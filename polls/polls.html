@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Glossary - Dimension Delvers Internal Documentation</title>
+        <title>Polls - Dimension Delvers Internal Documentation</title>
 
 
         <!-- Custom HTML head -->
@@ -12,32 +12,32 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="favicon.svg">
-        <link rel="shortcut icon" href="favicon.png">
-        <link rel="stylesheet" href="css/variables.css">
-        <link rel="stylesheet" href="css/general.css">
-        <link rel="stylesheet" href="css/chrome.css">
-        <link rel="stylesheet" href="css/print.css" media="print">
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
-        <link rel="stylesheet" href="fonts/fonts.css">
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" href="highlight.css">
-        <link rel="stylesheet" href="tomorrow-night.css">
-        <link rel="stylesheet" href="ayu-highlight.css">
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
 
 
         <!-- Provide site root to javascript -->
         <script>
-            var path_to_root = "";
+            var path_to_root = "../";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc.js"></script>
+        <script src="../toc.js"></script>
     </head>
     <body>
     <div id="body-container">
@@ -89,7 +89,7 @@
             <!-- populated by js -->
             <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
             <noscript>
-                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
             </noscript>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -123,13 +123,13 @@
                     <h1 class="menu-title">Dimension Delvers Internal Documentation</h1>
 
                     <div class="right-buttons">
-                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
                         <a href="https://github.com/Dimension-Delvers/dimension-delvers-docs" title="Git repository" aria-label="Git repository">
                             <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
-                        <a href="https://github.com/Dimension-Delvers/dimension-delvers-docs/edit/main/src/glossary.md" title="Suggest an edit" aria-label="Suggest an edit">
+                        <a href="https://github.com/Dimension-Delvers/dimension-delvers-docs/edit/main/src/polls/polls.md" title="Suggest an edit" aria-label="Suggest an edit">
                             <i id="git-edit-button" class="fa fa-edit"></i>
                         </a>
 
@@ -158,59 +158,41 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="glossary"><a class="header" href="#glossary">Glossary</a></h1>
-<h2 id="mod"><a class="header" href="#mod">Mod</a></h2>
-<ul>
-<li><strong>Dimension Delvers</strong>: Current project working name. Not final.</li>
-<li><strong>Rift</strong>: Current working name for the randomly generated dungeons that the player will enter.</li>
-<li><strong>Rift Key</strong>: Current working name for the item that can open a portal to a rift.</li>
-<li><strong>Theme</strong>: The visuals and general content that is applied to a rift. Utilizes processors.</li>
-</ul>
-<h2 id="features"><a class="header" href="#features">Features</a></h2>
-<ul>
-<li><strong>Gear Sockets <em>(PoC)</em></strong>: The current working system to manage the modifiers on our weapons and armor.</li>
-<li><strong>Modifier <em>(Feature)</em></strong>: Any powerup applied to a player or to something else, will be implemented using the modifier system. This system is comparable to enchantments, but much more advanced and under our control.</li>
-<li><strong>RiftMapper <em>(PoC)</em></strong>: An attempt to create a map of the Rift. Will allow us to remove the minimap while in a rift.</li>
-<li><strong>Runegem <em>(PoC)</em></strong>: The current working system for crafting your items into better items. Specifically, when applied to a gear socket, it applies a modifier to the related item.</li>
-<li><strong>Transmogs <em>(Spike)</em></strong>: A planned system that allows a player to change their looks towards any other collected gear piece.</li>
-</ul>
-<h2 id="project-management"><a class="header" href="#project-management">Project Management</a></h2>
-<ul>
-<li><strong>Contributor</strong>: Any person who requested the role in the discord. These people are the amazing group that intend to bring you this mod.</li>
-<li><strong>Coordinator</strong>: Per subteam, two coordinators are assigned by popular vote. These coordinators have additional responsibilities within the project. They are responsible for ensuring all topics in their area are summarized and followed up on. You can contact your coordinator for any questions and challenges you face. Their role is purely assistance, they do not have any decisive power.</li>
-<li><strong>PM Group</strong>: The small group of Project Managers. Their role is to ensure the project moves forward. They break ties and they ensure the team remains on focus.</li>
-</ul>
-<h2 id="dev-technical"><a class="header" href="#dev-technical">Dev Technical</a></h2>
-<h3 id="general-terms"><a class="header" href="#general-terms">General terms</a></h3>
-<ul>
-<li><strong>Java</strong>: The programming language used by the team and by Mojang, to make Minecraft and our mods.</li>
-<li><strong>JSON</strong>: The language used by datapacks to load data into Minecraft.</li>
-<li><strong>Mojank</strong>: A word used by modding people when they refer to a piece of code written by mojang, that causes us to question their and sometimes our own sanity.</li>
-<li><strong>Project Board</strong>: An overview of all open tasks for the Mod, you can asses it <a href="https://github.com/orgs/Dimension-Delvers/projects/1">HERE</a>.</li>
-</ul>
-<h3 id="project-board-tasks"><a class="header" href="#project-board-tasks">Project Board Tasks</a></h3>
-<ul>
-<li><strong>Feature</strong>: Something that is already decided or we have to do this either way. <em>Example: Rift Generation, Structure Generation, Modifier System (our better version of enchantments)</em></li>
-<li><strong>Proof of Concept (PoC)</strong>: One of the suggestions given by people. By creating a PoC, we will be able to test it out. If we only have 1 implemented PoC and we are all satisfied, then we might as well make it core. If we have a PoC and people have clear issues with the gameplay it brings, we must spend time on another PoC. <em>Example: Gear Sockets, Skill Crystals, Cost of dying</em></li>
-<li><strong>Spike</strong>: A spike is something we know we need, but we have not yet discussed how to do it, or maybe we have discussed it, but no clear path to implementation. Spikes can be very exploratory, sometimes even involving a mini PoC. Spikes generally should not be too long, just enough time to prove it might work. <em>Example: Multiblock Altar, Wireframe Minimap, Abilities</em></li>
-<li><strong>Datapack</strong>: A task to add a set of jsons as per <a href="code/datapack/datapack-formats.html">the datapack formats</a>. This task usually follows up on a relevant code ticket. This can be picked up by people with no skills in java.</li>
-</ul>
-<h2 id="build-technical"><a class="header" href="#build-technical">Build Technical</a></h2>
-<ul>
-<li><strong>JigSaw</strong>: The technical vanilla minecraft system that is used to place a structure into the world.</li>
-<li><strong>Processors</strong>: The technical vanilla minecraft system that allows a Structure Piece in a JigSaw to be modified and drastically change its looks.</li>
-<li><strong>Structure Piece</strong>: A single piece of a JigSaw structure, in our case, one room.</li>
-</ul>
+                        <h1 id="polls"><a class="header" href="#polls">Polls</a></h1>
+<h2 id="process"><a class="header" href="#process">Process</a></h2>
+<ol>
+<li><em>Anyone</em>: Open a conversation on a topic in either #project-forum or #future-gameplay-ideas.</li>
+<li><em>Anyone</em>: Discuss the topic for at least a week.</li>
+<li><em>Coordinator</em>: Create a new markdown file in the <code>polls</code> directory. See below for necessary contents.</li>
+<li><em>Coordinator</em>: Inform in #pm-coordinator-chat of the existence of the page.</li>
+<li><em>PMs</em>: Set up the poll in the #polls channel at the next Project Meeting.</li>
+<li><em>Anyone</em>: Vote on the poll, you have 1 week to do so.</li>
+</ol>
+<h2 id="poll-format"><a class="header" href="#poll-format">Poll Format</a></h2>
+<pre><code class="language-markdown"># Poll Title
+## Question
+// What is the question you are asking?
+## Discussion Thread
+// Link to the discussion thread on Discord
+## Options
+// What are the options for the poll?
+### Option 1
+// Description of the option
+### Option 2
+// Description of the option
+### Option ...
+// More options
+</code></pre>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="builds/processors.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../glossary.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="polls/polls.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../polls/durability.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -220,11 +202,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="builds/processors.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../glossary.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="polls/polls.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../polls/durability.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
@@ -239,13 +221,13 @@
         </script>
 
 
-        <script src="elasticlunr.min.js"></script>
-        <script src="mark.min.js"></script>
-        <script src="searcher.js"></script>
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
 
-        <script src="clipboard.min.js"></script>
-        <script src="highlight.js"></script>
-        <script src="book.js"></script>
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
 
         <!-- Custom JS scripts -->
 
