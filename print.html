@@ -416,14 +416,44 @@ Code here
 <div style="break-before: page; page-break-before: always;"></div><h2 id="processor-blocks"><a class="header" href="#processor-blocks">Processor Blocks</a></h2>
 <p>Name is <code>processor_block_1</code>, the more specific ones have a suffix like: <code>processor_block_1_slab</code>.</p>
 <div class="table-wrapper"><table><thead><tr><th>Color</th><th>ID</th><th>Name</th><th>Use</th></tr></thead><tbody>
-<tr><td>Grey</td><td>1</td><td><code>processor_block_1</code></td><td>walls</td></tr>
-<tr><td>Brown</td><td>2</td><td><code>processor_block_2</code></td><td>paths</td></tr>
-<tr><td>Grass</td><td>3</td><td><code>processor_block_3</code></td><td>ground</td></tr>
-<tr><td>Pink</td><td>4</td><td><code>processor_block_4</code></td><td>complement</td></tr>
+<tr><td>Grey</td><td>1</td><td><code>processor_block_1</code></td><td>Walls</td></tr>
+<tr><td>Orange</td><td>2</td><td><code>processor_block_2</code></td><td>Paths</td></tr>
+<tr><td>Green</td><td>3</td><td><code>processor_block_3</code></td><td>Floors</td></tr>
+<tr><td>Purple</td><td>4</td><td><code>processor_block_4</code></td><td>Alt Wall</td></tr>
+<tr><td>Blue</td><td>5</td><td><code>processor_block_5</code></td><td>Dark Floor</td></tr>
+<tr><td>Yellow</td><td>6</td><td><code>processor_block_6</code></td><td>Planks</td></tr>
+<tr><td>Black</td><td>7</td><td><code>processor_block_7</code></td><td>Bricks</td></tr>
 </tbody></table>
 </div>
-<p>Use these when making builds, so the processors can easily target them.
+<p>Where walls, paths and floors comprise the bulk of the room.</p>
+<p>Alt wall can be used for etching, and indicators like cracks.
+Dark floor can be used in corners, further away from the path.
+Planks will (almost) always be planks, for things like bridges.
+Bricks can be used to indicate a more solid part.</p>
+<p>Use these when making builds, both rooms and POIs, so the processors can easily target them.
 <img src="builds/processor_blocks.png" alt="processor_blocks" /></p>
+<p>The other processor blocks can be used, but require a custom processor from the builder, and will be room specific, eg. a tree always needing logs.</p>
+<h2 id="room-sizes"><a class="header" href="#room-sizes">Room Sizes</a></h2>
+<p>The size of a room is indicated with a multiple of the gridlenght, being 15. The number between brackets indicates the fixed multiplier, in X, Y and Z direction, respectively.</p>
+<p>Stable (3x3x3), standard room near the start, 47 blocks in every direction, and all doors easely reachable.<br />
+Unstable (3xYx3), doors are not easely reachable anymore, and is used as a step between Stable and Chaos).<br />
+Chaos (XxYxZ), doors are not in the center of a face anymore, has varying sizes, and makes the generated rift maze-like.</p>
+<h2 id="room-builds"><a class="header" href="#room-builds">Room Builds</a></h2>
+<p>All edges of the rooms need to be at least 3 blocks thick. This is not a hard rule, but try to have &gt;90% of the walls 3 blocks thick<br />
+Leave spaces for POIs, which will be randomly generated on set positions. A jigsaw block needs to be placed in the center of the POI location.</p>
+<p>Chaos rooms need 1/3 of their doors to remain open, with the jigsaw blocks inside them. Those doors need to be scattered around the room. The other doorways can be covered by processor blocks, but not by bedrock.</p>
+<h2 id="room-naming"><a class="header" href="#room-naming">Room Naming</a></h2>
+<p>The created room has to be saved using the following structure:<br />
+<code>wotr:rift/room/stability/XYZ/roomname</code> ,<br />
+Where Stability is Stable, Unstable or Chaos, XYZ is the size in every direction (1, 2 or 3), and roomname is the name of the room, chosen by the builder.<br />
+Example: <code>wotr:rift/room/stable/333/test_room</code>.</p>
+<h2 id="poi-sizes"><a class="header" href="#poi-sizes">POI sizes</a></h2>
+<p>The POI sizes will be (X, Y, Z):<br />
+(3, 3, 3)*, (5, 5, 5), (7, 6, 7), (9, 8, 9), (11, 9, 11)*.<br />
+This is the outer size of the POI, not counting the floor layer.<br />
+*Up for debate, might very well be removed.</p>
+<h2 id="poi-naming"><a class="header" href="#poi-naming">POI naming</a></h2>
+<p>To be decided</p>
 <div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><h1 id="mod-development-resources"><a class="header" href="#mod-development-resources">Mod Development Resources</a></h1>
 <p><a href="https://docs.neoforged.net/">Neoforged Documentation</a></p>
 <p><a href="https://www.jetbrains.com/idea/download">Intellij Download</a> (scroll down to the free community edition)</p>
