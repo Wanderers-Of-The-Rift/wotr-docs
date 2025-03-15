@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Introduction - Dimension Delvers Internal Documentation</title>
+        <title>How to contribute - Dimension Delvers Internal Documentation</title>
 
 
         <!-- Custom HTML head -->
@@ -129,7 +129,7 @@
                         <a href="https://github.com/Dimension-Delvers/dimension-delvers-docs" title="Git repository" aria-label="Git repository">
                             <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
-                        <a href="https://github.com/Dimension-Delvers/dimension-delvers-docs/edit/main/src/README.md" title="Suggest an edit" aria-label="Suggest an edit">
+                        <a href="https://github.com/Dimension-Delvers/dimension-delvers-docs/edit/main/src/contribute.md" title="Suggest an edit" aria-label="Suggest an edit">
                             <i id="git-edit-button" class="fa fa-edit"></i>
                         </a>
 
@@ -158,39 +158,77 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="wanderers-of-the-rift"><a class="header" href="#wanderers-of-the-rift">Wanderers of the Rift</a></h1>
-<h2 id="who-we-are"><a class="header" href="#who-we-are">Who we are</a></h2>
-<p>Wanderers of the Rift (WotR) is a new Minecraft modpack in the ARPG-pack genre. This is a community driven and developed project likely to end up in 1.22 Neoforge Minecraft.</p>
-<h2 id="our-values"><a class="header" href="#our-values">Our Values</a></h2>
+                        <h1 id="how-to-contribute"><a class="header" href="#how-to-contribute">How to Contribute</a></h1>
+<h2 id="how-to-create-pages"><a class="header" href="#how-to-create-pages">How to Create Pages</a></h2>
+<h3 id="1-get-access-to-the-repository"><a class="header" href="#1-get-access-to-the-repository">1. Get Access to the Repository</a></h3>
+<p>To add or edit pages in the mdBook, you need to be a member of the DD GitHub organization. If you haven't received an invite to the GitHub organization yet, please ask one of the organization Owners to invite you.</p>
+<h3 id="2-navigate-to-the-repository"><a class="header" href="#2-navigate-to-the-repository">2. Navigate to the Repository</a></h3>
+<ol>
+<li>Open the GitHub repository by clicking this link: <a href="https://github.com/Dimension-Delvers/dimension-delvers-docs/">https://github.com/Dimension-Delvers/dimension-delvers-docs/</a></li>
+</ol>
+<h3 id="3-find-the-src-folder"><a class="header" href="#3-find-the-src-folder">3. Find the <code>src</code> Folder</a></h3>
+<ol>
+<li>Inside the repository, look for a folder named <code>src</code>.</li>
+<li>This folder contains all the <code>.md</code> (Markdown) files used in the documentation.</li>
+</ol>
+<h3 id="4-create-a-new-page"><a class="header" href="#4-create-a-new-page">4. Create a New Page</a></h3>
+<ol>
+<li>Click the <code>Add file</code> button and select <code>Create new file</code>.</li>
+<li>Name your file with a <code>.md</code> extension (e.g., <code>new_page.md</code>). If you want to put the file in a folder, type the folder name followed by a / before the file name (e.g., <code>folder_name/new_page.md</code>).</li>
+<li>Write your content in Markdown format.</li>
+</ol>
+<h3 id="5-edit-an-existing-page"><a class="header" href="#5-edit-an-existing-page">5. Edit an Existing Page</a></h3>
+<ol>
+<li>Inside the <code>src</code> folder, find the file you want to edit.</li>
+<li>Click on it, then press the <code>Edit</code> button (pencil icon).</li>
+<li>Make your changes using Markdown syntax.</li>
+</ol>
+<h3 id="6-link-your-page"><a class="header" href="#6-link-your-page">6. Link Your Page</a></h3>
+<p>To make your page accessible from the book’s navigation:</p>
+<ol>
+<li>Open the <code>SUMMARY.md</code> file in the <code>src</code> folder.</li>
+<li>Add a new line with a link to your page in this format:
+<pre><code class="language-md">- [Page Title](new_page.md)
+</code></pre>
+</li>
+<li>Save your changes.</li>
+</ol>
+<h3 id="7-commit-your-changes"><a class="header" href="#7-commit-your-changes">7. Commit Your Changes</a></h3>
+<ol>
+<li>Press the green button in the top right of the page that says "Commit changes..."</li>
+<li>Add a short commit message (e.g., <code>Added new_page.md</code>).</li>
+<li>Click <code>Commit changes</code>.</li>
+</ol>
+<h3 id="markdown-quick-reference"><a class="header" href="#markdown-quick-reference">Markdown Quick Reference</a></h3>
 <ul>
-<li>Community Driven
+<li><strong>Headings</strong>: <code># Title</code>, <code>## Subtitle</code>, <code>### Section</code></li>
+<li><strong>Bold</strong>: <code>**bold text**</code></li>
+<li><strong>Italic</strong>: <code>*italic text*</code></li>
+<li><strong>Links</strong>: <code>[text](url)</code></li>
+<li><strong>Lists</strong>:
 <ul>
-<li>Open source</li>
-<li>Anyone can contribute</li>
-<li>Polls for decisions &amp; priority ranking</li>
-<li>Distributed leadership</li>
+<li><code>- Item</code> (unordered)</li>
+<li><code>1. Item</code> (ordered)</li>
 </ul>
 </li>
-<li>Accessibility
-<ul>
-<li>Play your way</li>
-<li>Custom configs</li>
+<li><strong>Code Blocks</strong>:
+<pre><code>\```language
+Code here
+\```
+</code></pre>
+(Remove the backslashes)</li>
 </ul>
-</li>
-<li>Transparency
-<ul>
-<li>Open communications</li>
-<li>No monetary involvement</li>
-</ul>
-</li>
-</ul>
+<p>If you have any questions, feel free to ask in the Discord server</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
 
-                            <a rel="next prefetch" href="contribute.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="design/DesignDocHome.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -200,8 +238,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
 
-                    <a rel="next prefetch" href="contribute.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="design/DesignDocHome.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
