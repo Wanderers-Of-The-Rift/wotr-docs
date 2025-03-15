@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Modifiers - Dimension Delvers Internal Documentation</title>
+        <title>Modifiers - Wanderers of the Rift Internal Documentation</title>
 
 
         <!-- Custom HTML head -->
@@ -120,7 +120,7 @@
                         </button>
                     </div>
 
-                    <h1 class="menu-title">Dimension Delvers Internal Documentation</h1>
+                    <h1 class="menu-title">Wanderers of the Rift Internal Documentation</h1>
 
                     <div class="right-buttons">
                         <a href="../../../print.html" title="Print this book" aria-label="Print this book">
@@ -160,9 +160,9 @@
                     <main>
                         <h1 id="modifiers"><a class="header" href="#modifiers">Modifiers</a></h1>
 <h2 id="modifier"><a class="header" href="#modifier">Modifier</a></h2>
-<p>Modifiers are the core of the Dimension Delvers upgrade system.</p>
+<p>Modifiers are the core of the WotR upgrade system.</p>
 <h4 id="location"><a class="header" href="#location">Location</a></h4>
-<p><code>data/dimensiondelvers/dimensiondelvers/modifier</code> Take note of the second dimensionDelvers.</p>
+<p><code>data/wotr/wotr/modifier</code> Take note of the second wotr.</p>
 <h4 id="format"><a class="header" href="#format">Format</a></h4>
 <ul>
 <li><code>tier</code>: A number representing the tier of the effect.</li>
@@ -179,7 +179,7 @@
   "tier": 1,
   "modifiers": [
     {
-      "type": "dimensiondelvers:attribute_modifier",
+      "type": "wotr:attribute_modifier",
       "id": "minecraft:flat_attack_damage",
       "attribute": "minecraft:attack_damage",
       "min_roll": 1,
@@ -195,7 +195,7 @@
 <h2 id="attributemodifiereffect"><a class="header" href="#attributemodifiereffect">AttributeModifierEffect</a></h2>
 <h4 id="format-1"><a class="header" href="#format-1">Format</a></h4>
 <ul>
-<li><code>type</code>: <code>"dimensiondelvers:attribute"</code></li>
+<li><code>type</code>: <code>"wotr:attribute"</code></li>
 <li><code>id</code>: The id is used to uniquely identify this attribute modifier efect in the list of modifier effects for this modifier. This is necessary to identify the correct attributes to remove when the item is removed.</li>
 <li><code>attribute</code>: The attribute adjusted by this effect.</li>
 <li><code>min_roll</code>: The minimum value that can be rolled for this effect.</li>
@@ -206,7 +206,7 @@
 <p>Each effect will add a random value between <code>min_roll</code> and <code>max_roll</code> to the <code>attribute</code> of the entity. The <code>operation</code> will determine how the value is added.</p>
 <h4 id="example-1"><a class="header" href="#example-1">Example</a></h4>
 <pre><code class="language-json">{
-  "type": "dimensiondelvers:attribute_modifier",
+  "type": "wotr:attribute_modifier",
   "id": "minecraft:flat_attack_damage",
   "attribute": "minecraft:attack_damage",
   "min_roll": 1,
@@ -217,7 +217,7 @@
 <h2 id="tags"><a class="header" href="#tags">Tags</a></h2>
 <p>The vanilla tag system is used to maintain the tags. Modifier tags will be used to select a modifier from a list of modifiers.</p>
 <h4 id="location-1"><a class="header" href="#location-1">Location</a></h4>
-<p><code>data/dimensiondelvers/tags/dimensiondelvers/modifier</code></p>
+<p><code>data/wotr/tags/wotr/modifier</code></p>
 <h4 id="format-2"><a class="header" href="#format-2">Format</a></h4>
 <ul>
 <li><code>values</code> : A list of modifier ResourceLocations.</li>
@@ -226,7 +226,7 @@
 <h4 id="example-2"><a class="header" href="#example-2">Example</a></h4>
 <pre><code class="language-json">{
   "values": [
-    "dimensiondelvers:modifiers/flat_attack_damage"
+    "wotr:modifiers/flat_attack_damage"
   ]
 }
 </code></pre>

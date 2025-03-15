@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Dimension Delvers Internal Documentation</title>
+        <title>Wanderers of the Rift Internal Documentation</title>
         <meta name="robots" content="noindex">
 
 
@@ -121,7 +121,7 @@
                         </button>
                     </div>
 
-                    <h1 class="menu-title">Dimension Delvers Internal Documentation</h1>
+                    <h1 class="menu-title">Wanderers of the Rift Internal Documentation</h1>
 
                     <div class="right-buttons">
                         <a href="print.html" title="Print this book" aria-label="Print this book">
@@ -337,10 +337,10 @@ Code here
 </ul>
 </li>
 </ul>
-<div style="break-before: page; page-break-before: always;"></div><p>Dimension Delvers Mod(Pack) Design</p>
+<div style="break-before: page; page-break-before: always;"></div><p>Wanderers of the Rift Mod(Pack) Design</p>
 <p>Home Page of The Design Doc</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="code-home"><a class="header" href="#code-home">Code Home</a></h1>
-<p>Welcome to the Code Home Page. This is where you can find all the code related information for the Dimension Delvers Mod(Pack).</p>
+<p>Welcome to the Code Home Page. This is where you can find all the code related information for the Wanderers of the Rift Mod(Pack).</p>
 <h2 id="important-code-pages"><a class="header" href="#important-code-pages">Important Code Pages</a></h2>
 <ul>
 <li><a href="code/code/decision/decisions.html">Code Decisions</a>: The entry point to general code decisions.</li>
@@ -360,12 +360,12 @@ Code here
 <li><strong>Proof of Concept (PoC)</strong>: The implementation of one of the suggestions given by people. By creating a PoC, we will be able to test it out, to help deciding if we want to continue on it. PoCs still require a lot of conversation, so try to involve the team as much as possible before implementing things. <em>Example: Gear Sockets, AbilitY Crystals, Cost of dying</em></li>
 <li><strong>Spike</strong>: A spike is something we know we need, but we have not yet discussed how to do it, or maybe we have discussed it high level, but no clear path to implementation. Spikes can be very exploratory, sometimes even involving a mini PoC. Spikes generally should not be too long, just enough time to prove it might work. A lot of the work in a spike will be conversation, make sure to take control of any Spike topic you pick up, including summarizing any ongoing discord conversation on the topic (if not already done by a Coordinator). <em>Example: Multiblock Altar, Wireframe Minimap, fishing</em></li>
 </ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="datapack-formats-in-dd"><a class="header" href="#datapack-formats-in-dd">Datapack formats in DD</a></h1>
-<p>A lot of Dimension Delvers's content is added through a unique datapack format. Modpack makers can fully customize how specific things look and behave through easy to understand datapacks. Adding the datapack works exactly as it does in vanilla minecraft, so it shouldn't pose too much troubles.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="datapack-formats-in-wotr"><a class="header" href="#datapack-formats-in-wotr">Datapack formats in WotR</a></h1>
+<p>A lot of the content in WotR is added through a unique datapack format. Modpack makers can fully customize how specific things look and behave through easy to understand datapacks. Adding the datapack works exactly as it does in vanilla minecraft, so it shouldn't pose too much troubles.</p>
 <h2 id="datapacks"><a class="header" href="#datapacks">Datapacks?</a></h2>
 <p>New to making a datapack? The <a href="https://minecraft.wiki/w/Tutorial:Creating_a_data_pack">MC wiki's datapack creation page</a> has you covered. Just imagine the below formats to be in the very same vanilla list and everything will work out just fine.</p>
-<h2 id="dimension-delvers-namespace"><a class="header" href="#dimension-delvers-namespace">Dimension Delvers namespace</a></h2>
-<p>The namespace in a datapack works a bit like the mod name. Mods have their own datapacks included with their own namespace. Dimension Delvers' namespace is dimensiondelvers. In this namespace we have added some basic examples that can guide you to create some new unique variations.</p>
+<h2 id="wanderers-of-the-rift-namespace"><a class="header" href="#wanderers-of-the-rift-namespace">Wanderers of the Rift namespace</a></h2>
+<p>The namespace in a datapack works a bit like the mod name. Mods have their own datapacks included with their own namespace. The Wanderers of the Rift mod's namespace is <code>wotr</code>. In this namespace we have added some basic examples that can guide you to create some new unique variations.</p>
 <h2 id="datapack-format-list"><a class="header" href="#datapack-format-list">Datapack Format List</a></h2>
 <ul>
 <li><a href="code/datapack/code/datapack/format/modifiers.html">Modifiers</a></li>
@@ -373,9 +373,9 @@ Code here
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="modifiers"><a class="header" href="#modifiers">Modifiers</a></h1>
 <h2 id="modifier"><a class="header" href="#modifier">Modifier</a></h2>
-<p>Modifiers are the core of the Dimension Delvers upgrade system.</p>
+<p>Modifiers are the core of the WotR upgrade system.</p>
 <h4 id="location"><a class="header" href="#location">Location</a></h4>
-<p><code>data/dimensiondelvers/dimensiondelvers/modifier</code> Take note of the second dimensionDelvers.</p>
+<p><code>data/wotr/wotr/modifier</code> Take note of the second wotr.</p>
 <h4 id="format"><a class="header" href="#format">Format</a></h4>
 <ul>
 <li><code>tier</code>: A number representing the tier of the effect.</li>
@@ -392,7 +392,7 @@ Code here
   "tier": 1,
   "modifiers": [
     {
-      "type": "dimensiondelvers:attribute_modifier",
+      "type": "wotr:attribute_modifier",
       "id": "minecraft:flat_attack_damage",
       "attribute": "minecraft:attack_damage",
       "min_roll": 1,
@@ -408,7 +408,7 @@ Code here
 <h2 id="attributemodifiereffect"><a class="header" href="#attributemodifiereffect">AttributeModifierEffect</a></h2>
 <h4 id="format-1"><a class="header" href="#format-1">Format</a></h4>
 <ul>
-<li><code>type</code>: <code>"dimensiondelvers:attribute"</code></li>
+<li><code>type</code>: <code>"wotr:attribute"</code></li>
 <li><code>id</code>: The id is used to uniquely identify this attribute modifier efect in the list of modifier effects for this modifier. This is necessary to identify the correct attributes to remove when the item is removed.</li>
 <li><code>attribute</code>: The attribute adjusted by this effect.</li>
 <li><code>min_roll</code>: The minimum value that can be rolled for this effect.</li>
@@ -419,7 +419,7 @@ Code here
 <p>Each effect will add a random value between <code>min_roll</code> and <code>max_roll</code> to the <code>attribute</code> of the entity. The <code>operation</code> will determine how the value is added.</p>
 <h4 id="example-1"><a class="header" href="#example-1">Example</a></h4>
 <pre><code class="language-json">{
-  "type": "dimensiondelvers:attribute_modifier",
+  "type": "wotr:attribute_modifier",
   "id": "minecraft:flat_attack_damage",
   "attribute": "minecraft:attack_damage",
   "min_roll": 1,
@@ -430,7 +430,7 @@ Code here
 <h2 id="tags"><a class="header" href="#tags">Tags</a></h2>
 <p>The vanilla tag system is used to maintain the tags. Modifier tags will be used to select a modifier from a list of modifiers.</p>
 <h4 id="location-1"><a class="header" href="#location-1">Location</a></h4>
-<p><code>data/dimensiondelvers/tags/dimensiondelvers/modifier</code></p>
+<p><code>data/wotr/tags/wotr/modifier</code></p>
 <h4 id="format-2"><a class="header" href="#format-2">Format</a></h4>
 <ul>
 <li><code>values</code> : A list of modifier ResourceLocations.</li>
@@ -439,7 +439,7 @@ Code here
 <h4 id="example-2"><a class="header" href="#example-2">Example</a></h4>
 <pre><code class="language-json">{
   "values": [
-    "dimensiondelvers:modifiers/flat_attack_damage"
+    "wotr:modifiers/flat_attack_damage"
   ]
 }
 </code></pre>
@@ -447,7 +447,7 @@ Code here
 <h2 id="runegem-data"><a class="header" href="#runegem-data">Runegem Data</a></h2>
 <p>Runegem Data files are used during the creation of runegems. They are used to define the properties of the runegem and the modifiers it will have when applied to an item.</p>
 <h4 id="location-2"><a class="header" href="#location-2">Location</a></h4>
-<p><code>data/dimensiondelvers/dimensiondelvers/runegem_data</code> Take note of the second dimensionDelvers.</p>
+<p><code>data/wotr/wotr/runegem_data</code> Take note of the second wotr.</p>
 <h4 id="format-3"><a class="header" href="#format-3">Format</a></h4>
 <ul>
 <li><code>shape</code> : The shape of the runegem. This is a string that represents the shape of the runegem. Taken from the possible shapes.
@@ -481,7 +481,7 @@ Code here
 <h4 id="example-3"><a class="header" href="#example-3">Example</a></h4>
 <pre><code class="language-json">{
     "shape": "circle",
-    "tag": "dimensiondelvers:modifiers/cut_health_rune",
+    "tag": "wotr:modifiers/cut_health_rune",
     "tier": "cut"
 }
 </code></pre>
@@ -581,7 +581,8 @@ This is the outer size of the POI, not counting the floor layer.<br />
 <div style="break-before: page; page-break-before: always;"></div><h1 id="glossary"><a class="header" href="#glossary">Glossary</a></h1>
 <h2 id="mod-1"><a class="header" href="#mod-1">Mod</a></h2>
 <ul>
-<li><strong>Dimension Delvers</strong>: Current project working name. Not final.</li>
+<li><strong>Dimension Delvers</strong>: Old project name.</li>
+<li><strong>Wanderers of the Rift</strong>: Current project working name.</li>
 <li><strong>Rift</strong>: Current working name for the randomly generated dungeons that the player will enter.</li>
 <li><strong>Rift Key</strong>: Current working name for the item that can open a portal to a rift.</li>
 <li><strong>Theme</strong>: The visuals and general content that is applied to a rift. Utilizes processors.</li>
@@ -874,7 +875,7 @@ https://forms.gle/VhzLPqU2oA71C19w8</p>
 <p>Forums for outside discussion</p>
 </li>
 <li>
-<p>Subreddit: https://www.reddit.com/r/DimensionDelvers/</p>
+<p>Subreddit: https://www.reddit.com/r/WanderersoftheRift/</p>
 </li>
 <li>
 <p>Name needed to really settle on the correct subreddit</p>
