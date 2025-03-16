@@ -158,7 +158,21 @@
 
                 <div id="content" class="content">
                     <main>
-                        
+                        <h2 id="processor-workings"><a class="header" href="#processor-workings">Processor workings</a></h2>
+<p>The processors inputs a theme and a room, and turns the processor blocks in that room into the according blocks that the theme provides.<br />
+The room is made from different processor blocks, that dictate the layout.<br />
+The theme is a sort of dictionary, translating every processor block into several themed blocks, with a given weighting.<br />
+For example: for cave theme, <code>processor_block_1</code> turns into 80% stone, 20% andesite. For wood theme, <code>processor_block_1</code> turns into 60% oak planks, 20% birch planks, 20% dark oak planks.</p>
+<p>Themes are WIP</p>
+<h2 id="fixed-and-extra-processor-blocks"><a class="header" href="#fixed-and-extra-processor-blocks">Fixed and Extra Processor blocks</a></h2>
+<p>Processor blocks 1 through 7 are fixed, every theme can replace them.<br />
+Processor blocks 8 through 14 are extra, not fixed, and a seperate processor has to be provided, specific to that room. That processor runs along additionally to the standard processor, so both pools can be used.<br />
+Additional processors can be re-used, so multiple rooms can use the same additional processor. This means that multiple rooms can have a demand for themed glass, for example, even though themed glass is not a fixed processor. The required additional processor has to be indicated in the "Extra processor blocks used" forum.</p>
+<p>Correct notation is WIP</p>
+<h2 id="more-processor-capabilities"><a class="header" href="#more-processor-capabilities">More Processor capabilities</a></h2>
+<p>There are processors that can place flowers and mushrooms on the floor, cobweb and vines against the wall, and fill flower pots with a long list of flowers, and alike. They can run over a room on request, or be theme dependent. This means that they dont have to be placed by the builder.<br />
+Sometimes, it may be useful to pick an extra processor block dedicated to eg. leaves, to be sure leaves are placed in a tree-top shape.</p>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
