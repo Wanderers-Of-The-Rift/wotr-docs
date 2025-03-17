@@ -38,7 +38,10 @@ The MVP contains following features:
     * *PoC*: Enchantments completely removed
 * Rift
     * *Feature*: Player Accessing the Rift (Entering/Leaving) => Dimension Generation
-    * *Feature*: Rift Generation in a 15x15 grid => Basic Jigsaw Structure Generation
+    * *Feature*: Rift Generation => Basic Jigsaw Structure Generation
+      * Rooms, with the smallest unit being 15x15x15 in size.
+      * Passages, that connect various rooms
+      * Points of Interest within a room
     * *PoC*: Rift Stability System
         * The further away from the rift portal you go, the messier and more difficult to travers the rift becomes.
         * The stable areas have easy to traverse terrain and always 4 central exits on the sides.
