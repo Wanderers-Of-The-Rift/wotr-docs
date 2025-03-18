@@ -27,8 +27,8 @@
 * **Project Board**: An overview of all open tasks for the Mod, you can asses it [HERE](https://github.com/orgs/Dimension-Delvers/projects/1).
 ### Project Board Tasks
 * **Feature**: Something that is already decided or we have to do this either way. *Example: Rift Generation, Structure Generation, Modifier System (our better version of enchantments)*
-* **Proof of Concept (PoC)**: One of the suggestions given by people. By creating a PoC, we will be able to test it out. If we only have 1 implemented PoC and we are all satisfied, then we might as well make it core. If we have a PoC and people have clear issues with the gameplay it brings, we must spend time on another PoC. *Example: Gear Sockets, Skill Crystals, Cost of dying*
-* **Spike**: A spike is something we know we need, but we have not yet discussed how to do it, or maybe we have discussed it, but no clear path to implementation. Spikes can be very exploratory, sometimes even involving a mini PoC. Spikes generally should not be too long, just enough time to prove it might work. *Example: Multiblock Altar, Wireframe Minimap, Abilities*
+* **Proof of Concept (PoC)**: One of the suggestions given by people. By creating a PoC, we will be able to test it out. To be considered a PoC, the concept needs to be well defined already. If we have a PoC and people have clear issues with the gameplay it brings, we must shift to on another PoC. *Example: Gear Sockets, Skill Crystals, Cost of dying*
+* **Spike**: A spike is a concept that still requires discussion and investigation. Some preliminary work can be done, to see if the idea is feasible. A Spike can not be considered a PoC if aspects of it are still a Spike. Once a spike has been fleshed out enough on core concepts this should be converted to PoC as soon as possible to further expand and see how it tests *Example: Multiblock Altar, Wireframe Minimap, Abilities*
 * **Datapack**: A task to add a set of jsons as per [the datapack formats](code/datapack/datapack-formats.md). This task usually follows up on a relevant code ticket. This can be picked up by people with no skills in java.
 
 ## Build Technical
