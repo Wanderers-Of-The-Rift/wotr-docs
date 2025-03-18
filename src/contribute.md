@@ -3,7 +3,7 @@
 ## How to Create Pages
 
 ### 1. Get Access to the Repository
-To add or edit pages in the mdBook, you need to be a member of the DD GitHub organization. If you haven't received an invite to the GitHub organization yet, please ask one of the organization Owners to invite you[here](https://discord.com/channels/1328761294085554176/1338550392065232936).
+To add or edit pages in the mdBook, you need to be a member of the DD GitHub organization. If you haven't received an invite to the GitHub organization yet, please ask one of the organization Owners to invite you [here](https://discord.com/channels/1328761294085554176/1338550392065232936).
 
 
 ### 2. Navigate to the Repository
