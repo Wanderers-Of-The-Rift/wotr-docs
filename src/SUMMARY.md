@@ -6,7 +6,7 @@
 - [Minimum Viable Product (MVP)](mvp.md)
 - [Mod(Pack) Design](design/DesignDocHome.md)
 - [Design]()
-  - OUR DESIGN HERE
+  - [OUR DESIGN TOPICS HERE]()
 - [Code](code/README.md)
     - [Datapack Formats](code/datapack/datapack-formats.md) 
       - [Modifiers](code/datapack/format/modifiers.md) 
