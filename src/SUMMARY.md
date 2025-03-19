@@ -8,6 +8,7 @@
 - [Design]()
   - [OUR DESIGN TOPICS HERE]()
 - [Code](code/README.md)
+    - [Style](code/style/style.md) 
     - [Datapack Formats](code/datapack/datapack-formats.md) 
       - [Modifiers](code/datapack/format/modifiers.md) 
       - [Runegems](code/datapack/format/runegems.md) 
