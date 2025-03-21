@@ -10,6 +10,7 @@ Name is `processor_block_1`, the more specific ones have a suffix like: `process
 | Blue   | 5    | `processor_block_5` | Dark Floor |
 | Yellow | 6    | `processor_block_6` | Planks     |
 | Black  | 7    | `processor_block_7` | Bricks     |
+| L_Blue | 8    | `processor_block_8` | Alt Path   |
 
 Where walls, paths and floors comprise the bulk of the room. 
 
@@ -43,9 +44,9 @@ Chaos rooms need 1/3 of their doors to remain open, with the jigsaw blocks insid
 
 ## Room Naming
 The created room has to be saved using the following structure:  
-`wotr:rift/room/stability/XYZ/roomname` ,  
-Where Stability is Stable, Unstable or Chaos, XYZ is the size in every direction (1, 2 or 3), and roomname is the name of the room, chosen by the builder.  
-Example: `wotr:rift/room/stable/333/test_room`.
+`wotr:rift/room/stability/XYZ/roomname_x_signature` ,  
+Where Stability is Stable, Unstable or Chaos, XYZ is the size in every direction (1, 2 or 3), and roomname is the name of the room, chosen by the builder, x is the variation number, signature is the builders signature.  
+Example: `wotr:rift/room/stable/333/testRoom_1_builderName`.
 
 
 ## POI sizes
