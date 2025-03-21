@@ -366,6 +366,71 @@ Code here
 <li><strong>Proof of Concept (PoC)</strong>: The implementation of one of the suggestions given by people. By creating a PoC, we will be able to test it out, to help deciding if we want to continue on it. PoCs still require a lot of conversation, so try to involve the team as much as possible before implementing things. <em>Example: Gear Sockets, AbilitY Crystals, Cost of dying</em></li>
 <li><strong>Spike</strong>: A spike is something we know we need, but we have not yet discussed how to do it, or maybe we have discussed it high level, but no clear path to implementation. Spikes can be very exploratory, sometimes even involving a mini PoC. Spikes generally should not be too long, just enough time to prove it might work. A lot of the work in a spike will be conversation, make sure to take control of any Spike topic you pick up, including summarizing any ongoing discord conversation on the topic (if not already done by a Coordinator). <em>Example: Multiblock Altar, Wireframe Minimap, fishing</em></li>
 </ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="code-style"><a class="header" href="#code-style">Code Style</a></h1>
+<p>A consistent code style helps to improve the approachability of code and reduce noise during pull requests caused by
+conflicting IDE settings between developers.</p>
+<h2 id="tools"><a class="header" href="#tools">Tools</a></h2>
+<p>The project a few tools to detect and address style violations. These tools are run against all Pull Requests.</p>
+<h3 id="spotless"><a class="header" href="#spotless">Spotless</a></h3>
+<p>Spotless is a tool that both detects and corrects style issues. This includes:</p>
+<ul>
+<li>Indentation using spaces, not tabs</li>
+<li>The order imports appear in</li>
+<li>Removal of unused imports</li>
+<li>Overall formatting of code</li>
+<li>Some safe code changes such as removal of unnecessary boxing.</li>
+</ul>
+<p>To check for issues run the <code>spotlessCheck</code> gradle task - this will produce a report of all violations.
+Then to fix issues run <code>spotlessApply</code>.</p>
+<p>If there are portions of code for which spotless checks should not be applied - perhaps a section of code that
+should be formatted in a particular way for readability - then it can be surrounded by a pair of comments containing
+<code>spotless:off</code> and <code>spotless:on</code>:</p>
+<pre><code class="language-java">// spotless:off
+public static final List&lt;Vector2i&gt; POSITIONS = List.of(
+        new Vector2i(0, 1),
+        new Vector2i(2, 3),
+        new Vector2i(5, 8),
+        new Vector2i(9, 13)
+);
+// spotless:on
+</code></pre>
+<h3 id="checkstyle"><a class="header" href="#checkstyle">Checkstyle</a></h3>
+<p>Checkstyle is a tool that can only detect and report style issues. It can be run using the <code>checkstyleMain</code> gradle task. It has been configured to report:</p>
+<ul>
+<li>Wildcard or star imports</li>
+<li>Names that don't match the standard java style. e.g. packages should have all lowercase names, non-constant variables should start with a lowercase letter, method names should start with a lowercase letter</li>
+<li>If statements that don't use braces</li>
+<li>Declaration order - this checks that elements in a type are declared in the following order:
+<ol>
+<li>Static variables (public, then protected, then package, then private)</li>
+<li>Instance variables (public, then protected, then package, then private)</li>
+<li>Constructors</li>
+<li>Methods</li>
+</ol>
+</li>
+<li>Case statements with code that falls through to another case statement. e.g.</li>
+</ul>
+<pre><code class="language-java">switch (letter) {
+    // This is fine, the case for 'a' has no code
+    case 'a':
+    case 'b':
+        System.out.println("a or b");
+        break;
+    // This provokes a checkstyle error
+    case 'c':
+        System.out.println("only c");
+    case 'd':
+        System.out.println("only d");
+}
+</code></pre>
+<p>This can be disabled by adding a comment of 'fall through' on the line before the case statement that can be fallen into.</p>
+<p>Similar to spotless, checkstyle checks can be disabled using <code>CHECKSTYLE.OFF: &lt;reason&gt;</code> and <code>CHECKSTYLE.ON: &lt;reason&gt;</code> comment pairs. e.g.</p>
+<pre><code class="language-java">public void check() {
+    // CHECKSTYLE.OFF: Performance optimisation - braces reduce framerate
+    if (false) return;
+    // CHECKSTYLE.ON: Performance optimisation
+}
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="datapack-formats-in-wotr"><a class="header" href="#datapack-formats-in-wotr">Datapack formats in WotR</a></h1>
 <p>A lot of the content in WotR is added through a unique datapack format. Modpack makers can fully customize how specific things look and behave through easy to understand datapacks. Adding the datapack works exactly as it does in vanilla minecraft, so it shouldn't pose too much troubles.</p>
 <h2 id="datapacks"><a class="header" href="#datapacks">Datapacks?</a></h2>
