@@ -168,6 +168,7 @@
 <tr><td>Blue</td><td>5</td><td><code>processor_block_5</code></td><td>Dark Floor</td></tr>
 <tr><td>Yellow</td><td>6</td><td><code>processor_block_6</code></td><td>Planks</td></tr>
 <tr><td>Black</td><td>7</td><td><code>processor_block_7</code></td><td>Bricks</td></tr>
+<tr><td>L_Blue</td><td>8</td><td><code>processor_block_8</code></td><td>Alt Path</td></tr>
 </tbody></table>
 </div>
 <p>Where walls, paths and floors comprise the bulk of the room.</p>
@@ -190,9 +191,9 @@ Leave spaces for POIs, which will be randomly generated on set positions. A jigs
 <p>Chaos rooms need 1/3 of their doors to remain open, with the jigsaw blocks inside them. Those doors need to be scattered around the room. The other doorways can be covered by processor blocks, but not by bedrock.</p>
 <h2 id="room-naming"><a class="header" href="#room-naming">Room Naming</a></h2>
 <p>The created room has to be saved using the following structure:<br />
-<code>wotr:rift/room/stability/XYZ/roomname</code> ,<br />
-Where Stability is Stable, Unstable or Chaos, XYZ is the size in every direction (1, 2 or 3), and roomname is the name of the room, chosen by the builder.<br />
-Example: <code>wotr:rift/room/stable/333/test_room</code>.</p>
+<code>wotr:rift/room/stability/XYZ/roomname_x_signature</code> ,<br />
+Where Stability is Stable, Unstable or Chaos, XYZ is the size in every direction (1, 2 or 3), and roomname is the name of the room, chosen by the builder, x is the variation number, signature is the builders signature.<br />
+Example: <code>wotr:rift/room/stable/333/testRoom_1_builderName</code>.</p>
 <h2 id="poi-sizes"><a class="header" href="#poi-sizes">POI sizes</a></h2>
 <p>The POI sizes will be (X, Y, Z):<br />
 (3, 3, 3)*, (5, 5, 5), (7, 6, 7), (9, 8, 9), (11, 9, 11)*.<br />
