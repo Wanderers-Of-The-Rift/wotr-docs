@@ -44,9 +44,9 @@ Chaos rooms need 1/3 of their doors to remain open, with the jigsaw blocks insid
 
 ## Room Naming
 The created room has to be saved using the following structure:  
-`wotr:rift/room/stability/XYZ/roomname` ,  
-Where Stability is Stable, Unstable or Chaos, XYZ is the size in every direction (1, 2 or 3), and roomname is the name of the room, chosen by the builder.  
-Example: `wotr:rift/room/stable/333/test_room`.
+`wotr:rift/room/stability/XYZ/roomname_x_signature` ,  
+Where Stability is Stable, Unstable or Chaos, XYZ is the size in every direction (1, 2 or 3), and roomname is the name of the room, chosen by the builder, x is the variation number, signature is the builders signature.  
+Example: `wotr:rift/room/stable/333/testRoom_1_builderName`.
 
 
 ## POI sizes
