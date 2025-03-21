@@ -10,6 +10,7 @@ Name is `processor_block_1`, the more specific ones have a suffix like: `process
 | Blue   | 5    | `processor_block_5` | Dark Floor |
 | Yellow | 6    | `processor_block_6` | Planks     |
 | Black  | 7    | `processor_block_7` | Bricks     |
+| L_Blue | 8    | `processor_block_8` | Alt Path   |
 
 Where walls, paths and floors comprise the bulk of the room. 
 
