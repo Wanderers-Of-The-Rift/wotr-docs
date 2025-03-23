@@ -64,11 +64,23 @@ switch (letter) {
 ```
 This can be disabled by adding a comment of 'fall through' on the line before the case statement that can be fallen into.
 
-Similar to spotless, checkstyle checks can be disabled using `CHECKSTYLE.OFF: <reason>` and `CHECKSTYLE.ON: <reason>` comment pairs. e.g.
+Similar to spotless, checkstyle checks can be disabled using `CHECKSTYLE.OFF: <Check>` and `CHECKSTYLE.ON: <Check>` comment pairs. e.g.
 ```java
 public void check() {
-    // CHECKSTYLE.OFF: Performance optimisation - braces reduce framerate
+    // CHECKSTYLE.OFF: NeedBraces - You cannot tell me what to do
     if (false) return;
-    // CHECKSTYLE.ON: Performance optimisation
+    // CHECKSTYLE.ON: NeedBraces
+}
+```
+
+However checkstyle additionally supports using the `@SuppressWarnings` annotation
+```java
+@SuppressWarnings({ "checkstyle:NeedBraces", "checkstyle:MethodName", "checkstyle:DeclarationOrder" })
+public class MyClass {
+    public void BAD_METHOD_NAME() {
+        if (true) return;
+    }
+    
+    public int value;
 }
 ```
