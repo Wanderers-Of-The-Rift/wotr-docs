@@ -10,3 +10,9 @@ Durability will cease to exist in the mod. Items will no longer break. Will affe
 Durability will cease to exist for all items from the WotRift mod. Vanilla items and items from other mods will still have durability.
 ### No, durability should stay
 Durability will remain in the mod. Items will still break.
+
+## Results
+The poll was ran from the 08/03/2025 until 15/03/2025 with the following results:
+Yes, remove durability completely -- 51%
+Yes, but only remove for WotRift items -- 25%
+No, durability should stay -- 24%

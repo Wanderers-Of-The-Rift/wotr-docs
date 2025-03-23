@@ -20,3 +20,6 @@ Enchanting will remain in the mod. Items can still be enchanted as normal. But m
 *Technical note*: See previous point.
 ### No, Enchanting should stay and be usable in rifts
 Enchanting will remain in the mod. Items can still be enchanted as normal. Rifts will be balanced around this, this will make the modifier system less useful and less impactful, especially when overpowered modded enchants are added. Consideration need to be made to make enchanting the main modifier system.
+
+## Results
+This poll is currently running in discord until saturday the 22th of March

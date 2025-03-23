@@ -18,3 +18,4 @@ Correct notation is WIP
 ## More Processor capabilities
 There are processors that can place flowers and mushrooms on the floor, cobweb and vines against the wall, and fill flower pots with a long list of flowers, and alike. They can run over a room on request, or be theme dependent. This means that they dont have to be placed by the builder.  
 Sometimes, it may be useful to pick an extra processor block dedicated to eg. leaves, to be sure leaves are placed in a tree-top shape.  
+When choosing a leave block, if a oak leaves was chosen, the theme will potentially change these to different themed leaves to match the theme. 
