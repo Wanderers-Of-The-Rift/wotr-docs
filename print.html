@@ -643,7 +643,11 @@ Example: <code>wotr:rift/room/stable/333/testRoom_1_builderName</code>.</p>
 <p>The POI sizes will be (X, Y, Z):<br />
 (3, 3, 3)*, (5, 5, 5), (7, 6, 7), (9, 8, 9), (11, 9, 11)*.<br />
 This is the outer size of the POI, not counting the floor layer.<br />
-*Up for debate, might very well be removed.</p>
+*Up for debate, might very well be removed.
+As a current rule of thumb, place at least an equal amount of rift chest as the size of the PoI.
+For example. In a 3,3,3 PoI place at least 3 chests.
+No decision has been made yet on the generation of the chests but this allows for many future options, such as x% of the chests will be generated.</p>
+<p>Additionally make sure that the PoI jigsaw block has been setup properly to allow for a clean replacement and or rotation.</p>
 <h2 id="poi-naming"><a class="header" href="#poi-naming">POI naming</a></h2>
 <p>To be decided</p>
 <div style="break-before: page; page-break-before: always;"></div><h2 id="processor-workings"><a class="header" href="#processor-workings">Processor workings</a></h2>
@@ -659,7 +663,8 @@ Additional processors can be re-used, so multiple rooms can use the same additio
 <p>Correct notation is WIP</p>
 <h2 id="more-processor-capabilities"><a class="header" href="#more-processor-capabilities">More Processor capabilities</a></h2>
 <p>There are processors that can place flowers and mushrooms on the floor, cobweb and vines against the wall, and fill flower pots with a long list of flowers, and alike. They can run over a room on request, or be theme dependent. This means that they dont have to be placed by the builder.<br />
-Sometimes, it may be useful to pick an extra processor block dedicated to eg. leaves, to be sure leaves are placed in a tree-top shape.</p>
+Sometimes, it may be useful to pick an extra processor block dedicated to eg. leaves, to be sure leaves are placed in a tree-top shape.<br />
+When choosing a leave block, if a oak leaves was chosen, the theme will potentially change these to different themed leaves to match the theme.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="mod-development-resources"><a class="header" href="#mod-development-resources">Mod Development Resources</a></h1>
 <p><a href="https://docs.neoforged.net/">Neoforged Documentation</a></p>
 <p><a href="https://www.jetbrains.com/idea/download">Intellij Download</a> (scroll down to the free community edition)</p>
@@ -756,6 +761,11 @@ Sometimes, it may be useful to pick an extra processor block dedicated to eg. le
 <p>Durability will cease to exist for all items from the WotRift mod. Vanilla items and items from other mods will still have durability.</p>
 <h3 id="no-durability-should-stay"><a class="header" href="#no-durability-should-stay">No, durability should stay</a></h3>
 <p>Durability will remain in the mod. Items will still break.</p>
+<h2 id="results"><a class="header" href="#results">Results</a></h2>
+<p>The poll was ran from the 08/03/2025 until 15/03/2025 with the following results:
+Yes, remove durability completely -- 51%
+Yes, but only remove for WotRift items -- 25%
+No, durability should stay -- 24%</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="should-we-remove-enchanting-from-the-mod"><a class="header" href="#should-we-remove-enchanting-from-the-mod">Should we remove enchanting from the mod?</a></h1>
 <h2 id="question-1"><a class="header" href="#question-1">Question</a></h2>
 <p>Should we remove enchanting from the mod? It is by itself already a heated topic. WotRift will introduce a new modifier system that will make enchanting fairly obsolete.</p>
@@ -774,6 +784,8 @@ Sometimes, it may be useful to pick an extra processor block dedicated to eg. le
 <p><em>Technical note</em>: See previous point.</p>
 <h3 id="no-enchanting-should-stay-and-be-usable-in-rifts"><a class="header" href="#no-enchanting-should-stay-and-be-usable-in-rifts">No, Enchanting should stay and be usable in rifts</a></h3>
 <p>Enchanting will remain in the mod. Items can still be enchanted as normal. Rifts will be balanced around this, this will make the modifier system less useful and less impactful, especially when overpowered modded enchants are added. Consideration need to be made to make enchanting the main modifier system.</p>
+<h2 id="results-1"><a class="header" href="#results-1">Results</a></h2>
+<p>This poll is currently running in discord until saturday the 22th of March</p>
 <div style="break-before: page; page-break-before: always;"></div><object data="../other-files/meeting-notes/2025-02-22-DD-Weekly-Update.pdf" type="application/pdf" width="700px" height="700px">
     <embed src="../other-files/meeting-notes/2025-02-22-DD-Weekly-Update.pdf">
         <p>This browser does not support PDFs. Please download the PDF to view it: <a href="meetings/../other-files/meeting-notes/2025-02-22-DD-Weekly-Update.pdf">Download PDF</a>.</p>
