@@ -54,7 +54,11 @@ The POI sizes will be (X, Y, Z):
 (3, 3, 3)\*, (5, 5, 5), (7, 6, 7), (9, 8, 9), (11, 9, 11)\*.  
 This is the outer size of the POI, not counting the floor layer.  
 *Up for debate, might very well be removed.
-
+As a current rule of thumb, place at least an equal amount of rift chest as the size of the PoI.
+For example. In a 3,3,3 PoI place at least 3 chests.
+No decision has been made yet on the generation of the chests but this allows for many future options, such as x% of the chests will be generated. 
+ 
+Additionally make sure that the PoI jigsaw block has been setup properly to allow for a clean replacement and or rotation.
 
 ## POI naming
 To be decided
