@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>How to contribute - Wanderers of the Rift Internal Documentation</title>
+        <title>PM Responsibilites - Wanderers of the Rift Internal Documentation</title>
 
 
         <!-- Custom HTML head -->
@@ -12,32 +12,32 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="favicon.svg">
-        <link rel="shortcut icon" href="favicon.png">
-        <link rel="stylesheet" href="css/variables.css">
-        <link rel="stylesheet" href="css/general.css">
-        <link rel="stylesheet" href="css/chrome.css">
-        <link rel="stylesheet" href="css/print.css" media="print">
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
-        <link rel="stylesheet" href="fonts/fonts.css">
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" id="highlight-css" href="highlight.css">
-        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
-        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
 
 
         <!-- Provide site root to javascript -->
         <script>
-            var path_to_root = "";
+            var path_to_root = "../";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc.js"></script>
+        <script src="../toc.js"></script>
     </head>
     <body>
     <div id="body-container">
@@ -89,7 +89,7 @@
             <!-- populated by js -->
             <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
             <noscript>
-                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
             </noscript>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -123,13 +123,13 @@
                     <h1 class="menu-title">Wanderers of the Rift Internal Documentation</h1>
 
                     <div class="right-buttons">
-                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
                         <a href="https://github.com/Dimension-Delvers/dimension-delvers-docs" title="Git repository" aria-label="Git repository">
                             <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
-                        <a href="https://github.com/Dimension-Delvers/dimension-delvers-docs/edit/main/src/contribute.md" title="Suggest an edit" aria-label="Suggest an edit">
+                        <a href="https://github.com/Dimension-Delvers/dimension-delvers-docs/edit/main/src/project-team/pmresponsibilities" title="Suggest an edit" aria-label="Suggest an edit">
                             <i id="git-edit-button" class="fa fa-edit"></i>
                         </a>
 
@@ -158,77 +158,61 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="how-to-contribute"><a class="header" href="#how-to-contribute">How to Contribute</a></h1>
-<h2 id="how-to-create-pages"><a class="header" href="#how-to-create-pages">How to Create Pages</a></h2>
-<h3 id="1-get-access-to-the-repository"><a class="header" href="#1-get-access-to-the-repository">1. Get Access to the Repository</a></h3>
-<p>To add or edit pages in the mdBook, you need to be a member of the DD GitHub organization. If you haven't received an invite to the GitHub organization yet, please ask one of the organization Owners to invite you <a href="https://discord.com/channels/1328761294085554176/1338550392065232936">here</a>.</p>
-<h3 id="2-navigate-to-the-repository"><a class="header" href="#2-navigate-to-the-repository">2. Navigate to the Repository</a></h3>
-<ol>
-<li>Open the GitHub repository by clicking this link: <a href="https://github.com/Dimension-Delvers/dimension-delvers-docs/">https://github.com/Dimension-Delvers/dimension-delvers-docs/</a></li>
-</ol>
-<h3 id="3-find-the-src-folder"><a class="header" href="#3-find-the-src-folder">3. Find the <code>src</code> Folder</a></h3>
-<ol>
-<li>Inside the repository, look for a folder named <code>src</code>.</li>
-<li>This folder contains all the <code>.md</code> (Markdown) files used in the documentation.</li>
-</ol>
-<h3 id="4-create-a-new-page"><a class="header" href="#4-create-a-new-page">4. Create a New Page</a></h3>
-<ol>
-<li>Click the <code>Add file</code> button and select <code>Create new file</code>.</li>
-<li>Name your file with a <code>.md</code> extension (e.g., <code>new_page.md</code>). If you want to put the file in a folder, type the folder name followed by a / before the file name (e.g., <code>folder_name/new_page.md</code>).</li>
-<li>Write your content in Markdown format.</li>
-</ol>
-<h3 id="5-edit-an-existing-page"><a class="header" href="#5-edit-an-existing-page">5. Edit an Existing Page</a></h3>
-<ol>
-<li>Inside the <code>src</code> folder, find the file you want to edit.</li>
-<li>Click on it, then press the <code>Edit</code> button (pencil icon).</li>
-<li>Make your changes using Markdown syntax.</li>
-</ol>
-<h3 id="6-link-your-page"><a class="header" href="#6-link-your-page">6. Link Your Page</a></h3>
-<p>To make your page accessible from the book’s navigation:</p>
-<ol>
-<li>Open the <code>SUMMARY.md</code> file in the <code>src</code> folder.</li>
-<li>Add a new line with a link to your page in this format:
-<pre><code class="language-md">- [Page Title](new_page.md)
-</code></pre>
-</li>
-<li>Save your changes.</li>
-</ol>
-<h3 id="7-commit-your-changes"><a class="header" href="#7-commit-your-changes">7. Commit Your Changes</a></h3>
-<ol>
-<li>Press the green button in the top right of the page that says "Commit changes..."</li>
-<li>Add a short commit message (e.g., <code>Added new_page.md</code>).</li>
-<li>Click <code>Commit changes</code>.</li>
-</ol>
-<h3 id="markdown-quick-reference"><a class="header" href="#markdown-quick-reference">Markdown Quick Reference</a></h3>
+                        <h1 id="project-manager-responsibilities"><a class="header" href="#project-manager-responsibilities">Project Manager Responsibilities</a></h1>
+<h2 id="strategic-oversight-and-leadership"><a class="header" href="#strategic-oversight-and-leadership">Strategic Oversight and Leadership</a></h2>
 <ul>
-<li><strong>Headings</strong>: <code># Title</code>, <code>## Subtitle</code>, <code>### Section</code></li>
-<li><strong>Bold</strong>: <code>**bold text**</code></li>
-<li><strong>Italic</strong>: <code>*italic text*</code></li>
-<li><strong>Links</strong>: <code>[text](url)</code></li>
-<li><strong>Lists</strong>:
+<li>Provide overall strategic direction for the project, ensuring alignment with goals and objectives.</li>
+<li>Oversee Coordinators and facilitate collaboration between different sections.</li>
+<li>Exercise autonomy in logistical, structural, and organizational decisions that keep the project on track and functional.</li>
+<li>Make executive decisions when necessary to avoid project stagnation.</li>
+</ul>
+<h2 id="decision-making-and-conflict-resolution"><a class="header" href="#decision-making-and-conflict-resolution">Decision-Making and Conflict Resolution</a></h2>
 <ul>
-<li><code>- Item</code> (unordered)</li>
-<li><code>1. Item</code> (ordered)</li>
+<li>Facilitate resolution when major conflicts arise between teams or sections, ensuring a fair and balanced approach.</li>
+<li>Ensure all decisions align with the overall project vision.</li>
 </ul>
-</li>
-<li><strong>Code Blocks</strong>:
-<pre><code>\```language
-Code here
-\```
-</code></pre>
-(Remove the backslashes)</li>
+<h2 id="coordination-and-communication"><a class="header" href="#coordination-and-communication">Coordination and Communication</a></h2>
+<ul>
+<li>Serve as the primary point of communication between different sections and leadership.</li>
+<li>Facilitate discussions with Coordinators to track progress, address roadblocks, and set priorities when appropriate.</li>
+<li>Facilitate cross-team collaboration and ensure all sections are working in sync.</li>
 </ul>
-<p>If you have any questions, feel free to ask in the Discord server</p>
+<h2 id="resource-management-and-support"><a class="header" href="#resource-management-and-support">Resource Management and Support</a></h2>
+<ul>
+<li>Identify and allocate necessary resources to teams, including tools, assets, and personnel.</li>
+<li>Ensure teams have the support they need to complete their objectives.</li>
+</ul>
+<h2 id="documentation-and-oversight"><a class="header" href="#documentation-and-oversight">Documentation and Oversight</a></h2>
+<ul>
+<li>Maintain an overarching view of the project’s progress, keeping track of major developments.</li>
+<li>Ensure Coordinators are providing summaries and structuring their sections effectively.</li>
+<li>Keep key documentation up to date for transparency and continuity.</li>
+</ul>
+<h2 id="polls-and-decision-making"><a class="header" href="#polls-and-decision-making">Polls and Decision Making</a></h2>
+<ul>
+<li>Oversee the polling process and ensure that polls are structured effectively.</li>
+<li>Ensure transparency and community involvement in decision-making, allowing the community to prioritize features while maintaining project direction.</li>
+</ul>
+<h2 id="crisis-management-and-problem-solving"><a class="header" href="#crisis-management-and-problem-solving">Crisis Management and Problem-Solving</a></h2>
+<ul>
+<li>Address major issues that could disrupt project progress.</li>
+<li>Act swiftly to resolve problems, whether logistical, technical, or interpersonal.</li>
+</ul>
+<h2 id="long-term-planning-and-future-growth"><a class="header" href="#long-term-planning-and-future-growth">Long-Term Planning and Future Growth</a></h2>
+<ul>
+<li>Establish a roadmap for the project's long-term success.</li>
+<li>Work with Coordinators to adapt and evolve strategies as the project progresses.</li>
+</ul>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../contribute.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="project-team/pmresponsibilities.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../mvp.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -238,11 +222,11 @@ Code here
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../contribute.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="project-team/pmresponsibilities.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../mvp.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
@@ -257,13 +241,13 @@ Code here
         </script>
 
 
-        <script src="elasticlunr.min.js"></script>
-        <script src="mark.min.js"></script>
-        <script src="searcher.js"></script>
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
 
-        <script src="clipboard.min.js"></script>
-        <script src="highlight.js"></script>
-        <script src="book.js"></script>
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
 
         <!-- Custom JS scripts -->
 
