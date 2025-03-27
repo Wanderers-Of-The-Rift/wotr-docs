@@ -3,6 +3,7 @@
 [Introduction](README.md)
 
 - [How to contribute](contribute.md)
+- [PM Responsibilites](project-team/pmresponsibilities)
 - [Minimum Viable Product (MVP)](mvp.md)
 - [Mod(Pack) Design](design/DesignDocHome.md)
 - [Design]()
