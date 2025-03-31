@@ -507,11 +507,21 @@ public static final List&lt;Vector2i&gt; POSITIONS = List.of(
 }
 </code></pre>
 <p>This can be disabled by adding a comment of 'fall through' on the line before the case statement that can be fallen into.</p>
-<p>Similar to spotless, checkstyle checks can be disabled using <code>CHECKSTYLE.OFF: &lt;reason&gt;</code> and <code>CHECKSTYLE.ON: &lt;reason&gt;</code> comment pairs. e.g.</p>
+<p>Similar to spotless, checkstyle checks can be disabled using <code>CHECKSTYLE.OFF: &lt;Check&gt;</code> and <code>CHECKSTYLE.ON: &lt;Check&gt;</code> comment pairs. e.g.</p>
 <pre><code class="language-java">public void check() {
-    // CHECKSTYLE.OFF: Performance optimisation - braces reduce framerate
+    // CHECKSTYLE.OFF: NeedBraces - You cannot tell me what to do
     if (false) return;
-    // CHECKSTYLE.ON: Performance optimisation
+    // CHECKSTYLE.ON: NeedBraces
+}
+</code></pre>
+<p>However checkstyle additionally supports using the <code>@SuppressWarnings</code> annotation</p>
+<pre><code class="language-java">@SuppressWarnings({ "checkstyle:NeedBraces", "checkstyle:MethodName", "checkstyle:DeclarationOrder" })
+public class MyClass {
+    public void BAD_METHOD_NAME() {
+        if (true) return;
+    }
+    
+    public int value;
 }
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="datapack-formats-in-wotr"><a class="header" href="#datapack-formats-in-wotr">Datapack formats in WotR</a></h1>
