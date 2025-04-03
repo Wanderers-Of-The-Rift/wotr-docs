@@ -94,6 +94,7 @@ A theme will always make sure that those blocks will be turned into thematic blo
 | Yellow | 6    | `processor_block_6` | Planks     |
 | Black  | 7    | `processor_block_7` | Bricks     |
 | L_Blue | 8    | `processor_block_8` | Alt Path   | 
+
 Where walls, paths and floors comprise the bulk of the room.
 
 Alt wall can be used for etching, and indicators like cracks. Dark floor can be used in corners, further away from the path. Planks will (almost) always be planks, for things like bridges. Bricks can be used to indicate a more solid part.
