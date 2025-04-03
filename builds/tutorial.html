@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Mod Development - Wanderers of the Rift Internal Documentation</title>
+        <title>Tutorial - Wanderers of the Rift Internal Documentation</title>
 
 
         <!-- Custom HTML head -->
@@ -132,7 +132,7 @@
                         <a href="https://github.com/Dimension-Delvers/dimension-delvers-docs" title="Git repository" aria-label="Git repository">
                             <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
-                        <a href="https://github.com/Dimension-Delvers/dimension-delvers-docs/edit/main/src/resources/mod-development.md" title="Suggest an edit" aria-label="Suggest an edit">
+                        <a href="https://github.com/Dimension-Delvers/dimension-delvers-docs/edit/main/src/builds/tutorial.md" title="Suggest an edit" aria-label="Suggest an edit">
                             <i id="git-edit-button" class="fa fa-edit"></i>
                         </a>
 
@@ -161,20 +161,76 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="mod-development-resources"><a class="header" href="#mod-development-resources">Mod Development Resources</a></h1>
-<p><a href="https://docs.neoforged.net/">Neoforged Documentation</a></p>
-<p><a href="https://www.jetbrains.com/idea/download">Intellij Download</a> (scroll down to the free community edition)</p>
-<p><a href="https://www.youtube.com/@ModdingByKaupenjoe">Kaupenjoe's Tutorials</a> (follows along with a lot of the neoforged documentation</p>
-
+                        <!-- 
+Created by: Wout
+Date: 2025-04-03
+-->
+<h2 id="chapter-4-making-processors"><a class="header" href="#chapter-4-making-processors">Chapter 4: Making processors</a></h2>
+<p>To start with processor generation, download the following zip file:
+<code>json_generator.zip</code> from <a href="https://discord.com/channels/1328761294085554176/1335631637769097236/1357334905922523236">here</a>.
+It uses <a href="https://www.python.org/downloads/">Python 3</a>.
+It is also useful to open Jade plugin setting in-game (num 0 by default), scroll down to the very bottom and enable both "Registry Name" and "Block States".
+This makes you able to see the names of the blocks you want to use, and their properties.<br />
+In the sheets, only the <strong>yellow</strong> cells should be filled in, but not all yellow cells need to be completed.</p>
+<h3 id="custom-processors"><a class="header" href="#custom-processors">Custom processors</a></h3>
+<p>To create a custom processor for 1 processor block, use <code>processor_single_sheet.xlsx</code>. If you want to use a custom processor for multiple processor blocks, use
+<code>processor_multiple_sheet.xlsx</code> instead. You only need to fill in the yellow cells of the blocks you've used, but make sure it is for the right number processor block.
+State is the block the processor block turns into, for example <code>minecraft:stone</code>, and step is the portion that will get this state. It is not equal to percentage,
+as it scales exponentially down. A step size of 25 for block A and 75 for block B will give a 50/50 distribution when generated. The random noise used is simplex,
+it will generate smooth, organic-looking patterns with continuous gradients, like layered spheres. The sum of the steps need to equal 1, anything higher will not get
+used, and lower means some of the processor blocks will not get transformed.
+Checksum will turn green if the total is 1, as indicator.</p>
+<p>A processor will generate a number between 0 and 1, and will look what block it wants to replace.
+Then, it will stack the steps from left to right, adding the numbers, and look for the block that belongs to this number.
+Let's say it wants to replace <code>processor_block_10</code>, and generates number <code>0.7</code>. Now if, for example, in the spreadsheet you
+have <code>minecraft:stone   0.6</code> and <code>minecraft:dirt   0.4</code>, it will replace <code>processor_block_10</code> into <code>minecraft_dirt</code>. If, instead,
+the number generated was <code>0.3</code>, the block turns into <code>minecraft_stone</code>. So, every block is like another layer in an onion, with the step sizes
+being the thickness of the layer, and the left-most step being the outer layer.</p>
+<p>When you're done filling in the rows of the blocks you have used, save the sheet as:
+<code>processor_single_sheet.csv</code> or <code>processor_multiple_sheet.csv</code>, respectively. Place this file in the same folder as the belonging python script
+(<code>single_json_generator.py</code> or <code>multiple_json_generator.py</code>). Run this, and enter the type of structure you want this processor for, either Room or POI.
+Do not change the output name, please.</p>
+<p>The last thing to do, is filling in the name of your custom processor into the Builders sheet, and give the json file to a Build Coordinator.
+When approved, they will put it into the mod, together with your structure.</p>
+<h3 id="making-a-theme"><a class="header" href="#making-a-theme">Making a theme</a></h3>
+<p>Before making a theme, please inform the Build Coordinator, to make sure it can get used and no double themes are made. To start making a theme, use the <code>processor_theme_sheet.xlsx</code> sheet.
+Theme making is similar to custom processor making, but require a state for every processor block. This is because builders can use every fixed processor block, with the knowledge it
+will be processed when generated. The checksum column should be fully green.
+Save this as <code>processor_theme_sheet.csv</code>, and run the python script. Enter Room or POI (often you want both, so run twice), and pick the custom choices in the popup. For POIs this is
+only a chest for now, so press "OK", and you're done. For rooms, more options are available. At the top, there are a few toggle options, for if you want mushrooms or not,
+for example. Below that, under the "Attachments" section, there are more customizable options. A list of example attachments is below in Appendix A. This can
+generate lanterns on the ceiling, rails on the floor, or bee nests on the walls, for example, but more are possible. "Name" is the name of the block you want to attach,
+"Rarity" is how often it occurs (between 0 and 1), "Up" is if it requires to touch the ceiling, "Down" is for when it requires to touch a floor, "Sides" is for how many walls it has to
+be up against, "Property" is a block property you can give it, and "Value" is the value of that property. Try different rarities and properties to find whatever suits your theme.
+Using Jade in-game with the advanced settings enabled, you can find the properties in the box. It is currently not possible to adjust the "facing" property to the wall it touches, so
+torches against the wall do not stick out of the wall, but are rotated.</p>
+<h2 id="chapter-5-questions-ask-for-help"><a class="header" href="#chapter-5-questions-ask-for-help">Chapter 5: Questions? Ask for help!</a></h2>
+<p>If there is anything that is not clear, or would like to know a bit more about, do not hesitate to ask questions in the <a href="https://discord.com/channels/1328761294085554176/1335631637769097236">build chat</a>!
+There are enough members willing
+to help you out. It is also very possible that more info needs to be given in this tutorial, so don't hold back.<br />
+AND SAVE YOUR STRUCTURES!</p>
+<h2 id="appendix-a"><a class="header" href="#appendix-a">Appendix A</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>Description</th><th>Name</th><th>Rarity</th><th>Up</th><th>Down</th><th>Sides</th><th>Property 1</th><th>Value 1</th><th>Property 2</th><th>Value 2</th></tr></thead><tbody>
+<tr><td>Lantern on ceiling</td><td>minecraft:lantern</td><td>0.01</td><td>V</td><td></td><td></td><td>hanging</td><td>true</td><td></td><td></td></tr>
+<tr><td>Rails on the floor</td><td>minecraft:rail</td><td>0.02</td><td></td><td>V</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>Bee nests on walls</td><td>minecraft:bee_nest</td><td>0.01</td><td></td><td></td><td>1</td><td>honey_level</td><td>5</td><td></td><td></td></tr>
+<tr><td>Stalactites</td><td>minecraft:pointed_dripstone</td><td>0.02</td><td>V</td><td></td><td></td><td>vertical_direction</td><td>down</td><td></td><td></td></tr>
+<tr><td>Stalagmites</td><td>minecraft:pointed_dripstone</td><td>0.02</td><td></td><td>V</td><td></td><td>vertical_direction</td><td>up</td><td></td><td></td></tr>
+<tr><td>Cobweb in corners</td><td>minecraft:cobweb</td><td>0.05</td><td>V</td><td></td><td>1</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>Glowberries on ceiling</td><td>minecraft:cave_vines</td><td>0.01</td><td>V</td><td></td><td></td><td>berries</td><td>true</td><td></td><td></td></tr>
+<tr><td>Waterlogged chain</td><td>minecraft:chain</td><td>0.05</td><td></td><td>V</td><td></td><td>axis</td><td>y</td><td>waterlogged</td><td>true</td></tr>
+<tr><td>Random floating slime</td><td>minecraft:slime_block</td><td>0.05</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+</tbody></table>
+</div>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../builds/tutorial.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../builds/processors.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../glossary.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../resources/mod-development.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -184,11 +240,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../builds/tutorial.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../builds/processors.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../glossary.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../resources/mod-development.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
