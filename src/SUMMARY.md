@@ -23,6 +23,7 @@
 - [Builds]()
     - [Standards](builds/standards.md)
     - [Processors](builds/processors.md)
+    - [Tutorial](builds/tutorial.md)
 - [Resources]()
     - [Mod Development](resources/mod-development.md)
 - [Glossary](glossary.md)
