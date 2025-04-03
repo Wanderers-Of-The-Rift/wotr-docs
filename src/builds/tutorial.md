@@ -129,7 +129,7 @@ If you use custom processor blocks, you must provide the processor yourself. Thi
 `Picture`
 
 ### Lighting
-To light up the room, use light blocks. They are found in the "Operator Utilities" tab in creative mode.
+_Poll is up for this_
 
 ### POIs
 When building a room, you need to include POIs. This can be done by adding Jigsaw Blocks.
