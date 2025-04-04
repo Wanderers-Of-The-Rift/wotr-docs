@@ -137,8 +137,15 @@ When building a room, you need to include POIs. This can be done by adding Jigsa
 
 Load `jigsaw_palette` to get the correct settings for all Jigsaw blocks. You can control middle-click the one you want, and place it on the correct location. They are named, so they are distinguishable in your inventory. Keep in mind how far the POI you place will reach in every dimension, they will destroy blocks when necessary! In-wall POIs do carve deep, and free standing go up high.
 
-### Server build indicators
-_To be filled_
+### Server Build Indicators
+On the server, wool blocks are used to indicate the status of your Room, and the sizes of the POIs. If you've installed the resource pack, they have replaced the wool textures. POI size indicators have a number on them. The status blocks indicate:
+ - Red: Still building.
+ - Yellow: Would like feedback for finishing touches.
+ - Lime: Finished, ready for review.
+ - Blue: Want help with placing POIs.
+ - Cyan: The POIs are placed by builder.
+
+To set your structure as finished, you have to add the name on the Builders sheet. Only then it can be put in the mod.
 
 ### Saving
 To save your created structure, locate the structure block for saving. For rooms, they are the inner structure block. For 
