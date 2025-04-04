@@ -205,7 +205,7 @@ They are placed on the outside of the Rift.</li>
 <li>Halfway: POIs that are half insid- and half outside (rounded up) the wall.</li>
 <li>Ceiling: Those POIs are placed on the ceiling of the rooms, like a chandelier.</li>
 </ul>
-<h3 id="structure-and-jigsaw-blocks"><a class="header" href="#structure-and-jigsaw-blocks">Structure and Jigsaw blocks</a></h3>
+<h3 id="structure-blocks-and-jigsaw-blocks"><a class="header" href="#structure-blocks-and-jigsaw-blocks">Structure blocks and Jigsaw blocks</a></h3>
 <p>The created structures are saved using structure blocks. If you use the templates, those are provided. Do not forget to use them to save, however.
 Jigsaw blocks are the blocks that make generation of Rooms and POIs possible. They are pre-configured too.</p>
 <h3 id="processor-blocks"><a class="header" href="#processor-blocks">Processor blocks</a></h3>
@@ -219,9 +219,11 @@ are provided. On singleplayer, you can use the command: <code>command here</code
 <p>To get consistent and quality rooms, there are a few rules we agreed upon:</p>
 <ul>
 <li>Naming: The created room has to be saved using the following structure:
-<code>wotr:rift/room/stability/XYZ/roomname_x_signature</code>.
-Where Stability is Stable, Unstable or Chaos, XYZ is the size in every direction (1, 2 or 3), and roomname is the name of the room, chosen by the builder, x is the variation number, signature is the builders signature.
-Example: wotr:rift/room/stable/333/testRoom_1_builderName.</li>
+<code>wotr:rift/room/stability/XYZ/main_feature-#-signature</code>.
+Where Stability is Stable, Unstable or Chaos, XYZ is the size in every direction (1, 2 or 3), and mainfeature is the main feature of the room, chosen by the builder, # is the variation number, signature is the builders signature.
+Example: wotr:rift/room/stable/333/testRoom_1_builderName.<br />
+The created POI has to be saved as the following: <code>wotr:rift/poi/type/size/main_feature-#-signature</code>.<br />
+Here, type is free, inwall, halfway or ceiling. Size is one of 3, 5, 7, 9 or 11.</li>
 <li>Room surfaces: The surfaces of the Rooms need to be at least 3 blocks thick. This is to prevent a casual player to accidentally
 dig into bedrock. This is not a hard rule, but around 90% of the surfaces need to have this thickness. The exception for this are (1xYx1) Chaos rooms, as they are too small otherwise, and may use 2 blocks thick surfaces.</li>
 <li>POI chests and spawner: Every POI needs at least an amount of chests equal to its length, and 1 trial spawner.</li>
@@ -294,7 +296,7 @@ The reason those are not fixed processor blocks, is that only a small amount of 
 <p>To set your structure as finished, you have to add the name on the Builders sheet. Only then it can be put in the mod.</p>
 <h3 id="saving"><a class="header" href="#saving">Saving</a></h3>
 <p>To save your created structure, locate the structure block for saving. For rooms, they are the inner structure block. For
-POIs, they are the top structure block. Make sure you use the correct naming convention, as explained above.
+POIs, they are the top structure block. Make sure you use the correct naming convention, as written in rules.
 <code>2 pictures missing</code></p>
 <p>To allow the mod to use your structure, copy-paste the structure name into the Builders Sheet in the correct location (Room and POI
 tabs). Ask in chat for a review.</p>
