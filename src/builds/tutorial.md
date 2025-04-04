@@ -46,7 +46,7 @@ There are also varieties of POIs:
  - Halfway: POIs that are half insid- and half outside (rounded up) the wall. 
  - Ceiling: Those POIs are placed on the ceiling of the rooms, like a chandelier.
 
-### Structure and Jigsaw blocks
+### Structure blocks and Jigsaw blocks
 The created structures are saved using structure blocks. If you use the templates, those are provided. Do not forget to use them to save, however.
 Jigsaw blocks are the blocks that make generation of Rooms and POIs possible. They are pre-configured too.
 
@@ -63,9 +63,11 @@ are provided. On singleplayer, you can use the command: `command here` to spawn 
 ## Chapter 3: Building and rules
 To get consistent and quality rooms, there are a few rules we agreed upon:
  - Naming: The created room has to be saved using the following structure:
-   `wotr:rift/room/stability/XYZ/roomname_x_signature`.
-   Where Stability is Stable, Unstable or Chaos, XYZ is the size in every direction (1, 2 or 3), and roomname is the name of the room, chosen by the builder, x is the variation number, signature is the builders signature.
-   Example: wotr:rift/room/stable/333/testRoom_1_builderName.
+   `wotr:rift/room/stability/XYZ/main_feature-#-signature`.
+   Where Stability is Stable, Unstable or Chaos, XYZ is the size in every direction (1, 2 or 3), and mainfeature is the main feature of the room, chosen by the builder, # is the variation number, signature is the builders signature.
+   Example: wotr:rift/room/stable/333/testRoom_1_builderName.  
+The created POI has to be saved as the following: `wotr:rift/poi/type/size/main_feature-#-signature`.  
+Here, type is free, inwall, halfway or ceiling. Size is one of 3, 5, 7, 9 or 11.
  - Room surfaces: The surfaces of the Rooms need to be at least 3 blocks thick. This is to prevent a casual player to accidentally
 dig into bedrock. This is not a hard rule, but around 90% of the surfaces need to have this thickness. The exception for this are (1xYx1) Chaos rooms, as they are too small otherwise, and may use 2 blocks thick surfaces.
  - POI chests and spawner: Every POI needs at least an amount of chests equal to its length, and 1 trial spawner. 
@@ -149,7 +151,7 @@ To set your structure as finished, you have to add the name on the Builders shee
 
 ### Saving
 To save your created structure, locate the structure block for saving. For rooms, they are the inner structure block. For 
-POIs, they are the top structure block. Make sure you use the correct naming convention, as explained above.
+POIs, they are the top structure block. Make sure you use the correct naming convention, as written in rules.
 `2 pictures missing`
 
 To allow the mod to use your structure, copy-paste the structure name into the Builders Sheet in the correct location (Room and POI 
