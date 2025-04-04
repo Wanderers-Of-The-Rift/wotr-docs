@@ -132,9 +132,10 @@ If you use custom processor blocks, you must provide the processor yourself. Thi
 ### Lighting
 _Poll is up for this_
 
-### POIs
-When building a room, you need to include POIs. This can be done by adding Jigsaw Blocks.
-Load `jigsaw_palette`, control middle-click the one you want, and place it on the correct location.
+### POIs in Rooms 
+When building a room, you need to include POIs. This can be done by adding Jigsaw Blocks. A POI will be generated against the Jigsaw, so it must be placed a bit further. This means that for a free standing poi, the Jigsaw must be placed 2 blocks deep in the floor. The same applies to halfway POIs, but for those you must also have the small line on the Jigsaw block towards you, and away from the wall. It should also be placed against the wall. The ceiling Jigsaw must be placed 2 layers in the ceiling. For the in-wall Jigsaw, however, placement is different. Those must be placed against the wall, with the face towards the wall. This is because when it generates, it generates towards the wall, and thus be placed inside. A placement example is on the server, or can be loaded with `jigsaw example name`.
+
+Load `jigsaw_palette` to get the correct settings for all Jigsaw blocks. You can control middle-click the one you want, and place it on the correct location. They are named, so they are distinguishable in your inventory. Keep in mind how far the POI you place will reach in every dimension, they will destroy blocks when necessary! In-wall POIs do carve deep, and free standing go up high.
 
 ### Server build indicators
 _To be filled_
