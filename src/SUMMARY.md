@@ -25,6 +25,8 @@
     - [Processors](builds/processors.md)
     - [Tutorial](builds/tutorial.md)
 - [Resources]()
+    - [Tools](resources/tools/README.md)
+		- [Palette Swapper](resources/tools/pallete-swapper.md)
     - [Mod Development](resources/mod-development.md)
 - [Glossary](glossary.md)
 - [Polls](polls/polls.md)
