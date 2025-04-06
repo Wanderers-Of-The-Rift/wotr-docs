@@ -99,7 +99,7 @@ Where walls, paths and floors comprise the bulk of the room.
 
 Alt wall can be used for etching, and indicators like cracks. Dark floor can be used in corners, further away from the path. Planks will (almost) always be planks, for things like bridges. Bricks can be used to indicate a more solid part.
 The alt path can be used to surround the path, to make it blend in a bit more.
-Water can be used as the themed liquid.
+Water can be used as the themed liquid. If you want themed leaves, use 'processor_block_6_glass', which will often be turned into leaves. If you always want leaves, use a custom processor block family.
 
 The specific blocks have a suffix like: `processor_block_1_slab`.
 Every family of processor blocks contains:
@@ -112,11 +112,11 @@ Every family of processor blocks contains:
  - Pressure plate
  - Fence
  - Fence gate
- - Bars
- - Door
+ - Pane
+ - Glass
  - Trapdoor
 
-`picture`
+<img src="processor_family.png" alt="processor_family" width="50%"/>
 
 ### Using custom processor blocks
 You can also use custom processor blocks, if you want a block that does not fit in any of the fixed categories, or if you want a block 
@@ -125,9 +125,10 @@ Examples are: glass or wood. A glass block does not belong to Wall or Floor, but
 When you are creating a tree, you always want this to be made out of wood, regardless of theme, so use a custom processor block for this too.
 The reason those are not fixed processor blocks, is that only a small amount of structures will use them, and now the processor block number can be used for other things, with other structures.
 
-If you use custom processor blocks, you must provide the processor yourself. This will be explained in a later Chapter.
+If you use custom processor blocks, you must provide the processor yourself. This will be explained in a later Chapter.  
+The full set of processor blocks is shown below, where the first 8 are fixed families, and the last 7 are custom.
 
-`Picture`
+<img src="palette_full.png" alt="palette_full" width="50%"/>
 
 ### Lighting
 _Poll is up for this_
