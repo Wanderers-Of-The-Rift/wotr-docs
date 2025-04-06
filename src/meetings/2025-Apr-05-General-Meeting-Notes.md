@@ -1,3 +1,9 @@
+<object data="../other-files/meeting-notes/Wanderers Weekly Update April 5.pdf" type="application/pdf" width="700px" height="700px">
+    <embed src="../other-files/meeting-notes/Wanderers Weekly Update April 5.pdf">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="../other-files/meeting-notes/Wanderers Weekly Update April 5.pdf">Download PDF</a>.</p>
+    </embed>
+</object>
+
 ## == Kudos and Recognition ==
 Kudos to Dev team in difficult time of trying to fit everything together for the MVP, Donoraffe jumping in quickly, Bullzey for work on build server, Robotmonkey for winning Dev coord role, Sp3cialK for great build work
 
