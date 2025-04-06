@@ -9,15 +9,13 @@ _(Work In Progress, also some things are not yet implemented)_
  - [Appendix A](#appendix-a)
 
 ## Chapter 1: Setting up
-To get started with building for WotR, first you need to download [Prims modloader](https://prismlauncher.org/download/windows/).  
-And the builders [modpack](https://discord.com/channels/1328761294085554176/1336719831537553469/1352027237821710509).
-
+To get started with building for WotR, first you need to download [Prims modloader](https://prismlauncher.org/download/windows/), and the builders [modpack](https://discord.com/channels/1328761294085554176/1336719831537553469/1352027237821710509).
 After setting up Prism, click on "Add Instance", "Import", "Browse" and locate the Builders Modpack you've just downloaded.
 
 Another great tool to download is the [resource pack](https://discord.com/channels/1328761294085554176/1336719831537553469/1352674512340258966), which is used to indicate the status of your builds. Launch the Builders Mod, go to "Options", "Resource Packs", "Open Pack Folder" and place the resource pack .zip in here.
 Make sure you enable it by pressing the arrow on the icon.
 
-Before you can get on the Builders Server, put your minecraft name in the [Build Server Whitelist channel](https://discord.com/channels/1328761294085554176/1336719831537553469). Offline building is also possible.
+Before you can get on the Builders Server, put your minecraft name in the [Build Server Whitelist channel](https://discord.com/channels/1328761294085554176/1336719831537553469), but offline building is also possible.
 The last thing you need to do, is putting your Discord name and timezone in the [Builders Sheet](https://discord.com/channels/1328761294085554176/1335631637769097236/1341132646612336773), and pick an unused signature. This sheet will be used throughout the tutorial.
 
 
@@ -151,7 +149,7 @@ To set your structure as finished, you have to add the name on the Builders shee
 
 ### Saving
 To save your created structure, locate the structure block for saving. For rooms, they are the inner structure block. For 
-POIs, they are the top structure block. Make sure you use the correct naming convention, as written in rules.
+POIs, they are the top structure block. Make sure you use the correct naming convention, as written in rules. To save, press the right "SAVE" button.
 `2 pictures missing`
 
 To allow the mod to use your structure, copy-paste the structure name into the Builders Sheet in the correct location (Room and POI 
@@ -164,6 +162,7 @@ It uses [Python 3](https://www.python.org/downloads/).
 It is also useful to open Jade plugin setting in-game (num 0 by default), scroll down to the very bottom and enable both "Registry Name" and "Block States".
 This makes you able to see the names of the blocks you want to use, and their properties.  
 In the sheets, only the **yellow** cells should be filled in, but not all yellow cells need to be completed.
+
 ### Custom processors
 To create a custom processor for 1 processor block, use `processor_single_sheet.xlsx`. If you want to use a custom processor for multiple processor blocks, use
 `processor_multiple_sheet.xlsx` instead. You only need to fill in the yellow cells of the blocks you've used, but make sure it is for the right number processor block.
