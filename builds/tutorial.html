@@ -252,7 +252,7 @@ A theme will always make sure that those blocks will be turned into thematic blo
 <p>Where walls, paths and floors comprise the bulk of the room.</p>
 <p>Alt wall can be used for etching, and indicators like cracks. Dark floor can be used in corners, further away from the path. Planks will (almost) always be planks, for things like bridges. Bricks can be used to indicate a more solid part.
 The alt path can be used to surround the path, to make it blend in a bit more.
-Water can be used as the themed liquid.</p>
+Water can be used as the themed liquid. If you want themed leaves, use 'processor_block_6_glass', which will often be turned into leaves. If you always want leaves, use a custom processor block family.</p>
 <p>The specific blocks have a suffix like: <code>processor_block_1_slab</code>.
 Every family of processor blocks contains:</p>
 <ul>
@@ -265,19 +265,20 @@ Every family of processor blocks contains:</p>
 <li>Pressure plate</li>
 <li>Fence</li>
 <li>Fence gate</li>
-<li>Bars</li>
-<li>Door</li>
+<li>Pane</li>
+<li>Glass</li>
 <li>Trapdoor</li>
 </ul>
-<p><code>picture</code></p>
+<img src="processor_family.png" alt="processor_family" width="50%"/>
 <h3 id="using-custom-processor-blocks"><a class="header" href="#using-custom-processor-blocks">Using custom processor blocks</a></h3>
 <p>You can also use custom processor blocks, if you want a block that does not fit in any of the fixed categories, or if you want a block
 to always be from the same set.
 Examples are: glass or wood. A glass block does not belong to Wall or Floor, but having the color randomly be generated is nice, so you can use a custom processor block for this.
 When you are creating a tree, you always want this to be made out of wood, regardless of theme, so use a custom processor block for this too.
 The reason those are not fixed processor blocks, is that only a small amount of structures will use them, and now the processor block number can be used for other things, with other structures.</p>
-<p>If you use custom processor blocks, you must provide the processor yourself. This will be explained in a later Chapter.</p>
-<p><code>Picture</code></p>
+<p>If you use custom processor blocks, you must provide the processor yourself. This will be explained in a later Chapter.<br />
+The full set of processor blocks is shown below, where the first 8 are fixed families, and the last 7 are custom.</p>
+<img src="palette_full.png" alt="palette_full" width="50%"/>
 <h3 id="lighting"><a class="header" href="#lighting">Lighting</a></h3>
 <p><em>Poll is up for this</em></p>
 <h3 id="pois-in-rooms"><a class="header" href="#pois-in-rooms">POIs in Rooms</a></h3>
