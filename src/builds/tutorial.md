@@ -133,9 +133,11 @@ If you use custom processor blocks, you must provide the processor yourself. Thi
 _Poll is up for this_
 
 ### POIs in Rooms 
-When building a room, you need to include POIs. This can be done by adding Jigsaw Blocks. A POI will be generated against the Jigsaw, so it must be placed a bit further. This means that for a free standing poi, the Jigsaw must be placed 2 blocks deep in the floor. The same applies to halfway POIs, but for those you must also have the small line on the Jigsaw block towards you, and away from the wall. It should also be placed against the wall. The ceiling Jigsaw must be placed 2 layers in the ceiling. For the in-wall Jigsaw, however, placement is different. Those must be placed against the wall, with the face towards the wall. This is because when it generates, it generates towards the wall, and thus be placed inside. A placement example is on the server, or can be loaded with `jigsaw example name`.
+When building a room, you need to include POIs. This can be done by adding Jigsaw Blocks. A POI will be generated against the Jigsaw, so it must be placed a bit further. This means that for a free standing poi, the Jigsaw must be placed 2 blocks deep in the floor. The same applies to halfway POIs, but for those you must also have the small line on the Jigsaw block towards you, and away from the wall. It should also be placed against the wall. The ceiling Jigsaw must be placed 2 layers in the ceiling. For the in-wall Jigsaw, however, placement is different. Those must be placed against the wall, with the face towards the wall. This is because when it generates, it generates towards the wall, and thus be placed inside. A placement example is on the server, or can be loaded with `wotr:guides/jigsaw_placement`.
+<img src="Jigsaw_example.png" alt="jigsaw_example" width="50%"/>
 
-Load `jigsaw_palette` to get the correct settings for all Jigsaw blocks. You can control middle-click the one you want, and place it on the correct location. They are named, so they are distinguishable in your inventory. Keep in mind how far the POI you place will reach in every dimension, they will destroy blocks when necessary! In-wall POIs do carve deep, and free standing go up high.
+Load `wotr:guides/jigsaw_palette` to get the correct settings for all Jigsaw blocks. You can control middle-click the one you want, and place it on the correct location. They are named, so they are distinguishable in your inventory. Keep in mind how far the POI you place will reach in every dimension, they will destroy blocks when necessary! In-wall POIs do carve deep, and free standing go up high.
+<img src="jigsaw_palette.png" alt="jigsaw_palette" width="50%"/>
 
 ### Server Build Indicators
 On the server, wool blocks are used to indicate the status of your Room, and the sizes of the POIs. If you've installed the resource pack, they have replaced the wool textures. POI size indicators have a number on them. The status blocks indicate:
@@ -146,11 +148,14 @@ On the server, wool blocks are used to indicate the status of your Room, and the
  - Cyan: The POIs are placed by builder.
 
 To set your structure as finished, you have to add the name on the Builders sheet. Only then it can be put in the mod.
+<img src="status_blocks.png" alt="status_blocks" width="50%"/>
+
 
 ### Saving
 To save your created structure, locate the structure block for saving. For rooms, they are the inner structure block. For 
 POIs, they are the top structure block. Make sure you use the correct naming convention, as written in rules. To save, press the right "SAVE" button.
-`2 pictures missing`
+<img src="save_room.png" alt="save_room" width="50%"/><img src="save_poi.png" alt="save_poi" width="50%"/>
+
 
 To allow the mod to use your structure, copy-paste the structure name into the Builders Sheet in the correct location (Room and POI 
 tabs). Ask in chat for a review.
