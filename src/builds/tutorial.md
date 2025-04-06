@@ -112,8 +112,8 @@ Every family of processor blocks contains:
  - Pressure plate
  - Fence
  - Fence gate
- - Glass pane
  - Glass
+ - Glass pane
  - Trapdoor
 
 <img src="processor_family.png" alt="processor_family" width="50%"/>
