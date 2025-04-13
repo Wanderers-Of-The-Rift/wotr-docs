@@ -1,3 +1,9 @@
+<object data="../other-files/meeting-notes/Wanderers Weekly Update April 12.pdf" type="application/pdf" width="700px" height="700px">
+    <embed src="../other-files/meeting-notes/Wanderers Weekly Update April 12.pdf">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="../other-files/meeting-notes/Wanderers Weekly Update April 12.pdf">Download PDF</a>.</p>
+    </embed>
+</object>
+
 ## == Kudos and Recognition ==
 Docs team and Cjzech for work on summaries 
 
