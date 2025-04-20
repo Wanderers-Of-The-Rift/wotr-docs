@@ -1,6 +1,6 @@
-<object data="../other-files/meeting-notes/Wanderers Weekly Update April 20.pdf" type="application/pdf" width="700px" height="700px">
-    <embed src="../other-files/meeting-notes/Wanderers Weekly Update April 20.pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="../other-files/meeting-notes/Wanderers Weekly Update April 20.pdf">Download PDF</a>.</p>
+<object data="../other-files/meeting-notes/Wanderers Weekly Update April 19.pdf" type="application/pdf" width="700px" height="700px">
+    <embed src="../other-files/meeting-notes/Wanderers Weekly Update April 19.pdf">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="../other-files/meeting-notes/Wanderers Weekly Update April 19.pdf">Download PDF</a>.</p>
     </embed>
 </object>
 
