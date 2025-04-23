@@ -9,7 +9,7 @@ _(Work In Progress, also some things are not yet implemented)_
  - [Appendix A](#appendix-a)
 
 ## Chapter 1: Setting up
-To get started with building for WotR, first you need to download [Prims modloader](https://prismlauncher.org/download/windows/), and the builders [modpack](https://discord.com/channels/1328761294085554176/1336719831537553469/1352027237821710509).
+To get started with building for WotR, first you need to download [Prims modloader](https://prismlauncher.org/download/windows/), and the builders [modpack](https://discord.com/channels/1328761294085554176/1364338331554418798).
 After setting up Prism, click on "Add Instance", "Import", "Browse" and locate the Builders Modpack you've just downloaded.
 
 Another great tool to download is the [resource pack](https://discord.com/channels/1328761294085554176/1336719831537553469/1352674512340258966), which is used to indicate the status of your builds. Launch the Builders Mod, go to "Options", "Resource Packs", "Open Pack Folder" and place the resource pack .zip in here.
@@ -55,7 +55,7 @@ a processor block in a cave theme will turn into stone, but the same block in a 
 
 ### Guides in game
 At the spawn location of the build server, a few guides are placed that give examples of the things above, and empty templates
-are provided. On singleplayer, you can use the command: `command here` to spawn in the guideline pieces.
+are provided. On singleplayer, you can use the command: `/spawnpiece wotr:guides/[guide]` to spawn in the guideline pieces. There is an example hallway, showing what the processor blocks do. There are also several palettes for processor blocks. You can copy-paste by control-middleclick on the structure block, so you can have one near your building area. There is also a jigsaw palette, and example placements included. 
 
 
 ## Chapter 3: Building and rules
@@ -74,10 +74,9 @@ fill the doorway with bedrock, this will be generated automatically.
 
 ### Spawning template
 On the build server, a template for every structure is provided, and placed in an appropriate location. To make locating this easy, Stable room templates are light gray, Unstable room templates
-are pink, and Chaos room templates are red. If there are no empty templates for the structure you want to build, please contact a
-build coordinator. 
+are pink, and Chaos room templates are red. If there are no empty templates for the structure you want to build, please contact a build coordinator. 
 
-In a singleplayer world, you can use the command `Command here` to spawn in the template of the structure you want to build.
+In a singleplayer world, you can use the command `/spawnpiece wotr:templates/[structure]` to spawn in the template of the structure you want to build. Be careful, they might be bigger than expected, and there is no undo command. 
 
 ### Using fixed processor blocks
 There are fixed and custom processor blocks. Fixed processor blocks are always used for the same purpose, a wall processor block should always be used for walls.
