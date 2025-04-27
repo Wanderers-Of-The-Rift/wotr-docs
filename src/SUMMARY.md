@@ -45,5 +45,6 @@
         - [Apr-05-2025 Community Meeting](meetings/2025-Apr-05-General-Meeting-Notes.md)
         - [Apr-12-2025 Community Meeting](meetings/2025-Apr-12-General-Meeting-Notes.md)
         - [Apr-19-2025 Community Meeting](meetings/2025-Apr-19-General-Meeting-Notes.md)
+        - [Apr-26-2025 Community Meeting](meetings/2025-Apr-26-General-Meeting-Notes.md)
     - [PM Meetings]() 
         - [Feb-08-2025 Community Meeting](meetings/2025-Feb-08-PM-Meeting-Notes.md) 
