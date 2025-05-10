@@ -18,6 +18,8 @@ Vanilla gear supports implicit modifiers
 3 Abilities in game currently: Fireball, Dash, Heal
 Loot is in game
 
+There will be files released for Curseforge/Modrinth.
+
 Considerations: 
 No balance testing done yet, minimal bug testing done, focus on functionality, no riftmapper (Yet), GeckoLib required, Low performance during rift gen currently. 
 
