@@ -9,12 +9,18 @@ We should try to always keep this style aspect because it's what makes items loo
 Many may not realize but even the darker border follows shading/lighting where the bottom sides are often darker to give a shadow effect.
 ![border-shading](examples/border-shading.png)
 And it can be subtle or even a bit more contrasting.
-A Minecraft item slot in almost all GUI containers like the inventory are all 16x16
+A Minecraft item slot in almost all GUI containers like the inventory are all 16x160
+
 ![item-slot](examples/item-slot.png)
+
 As much as humanly possible we should strive to always keep a 1px space between items and the border of the 16x16 box
+
 ![margin](examples/margin.png)
+
 Sometimes this is not always possible, but we should try to keep it this way as much as we possibly can. Here is an example of how it sometimes does not:
+
 ![margin-exception](examples/margin-exception.png)
+
 It's okay if small parts sometimes touch the edges, just try to refrain from having things touch edges as much as possible.
 (This only applies to items that will be in inventory - this does not apply to icons like abilities)
 #### Icons should be fairly simplified, but this does not mean that they should be flat or boring
@@ -32,4 +38,5 @@ If you make very over-complicated icons, the details can get lost or blend toget
 ![tiling](examples/tiling.png)You typically want to be creating seamless tiles in most cases
 Of course there are exceptions - and they are for a good reason.
 ![tiling-exception](examples/tiling-exception.png)
+
 Like with things such as a diamond, gold, iron blocks, and even blocks like the sealantern as well
