@@ -6,8 +6,8 @@ Wanderers of the Rift, or WotR for short, is an ARPG, dungeon crawler modpack fo
 
 # **The new dimensions**
 
-You can find rifts that lead to new dimensions. To enter a rift, you must weave your own rifts through the \[Rift Spawner\]. Each rift leads to a procedurally generated dimension with tons of loot in the form of mob drops, chests and special encounters. Weave your rifts using a  
-\[rift key\], that you can craft in a \[Key Forge\]. Right-clicking on a \[rift spawner\] with a key will open a rift. Currently, you can craft \[rift keys\] from any vanilla item. Below, you can find the recipes for the \[rift spawner and the key forge\].
+You can create rifts that lead to new dimensions. To enter a rift, you must weave your own rifts through the use of a [Rift Key] and a [Rift Spawner]. You can craft a [Rift Key] using a [Key Forge] by feeding it [Vanilla] items. Each item has an invisible essence value, and the tier of the rift increases with the total value of items you put into the forge. The items you supply will influence the theme of the rift you are creating. Currently, only a forest theme can be crafted using nature-themed items. Right-clicking on a [Rift Spawner] with a [Rift Key] will open a rift. Each rift leads to a procedurally generated dimension with tons of loot in the form of mob drops, chests and special encounters. Below, you can find the recipes for the [Rift Spawner] and the [Key Forge].
+
 
 ### The \[rift spawner\] recipe
 
