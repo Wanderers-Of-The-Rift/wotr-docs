@@ -94,6 +94,8 @@ Hollow
       * Act 0 \- Tutorial  
         * Greeble introduce you to quest system, rune gems, and rift generation  
       * Act 1 \- The Guilds (WIP)  
+    * Lore greeble stuff: https://discord.com/channels/1328761294085554176/1339097373779165215
+    * Art greeble stuff: https://discord.com/channels/1328761294085554176/1340179969287917569
   * Next workshop is to discuss two other guilds to round out a guild foundation to build upon  
     * [https://discord.com/channels/1328761294085554176/1375330452809711648](https://discord.com/channels/1328761294085554176/1375330452809711648)   
     * Ideas are not set in stone, we expect to be expanding guilds in the future  
@@ -103,7 +105,12 @@ Hollow
     * Reintroduce Bullzey1401’s theme building tool  
     * Accessible and easy for everyone  
       * Come through and build, or join the fun in voice chat\!  
-    * [https://discord.com/events/1328761294085554176/1374438712775282838](https://discord.com/events/1328761294085554176/1374438712775282838)   
+    * [https://discord.com/events/1328761294085554176/1374438712775282838](https://discord.com/events/1328761294085554176/1374438712775282838)
+  * Server update
+    * New mods were added to the build server for additional building blocks
+  * Upcoming polls, look out for them!
+    * Sole building blocks, only aesthetic
+    * Building blocks that affect gameplay/worldbuilding
 * Q\&A  
   * Barry Allen/Cjzech \- acknowledge WarrenGore’s post in project-forum  
     * [https://discord.com/channels/1328761294085554176/1375876411088310512](https://discord.com/channels/1328761294085554176/1375876411088310512)   
