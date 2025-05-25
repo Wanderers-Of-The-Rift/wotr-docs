@@ -20,6 +20,7 @@ Gameplay/worldgen affecting mods (but also adding blocks):
 - Oh The Biomes We've Gone 
 - Oh The Trees You'll Grow 
   
+## Poll 1
 ### Option 1
 - Add Pure block/decoration mods
 ### Option 2
@@ -27,6 +28,7 @@ Gameplay/worldgen affecting mods (but also adding blocks):
 ### Option 3
 - More discussion required
 
+## Poll 2
 ### Option 1
 - Add Gameplay/worldgen affecting mods
 ### Option 2
