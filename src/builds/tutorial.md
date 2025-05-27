@@ -233,7 +233,7 @@ The noise scale inputs are explained at the start of [chapter 4](#chapter-4-maki
 The chest checkbox and rarity can also be unchanged, so just press `OK`. 
 _More options will come, WIP_
 
-#### Room
+##### Room
 The noise scale inputs are explained at the start of [chapter 4](#chapter-4-making-processors), but can often be left as default.
 The mushroom and vines checkboxes can be checked, when you want to include them into your theme. The rarity can be tweaked upon preference.
 Below that, under the "Attachments" section, there are more customizable options. A list of example attachments is below in [Appendix A](#appendix-a). This can
