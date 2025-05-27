@@ -1,37 +1,25 @@
 # Decorative & Building Block Mods
 ## Which mods should we add to increase themes?
 To make beautiful themes, we need some more blocks than vanilla offers. First of all, those mods need to be not ARR (licensed). This is so that when the mod gets discontinued, we can take the code and continue it ourselves, making it future proof and not a liability. There is a forum post that contains a list of mods, which has been distilled to no-ARR and 1.21.4.
-In the following list there are 2 groups of mods:  
-The first does not affect gameplay/worldgen, but only adds blocks/decoration. 
-The second group does affect gameplay/worldgen, on top of adding blocks. This will set the future of our modpack a bit, as , which is a downside that must be considered when allowing the use of those blocks.
+All mods will NOT affect gameplay/worldgen. The first 6 by default, the last by changing config (which will be done).
 
 ## Options
-For both groups, please vote for either: adding, not adding, or discussion required (and hence, not adding at this moment).
+Please vote for either: adding, not adding, discuss a selection, or more discussion required (and hence, not adding at this moment).
 
-## Groups
-Pure block/decoration mods
+## Poll
 - Block Variants 
 - Chisel Reborn 
 - Glassential 
 - Dusty Decorations 
-- Stoneworks 
-
-Gameplay/worldgen affecting mods (but also adding blocks):
-- Oh The Biomes We've Gone 
+- Stoneworks
 - Oh The Trees You'll Grow 
-  
-## Poll 1
-### Option 1
-- Add Pure block/decoration mods
-### Option 2
-- Don't add Pure block/decoration mods
-### Option 3
-- More discussion required
+- Oh The Biomes We've Gone 
 
-## Poll 2
 ### Option 1
-- Add Gameplay/worldgen affecting mods
+- Add mods
 ### Option 2
-- Don't add Gameplay/worldgen affecting mods
+- Don't add mods
 ### Option 3
+- Discuss selection
+### Option 4
 - More discussion required
