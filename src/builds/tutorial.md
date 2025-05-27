@@ -199,7 +199,6 @@ When approved, they will put it into the mod, together with your structure.
 
 ### Making a theme
 Before making a theme, please inform the Build Coordinator, to make sure it can get used and no double themes are made.
-The "step sizes" 
 #### Excel way
 To start making a theme, use the `processor_theme_sheet.xlsx` sheet.
 Theme making is similar to custom processor making, but require a state for every processor block. This is because builders can use every fixed processor block, with the knowledge it
@@ -227,6 +226,7 @@ Now, download [the theme json generator ZIP](https://github.com/Bullzey/schemati
 file and some folders) create a new folder with name `theme_#`, replacing `#` with the name you want to give your theme, 
 and place the 8 `.schem` files inside this. The folder `theme_name` is an example, ignore the subfolders. Once finished, 
 run `theme_json_generator.exe`, and select your theme folder. Then, select either `POI` or `Room`, and press `OK` (often you want both, so run twice).
+Both options should output a `.json` file. 
 
 ##### POI
 The noise scale inputs are explained at the start of [chapter 4](#chapter-4-making-processors), but can often be left as default. 
@@ -242,6 +242,10 @@ generate lanterns on the ceiling, rails on the floor, or bee nests on the walls,
 be up against, "Property" is a block property you can give it, and "Value" is the value of that property. Try different rarities and properties to find whatever suits your theme.
 Using Jade in-game with the advanced settings enabled, you can find the properties in the box. It is currently not possible to adjust the "facing" property to the wall it touches, so
 torches against the wall do not stick out of the wall, but are rotated.
+
+### Into the Mod
+When you have created the required `.json` files, send them to a build coordinator, and tell them what name you want it to have, and for
+themes, discuss the ingredients required for the key generation.
 
 ## Chapter 5: Questions? Ask for help!
 If there is anything that is not clear, or would like to know a bit more about, do not hesitate to ask questions in the [build chat](https://discord.com/channels/1328761294085554176/1335631637769097236)!
