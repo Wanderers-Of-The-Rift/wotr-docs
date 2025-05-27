@@ -1090,19 +1090,23 @@ POIs, they are the top structure block. Make sure you use the correct naming con
 <p>To allow the mod to use your structure, copy-paste the structure name into the Builders Sheet in the correct location (Room and POI
 tabs). Ask in chat for a review.</p>
 <h2 id="chapter-4-making-processors"><a class="header" href="#chapter-4-making-processors">Chapter 4: Making processors</a></h2>
-<p>To start with processor generation, download the following zip file:
+<p>To start with processor generation using excel sheets, download the following zip file:
 <code>json_generator.zip</code> from <a href="https://discord.com/channels/1328761294085554176/1335631637769097236/1357334905922523236">here</a>.
 It uses <a href="https://www.python.org/downloads/">Python 3</a>.
 It is also useful to open Jade plugin setting in-game (num 0 by default), scroll down to the very bottom and enable both "Registry Name" and "Block States".
 This makes you able to see the names of the blocks you want to use, and their properties.<br />
 In the sheets, only the <strong>yellow</strong> cells should be filled in, but not all yellow cells need to be completed.</p>
+<p>For most processors, a value called "step size" is used, which is like a weight for the given block, dictating how often it gets used. It is not equal to percentage,
+as it scales exponentially down. A step size of 25 for block A and 75 for block B will give a 50/50 distribution when generated. The random noise used is simplex,
+it will generate smooth, organic-looking patterns with continuous gradients, like layered spheres. A good way to grasp the step size values is to see it as an onion, with the first
+input being the outer layer, and every following input being one layer towards the center. When peeling the onion, the outer layer will be bigger than the inner layer, even tho they are both 1 layer, and the same holds for
+step size, even when given the same value. The sum of the steps need to equal 1, anything higher will not get
+used, and lower means some of the processor blocks will not get transformed. The processor input <code>noise_scale_</code>, followed by <code>x, y, z</code>,
+controls the size of the total onion, and its layers. Smaller values give larger onions.</p>
 <h3 id="custom-processors"><a class="header" href="#custom-processors">Custom processors</a></h3>
 <p>To create a custom processor for 1 processor block, use <code>processor_single_sheet.xlsx</code>. If you want to use a custom processor for multiple processor blocks, use
 <code>processor_multiple_sheet.xlsx</code> instead. You only need to fill in the yellow cells of the blocks you've used, but make sure it is for the right number processor block.
-State is the block the processor block turns into, for example <code>minecraft:stone</code>, and step is the portion that will get this state. It is not equal to percentage,
-as it scales exponentially down. A step size of 25 for block A and 75 for block B will give a 50/50 distribution when generated. The random noise used is simplex,
-it will generate smooth, organic-looking patterns with continuous gradients, like layered spheres. The sum of the steps need to equal 1, anything higher will not get
-used, and lower means some of the processor blocks will not get transformed.
+State is the block the processor block turns into, for example <code>minecraft:stone</code>, and step size is as explained above.
 Checksum will turn green if the total is 1, as indicator.</p>
 <p>A processor will generate a number between 0 and 1, and will look what block it wants to replace.
 Then, it will stack the steps from left to right, adding the numbers, and look for the block that belongs to this number.
@@ -1117,12 +1121,40 @@ Do not change the output name, please.</p>
 <p>The last thing to do, is filling in the name of your custom processor into the Builders sheet, and give the json file to a Build Coordinator.
 When approved, they will put it into the mod, together with your structure.</p>
 <h3 id="making-a-theme"><a class="header" href="#making-a-theme">Making a theme</a></h3>
-<p>Before making a theme, please inform the Build Coordinator, to make sure it can get used and no double themes are made. To start making a theme, use the <code>processor_theme_sheet.xlsx</code> sheet.
+<p>Before making a theme, please inform the Build Coordinator, to make sure it can get used and no double themes are made.
+The "step sizes"</p>
+<h4 id="excel-way"><a class="header" href="#excel-way">Excel way</a></h4>
+<p>To start making a theme, use the <code>processor_theme_sheet.xlsx</code> sheet.
 Theme making is similar to custom processor making, but require a state for every processor block. This is because builders can use every fixed processor block, with the knowledge it
 will be processed when generated. The checksum column should be fully green.
 Save this as <code>processor_theme_sheet.csv</code>, and run the python script. Enter Room or POI (often you want both, so run twice), and pick the custom choices in the popup. For POIs this is
 only a chest for now, so press "OK", and you're done. For rooms, more options are available. At the top, there are a few toggle options, for if you want mushrooms or not,
-for example. Below that, under the "Attachments" section, there are more customizable options. A list of example attachments is below in Appendix A. This can
+for example. Below that, under the "Attachments" section, there are more customizable options. A list of example attachments is below in <a href="builds/tutorial.html#appendix-a">Appendix A</a>. This can
+generate lanterns on the ceiling, rails on the floor, or bee nests on the walls, for example, but more are possible. "Name" is the name of the block you want to attach,
+"Rarity" is how often it occurs (between 0 and 1), "Up" is if it requires to touch the ceiling, "Down" is for when it requires to touch a floor, "Sides" is for how many walls it has to
+be up against, "Property" is a block property you can give it, and "Value" is the value of that property. Try different rarities and properties to find whatever suits your theme.
+Using Jade in-game with the advanced settings enabled, you can find the properties in the box. It is currently not possible to adjust the "facing" property to the wall it touches, so
+torches against the wall do not stick out of the wall, but are rotated.</p>
+<h4 id="worldedit-way"><a class="header" href="#worldedit-way">WorldEdit way</a></h4>
+<p>To get started with this, get yourself a theme template (Server: test zone, singleplayer: <code>/spawnpiece wotr:guides/theme_palette</code>).
+For every processor block type, place blocks next to it in which you want the processor block to be processed into, see image below.
+Do this for all 8 numbers of processor block families. When finished, for all processor block families, leftclick the main processor block in 1 corner with a wooden axe,
+and rightclick bedrock in the opposing corner with the wooden axe, and type <code>/copy</code>. This should copy the entire section for 1 processor
+block family. Then, type <code>/schem share</code>, and click the generated link. Download the file, and rename it to <code>processor#.schem</code>, but replace
+the <code>#</code> with the number processor block you've copied. Repeat this for all families, you should have 8 <code>.schem</code> files.</p>
+<img src="builds/build_theme_worldedit_PBfill.png" alt="processor_theme" width="50%"/>
+<p>Now, download <a href="https://github.com/Bullzey/schematic_to_json_wotr/blob/main/dist/theme_json_generator.zip">the theme json generator ZIP</a> (right side, little download icon), and extract anywhere. In the <code>theme_json_generator</code> folder (which should include an exe
+file and some folders) create a new folder with name <code>theme_#</code>, replacing <code>#</code> with the name you want to give your theme,
+and place the 8 <code>.schem</code> files inside this. The folder <code>theme_name</code> is an example, ignore the subfolders. Once finished,
+run <code>theme_json_generator.exe</code>, and select your theme folder. Then, select either <code>POI</code> or <code>Room</code>, and press <code>OK</code> (often you want both, so run twice).</p>
+<h5 id="poi"><a class="header" href="#poi">POI</a></h5>
+<p>The noise scale inputs are explained at the start of <a href="builds/tutorial.html#chapter-4-making-processors">chapter 4</a>, but can often be left as default.
+The chest checkbox and rarity can also be unchanged, so just press <code>OK</code>.
+<em>More options will come, WIP</em></p>
+<h4 id="room"><a class="header" href="#room">Room</a></h4>
+<p>The noise scale inputs are explained at the start of <a href="builds/tutorial.html#chapter-4-making-processors">chapter 4</a>, but can often be left as default.
+The mushroom and vines checkboxes can be checked, when you want to include them into your theme. The rarity can be tweaked upon preference.
+Below that, under the "Attachments" section, there are more customizable options. A list of example attachments is below in <a href="builds/tutorial.html#appendix-a">Appendix A</a>. This can
 generate lanterns on the ceiling, rails on the floor, or bee nests on the walls, for example, but more are possible. "Name" is the name of the block you want to attach,
 "Rarity" is how often it occurs (between 0 and 1), "Up" is if it requires to touch the ceiling, "Down" is for when it requires to touch a floor, "Sides" is for how many walls it has to
 be up against, "Property" is a block property you can give it, and "Value" is the value of that property. Try different rarities and properties to find whatever suits your theme.
