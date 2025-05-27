@@ -161,20 +161,25 @@ To allow the mod to use your structure, copy-paste the structure name into the B
 tabs). Ask in chat for a review.
 
 ## Chapter 4: Making processors
-To start with processor generation, download the following zip file:
+To start with processor generation using excel sheets, download the following zip file:
 `json_generator.zip` from [here](https://discord.com/channels/1328761294085554176/1335631637769097236/1357334905922523236).
 It uses [Python 3](https://www.python.org/downloads/).
 It is also useful to open Jade plugin setting in-game (num 0 by default), scroll down to the very bottom and enable both "Registry Name" and "Block States".
 This makes you able to see the names of the blocks you want to use, and their properties.  
 In the sheets, only the **yellow** cells should be filled in, but not all yellow cells need to be completed.
 
+For most processors, a value called "step size" is used, which is like a weight for the given block, dictating how often it gets used. It is not equal to percentage,
+as it scales exponentially down. A step size of 25 for block A and 75 for block B will give a 50/50 distribution when generated. The random noise used is simplex,
+it will generate smooth, organic-looking patterns with continuous gradients, like layered spheres. A good way to grasp the step size values is to see it as an onion, with the first 
+input being the outer layer, and every following input being one layer towards the center. When peeling the onion, the outer layer will be bigger than the inner layer, even tho they are both 1 layer, and the same holds for 
+step size, even when given the same value. The sum of the steps need to equal 1, anything higher will not get
+used, and lower means some of the processor blocks will not get transformed. The processor input `noise_scale_`, followed by `x, y, z`,
+controls the size of the total onion, and its layers. Smaller values give larger onions.
+
 ### Custom processors
 To create a custom processor for 1 processor block, use `processor_single_sheet.xlsx`. If you want to use a custom processor for multiple processor blocks, use
 `processor_multiple_sheet.xlsx` instead. You only need to fill in the yellow cells of the blocks you've used, but make sure it is for the right number processor block.
-State is the block the processor block turns into, for example `minecraft:stone`, and step is the portion that will get this state. It is not equal to percentage,
-as it scales exponentially down. A step size of 25 for block A and 75 for block B will give a 50/50 distribution when generated. The random noise used is simplex,
-it will generate smooth, organic-looking patterns with continuous gradients, like layered spheres. The sum of the steps need to equal 1, anything higher will not get
-used, and lower means some of the processor blocks will not get transformed.
+State is the block the processor block turns into, for example `minecraft:stone`, and step size is as explained above.
 Checksum will turn green if the total is 1, as indicator.
 
 A processor will generate a number between 0 and 1, and will look what block it wants to replace.
@@ -193,12 +198,45 @@ The last thing to do, is filling in the name of your custom processor into the B
 When approved, they will put it into the mod, together with your structure.
 
 ### Making a theme
-Before making a theme, please inform the Build Coordinator, to make sure it can get used and no double themes are made. To start making a theme, use the `processor_theme_sheet.xlsx` sheet.
+Before making a theme, please inform the Build Coordinator, to make sure it can get used and no double themes are made.
+The "step sizes" 
+#### Excel way
+To start making a theme, use the `processor_theme_sheet.xlsx` sheet.
 Theme making is similar to custom processor making, but require a state for every processor block. This is because builders can use every fixed processor block, with the knowledge it
 will be processed when generated. The checksum column should be fully green.
 Save this as `processor_theme_sheet.csv`, and run the python script. Enter Room or POI (often you want both, so run twice), and pick the custom choices in the popup. For POIs this is
 only a chest for now, so press "OK", and you're done. For rooms, more options are available. At the top, there are a few toggle options, for if you want mushrooms or not,
-for example. Below that, under the "Attachments" section, there are more customizable options. A list of example attachments is below in Appendix A. This can
+for example. Below that, under the "Attachments" section, there are more customizable options. A list of example attachments is below in [Appendix A](#appendix-a). This can
+generate lanterns on the ceiling, rails on the floor, or bee nests on the walls, for example, but more are possible. "Name" is the name of the block you want to attach,
+"Rarity" is how often it occurs (between 0 and 1), "Up" is if it requires to touch the ceiling, "Down" is for when it requires to touch a floor, "Sides" is for how many walls it has to
+be up against, "Property" is a block property you can give it, and "Value" is the value of that property. Try different rarities and properties to find whatever suits your theme.
+Using Jade in-game with the advanced settings enabled, you can find the properties in the box. It is currently not possible to adjust the "facing" property to the wall it touches, so
+torches against the wall do not stick out of the wall, but are rotated.
+
+#### WorldEdit way
+To get started with this, get yourself a theme template (Server: test zone, singleplayer: `/spawnpiece wotr:guides/theme_palette`). 
+For every processor block type, place blocks next to it in which you want the processor block to be processed into, see image below.
+Do this for all 8 numbers of processor block families. When finished, for all processor block families, leftclick the main processor block in 1 corner with a wooden axe,
+and rightclick bedrock in the opposing corner with the wooden axe, and type `/copy`. This should copy the entire section for 1 processor
+block family. Then, type `/schem share`, and click the generated link. Download the file, and rename it to `processor#.schem`, but replace
+the `#` with the number processor block you've copied. Repeat this for all families, you should have 8 `.schem` files. 
+
+<img src="build_theme_worldedit_PBfill.png" alt="processor_theme" width="50%"/>
+
+Now, download [the theme json generator ZIP](https://github.com/Bullzey/schematic_to_json_wotr/blob/main/dist/theme_json_generator.zip) (right side, little download icon), and extract anywhere. In the `theme_json_generator` folder (which should include an exe 
+file and some folders) create a new folder with name `theme_#`, replacing `#` with the name you want to give your theme, 
+and place the 8 `.schem` files inside this. The folder `theme_name` is an example, ignore the subfolders. Once finished, 
+run `theme_json_generator.exe`, and select your theme folder. Then, select either `POI` or `Room`, and press `OK` (often you want both, so run twice).
+
+##### POI
+The noise scale inputs are explained at the start of [chapter 4](#chapter-4-making-processors), but can often be left as default. 
+The chest checkbox and rarity can also be unchanged, so just press `OK`. 
+_More options will come, WIP_
+
+#### Room
+The noise scale inputs are explained at the start of [chapter 4](#chapter-4-making-processors), but can often be left as default.
+The mushroom and vines checkboxes can be checked, when you want to include them into your theme. The rarity can be tweaked upon preference.
+Below that, under the "Attachments" section, there are more customizable options. A list of example attachments is below in [Appendix A](#appendix-a). This can
 generate lanterns on the ceiling, rails on the floor, or bee nests on the walls, for example, but more are possible. "Name" is the name of the block you want to attach,
 "Rarity" is how often it occurs (between 0 and 1), "Up" is if it requires to touch the ceiling, "Down" is for when it requires to touch a floor, "Sides" is for how many walls it has to
 be up against, "Property" is a block property you can give it, and "Value" is the value of that property. Try different rarities and properties to find whatever suits your theme.
