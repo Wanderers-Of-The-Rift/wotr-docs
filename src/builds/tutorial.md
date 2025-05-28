@@ -214,12 +214,14 @@ torches against the wall do not stick out of the wall, but are rotated.
 
 #### WorldEdit way
 To get started with this, get yourself a theme template (Server: test zone, singleplayer: `/spawnpiece wotr:guides/theme_palette`). 
-For every processor block type, place blocks next to it in which you want the processor block to be processed into, see image below.
+Make sure that the full processor block is facing north (use F3), and your chosen blocks will be placed to the right of it, as in the first image below.
+For every processor block type, place blocks next to it in which you want the processor block to be processed into, see second image below.
 Do this for all 8 numbers of processor block families. When finished, for all processor block families, leftclick the main processor block in 1 corner with a wooden axe,
 and rightclick bedrock in the opposing corner with the wooden axe, and type `/copy`. This should copy the entire section for 1 processor
 block family. Then, type `/schem share`, and click the generated link. Download the file, and rename it to `processor#.schem`, but replace
 the `#` with the number processor block you've copied. Repeat this for all families, you should have 8 `.schem` files. 
 
+<img src="builders_theme_north.png" alt="processor_north" width="50%"/>
 <img src="build_theme_worldedit_PBfill.png" alt="processor_theme" width="50%"/>
 
 Now, download [the theme json generator ZIP](https://github.com/Bullzey/schematic_to_json_wotr/blob/main/dist/theme_json_generator.zip) (right side, little download icon), and extract anywhere. In the `theme_json_generator` folder (which should include an exe 
