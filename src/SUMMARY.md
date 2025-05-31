@@ -8,7 +8,7 @@
     - [Coordinator Responsibilites](project-team/coordinator-responsibilities)
 - [Minimum Viable Product (MVP)](mvp.md)
 - [Mod(Pack) Design](design/DesignDocHome.md)
-- [Design](design/DesignDocHome.md)
+- [Design]()
   - [OUR DESIGN TOPICS HERE]()
 - [Code](code/README.md)
     - [Style](code/style/style.md) 
