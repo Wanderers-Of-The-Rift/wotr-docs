@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Runegems - Wanderers of the Rift Internal Documentation</title>
+        <title>Decisions - Wanderers of the Rift Internal Documentation</title>
 
 
         <!-- Custom HTML head -->
@@ -12,33 +12,33 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="../../../favicon.svg">
-        <link rel="shortcut icon" href="../../../favicon.png">
-        <link rel="stylesheet" href="../../../css/variables.css">
-        <link rel="stylesheet" href="../../../css/general.css">
-        <link rel="stylesheet" href="../../../css/chrome.css">
-        <link rel="stylesheet" href="../../../css/print.css" media="print">
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="../../../FontAwesome/css/font-awesome.css">
-        <link rel="stylesheet" href="../../../fonts/fonts.css">
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" id="highlight-css" href="../../../highlight.css">
-        <link rel="stylesheet" id="tomorrow-night-css" href="../../../tomorrow-night.css">
-        <link rel="stylesheet" id="ayu-highlight-css" href="../../../ayu-highlight.css">
+        <link rel="stylesheet" id="highlight-css" href="../../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
 
 
         <!-- Provide site root and default themes to javascript -->
         <script>
-            const path_to_root = "../../../";
+            const path_to_root = "../../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../../toc.js"></script>
+        <script src="../../toc.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -102,7 +102,7 @@
             <!-- populated by js -->
             <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
             <noscript>
-                <iframe class="sidebar-iframe-outer" src="../../../toc.html"></iframe>
+                <iframe class="sidebar-iframe-outer" src="../../toc.html"></iframe>
             </noscript>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -137,13 +137,13 @@
                     <h1 class="menu-title">Wanderers of the Rift Internal Documentation</h1>
 
                     <div class="right-buttons">
-                        <a href="../../../print.html" title="Print this book" aria-label="Print this book">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
                         <a href="https://github.com/Dimension-Delvers/dimension-delvers-docs" title="Git repository" aria-label="Git repository">
                             <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
-                        <a href="https://github.com/Dimension-Delvers/dimension-delvers-docs/edit/main/src/code/datapack/format/runegems.md" title="Suggest an edit" aria-label="Suggest an edit">
+                        <a href="https://github.com/Dimension-Delvers/dimension-delvers-docs/edit/main/src/code/decisions/decisions.md" title="Suggest an edit" aria-label="Suggest an edit">
                             <i id="git-edit-button" class="fa fa-edit"></i>
                         </a>
 
@@ -172,58 +172,18 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="runegems"><a class="header" href="#runegems">Runegems</a></h1>
-<h2 id="runegem-data"><a class="header" href="#runegem-data">Runegem Data</a></h2>
-<p>Runegem Data files are used during the creation of runegems. They are used to define the properties of the runegem and the modifiers it will have when applied to an item.</p>
-<h4 id="location"><a class="header" href="#location">Location</a></h4>
-<p><code>data/wotr/wotr/runegem_data</code> Take note of the second wotr.</p>
-<h4 id="format"><a class="header" href="#format">Format</a></h4>
-<ul>
-<li><code>shape</code> : The shape of the runegem. This is a string that represents the shape of the runegem. Taken from the possible shapes.
-<ul>
-<li><code>circle</code></li>
-<li><code>square</code></li>
-<li><code>triangle</code></li>
-<li><code>diamond</code></li>
-<li><code>heart</code></li>
-<li><code>pentagon</code></li>
-</ul>
-</li>
-<li><code>tag</code> : A tag of modifier effects that will be applied to the entity by this modifier.</li>
-<li><code>tier</code> : The tier for this modifier. For now, we do not use all values.
-<ul>
-<li><code>raw</code>: <strong>USED</strong>, lowest tier.</li>
-<li><code>shaped</code></li>
-<li><code>cut</code>: <strong>USED</strong>, mid tier.</li>
-<li><code>polished</code></li>
-<li><code>framed</code>: <strong>USED</strong>, highest tier.</li>
-<li><code>unique</code>: <strong>USED</strong>, unique tier, no random effects.</li>
-</ul>
-</li>
-</ul>
-<h4 id="implementation-guidelines"><a class="header" href="#implementation-guidelines">Implementation Guidelines</a></h4>
-<ul>
-<li>A runegem should have a name that describes its intention. The complete name should be the format: <code>&lt;tier&gt;_&lt;name&gt;_rune</code>.</li>
-<li>The explanation of the tag can be found on <a href="code/datapack/format/modifiers.html">Modifiers</a>. The name of the tag should ideally be identical to the runegem name.</li>
-<li>The content of the tag can overlap with content from higher tiers. For example, a <code>cut</code> rune can have the stronger content from the <code>raw</code> rune, but it should also have its own content.</li>
-</ul>
-<h4 id="example"><a class="header" href="#example">Example</a></h4>
-<pre><code class="language-json">{
-    "shape": "circle",
-    "tag": "wotr:modifiers/cut_health_rune",
-    "tier": "cut"
-}
-</code></pre>
+                        <h1 id="code-decisions"><a class="header" href="#code-decisions">Code Decisions</a></h1>
+<p>Welcome to the Code Decisions Page. This is where you can find all the code decisions for the Wanderers of the Rift Mod(Pack).</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../../../code/datapack/format/modifiers.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../../code/datapack/format/runegems.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../../../code/decisions/decisions.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../../code/design/design-implementation.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -233,11 +193,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../../../code/datapack/format/modifiers.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../../code/datapack/format/runegems.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../../../code/decisions/decisions.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../../code/design/design-implementation.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
@@ -252,13 +212,13 @@
         </script>
 
 
-        <script src="../../../elasticlunr.min.js"></script>
-        <script src="../../../mark.min.js"></script>
-        <script src="../../../searcher.js"></script>
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
 
-        <script src="../../../clipboard.min.js"></script>
-        <script src="../../../highlight.js"></script>
-        <script src="../../../book.js"></script>
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
 
         <!-- Custom JS scripts -->
 
