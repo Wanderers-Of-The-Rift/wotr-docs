@@ -2,7 +2,7 @@
 Welcome to the Code Home Page. This is where you can find all the code related information for the Wanderers of the Rift Mod(Pack).
 
 ## Important Code Pages
-- [Code Decisions](decision/decisions.md): The entry point to general code decisions.
+- [Code Decisions](decisions/decisions.md): The entry point to general code decisions.
 - [Design Implementation Pointers](design/design-implementation.md): When a design requires specific code pointers, they will be explained here.
 
 ## Code Locations
