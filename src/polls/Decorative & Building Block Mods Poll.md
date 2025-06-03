@@ -5,6 +5,7 @@ All mods will NOT affect gameplay/worldgen. The first 6 by default, the last by 
 
 The downside, however, to adding mods is that when it gets discontinued, we have to update them, or our mod breaks too. 
 This does bring extra work to Devs (or whoever takes responsibility). For some mods this will not be much work, as they only add blocks, but for others it might be. More and complex additions means more work.
+Due to the licencing, we can scrape the textures for them and add to our own mod. Most mods do have a reputation of supporting new versions.
 
 The mods are listed below, with summaries of what they add. Textures are things like a creeper face on a block, shapes are things like stairs or slabs, and decorations are things like lanterns.
 
