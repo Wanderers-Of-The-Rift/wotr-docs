@@ -15,34 +15,34 @@ What’s Next?
     * More discussion and hopefully a poll in the near future for what it would look like
 * Continued brainstorming in forums
     * Take a look at the ideas being discussed\! (Random selection below)
-        * [Campaign System]([https://discord.com/channels/1328761294085554176/1379281189524869150](https://discord.com/channels/1328761294085554176/1379281189524869150))
-        * [Gear Implicits]([https://discord.com/channels/1328761294085554176/1375921844166590494](https://discord.com/channels/1328761294085554176/1375921844166590494))
-        * [Objectives]([https://discord.com/channels/1328761294085554176/1375922167027597322](https://discord.com/channels/1328761294085554176/1375922167027597322))
+        * [Campaign System](https://discord.com/channels/1328761294085554176/1379281189524869150)
+        * [Gear Implicits](https://discord.com/channels/1328761294085554176/1375921844166590494)
+        * [Objectives](https://discord.com/channels/1328761294085554176/1375922167027597322)
         * [Ability Ideas](https://discord.com/channels/1328761294085554176/1373065058531410011)
 
 Update from Lore
 
 * Workshops Wednesdays and Sunday
-    * Previous meeting notes can be found here: [Historical Meeting Notes]([https://discord.com/channels/1328761294085554176/1376374250453205075](https://discord.com/channels/1328761294085554176/1376374250453205075))
+    * Previous meeting notes can be found here: [Historical Meeting Notes](https://discord.com/channels/1328761294085554176/1376374250453205075)
 * Join the Lore Party\!
     * Everyone is welcome\!
     * If you are more comfortable doing so, you can pass your ideas to a coordinator for them to present it
 * Focus for the week: [Workshop \#7](https://discord.com/channels/1328761294085554176/1380556698510426262)
     * Act 0 \- The Tutorial
-        * [Previous discussion]([https://discord.com/channels/1328761294085554176/1373757529045340302](https://discord.com/channels/1328761294085554176/1373757529045340302))
+        * [Previous discussion](https://discord.com/channels/1328761294085554176/1373757529045340302)
         * Other ideas in more recent meeting notes, including [Workshop \#5](https://discord.com/channels/1328761294085554176/1378880887319695421) and [Workshop \#6](https://discord.com/channels/1328761294085554176/1379956312238194710)
     * Essence Force Chart
         * [Lore post](https://discord.com/channels/1328761294085554176/1373096826399359097)
     * Hub World
-        * [Pitch Prep]([https://discord.com/channels/1328761294085554176/1379730928611627032](https://discord.com/channels/1328761294085554176/1379730928611627032))
-        * [Brainstorming]([https://discord.com/channels/1328761294085554176/1365731914723360860](https://discord.com/channels/1328761294085554176/1365731914723360860))
+        * [Pitch Prep](https://discord.com/channels/1328761294085554176/1379730928611627032)
+        * [Brainstorming](https://discord.com/channels/1328761294085554176/1365731914723360860)
 
 Update from Art
 
 * [Palette poll for art is posted](https://discord.com/channels/1328761294085554176/1347951965245542521/1380962307386904637), make sure to vote\!
 * Options can be seen here
-    * [Vintage Rustic]([https://discord.com/channels/1328761294085554176/1375228037771034656/1375555042572239001](https://discord.com/channels/1328761294085554176/1375228037771034656/1375555042572239001))
-    * [Celestial Woven]([https://discord.com/channels/1328761294085554176/1375228037771034656/1375696656359493733](https://discord.com/channels/1328761294085554176/1375228037771034656/1375696656359493733))
+    * [Vintage Rustic](https://discord.com/channels/1328761294085554176/1375228037771034656/1375555042572239001)
+    * [Celestial Woven](https://discord.com/channels/1328761294085554176/1375228037771034656/1375696656359493733)
     * [Folklore Fantasy](https://discord.com/channels/1328761294085554176/1375228037771034656/1375721851002556528)
 
 Update from Build
