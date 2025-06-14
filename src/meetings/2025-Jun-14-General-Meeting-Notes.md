@@ -76,6 +76,12 @@ Jun-14-2025 Community Meeting
 * Update from Art
     * Palette poll completed \- Celestial Woven
     * Server move preview
+      * Art Bulletin is for 
+        * Our overall big to-do lists and where we post stuff like we did before
+        * Meeting notes
+        * General Minecraft Art How-to Guidelines like the one previously posted that talks about the darker outlines and such
+        * Helpful links / programs post like before
+        * Our Art Direction - like our palette we voted on and our branding
 * Update from Build
     * Server move preview
         *  Feels familiar
