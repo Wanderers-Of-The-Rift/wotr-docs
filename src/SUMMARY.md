@@ -4,8 +4,8 @@
 
 - [How to contribute](contribute.md)
 - [Project Team]()
-    - [PM Responsibilites](project-team/pmresponsibilities)
-    - [Coordinator Responsibilites](project-team/coordinator-responsibilities)
+    - [PM Responsibilities](project-team/pmresponsibilities)
+    - [Coordinator Responsibilities](project-team/coordinator-responsibilities)
 - [Minimum Viable Product (MVP)](mvp.md)
 - [Mod(Pack) Design](design/DesignDocHome.md)
 - [Design]()
@@ -33,6 +33,7 @@
     - [Enchanting](polls/enchanting.md)
 - [Meeting Notes]()
     - [General Meetings]()
+        - [Jun-14-2025 Community Meeting](meetings/2025-Jun-14-General-Meeting-Notes.md)
         - [Jun-07-2025 Community Meeting](meetings/2025-Jun-07-General-Meeting-Notes.md)
         - [May-31-2025 Community Meeting](meetings/2025-May-31-General-Meeting-Notes.md)
         - [May-24-2025 Community Meeting](meetings/2025-May-24-General-Meeting-Notes.md)
