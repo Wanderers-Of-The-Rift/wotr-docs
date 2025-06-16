@@ -71,6 +71,7 @@ dig into bedrock. This is not a hard rule, but around 90% of the surfaces need t
  - POI chests and spawner: Every POI needs at least an amount of chests equal to its length, and 1 trial spawner. 
  - When making a Chaos room, at least 1/3 of the doors must remain open. To close other doors, remove the jigsaw blocks. Do not 
 fill the doorway with bedrock, this will be generated automatically.
+ - POIs should not have water on the edge of the structure, not even at the ground level layer. This is to prevent leakage when the floor the POI gets placed on is uneven.
 
 ### Spawning template
 On the build server, a template for every structure is provided, and placed in an appropriate location. To make locating this easy, Stable room templates are light gray, Unstable room templates
@@ -130,7 +131,7 @@ The full set of processor blocks is shown below, where the first 8 are fixed fam
 <img src="palette_full.png" alt="palette_full" width="50%"/>
 
 ### Lighting
-_Poll is up for this_
+A low level nightvision is given to players when entering the rift, so adding light in rooms is not required. Natural lighting (torches, lanterns) may be added, as well as the creative lights (operator utilities tab), to highlight certain locations.
 
 ### POIs in Rooms 
 When building a room, you need to include POIs. This can be done by adding Jigsaw Blocks. A POI will be generated against the Jigsaw, so it must be placed a bit further. This means that for a free standing poi, the Jigsaw must be placed 2 blocks deep in the floor. The same applies to halfway POIs, but for those you must also have the small line on the Jigsaw block towards you, and away from the wall. It should also be placed against the wall. The ceiling Jigsaw must be placed 2 layers in the ceiling. For the in-wall Jigsaw, however, placement is different. Those must be placed against the wall, with the face towards the wall. This is because when it generates, it generates towards the wall, and thus be placed inside. A placement example is on the server, or can be loaded with `wotr:guides/jigsaw_placement`.  
