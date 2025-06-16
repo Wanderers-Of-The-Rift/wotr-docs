@@ -21,7 +21,7 @@ There are advantages and disadvantages to all options:
 
 Thick walls and open floor areas limit building flexibility, hence are a real downside.
 
-There is an option to pick multiple depths, however keep in mind that this essentially means **splitting **the available POI pool, requiring double the designs to be created.
+There is an option to pick multiple depths, however keep in mind that this essentially means **splitting** the available POI pool, requiring double the designs to be created.
 We can always **add **more depth levels pools** later on**, if we are loaded with POIs. At this moment, we have far from enough for current pools, so adding more options hinders a lot.
 
 ## Poll
