@@ -32,7 +32,7 @@
     - [Durability](polls/durability.md)
     - [Enchanting](polls/enchanting.md)
     - [Wall POI Depth](polls/Wall%20depth%20Poll.md)
-    - [Builders Mods](polls/Decorative%20%26%20Building%20Block%20Mods%20Poll.md)
+    - [Builders Mods](polls/Decorative%20&%20Building%20Block%20Mods%20Poll.md)
     - [Stairs](polls/Stairs%20Poll.md)
 - [Meeting Notes]()
     - [General Meetings]()
