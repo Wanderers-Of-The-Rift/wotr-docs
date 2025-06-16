@@ -41,3 +41,14 @@ Do we add the aforementioned list of mods to our pack?
 - Add **all 6** mods.
 ### Option 6
 - More discussion required.
+
+
+## Results:
+1. 2%
+2. 23%
+3. 7%
+4. 2%
+5. 37%
+6. 28%
+
+Add **all 6** mods won.
