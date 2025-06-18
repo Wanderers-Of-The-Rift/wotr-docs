@@ -17,7 +17,7 @@
       - [Runegems](code/datapack/format/runegems.md)
     - [API](code/api/api.md)
       - [Quick Mover](code/api/quickmover.md)
-      - [Configurable HUD](code/api/coonfigurable-hud.md)
+      - [Configurable HUD](code/api/configurable-hud.md)
     - [Decisions](code/decisions/decisions.md)
     - [Design Implementations](code/design/design-implementation.md)
 - [Art]()
