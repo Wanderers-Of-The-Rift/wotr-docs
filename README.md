@@ -1,1 +1,1 @@
-URL of the mdbook: https://dimension-delvers.github.io/dimension-delvers-docs/
+URL of the mdbook: https://wanderers-of-the-rift.github.io/wotr-docs/
