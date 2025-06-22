@@ -39,6 +39,7 @@
     - [Stairs](polls/Stairs%20Poll.md)
 - [Meeting Notes]()
     - [General Meetings]()
+        - [Jun-21-2025 Community Meeting](meetings/2025-Jun-21-General-Meeting-Notes.md) 
         - [Jun-14-2025 Community Meeting](meetings/2025-Jun-14-General-Meeting-Notes.md)
         - [Jun-07-2025 Community Meeting](meetings/2025-Jun-07-General-Meeting-Notes.md)
         - [May-31-2025 Community Meeting](meetings/2025-May-31-General-Meeting-Notes.md)
