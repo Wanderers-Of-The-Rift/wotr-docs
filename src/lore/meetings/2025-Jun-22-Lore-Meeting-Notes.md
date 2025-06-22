@@ -29,8 +29,8 @@ Terminology suggestions: “Shrines” / "Rift Tears" / "Altars"
 - What do they look like (size, shape, variety)?
 
 ### Concepts
-- **Golden / Cursed / Sage-Touched** shrine variants.
-- “Infected Rift” origin story – caused by prankster Sage.
+- **Guild / Cursed / Sage-Touched** shrine variants.
+- “Infected Rift” origin story, caused by prankster Sage.
 - **Player feedback**: Visual and audio responses upon interaction.
 - SFX/VFX:
     - _Good_: sparkles + “boom”
