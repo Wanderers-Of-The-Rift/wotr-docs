@@ -60,6 +60,8 @@
         - [Feb-15-2025 Community Meeting](meetings/2025-Feb-15-General-Meeting-Notes.md)
         - [Feb-08-2025 Community Meeting](meetings/2025-Feb-08-General-Meeting-Notes.md)
         - [Feb-03-2025 Summary Meeting](meetings/2025-Feb-03-Summary-Meeting-Notes.md)
+    - [Lore Meetings]()
+        - [Jun-22-2025 Lore Meeting](lore/meetings/2025-Jun-22-Lore-Meeting-Notes.md)
     - [PM Meetings]() 
         - [May-30-2025 PM Coordinator Meeting](meetings/2025-May-30-PM-Coordinator-Meeting-Notes.md)
         - [Feb-08-2025 PM Meeting](meetings/2025-Feb-08-PM-Meeting-Notes.md)
