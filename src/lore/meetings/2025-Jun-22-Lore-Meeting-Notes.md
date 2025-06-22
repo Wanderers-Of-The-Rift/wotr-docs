@@ -1,7 +1,7 @@
 # Lore Meeting: June 22, 2025
 
 > _Ability creation guild, Rift shrines, Sages, and Hub world_  
-> _Guild types, Campaign system, Lore preservation, Forum categories
+> _Guild types, Campaign system, Lore preservation, Forum categories_
 
 ---
 
