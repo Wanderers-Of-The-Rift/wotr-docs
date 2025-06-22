@@ -663,6 +663,186 @@ public class MyClass {
     "tier": "cut"
 }
 </code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="api"><a class="header" href="#api">API</a></h1>
+<p>This page is for describing how to use APIs included in the Wanderers of the Rifts.</p>
+<ul>
+<li><a href="code/api/code/api/quickmover.html">Quick Mover</a></li>
+<li><a href="code/api/code/api/configurable-hud.html">Configurable HUD</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="quickmover"><a class="header" href="#quickmover">QuickMover</a></h1>
+<p>QuickMover is a helper for defining the quickMove (shift-click) behavior in menus. It allows declaring the desired
+movement of items between slots, with standard player inventory behavior built in. The implementation is designed
+to work with both standard container slots and NeoForge's ItemHandler slots.</p>
+<h2 id="usage-1"><a class="header" href="#usage-1">Usage</a></h2>
+<p>Within a Menu, instantiate a QuickMover using its builder (via <code>QuickMover::create</code>). Using the builder the behavior
+of individual slots, ranges of slots and the player inventory slots can be defined by providing the movements that should
+be attempted when shift-clicking on those slots. The player slots should be defined first if present - this just needs
+to provide the index of the first player slot. Doing so will add the default behavior of switching items between the
+player's inventory and their hotbar if there are no other possible moves.</p>
+<p>The implementation of <code>AbstractContainerMenu::quickMoveStack</code> should delegate to the <code>QuickMover::quickMove</code>.</p>
+<pre><code class="language-java">private final QuickMover mover;
+
+public MyMenu(int containerId/*, ... */) {
+    //...
+    mover = QuickMover.create(this)
+            // Specify there are player slots and the slot they begin from.
+            .forPlayerSlots(INPUT_SLOT_COUNT + OUTPUT_SLOT_COUNT)
+            .tryMoveTo(0, INPUT_SLOT_COUNT)
+            // Specify slot 0 will first try to move to slot 1, then to the player's inventory (including hot bar)
+            .forSlot(0)
+            .tryMoveTo(1)
+            .tryMoveToPlayer()
+            // Specify slot 1 will first try to move to slot 1, then to the player's inventory
+            .forSlot(1)
+            .tryMoveTo(0)
+            .tryMoveToPlayer()
+            // Specify that slot 2, through to 2 + OUTPUT_SLOT_COUNT exclusive, will just try to move to player's inventory
+            .forSlots(2, OUTPUT_SLOT_COUNT)
+            .tryMoveToPlayer()
+            .build();            
+}
+
+@Override
+public @NotNull ItemStack quickMoveStack(@NotNull Player player, int index) {
+    return mover.quickMove(player, index);
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="configurable-hud"><a class="header" href="#configurable-hud">Configurable HUD</a></h1>
+<p>Wanderers of the Rift has a system for defining HUD elements whose rendering location can be configured, including the possibility of rotating for
+compatible elements.</p>
+<h2 id="principals"><a class="header" href="#principals">Principals</a></h2>
+<p>A HUD element is rendered relative to a <code>ScreenAnchor</code>. There are nine of these - one for each corner of the screen, one for the center of each
+side of the screen, and one for the center of the screen. Being anchored means that regardless of the screen size the element should moved to maintain the
+same offset from that anchor. For example, when you resize the screen the hotbar remains attached to the bottom-center of the screen.</p>
+<p>To achieve this the size of the HUD element needs to be known - its width and height. This allows the correct top-left position to be determined.</p>
+<p>For HUD elements that can grow or change sizes, this growth should ideally be "away" from the anchor. For example, when the player gains
+additional hearts, they should appear in a new row above if anchored to the bottom of the screen, and a new row below if anchored to
+the top of the screen.</p>
+<h2 id="configuration-info"><a class="header" href="#configuration-info">Configuration Info</a></h2>
+<p>Each HUD element has the following configuration:</p>
+<ul>
+<li>Whether the element is visible</li>
+<li>Where the element is anchored</li>
+<li>The x,y offset of the HUD element in pixels. This is applied relative to where the element is anchored.</li>
+<li>Optionally, the orientation of the element if rotation is supported.</li>
+</ul>
+<h2 id="usage-2"><a class="header" href="#usage-2">Usage</a></h2>
+<h3 id="adapting-an-existing-hud-element"><a class="header" href="#adapting-an-existing-hud-element">Adapting an existing HUD element</a></h3>
+<p>For use with vanilla or HUD elements from other mods.</p>
+<p>In ClientConfig, add a <code>HudElementConfig</code> for the HUD element - this will capture the player's configuration. Ensure the default values reflect
+how the element is placed normally:</p>
+<pre><code class="language-java">public static final HudElementConfig EXPERIENCE_BAR;
+
+static {
+    // For example, minecraft experience bar is displayed relative to the bottom-center of the screen
+    EXPERIENCE_BAR = new HudElementConfig.Builder("Vanilla Experience Bar", "xpBar")
+            .anchor(ScreenAnchor.BOTTOM_CENTER)
+            .offset(0, -24)
+            // If not specified, the element cannot be rotated
+            .rotates(UIOrientation.HORIZONTAL)
+            .build(builder);
+}
+</code></pre>
+<p>Next register a ConfigurableLayerAdapter for the element - this will intercept the rendering of element and reposition (and optionally rotate) it based
+on the configuration. A basic fixed size adapter is provided to handle basic HUD elements - this requires knowing the maximum width and height of the element.
+A separate DeferredRegister should be used for vanilla and each mod.</p>
+<pre><code class="language-java">public static final DeferredRegister&lt;ConfigurableLayer&gt; VANILLA_LAYERS = DeferredRegister
+        .create(WotrClientRegistries.Keys.CONFIGURABLE_LAYERS, "minecraft");
+
+public static final Supplier&lt;ConfigurableLayerAdapter&gt; VANILLA_XP_BAR = VANILLA_LAYERS.register(
+            VanillaGuiLayers.EXPERIENCE_BAR.getPath(),
+            () -&gt; new FixedSizeLayerAdapter(Component.translatable("hud.minecraft.experience_bar"), ClientConfig.EXPERIENCE_BAR, 182, 5, List.of(VanillaGuiLayers.EXPERIENCE_BAR)));
+</code></pre>
+<p>For more advanced handling a custom adapter can be created by implementing <code>ConfigurableLayerAdapter</code>. This provides access to <code>preRender</code>, <code>render</code>, and <code>postRender</code> for the layer.
+This can be used to manipulate the poseStack to reposition and rotate the existing layer when it is rendered. Do take care to undo any transformations made in <code>preRender</code>.</p>
+<h3 id="creating-a-native-configurable-hud-element"><a class="header" href="#creating-a-native-configurable-hud-element">Creating a native configurable HUD element</a></h3>
+<p>First, once more will need to add a <code>HudElementConfig</code> for the new HUD element:</p>
+<pre><code class="language-java">public static final HudElementConfig MANA_BAR;
+
+static {
+MANA_BAR = new HudElementConfig.Builder("Mana Bar", "manaBar").anchor(ScreenAnchor.TOP_LEFT)
+                .offset(25, 0)
+                // Optional, if rotates is not specified then the HUD element will not be rotatable
+                .rotates(UIOrientation.VERTICAL)
+                .build(builder);
+}
+</code></pre>
+<p>The HUD element itself should implement <code>ConfigurableLayer</code> - this requires implementing four methods. These are used primarily
+by the configuration UI.</p>
+<pre><code class="language-java">public class ManaBar implements ConfigurableLayer {
+    /**
+     * @return The name of the Layer (for display in tooltip)
+     */
+    public Component getName() {
+        return Component.translatable("hud.mymod.manabar");
+    }
+
+    /**
+     * @return The configuration that controls the layer's positioning
+     */
+    public HudElementConfig getConfig() {
+        return ClientConfig.MANA_BAR;
+    }
+
+    /**
+     * @return The width to display the element in the configuration screen. Ideally this is the display width of the
+     *         element, but may be representative of its potential width instead. Should not be zero. Should account
+     *         for rotation though.
+     */
+    public int getConfigWidth() {
+        return getConfig().getOrientation() == UIOrientation.VERTICAL ? 10 : 100;
+    }
+
+    /**
+     * @return The height to display the element in the configuration screen. Ideally this is the display height of the
+     *         element, but may be representative of its potential width instead. Should not be zero. Should account
+     *         for rotation though.
+     */
+    public int getConfigHeight() {
+        return getConfig().getOrientation() == UIOrientation.VERTICAL ? 100 : 10;
+    }
+}
+</code></pre>
+<p>Beyond this, when rendering the element should use the config to determine where it should render:</p>
+<pre><code class="language-java">@Override
+public void render(@NotNull GuiGraphics guiGraphics, @NotNull DeltaTracker deltaTracker) {
+    // General check for whether to render the element, including a getConfig().isVisible check.
+    Minecraft minecraft = Minecraft.getInstance();
+    if (minecraft.options.hideGui || !getConfig().isVisible() || minecraft.gameMode == null
+            || minecraft.gameMode.getPlayerMode() == GameType.SPECTATOR) {
+        return;
+    }
+    
+    // Determine the width and height of the element. This may need information about the player or state of the game
+    int width = calcWidth();
+    int height = calcHeight();
+    
+    // Top-left screen pos to render the element in
+    Vector2i pos = getConfig().getPosition(width, height, guiGraphics.guiWidth(), guiGraphics.guiHeight());
+    // Other config settings such as orientation can be used to determine how to render too.
+    UIOrientation orientation = getConfig().getOrientation();
+}
+</code></pre>
+<p>The HUD element should be registered as a configurable layer:</p>
+<pre><code class="language-java">public class ModConfigurableLayers {
+    public static final DeferredRegister&lt;ConfigurableLayer&gt; LAYERS = DeferredRegister
+            .create(WotrClientRegistries.Keys.CONFIGURABLE_LAYERS, Mod.MODID);
+
+    public static final Supplier&lt;ConfigurableLayer&gt; MANA_BAR = LAYERS.register("mana_bar", ManaBar::new);
+}
+</code></pre>
+<p>and should also be registered as a GuiLayer:</p>
+<pre><code class="language-java">@EventBusSubscriber(modid = Mod.MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+public class ModGuiLayers {
+    public static final ResourceLocation MANA_BAR = ResourceLocation.fromNamespaceAndPath(Mod.MODID, "mana_bar");
+    
+    @SubscribeEvent
+    public static void registerGuiLayers(RegisterGuiLayersEvent event) {
+        event.registerAbove(VanillaGuiLayers.HOTBAR, MANA_BAR, ModConfigurableLayers.MANA_BAR.get());
+    }
+}
+
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="code-decisions"><a class="header" href="#code-decisions">Code Decisions</a></h1>
 <p>Welcome to the Code Decisions Page. This is where you can find all the code decisions for the Wanderers of the Rift Mod(Pack).</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="design-implementation"><a class="header" href="#design-implementation">Design Implementation</a></h1>

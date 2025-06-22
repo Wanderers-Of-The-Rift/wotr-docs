@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Decisions - Wanderers of the Rift Internal Documentation</title>
+        <title>Quick Mover - Wanderers of the Rift Internal Documentation</title>
 
 
         <!-- Custom HTML head -->
@@ -143,7 +143,7 @@
                         <a href="https://github.com/Dimension-Delvers/dimension-delvers-docs" title="Git repository" aria-label="Git repository">
                             <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
-                        <a href="https://github.com/Dimension-Delvers/dimension-delvers-docs/edit/main/src/code/decisions/decisions.md" title="Suggest an edit" aria-label="Suggest an edit">
+                        <a href="https://github.com/Dimension-Delvers/dimension-delvers-docs/edit/main/src/code/api/quickmover.md" title="Suggest an edit" aria-label="Suggest an edit">
                             <i id="git-edit-button" class="fa fa-edit"></i>
                         </a>
 
@@ -172,18 +172,54 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="code-decisions"><a class="header" href="#code-decisions">Code Decisions</a></h1>
-<p>Welcome to the Code Decisions Page. This is where you can find all the code decisions for the Wanderers of the Rift Mod(Pack).</p>
+                        <h1 id="quickmover"><a class="header" href="#quickmover">QuickMover</a></h1>
+<p>QuickMover is a helper for defining the quickMove (shift-click) behavior in menus. It allows declaring the desired
+movement of items between slots, with standard player inventory behavior built in. The implementation is designed
+to work with both standard container slots and NeoForge's ItemHandler slots.</p>
+<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
+<p>Within a Menu, instantiate a QuickMover using its builder (via <code>QuickMover::create</code>). Using the builder the behavior
+of individual slots, ranges of slots and the player inventory slots can be defined by providing the movements that should
+be attempted when shift-clicking on those slots. The player slots should be defined first if present - this just needs
+to provide the index of the first player slot. Doing so will add the default behavior of switching items between the
+player's inventory and their hotbar if there are no other possible moves.</p>
+<p>The implementation of <code>AbstractContainerMenu::quickMoveStack</code> should delegate to the <code>QuickMover::quickMove</code>.</p>
+<pre><code class="language-java">private final QuickMover mover;
+
+public MyMenu(int containerId/*, ... */) {
+    //...
+    mover = QuickMover.create(this)
+            // Specify there are player slots and the slot they begin from.
+            .forPlayerSlots(INPUT_SLOT_COUNT + OUTPUT_SLOT_COUNT)
+            .tryMoveTo(0, INPUT_SLOT_COUNT)
+            // Specify slot 0 will first try to move to slot 1, then to the player's inventory (including hot bar)
+            .forSlot(0)
+            .tryMoveTo(1)
+            .tryMoveToPlayer()
+            // Specify slot 1 will first try to move to slot 1, then to the player's inventory
+            .forSlot(1)
+            .tryMoveTo(0)
+            .tryMoveToPlayer()
+            // Specify that slot 2, through to 2 + OUTPUT_SLOT_COUNT exclusive, will just try to move to player's inventory
+            .forSlots(2, OUTPUT_SLOT_COUNT)
+            .tryMoveToPlayer()
+            .build();            
+}
+
+@Override
+public @NotNull ItemStack quickMoveStack(@NotNull Player player, int index) {
+    return mover.quickMove(player, index);
+}
+</code></pre>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../../code/api/configurable-hud.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../../code/api/api.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../../code/design/design-implementation.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../../code/api/configurable-hud.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -193,11 +229,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../../code/api/configurable-hud.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../../code/api/api.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../../code/design/design-implementation.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../../code/api/configurable-hud.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
