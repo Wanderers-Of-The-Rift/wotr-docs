@@ -9,14 +9,14 @@ _(Work In Progress, also some things are not yet implemented)_
  - [Appendix A](#appendix-a)
 
 ## Chapter 1: Setting up
-To get started with building for WotR, first you need to download [Prims modloader](https://prismlauncher.org/download/windows/), and the builders [modpack](https://discord.com/channels/1328761294085554176/1364338331554418798).
+To get started with building for WotR, first you need to download [Prims modloader](https://prismlauncher.org/download/windows/), and the builders [modpack](https://discord.com/channels/1374772629298483202/1382748526915747870/1385345216709525587).
 After setting up Prism, click on "Add Instance", "Import", "Browse" and locate the Builders Modpack you've just downloaded.
 
-Another great tool to download is the [resource pack](https://discord.com/channels/1328761294085554176/1336719831537553469/1352674512340258966), which is used to indicate the status of your builds. Launch the Builders Mod, go to "Options", "Resource Packs", "Open Pack Folder" and place the resource pack .zip in here.
+Another great tool to download is the [resource pack](https://discord.com/channels/1374772629298483202/1382748526915747870/1383070611403702284), which is used to indicate the status of your builds. Launch the Builders Mod, go to "Options", "Resource Packs", "Open Pack Folder" and place the resource pack .zip in here.
 Make sure you enable it by pressing the arrow on the icon.
 
-Before you can get on the Builders Server, put your minecraft name in the [Build Server Whitelist channel](https://discord.com/channels/1328761294085554176/1336719831537553469), but offline building is also possible.
-The last thing you need to do, is putting your Discord name and timezone in the [Builders Sheet](https://discord.com/channels/1328761294085554176/1335631637769097236/1341132646612336773), and pick an unused signature. This sheet will be used throughout the tutorial.
+Before you can get on the Builders Server, file a [ticket](https://discord.com/channels/1374772629298483202/1382748526915747870/1385202486620454943) to get access, but offline building is also possible.
+The last thing you need to do, is putting your Discord name and timezone in the [Builders Sheet in this post](https://discord.com/channels/1374772629298483202/1382748526915747870/1383009059590115398), and pick an unused signature. This sheet will be used throughout the tutorial.
 
 
 ## Chapter 2: Introduction to building
@@ -163,7 +163,7 @@ tabs). Ask in chat for a review.
 
 ## Chapter 4: Making processors
 To start with processor generation using excel sheets, download the following zip file:
-`json_generator.zip` from [here](https://discord.com/channels/1328761294085554176/1335631637769097236/1357334905922523236).
+`json_generator.zip` from [here]() _Link broken, WIP_.
 It uses [Python 3](https://www.python.org/downloads/).
 It is also useful to open Jade plugin setting in-game (num 0 by default), scroll down to the very bottom and enable both "Registry Name" and "Block States".
 This makes you able to see the names of the blocks you want to use, and their properties.  
@@ -251,7 +251,7 @@ When you have created the required `.json` files, send them to a build coordinat
 themes, discuss the ingredients required for the key generation.
 
 ## Chapter 5: Questions? Ask for help!
-If there is anything that is not clear, or would like to know a bit more about, do not hesitate to ask questions in the [build chat](https://discord.com/channels/1328761294085554176/1335631637769097236)!
+If there is anything that is not clear, or would like to know a bit more about, do not hesitate to ask questions in the [build chat](https://discord.com/channels/1374772629298483202/1377671335295189143)!
 There are enough members willing
 to help you out. It is also very possible that more info needs to be given in this tutorial, so don't hold back.  
 AND SAVE YOUR STRUCTURES!
