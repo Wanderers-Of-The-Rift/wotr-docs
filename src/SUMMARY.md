@@ -27,6 +27,7 @@
     - [Concepts]()
       - [Prosperity](lore/topic/hubworld/concepts/Lore-Concept-Hubworld-1.md)
       - [Sanctuary](lore/topic/hubworld/concepts/Lore-Concept-Hubworld-2.md)
+      - [Convergance](lore/topic/hubworld/concepts/Lore-Concept-Hubworld-3.md)
 - [Builds]()
     - [Standards](builds/standards.md)
     - [Processors](builds/processors.md)
