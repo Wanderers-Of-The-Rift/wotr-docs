@@ -46,7 +46,7 @@ Jun-28-2025 Community Meeting
     - Cjzech - there is [a writeup you can read about here](https://discord.com/channels/1374772629298483202/1377663029595869254/1385358144279937084). The slide is just saying we can always go and redefine later if needed.
 - MattDoesEverything - With the tie regarding essence discussion, what are our next steps for Essence, as it seems to be our base foundation?
     - Cjzech - need to go back and figure out what would work best for the pack. Will work with those who made the essence system suggestions to see if we can rework/re-summarize ideas. See if we can work with Divides by Zero to work out what else is needed with crafting essences/making bigger and stronger essences to better define it for everyone else.
-- Danymaddox
+- Danymaddox - Is there a protocol for submitting and properly crediting builds/themes from people not in the server? I ask because I have a small Spanish community who would like to help the build team but don't want to join the Discord because they do not speak English. Is it possible?
     - Barry Allen - we don’t have a protocol, but could maybe create it. Ask the build navigators
     - Wout - best way would be to work with a build navigator so they can add it to the build server. Use your name on the spreadsheet so if there are any questions or feedback you can relay it to them for changes. See Builders Sheets (third bullet point) and other helpful information like build server modpack and build tutorial here: [build-start-here](https://discord.com/channels/1374772629298483202/1382748526915747870)
 
