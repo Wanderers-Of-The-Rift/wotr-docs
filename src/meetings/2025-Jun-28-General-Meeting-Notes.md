@@ -50,20 +50,20 @@ Jun-28-2025 Community Meeting
     - Barry Allen - we don’t have a protocol, but could maybe create it. Ask the build navigators
     - Wout - best way would be to work with a build navigator so they can add it to the build server. Use your name on the spreadsheet so if there are any questions or feedback you can relay it to them for changes. See Builders Sheets (third bullet point) and other helpful information like build server modpack and build tutorial here: [build-start-here](https://discord.com/channels/1374772629298483202/1382748526915747870)
 
-**Attendance**
-Req
-Wout
-Barry Allen
-Cjzech
-WarrenGore
-ImplementsLegend
-MattDoesEverything
-Galactic_15
-MooMarMouse
-Sybil
-Melancholic Adventurer
-rachaelrose1212
-Danymaddox
-Rev
-a1qs
+**Attendance**\
+Req\
+Wout\
+Barry Allen\
+Cjzech\
+WarrenGore\
+ImplementsLegend\
+MattDoesEverything\
+Galactic_15\
+MooMarMouse\
+Sybil\
+Melancholic Adventurer\
+rachaelrose1212\
+Danymaddox\
+Rev\
+a1qs\
 EsZeph
