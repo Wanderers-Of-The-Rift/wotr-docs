@@ -68,6 +68,7 @@
         - [Feb-08-2025 Community Meeting](meetings/2025-Feb-08-General-Meeting-Notes.md)
         - [Feb-03-2025 Summary Meeting](meetings/2025-Feb-03-Summary-Meeting-Notes.md)
     - [Lore Meetings]()
+        - [Jun-25-2025 Essence Guild, Material, Ability Guild & More](lore/meetings/2025-Jun-29-Lore-Meeting-Notes.md)
         - [Jun-25-2025 Shrines/Anomalies and More](lore/meetings/2025-Jun-25-Lore-Meeting-Notes.md)
         - [Jun-22-2025 Ability creation guild, Rift shrines, Sages, and Hub world](lore/meetings/2025-Jun-22-Lore-Meeting-Notes.md)
         - [Jun-08-2025 Hub & Essence](lore/meetings/2025-Jun-8-Lore-Meeting-Notes.md)
