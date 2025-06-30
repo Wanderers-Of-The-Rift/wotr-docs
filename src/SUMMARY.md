@@ -64,7 +64,7 @@
         - [Jun-22-2025 Ability creation guild, Rift shrines, Sages, and Hub world](lore/meetings/2025-Jun-22-Lore-Meeting-Notes.md)
         - [Jun-08-2025 Hub & Essence](lore/meetings/2025-Jun-8-Lore-Meeting-Notes.md)
         - [Jun-04-2025 Tutorial, Campaign, Hub](lore/meetings/2025-Jun-4-Lore-Meeting-Notes.md)
-        - [Jun-01-2025 Tutorial & Quests](lore/meetings/2025-Jun-01-Lore-Meeting-Notes.md)
+        - [Jun-01-2025 Tutorial & Quests](lore/meetings/2025-Jun-1-Lore-Meeting-Notes.md)
         - [May-28-2025 Guilds, Essence, Sage](lore/meetings/2025-May-28-Lore-Meeting-Notes.md)
         - [May-25-2025 Hub World, Guild design](lore/meetings/2025-May-25-Lore-Meeting-Notes.md)
         - [May-21-2025 Essence, Greeble Guild, Fabric Guild, Hub World](lore/meetings/2025-May-21-Lore-Meeting-Notes.md)
