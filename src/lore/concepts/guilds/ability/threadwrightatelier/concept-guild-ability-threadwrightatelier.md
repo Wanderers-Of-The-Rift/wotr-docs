@@ -1,6 +1,6 @@
 # Threadwright Atelier (Ability Guild)
 
-[**Concept Art**](#concept-art) • [**Story**](#story) • [**Concept**](#Concept) • [**TLDR**](#tldr)
+[**Concept Art**](#concept-art) • [**Story**](#story) • [**Concept**](#concept) • [**TLDR**](#tldr)
 
 ---
 
