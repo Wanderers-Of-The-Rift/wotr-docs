@@ -1,5 +1,10 @@
 # Shrines - Concept Pitch
 
+## Related Links
+[Shrine Pitch Prep](https://discord.com/channels/1374772629298483202/1388628696822190090/1388628696822190090)
+[Shrine Lore Task](https://discord.com/channels/1374772629298483202/1383095540312707192/1383098696089993286)
+[Shrine Lore Topic](https://discord.com/channels/1374772629298483202/1386378785770700860/1386378785770700860)
+
 ## Overview
 Referred to as Anomalies for the remainder of this document.
 
