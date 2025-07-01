@@ -33,7 +33,7 @@
       - [Convergance](lore/topic/hubworld/concepts/Lore-Concept-Hubworld-3.md)
   - [Guilds]()
     - [Concepts]()
-      - Ability - [Threadwright Atelier](lore/concepts/guilds/ability/threadwrightatelier/concept-guild-ability-threadwrightatelier.md)
+      - [Ability - Threadwright Atelier](lore/concepts/guilds/ability/threadwrightatelier/concept-guild-ability-threadwrightatelier.md)
 - [Builds]()
     - [Standards](builds/standards.md)
     - [Processors](builds/processors.md)
