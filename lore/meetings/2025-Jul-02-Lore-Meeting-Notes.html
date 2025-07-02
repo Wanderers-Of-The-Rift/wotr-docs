@@ -1,0 +1,377 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Jul-02-2025 Material, Ability Guild, Essence Guild, Gem Guild Leader &amp; More - Wanderers of the Rift Internal Documentation</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../../toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Wanderers of the Rift Internal Documentation</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/Dimension-Delvers/dimension-delvers-docs" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/Dimension-Delvers/dimension-delvers-docs/edit/main/src/lore/meetings/2025-Jul-02-Lore-Meeting-Notes.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="lore-meeting-july-2-2025"><a class="header" href="#lore-meeting-july-2-2025">Lore Meeting: July 2, 2025</a></h1>
+<blockquote>
+<p><em>Material, Ability Guild, Essence Guild, Gem Guild Leader</em></p>
+<p><em>Hub World, Sages, Shrine Pitch, Essences, Pitch Process</em></p>
+</blockquote>
+<h2 id="material"><a class="header" href="#material"><a href="https://discord.com/channels/1374772629298483202/1387618332756410498/1387618332756410498">Material</a></a></h2>
+<ul>
+<li>
+<p>Discussion of <strong><a href="https://discord.com/channels/1374772629298483202/1387618332756410498/1389765218183282830">Metal</a></strong> concept:</p>
+<ul>
+<li>Moving focus from brass to <strong>copper</strong> that is altered by Rift energy.</li>
+<li>Process similar to <strong>Shimmer from Terraria</strong> or the <strong>Elven portal from Botania</strong> where items transform when passed through.</li>
+<li>Instead of relying on the portal model, players could use a bucket to scoop out "liquid fabric" of space.</li>
+<li>Suggested names: <strong>Altered Copper</strong>, <strong>Rift Blessed Copper</strong>, also drew inspiration from D&amp;D’s <strong>Orium</strong> (a toxic but valuable Feywild metal).</li>
+<li>Other ideas included: <strong>Phase Metal</strong>, <strong>Echo Alloy</strong>, <strong>Shift Metal</strong>, <strong>Limbro</strong>.</li>
+</ul>
+</li>
+<li>
+<p>Discussion of <strong><a href="https://discord.com/channels/1374772629298483202/1387618332756410498/1389771759921791137">Wood</a></strong> concept:</p>
+<ul>
+<li>Focus on <strong>Ashwood trees</strong>, inspired by <strong>Flatland</strong>, envisioned as higher-dimensional organisms linked to <strong>Yggdrasil</strong>.</li>
+<li>All Ashwood trees are connected across dimensions, forming a vast network.</li>
+<li>Mechanics discussed:
+<ul>
+<li>Could allow <strong>teleportation</strong> or act as living gateways to a Hub world.</li>
+<li>Unlike a typical portal frame, using Ashwood logs would require a <strong>catalyst or special action</strong> to open a rift.</li>
+<li>Possibly using the <strong>entire tree as a multi-block portal</strong>, keeping it organic and distinct.</li>
+<li>Turning Ashwood into planks yields <strong>phase planks</strong>, still linked to the world tree.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Discussion of <strong><a href="https://discord.com/channels/1374772629298483202/1387618332756410498/1389786561469747310">Fabric</a></strong> concept:</p>
+<ul>
+<li>When a rift collapses, it sheds a <strong>plant-like organic fiber</strong>, resembling dry grass or reeds.</li>
+<li>A wanderer with residual Rift energy could <strong>replant these fibers</strong>, making them active again.</li>
+<li>They grow like <strong>reverse vines</strong>, climbing up walls, producing cotton-like bulbs that can be harvested for silk and then woven into fabric.</li>
+<li>Names proposed: <strong>vinesilk velvet</strong>, <strong>riftweave silk</strong>, <strong>driftseed velvet</strong>.</li>
+<li><strong>Riftweave</strong> could be the solid block form; initial harvest might be <strong>vine string</strong> or <strong>vine silk</strong>.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="ability-guild"><a class="header" href="#ability-guild"><a href="https://discord.com/channels/1374772629298483202/1386024438151249971/1386024438151249971">Ability Guild</a></a></h2>
+<ul>
+<li>Discussion of <strong>School</strong> concept:
+<ul>
+<li>Academy offered as expanded idea</li>
+<li>Could be more than just simple ability enhancement and could frame the pack</li>
+</ul>
+</li>
+<li>Port over of previous concepts:
+<ul>
+<li><a href="https://discord.com/channels/1374772629298483202/1389732567808479232/1389732567808479232">Threadwright</a> - Tailor Mice, ability thread</li>
+<li><a href="https://discord.com/channels/1374772629298483202/1388038169391267960/1388038169391267960">Felt</a> - Mushroom Hive-mind Muppets</li>
+<li><a href="https://discord.com/channels/1374772629298483202/1388047396667392000/1388047396667392000">Ladies of the Line</a> - Victorian Dress / Magic girl, parasol wand</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="essence-guild"><a class="header" href="#essence-guild"><a href="https://discord.com/channels/1374772629298483202/1388685966818148403/1388685966818148403">Essence Guild</a></a></h2>
+<ul>
+<li>Broke into three high-level archetypes:
+<ul>
+<li><strong>Sages</strong>: mystical lineage with ties to existing lore.</li>
+<li><strong>Craftsman family</strong>: secrets passed through generations.</li>
+<li><strong>Science/research guild</strong>: more experimental approach.</li>
+</ul>
+</li>
+<li>Plan is to draft all three as pitches by next Wednesday for a vote.</li>
+<li><strong>two or three options</strong> for the vote to avoid a single forced path.</li>
+</ul>
+<hr />
+<h2 id="gem-guild-leader"><a class="header" href="#gem-guild-leader"><a href="https://discord.com/channels/1374772629298483202/1385631740189478964/1385631740189478964">Gem Guild Leader</a></a></h2>
+<ul>
+<li>Goal to rework <strong>Gem Garners</strong> guild leadership:
+<ul>
+<li>Shift from Greebles as leaders to (potentially a <strong>crow species</strong> who love shiny things.)</li>
+<li>Greebles might instead be <strong>hired help/pets</strong>, or handled separately as loot goblins.</li>
+<li>Options include splitting Greeble lore/art, using them for rune gem aspects, or creating simpler alternatives.</li>
+</ul>
+</li>
+<li>Draft ideas for a Gem Guild leader to get better direction.</li>
+</ul>
+<hr />
+<h2 id="other-topics"><a class="header" href="#other-topics">Other Topics</a></h2>
+<h3 id="hub-world--liminal-spaces"><a class="header" href="#hub-world--liminal-spaces">Hub World &amp; Liminal Spaces</a></h3>
+<ul>
+<li>Discussed making the <strong>Hub</strong> resemble nostalgic <strong>liminal spaces</strong></li>
+<li>Ideas for an archipelago of islands connected by rift trees.</li>
+<li>Acknowledged the <strong>Hub might not come until the 0.3.0 update</strong>, so guilds need to stand alone first.</li>
+</ul>
+<hr />
+<h3 id="sages--story-lore"><a class="header" href="#sages--story-lore">Sages &amp; Story Lore</a></h3>
+<ul>
+<li><strong>Sages</strong> are like retired level 20 D&amp;D adventurers — powerful, mostly withdrawn or missing.
+<ul>
+<li>Queen Elizabeth Lavaria (Ever Burning Flame) rules the Hub, benevolent but acts only if threatened.</li>
+<li>Edward Lindsay (Emperor of 100 Seas) is more conquest-driven, seeking challenges.</li>
+<li>Concept to link these characters as <strong>founders of the Hub</strong>.</li>
+<li>If not used may fit well as a campaign</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="shrine-game-pitch"><a class="header" href="#shrine-game-pitch"><a href="https://discord.com/channels/1374772629298483202/1388628696822190090/1389674869100118208">Shrine Game Pitch</a></a></h3>
+<ul>
+<li>A pitch has been developed alongside Rachael's shrine work and is almost ready.</li>
+<li>Wout welcomes at least one other competing idea for the shrine.
+<ul>
+<li>The goal is to avoid a "yes, no" vote scenario, encouraging more diverse options.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="essences"><a class="header" href="#essences"><a href="https://discord.com/channels/1374772629298483202/1382855794827067483/1389745763596238881">Essences</a></a></h3>
+<ul>
+<li>Revisit the Essences concept and break it down to its basic forms.</li>
+<li>Find new approaches to categorizing blocks to build a foundation for the Essence system.</li>
+<li>Examples:
+<ul>
+<li>Color</li>
+<li>Elements (earth, water, wind, fire)</li>
+<li>Source (living, ground, dimension)</li>
+<li>Block properties (full, transparent, hardness, tool requirements)</li>
+</ul>
+</li>
+</ul>
+<h3 id="pitch-process-clarification"><a class="header" href="#pitch-process-clarification">Pitch Process Clarification</a></h3>
+<ul>
+<li>There was general uncertainty about how the lore pitch and review process is supposed to work.</li>
+<li>Questions were raised on whether it’s strictly a "yes/no" vote for a single pitch, or if multiple pitches can be approved simultaneously for proofs of concept.</li>
+<li>The pitch poll format was noted to allow "yes, no, or rework" options, but recent examples (like the Essences vote) didn’t follow this structure.</li>
+<li>The group acknowledged that the process is still largely defined by precedent and collective decision.</li>
+<li>Discussion on whether the vote for which story direction to pursue should take place within Lore Review.</li>
+<li>Current plan is to have all three pitches written up, then hold form a consensus.</li>
+<li>The only formal nodes referenced were under Lore tasks and the pinned tasks post, which outline owner responsibilities but not voting.</li>
+<li>It was unclear if the group should go through the full pitch-to-feature pipeline when only discussing the story aspect.</li>
+<li>There may need to be a separate pitch later for the guild’s mechanics like creation and manipulation.</li>
+<li>Suggestion that Lore Review might be the venue where different story-based pitches (e.g. scientific vs sage approaches) are posted and discussed.</li>
+<li>Under this approach, separate posts would detail each pitch and follow the yes/no/rework format.</li>
+<li>Once a pitch is chosen, does it move to Lore Canon?</li>
+<li>Step five would involve collaborating with the Lore leadership team to formally adopt it into canon.</li>
+<li>Only one idea would be fully accepted for the specific task, though others could be repurposed.</li>
+<li>There was also speculation that depending on the vote outcome, one, two, or even all three might proceed.</li>
+<li>After the initial vote, a full pitch would be drafted with more gameplay details.</li>
+<li>
+<h3 id="suggested-to-talk-with-cj-or-doro-to-get-further-clarity-on-the-process"><a class="header" href="#suggested-to-talk-with-cj-or-doro-to-get-further-clarity-on-the-process">Suggested to talk with CJ or Doro to get further clarity on the process.</a></h3>
+</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../meetings/2025-Feb-03-Summary-Meeting-Notes.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../../lore/meetings/2025-Jun-29-Lore-Meeting-Notes.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../meetings/2025-Feb-03-Summary-Meeting-Notes.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../../lore/meetings/2025-Jun-29-Lore-Meeting-Notes.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
