@@ -11,10 +11,10 @@
 - [Coordinator Responsibilities](project-team/coordinator-responsibilities)
 
 ### Community Guidelines
-_(No existing entries yet)_
+- [No existing entries yet]()
 
 ### Policies & Procedures
-_(No existing entries yet)_
+- [No existing entries yet]()
 
 ## 3. Project Documentation
 - [Minimum Viable Product (MVP)](mvp.md)
