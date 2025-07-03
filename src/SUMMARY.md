@@ -31,7 +31,7 @@
         - [Shrines](ideas/summary/pitch-prep-shrines.md)
 - [Guilds]()
     - [Concepts]()
-        - [Ability - Threadwright Atelier](lore/concepts/guilds/ability/threadwrightatelier/concept-guild-ability-threadwrightatelier.md)
+        - [No existing entries yet]()
 
 ### Polls
 - [Polls](polls/polls.md)
@@ -87,7 +87,7 @@
 - [Standards](builds/standards.md)
 - [Processors](builds/processors.md)
 - [Tutorial](builds/tutorial.md)
-- [Tools](resources/tools/README.md)
+- [Tools]()
     - [Palette Swapper](resources/tools/palette-swapper.md)
 
 ## 6. Lore
