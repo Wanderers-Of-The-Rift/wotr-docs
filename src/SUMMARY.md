@@ -15,6 +15,7 @@
 
 ### Policies & Procedures
 - [No existing entries yet]()
+  - [No existing entries yet]()
 
 ## 3. Project Documentation
 - [Minimum Viable Product (MVP)](mvp.md)
