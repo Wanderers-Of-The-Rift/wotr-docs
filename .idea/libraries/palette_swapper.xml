@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="palette-swapper">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/resources/tools/files/palette-swapper.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
