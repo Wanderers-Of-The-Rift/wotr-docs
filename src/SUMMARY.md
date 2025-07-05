@@ -100,6 +100,7 @@
 - [Guilds]()
     - [Concepts]()
         - [Ability - Threadwright Atelier](lore/concepts/guilds/ability/threadwrightatelier/concept-guild-ability-threadwrightatelier.md)
+        - [Ability - Academy of Threads](lore/concepts/guilds/ability/academyofthreads/concept-guild-ability-academyofthreads.md)
 - [Lore Meetings]()
     - [Jul-02-2025 Material, Ability Guild, Essence Guild, Gem Guild Leader & More](lore/meetings/2025-Jul-02-Lore-Meeting-Notes.md)
     - [Jun-29-2025 Essence Guild, Material, Ability Guild & More](lore/meetings/2025-Jun-29-Lore-Meeting-Notes.md)
