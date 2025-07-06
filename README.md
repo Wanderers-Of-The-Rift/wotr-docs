@@ -12,7 +12,7 @@
 
 **A living design & gameplay archive for Wanderers of the Rift.**
 
-This repository holds all design docs, style guides, gameplay concepts, meeting notes, and discussions for **Wanderers of the Rift** — an ARPG-style Minecraft modpack project.
+This repository holds all design docs, style guides, gameplay concepts, meeting notes, and discussions for **Wanderers of the Rift**: an ARPG-style Minecraft modpack project.
 
 ---
 
