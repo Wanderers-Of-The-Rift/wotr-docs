@@ -57,7 +57,7 @@ Then open your browser to [http://localhost:3000/wotr-docs/](http://localhost:30
 
 ## Deployment
 
-This site auto-deploys via **GitHub Actions** on every push to `main`.  
+This site auto-deploys via [**GitHub Actions**](https://github.com/Wanderers-Of-The-Rift/wotr-docs/actions/workflows/docusaurus-deploy.yml) on every push to `main`.  
 Latest deploy status shown in the badge above.
 
 ---
