@@ -6,13 +6,13 @@
 <a href="https://github.com/Wanderers-Of-The-Rift/wotr-docs/actions/workflows/docusaurus-deploy.yml">
   <img src="https://github.com/Wanderers-Of-The-Rift/wotr-docs/actions/workflows/docusaurus-deploy.yml/badge.svg" alt="Deploy Docs" />
 </a>
+<br/>
 <img src="https://img.shields.io/github/last-commit/Wanderers-Of-The-Rift/wotr-docs" alt="Last commit" />
 <img src="https://img.shields.io/github/commit-activity/m/Wanderers-Of-The-Rift/wotr-docs" alt="Commit activity" />
+<img src="https://img.shields.io/github/contributors/Wanderers-Of-The-Rift/wotr-docs" alt="Contributors" />
 
 <br/>
 
-<img src="https://img.shields.io/github/contributors/Wanderers-Of-The-Rift/wotr-docs" alt="Contributors" />
-<img src="https://img.shields.io/github/issues/Wanderers-Of-The-Rift/wotr-docs" alt="Open issues" />
 <img src="https://img.shields.io/github/issues-pr/Wanderers-Of-The-Rift/wotr-docs" alt="Open PRs" />
 
 </div>
