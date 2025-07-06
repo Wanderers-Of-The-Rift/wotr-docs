@@ -11,8 +11,8 @@
 <img src="https://img.shields.io/github/commit-activity/m/Wanderers-Of-The-Rift/wotr-docs" alt="Commit activity" />
 <img src="https://img.shields.io/github/contributors/Wanderers-Of-The-Rift/wotr-docs" alt="Contributors" />
 <br/>
-![Issues](https://img.shields.io/github/issues/Wanderers-Of-The-Rift/wotr-docs)
-![License](https://img.shields.io/github/license/Wanderers-Of-The-Rift/wotr-docs)
+<img src="https://img.shields.io/github/issues/Wanderers-Of-The-Rift/wotr-docs" />
+<img src="https://img.shields.io/github/license/Wanderers-Of-The-Rift/wotr-docs" />
 </div>
 
 ---
