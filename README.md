@@ -1,19 +1,14 @@
 
 # Wanderers of the Rift Docs
 
-<div align="center">
+[![Deploy Docs](https://github.com/Wanderers-Of-The-Rift/wotr-docs/actions/workflows/docusaurus-deploy.yml/badge.svg)](https://github.com/Wanderers-Of-The-Rift/wotr-docs/actions/workflows/docusaurus-deploy.yml)
 
-<a href="https://github.com/Wanderers-Of-The-Rift/wotr-docs/actions/workflows/docusaurus-deploy.yml">
-  <img src="https://github.com/Wanderers-Of-The-Rift/wotr-docs/actions/workflows/docusaurus-deploy.yml/badge.svg" alt="Deploy Docs" />
-</a>
-<br/>
-<img src="https://img.shields.io/github/last-commit/Wanderers-Of-The-Rift/wotr-docs" alt="Last commit" />
-<img src="https://img.shields.io/github/commit-activity/m/Wanderers-Of-The-Rift/wotr-docs" alt="Commit activity" />
-<img src="https://img.shields.io/github/contributors/Wanderers-Of-The-Rift/wotr-docs" alt="Contributors" />
-<br/>
-<img src="https://img.shields.io/github/issues/Wanderers-Of-The-Rift/wotr-docs" />
-<img src="https://img.shields.io/github/license/Wanderers-Of-The-Rift/wotr-docs" />
-</div>
+[![Last commit](https://img.shields.io/github/last-commit/Wanderers-Of-The-Rift/wotr-docs)](https://github.com/Wanderers-Of-The-Rift/wotr-docs/commits)
+[![Commit activity](https://img.shields.io/github/commit-activity/m/Wanderers-Of-The-Rift/wotr-docs)](https://github.com/Wanderers-Of-The-Rift/wotr-docs/graphs/commit-activity)
+[![Contributors](https://img.shields.io/github/contributors/Wanderers-Of-The-Rift/wotr-docs)](https://github.com/Wanderers-Of-The-Rift/wotr-docs/graphs/contributors)
+
+[![Issues](https://img.shields.io/github/issues/Wanderers-Of-The-Rift/wotr-docs)](https://github.com/Wanderers-Of-The-Rift/wotr-docs/issues)
+[![License](https://img.shields.io/github/license/Wanderers-Of-The-Rift/wotr-docs)](https://github.com/Wanderers-Of-The-Rift/wotr-docs/blob/main/LICENSE)
 
 ---
 
