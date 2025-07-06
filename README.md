@@ -1,36 +1,33 @@
 
 # Wanderers of the Rift Docs
 
-<div align="center">
+<table align="center"><tr><td align="center">
 
 <a href="https://github.com/Wanderers-Of-The-Rift/wotr-docs/actions/workflows/docusaurus-deploy.yml">
   <img src="https://github.com/Wanderers-Of-The-Rift/wotr-docs/actions/workflows/docusaurus-deploy.yml/badge.svg" alt="Deploy Docs" />
+</a><br/>
+
+<a href="https://github.com/Wanderers-Of-The-Rift/wotr-docs/commits">
+  <img src="https://img.shields.io/github/last-commit/Wanderers-Of-The-Rift/wotr-docs" alt="Last commit" />
+</a>
+<a href="https://github.com/Wanderers-Of-The-Rift/wotr-docs/graphs/commit-activity">
+  <img src="https://img.shields.io/github/commit-activity/m/Wanderers-Of-The-Rift/wotr-docs" alt="Commit activity" />
+</a>
+<a href="https://github.com/Wanderers-Of-The-Rift/wotr-docs/graphs/contributors">
+  <img src="https://img.shields.io/github/contributors/Wanderers-Of-The-Rift/wotr-docs" alt="Contributors" />
+</a><br/>
+
+<a href="https://github.com/Wanderers-Of-The-Rift/wotr-docs/issues">
+  <img src="https://img.shields.io/github/issues/Wanderers-Of-The-Rift/wotr-docs" alt="Issues" />
+</a>
+<a href="https://github.com/Wanderers-Of-The-Rift/wotr-docs/blob/main/LICENSE">
+  <img src="https://img.shields.io/github/license/Wanderers-Of-The-Rift/wotr-docs" alt="License" />
 </a>
 
-<p>
-  <a href="https://github.com/Wanderers-Of-The-Rift/wotr-docs/commits">
-    <img src="https://img.shields.io/github/last-commit/Wanderers-Of-The-Rift/wotr-docs" alt="Last commit" />
-  </a>
-  <a href="https://github.com/Wanderers-Of-The-Rift/wotr-docs/graphs/commit-activity">
-    <img src="https://img.shields.io/github/commit-activity/m/Wanderers-Of-The-Rift/wotr-docs" alt="Commit activity" />
-  </a>
-  <a href="https://github.com/Wanderers-Of-The-Rift/wotr-docs/graphs/contributors">
-    <img src="https://img.shields.io/github/contributors/Wanderers-Of-The-Rift/wotr-docs" alt="Contributors" />
-  </a>
-</p>
-
-<p>
-  <a href="https://github.com/Wanderers-Of-The-Rift/wotr-docs/issues">
-    <img src="https://img.shields.io/github/issues/Wanderers-Of-The-Rift/wotr-docs" alt="Issues" />
-  </a>
-  <a href="https://github.com/Wanderers-Of-The-Rift/wotr-docs/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/Wanderers-Of-The-Rift/wotr-docs" alt="License" />
-  </a>
-</p>
-
-</div>
+</td></tr></table>
 
 ---
+
 
 
 
