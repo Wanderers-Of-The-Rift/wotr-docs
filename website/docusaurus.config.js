@@ -5,7 +5,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 const config = {
   title: 'Wanderers of the Rift Docs',
   tagline: 'A living design & gameplay archive',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/wotrdev.png',
 
   future: {
     v4: true,
@@ -43,11 +43,16 @@ const config = {
 
   themeConfig: {
     image: 'img/docusaurus-social-card.jpg',
+    colorMode: {
+        defaultMode: 'dark',
+        disableSwitch: false,
+        respectPrefersColorScheme: false,
+      },
     navbar: {
       title: 'WotR Docs',
       logo: {
         alt: 'WotR Logo',
-        src: 'img/logo.svg',
+        src: 'img/wotrdev.png',
       },
       items: [
         {
@@ -69,13 +74,13 @@ const config = {
         {
           title: 'Docs',
           items: [
-            { label: 'Getting Started', to: '/docs/intro' },
+            { label: 'Getting Started', to: '/docs' },
           ],
         },
         {
           title: 'Community',
           items: [
-            { label: 'Discord', href: 'https://discord.gg/yourserver' },
+            { label: 'Discord', href: 'https://discord.gg/VkSeepd59S' },
           ],
         },
         {

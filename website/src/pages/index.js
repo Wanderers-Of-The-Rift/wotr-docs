@@ -1,42 +1,51 @@
-import clsx from 'clsx';
+import React from 'react';
 import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
-
-import Heading from '@theme/Heading';
-import styles from './index.module.css';
-
-function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
-        </div>
-      </div>
-    </header>
-  );
-}
 
 export default function Home() {
-  const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
-      <HomepageHeader />
-      <main>
-        <HomepageFeatures />
+      title="Wanderers of the Rift"
+      description="A living design & gameplay archive"
+    >
+      <main style={{ textAlign: 'center', padding: '4rem 2rem' }}>
+        <h1 style={{ fontSize: '3rem', marginBottom: '0.5rem' }}>
+          Wanderers of the Rift
+        </h1>
+        <p style={{ fontSize: '1.5rem', marginBottom: '2rem' }}>
+          A living design & gameplay archive
+        </p>
+
+        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '1.5rem' }}>
+          <Link
+            className="button button--primary"
+            to="/wotr-docs/docs/"
+            style={{ padding: '1rem 2rem', fontSize: '1.2rem' }}
+          >
+            📚 Documentation
+          </Link>
+          <Link
+            className="button button--secondary"
+            to="/wotr-docs/docs/art/style-guide/"
+            style={{ padding: '1rem 2rem', fontSize: '1.2rem' }}
+          >
+            🎨 Art Style Guide
+          </Link>
+          <Link
+            className="button button--secondary"
+            href="https://github.com/Wanderers-Of-The-Rift/wotr-docs"
+            style={{ padding: '1rem 2rem', fontSize: '1.2rem' }}
+          >
+            💻 GitHub
+          </Link>
+          <Link
+            className="button button--secondary"
+            href="https://discord.gg/VkSeepd59S"
+            style={{ padding: '1rem 2rem', fontSize: '1.2rem' }}
+          >
+            💬 Discord
+          </Link>
+        </div>
       </main>
     </Layout>
   );
