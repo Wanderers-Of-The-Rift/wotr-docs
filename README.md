@@ -15,12 +15,6 @@
 <img src="https://img.shields.io/github/issues/Wanderers-Of-The-Rift/wotr-docs" alt="Open issues" />
 <img src="https://img.shields.io/github/issues-pr/Wanderers-Of-The-Rift/wotr-docs" alt="Open PRs" />
 
-<br/>
-
-<img src="https://img.shields.io/github/repo-size/Wanderers-Of-The-Rift/wotr-docs" alt="Repo size" />
-<img src="https://img.shields.io/github/license/Wanderers-Of-The-Rift/wotr-docs" alt="License" />
-<img src="https://img.shields.io/github/stars/Wanderers-Of-The-Rift/wotr-docs?style=social" alt="Stars" />
-
 </div>
 
 ---
