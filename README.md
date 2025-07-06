@@ -5,6 +5,7 @@
 ![Last commit](https://img.shields.io/github/last-commit/Wanderers-Of-The-Rift/wotr-docs)
 ![Repo size](https://img.shields.io/github/repo-size/Wanderers-Of-The-Rift/wotr-docs)
 ![Commit activity](https://img.shields.io/github/commit-activity/m/Wanderers-Of-The-Rift/wotr-docs)
+![Contributors](https://img.shields.io/github/contributors/Wanderers-Of-The-Rift/wotr-docs)
 ![Issues](https://img.shields.io/github/issues/Wanderers-Of-The-Rift/wotr-docs)
 ![License](https://img.shields.io/github/license/Wanderers-Of-The-Rift/wotr-docs)
 
