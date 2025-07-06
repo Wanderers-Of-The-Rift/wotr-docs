@@ -25,11 +25,11 @@ This repository holds all design docs, style guides, gameplay concepts, meeting 
 
 ## 📚 What you'll find here
 
-- 🎨 **Art style guides** — pixel rules, color palettes, texture conventions
-- ⚔ **Gameplay design documents** — combat, skills, dungeons
-- 📝 **Meeting notes** — project decisions & team discussions
-- 🗳 **Polls & votes** — community-driven feature shaping
-- ✍️ **Lore drafts** — factions, hubworlds, unique thematic elements
+- 🎨 **Art style guides** pixel rules, color palettes, texture conventions
+- ⚔ **Gameplay design documents** combat, skills, dungeons
+- 📝 **Meeting notes** project decisions & team discussions
+- 🗳 **Polls & votes** community-driven feature shaping
+- ✍️ **Lore drafts** factions, hubworlds, unique thematic elements
 
 ---
 
