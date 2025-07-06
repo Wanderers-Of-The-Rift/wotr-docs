@@ -1,4 +1,4 @@
-# Lore: Ability, Custom Dimension, Anomalies (Shrines)
+# Lore: Ability Guild, Custom Dimension, Anomalies (Shrines)
 
 > ### _July 6, 2025_
 > - @artemiskhros
