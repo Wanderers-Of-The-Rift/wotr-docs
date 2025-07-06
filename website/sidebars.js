@@ -88,6 +88,7 @@ module.exports = {
           type: 'category',
           label: 'Lore Meeting Notes',
           items: [
+            'lore/meetings/Jul-06-Lore-Meeting-Notes',
             'lore/meetings/Jul-02-Lore-Meeting-Notes',
             'lore/meetings/Jun-29-Lore-Meeting-Notes',
             'lore/meetings/Jun-25-Lore-Meeting-Notes',
