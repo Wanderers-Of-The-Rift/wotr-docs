@@ -1,7 +1,7 @@
 # Lore: Ability Guild, Custom Dimension, Anomalies (Shrines)
 
 > ### _July 6, 2025_
-> - @artemiskhros
+> - @Sp3cialK
 > - @rachaelrose1212
 > - @galactic_15
 > - @moomarmouse
