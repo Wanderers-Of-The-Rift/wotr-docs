@@ -42,7 +42,7 @@ const config = {
   ],
 
   themeConfig: {
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/wotrdocCard.PNG',
     colorMode: {
         defaultMode: 'dark',
         disableSwitch: false,
