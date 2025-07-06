@@ -3,7 +3,7 @@ module.exports = {
     {
       type: 'category',
       label: '1. Overview',
-      items: ['README', 'glossary', 'WotR for dummies (WIP)', 'intro'],
+      items: ['README', 'glossary', 'WotR for dummies (WIP)'],
     },
     {
       type: 'category',
