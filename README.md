@@ -1,35 +1,16 @@
 
 # Wanderers of the Rift Docs
 
-<table align="center"><tr><td align="center">
+[![Deploy Docs](https://github.com/Wanderers-Of-The-Rift/wotr-docs/actions/workflows/docusaurus-deploy.yml/badge.svg)](https://github.com/Wanderers-Of-The-Rift/wotr-docs/actions/workflows/docusaurus-deploy.yml)
 
-<a href="https://github.com/Wanderers-Of-The-Rift/wotr-docs/actions/workflows/docusaurus-deploy.yml">
-  <img src="https://github.com/Wanderers-Of-The-Rift/wotr-docs/actions/workflows/docusaurus-deploy.yml/badge.svg" alt="Deploy Docs" />
-</a><br/>
+[![Last commit](https://img.shields.io/github/last-commit/Wanderers-Of-The-Rift/wotr-docs)](https://github.com/Wanderers-Of-The-Rift/wotr-docs/commits)
+[![Commit activity](https://img.shields.io/github/commit-activity/m/Wanderers-Of-The-Rift/wotr-docs)](https://github.com/Wanderers-Of-The-Rift/wotr-docs/graphs/commit-activity)
+[![Contributors](https://img.shields.io/github/contributors/Wanderers-Of-The-Rift/wotr-docs)](https://github.com/Wanderers-Of-The-Rift/wotr-docs/graphs/contributors)
 
-<a href="https://github.com/Wanderers-Of-The-Rift/wotr-docs/commits">
-  <img src="https://img.shields.io/github/last-commit/Wanderers-Of-The-Rift/wotr-docs" alt="Last commit" />
-</a>
-<a href="https://github.com/Wanderers-Of-The-Rift/wotr-docs/graphs/commit-activity">
-  <img src="https://img.shields.io/github/commit-activity/m/Wanderers-Of-The-Rift/wotr-docs" alt="Commit activity" />
-</a>
-<a href="https://github.com/Wanderers-Of-The-Rift/wotr-docs/graphs/contributors">
-  <img src="https://img.shields.io/github/contributors/Wanderers-Of-The-Rift/wotr-docs" alt="Contributors" />
-</a><br/>
-
-<a href="https://github.com/Wanderers-Of-The-Rift/wotr-docs/issues">
-  <img src="https://img.shields.io/github/issues/Wanderers-Of-The-Rift/wotr-docs" alt="Issues" />
-</a>
-<a href="https://github.com/Wanderers-Of-The-Rift/wotr-docs/blob/main/LICENSE">
-  <img src="https://img.shields.io/github/license/Wanderers-Of-The-Rift/wotr-docs" alt="License" />
-</a>
-
-</td></tr></table>
+[![Issues](https://img.shields.io/github/issues/Wanderers-Of-The-Rift/wotr-docs)](https://github.com/Wanderers-Of-The-Rift/wotr-docs/issues)
+[![License](https://img.shields.io/github/license/Wanderers-Of-The-Rift/wotr-docs)](https://github.com/Wanderers-Of-The-Rift/wotr-docs/blob/main/LICENSE)
 
 ---
-
-
-
 
 **A living design & gameplay archive for Wanderers of the Rift.**
 
