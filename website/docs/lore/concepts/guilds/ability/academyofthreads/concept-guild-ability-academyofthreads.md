@@ -1,4 +1,4 @@
-># Academy of Threads
+# Academy of Threads (Ability Guild)
 ---
 ## Guild Name
 Academy of Threads

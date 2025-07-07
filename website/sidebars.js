@@ -80,8 +80,21 @@ module.exports = {
           type: 'category',
           label: 'Guilds',
           items: [
-            'lore/concepts/guilds/ability/academyofthreads/concept-guild-ability-academyofthreads',
-            'lore/concepts/guilds/ability/threadwrightatelier/concept-guild-ability-threadwrightatelier',
+            {
+              type: 'category',
+              label: 'Ability',
+              items: [
+                'lore/concepts/guilds/ability/academyofthreads/concept-guild-ability-academyofthreads',
+                'lore/concepts/guilds/ability/threadwrightatelier/concept-guild-ability-threadwrightatelier',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Essence',
+              items: [
+                'lore/concepts/guilds/essence/thewovenoctet/concept-guild-essence-thewovenoctet',
+              ],
+            },
           ],
         },
         {
