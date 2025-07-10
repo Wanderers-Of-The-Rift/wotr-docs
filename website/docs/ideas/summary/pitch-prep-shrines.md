@@ -39,9 +39,9 @@ This concept primarily proposes **replacing some existing 3x3 POIs with anomalie
 
 ### Variants / Types
 - Types discussed in the lore conversations include:
-    - **Guild anomalies** — anomalies influenced by guild activities.
-    - **Sage anomalies** — anomalies touched by Sage interference.
-    - **Anomalies** — naturally occurring dimensional instabilities.
+    - **Guild anomalies**: anomalies influenced by guild activities.
+    - **Sage anomalies**: anomalies touched by Sage interference.
+    - **Anomalies**: naturally occurring dimensional instabilities.
 
 ### Environmental & Sensory details
 - Anomalies may have:
