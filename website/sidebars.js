@@ -7,26 +7,33 @@ module.exports = {
     },
     {
       type: 'category',
-      label: '2. Project Documentation',
+      label: '2. Design',
       items: [
         'mvp',
         'design/DesignDocHome',
         'design/livingbacklog',
         {
           type: 'category',
-          label: 'Art',
-          items: ['art/style-guide/README'],
+          label: 'Feature Prep',
+          items: ['ideas/summary/pitch-prep-shrines'],
         },
         {
           type: 'category',
-          label: 'Feature Prep',
-          items: ['ideas/summary/pitch-prep-shrines'],
+          label: 'Design Meeting Notes',
+          items: ['design/meetings/2025-Jul-10-Design-Meeting-Notes'],
         },
       ],
     },
     {
       type: 'category',
-      label: '3. Development',
+      label: '3. Art',
+      items: [
+        'art/style-guide/README'
+        ],
+    },
+    {
+      type: 'category',
+      label: '4. Development',
       items: [
         'contribute',
         {
@@ -52,7 +59,7 @@ module.exports = {
     },
     {
       type: 'category',
-      label: '4. Build',
+      label: '5. Build',
       items: [
         'builds/standards',
         'builds/processors',
@@ -66,7 +73,7 @@ module.exports = {
     },
     {
       type: 'category',
-      label: '5. Lore',
+      label: '6. Lore',
       items: [
         {
           type: 'category',
@@ -119,7 +126,7 @@ module.exports = {
     },
     {
       type: 'category',
-      label: '6. General Meeting Notes',
+      label: '7. General Meeting Notes',
       items: [
         {
           type: 'category',
@@ -187,7 +194,7 @@ module.exports = {
     },
     {
       type: 'category',
-      label: '7. Polls',
+      label: '8. Polls',
       items: [
         'polls/polls',
         'polls/durability',
@@ -199,7 +206,7 @@ module.exports = {
     },
     {
       type: 'category',
-      label: '8. Resources',
+      label: '9. Resources',
       items: ['resources/mod-development'],
     },
   ],
