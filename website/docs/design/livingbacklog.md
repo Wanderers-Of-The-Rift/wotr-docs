@@ -2,9 +2,10 @@
 
 Below is the current living backlog for our project.
 
-<small style={{color:"gray"}}> Click on any section to expand details. </small>
+<small style="color:gray;"> Click on any section to expand details. </small>
 
 ---
+
 
 <details>
 <summary style="display:flex; align-items:center; gap:8px;">
