@@ -25,14 +25,10 @@ Below is the current living backlog for our project.
 {(<div style={{display: "flex", alignItems: "center", marginBottom: "8px"}}>
   <div style={{flex: "0 0 140px", textAlign: "right", marginRight: "8px", cursor: "pointer", textDecoration: "underline", color: "#26ac8f"}}
     onClick={() => {
-      const el = document.getElementById("rifts");
+      const el = document.getElementById("rifts-content");
       if (el) {
-        el.open = true;
-        el.setAttribute("open", "");
-        setTimeout(() => {
-          el.scrollIntoView({ behavior: "smooth", block: "start" });
-          window.scrollBy(0, -60);
-        }, 50);
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+        window.scrollBy(0, -20);
       }
     }}>
     <strong>Rifts (9)</strong>
@@ -118,8 +114,10 @@ Below is the current living backlog for our project.
 
 ---
 
-<details id="rifts">
+<details>
 <summary>Rifts</summary>
+
+<div id="rifts-content"></div>
 
 - Generation ✅
 - Objectives ✅
