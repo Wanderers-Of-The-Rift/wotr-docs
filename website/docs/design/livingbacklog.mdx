@@ -27,8 +27,9 @@ Below is the current living backlog for our project.
     onClick={() => {
       const el = document.getElementById("rifts-content");
       if (el) {
+        el.closest("details").open = true;
         el.scrollIntoView({ behavior: "smooth", block: "start" });
-        window.scrollBy(0, -20);
+        window.scrollBy(0, -60);
       }
     }}>
     <strong>Rifts (9)</strong>
