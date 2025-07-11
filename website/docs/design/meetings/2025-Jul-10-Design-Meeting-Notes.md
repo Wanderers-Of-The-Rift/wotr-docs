@@ -1,5 +1,5 @@
 # Design: Anomalies, Guilds & More
-> **July 10, 2025**  
+> ### _July 10, 2025_
 > - @Sp3cialK
 > - @rachaelrose1212
 > - @galactic_15
