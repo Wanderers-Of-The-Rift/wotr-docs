@@ -7,16 +7,16 @@ Below is the current living backlog for our project.
 ---
 
 <details>
-<summary>
-Rifts &nbsp; 
-<span style={{display:"inline-block",width:"180px",height:"12px",background:"#ddd",borderRadius:"4px",overflow:"hidden",verticalAlign:"middle"}}>
-  <span style={{display:"inline-block",width:"22%",height:"12px",background:"#4caf50"}}></span>
-  <span style={{display:"inline-block",width:"11%",height:"12px",background:"#2196f3"}}></span>
-  <span style={{display:"inline-block",width:"0%",height:"12px",background:"#ff9800"}}></span>
-  <span style={{display:"inline-block",width:"11%",height:"12px",background:"#9c27b0"}}></span>
-  <span style={{display:"inline-block",width:"44%",height:"12px",background:"#ffeb3b"}}></span>
-  <span style={{display:"inline-block",width:"11%",height:"12px",background:"#9e9e9e"}}></span>
-</span>
+<summary style="display:flex; align-items:center; gap:8px;">
+  Rifts
+  <span style="display:flex; width:180px; height:12px; border-radius:4px; overflow:hidden; background:#ddd;">
+    <span style="flex:22; background:#4caf50;"></span>
+    <span style="flex:11; background:#2196f3;"></span>
+    <span style="flex:0; background:#ff9800;"></span>
+    <span style="flex:11; background:#9c27b0;"></span>
+    <span style="flex:44; background:#ffeb3b;"></span>
+    <span style="flex:11; background:#9e9e9e;"></span>
+  </span>
 </summary>
 
 ✅ Implemented | ⛏️ In Development | 🗳️ Vote | 📝 Pitch | 💡 Idea | 🗯️ Mentioned
@@ -32,6 +32,7 @@ Rifts &nbsp;
 - Guild Rooms 🗯️
 
 </details>
+
 
 ---
 
