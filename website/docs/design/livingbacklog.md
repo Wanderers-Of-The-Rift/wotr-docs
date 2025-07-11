@@ -1,6 +1,8 @@
 # Living Backlog
 
-Below is the current living backlog for our project. Click on any section to expand details.
+Below is the current living backlog for our project.
+
+<small style={{color:"gray"}}> Click on any section to expand details. </small>
 
 <details>
 
