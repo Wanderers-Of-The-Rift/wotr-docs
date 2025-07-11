@@ -11,6 +11,7 @@ module.exports = {
       items: [
         'mvp',
         'design/DesignDocHome',
+        'design/livingbacklog',
         {
           type: 'category',
           label: 'Art',
