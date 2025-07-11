@@ -2,21 +2,20 @@
 
 Below is the current living backlog for our project.
 
-<small style="color:gray;"> Click on any section to expand details. </small>
+<small style={{color: "gray"}}>Click on any section to expand details.</small>
 
 ---
 
-
 <details>
-<summary style="display:flex; align-items:center; gap:8px;">
+<summary style="display: flex; align-items: center; gap: 8px;">
   Rifts
-  <span style="display:flex; width:180px; height:12px; border-radius:4px; overflow:hidden; background:#ddd;">
-    <span style="flex:22; background:#4caf50;"></span>
-    <span style="flex:11; background:#2196f3;"></span>
-    <span style="flex:0; background:#ff9800;"></span>
-    <span style="flex:11; background:#9c27b0;"></span>
-    <span style="flex:44; background:#ffeb3b;"></span>
-    <span style="flex:11; background:#9e9e9e;"></span>
+  <span style="display: flex; width: 180px; height: 12px; border-radius: 4px; overflow: hidden; background: #ddd;">
+    <span style="flex: 22; background: #4caf50;"></span>
+    <span style="flex: 11; background: #2196f3;"></span>
+    <span style="flex: 0; background: #ff9800;"></span>
+    <span style="flex: 11; background: #9c27b0;"></span>
+    <span style="flex: 44; background: #ffeb3b;"></span>
+    <span style="flex: 11; background: #9e9e9e;"></span>
   </span>
 </summary>
 
