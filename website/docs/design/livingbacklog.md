@@ -4,18 +4,11 @@ Below is the current living backlog for our project.
 
 <small style={{color:"gray"}}> Click on any section to expand details. </small>
 
-<details>
-
-<summary>Status Key</summary>
-
-✅ Implemented | ⛏️ In Development | 🗳️ Vote | 📄 Pitch | 💡 Idea | 🗯️ Mentioned
-
-</details>
-
 ---
 
 <details>
 <summary>Rifts</summary>
+✅ Implemented | ⛏️ In Development | 🗳️ Vote | 📄 Pitch | 💡 Idea | 🗯️ Mentioned
 
 - Generation ✅
 - Objectives ✅
@@ -33,6 +26,7 @@ Below is the current living backlog for our project.
 
 <details>
 <summary>Abilities</summary>
+✅ Implemented | ⛏️ In Development | 🗳️ Vote | 📄 Pitch | 💡 Idea | 🗯️ Mentioned
 
 - Mana 🗯️
 - AOE ✅
@@ -50,6 +44,7 @@ Below is the current living backlog for our project.
 
 <details>
 <summary>Gear</summary>
+✅ Implemented | ⛏️ In Development | 🗳️ Vote | 📄 Pitch | 💡 Idea | 🗯️ Mentioned
 
 - Basic Sockets 🗯️
 - Runegems ✅
@@ -64,6 +59,7 @@ Below is the current living backlog for our project.
 
 <details>
 <summary>Attributes</summary>
+✅ Implemented | ⛏️ In Development | 🗳️ Vote | 📄 Pitch | 💡 Idea | 🗯️ Mentioned
 
 - Criticals ✅
 - Thorns ⛏️
@@ -74,6 +70,7 @@ Below is the current living backlog for our project.
 
 <details>
 <summary>Guilds</summary>
+✅ Implemented | ⛏️ In Development | 🗳️ Vote | 📄 Pitch | 💡 Idea | 🗯️ Mentioned
 
 - Currency ⛏️
 - Stores ⛏️
@@ -86,6 +83,7 @@ Below is the current living backlog for our project.
 
 <details>
 <summary>Essences</summary>
+✅ Implemented | ⛏️ In Development | 🗳️ Vote | 📄 Pitch | 💡 Idea | 🗯️ Mentioned
 
 - TBD
 
@@ -95,6 +93,7 @@ Below is the current living backlog for our project.
 
 <details>
 <summary>Mod Support</summary>
+✅ Implemented | ⛏️ In Development | 🗳️ Vote | 📄 Pitch | 💡 Idea | 🗯️ Mentioned
 
 - TBD
 
@@ -104,6 +103,7 @@ Below is the current living backlog for our project.
 
 <details>
 <summary>Hub World</summary>
+✅ Implemented | ⛏️ In Development | 🗳️ Vote | 📄 Pitch | 💡 Idea | 🗯️ Mentioned
 
 - TBD
 
