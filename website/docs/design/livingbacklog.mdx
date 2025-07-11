@@ -24,11 +24,12 @@ Below is the current living backlog for our project.
 
 <div style={{display: "flex", alignItems: "center", marginBottom: "8px"}}>
   <div
-    style={{flex: "0 0 140px", textAlign: "right", marginRight: "8px", cursor: "pointer"}}
+    style={{flex: "0 0 140px", textAlign: "right", marginRight: "8px", cursor: "pointer", textDecoration: "underline", color: "#4caf50"}}
     onClick={() => {
       const el = document.getElementById("rifts");
       if (el) {
         el.scrollIntoView({ behavior: "smooth", block: "start" });
+        window.scrollBy(0, -60);
         el.open = true;
       }
     }}
