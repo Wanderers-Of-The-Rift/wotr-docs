@@ -3,8 +3,11 @@
 Below is the current living backlog for our project. Click on any section to expand details.
 
 <details>
+
 <summary>Status Key</summary>
+
 ✅ Implemented | ⛏️ In Development | 🗳️ Vote | 📄 Pitch | 💡 Idea | 🗯️ Mentioned
+
 </details>
 
 ---
