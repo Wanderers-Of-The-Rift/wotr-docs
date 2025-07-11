@@ -1,3 +1,23 @@
+import React, { useState } from 'react';
+
+const Collapsible = ({ title, id, children }) => {
+  const [open, setOpen] = useState(false);
+  return (
+    <div style={{ marginBottom: "16px" }}>
+      <div
+        onClick={() => setOpen(!open)}
+        style={{ cursor: "pointer", fontWeight: "bold", color: "#26ac8f", marginBottom: "4px" }}
+      >
+        {title}
+      </div>
+      <div id={id} style={{ display: open ? "block" : "none", paddingLeft: "8px" }}>
+        {children}
+      </div>
+    </div>
+  );
+};
+
+
 # Living Backlog
 
 Below is the current living backlog for our project.
@@ -118,8 +138,7 @@ Below is the current living backlog for our project.
 
 ---
 
-<details>
-<summary>Rifts</summary>
+<Collapsible title="Rifts" id="rifts-content">
 
 <div id="rifts-content"></div>
 ### rifts-conent
@@ -134,13 +153,12 @@ Below is the current living backlog for our project.
 - Gachapon 💡
 - Guild Rooms 🗯️
 
-</details>
+</Collapsible>
 
 
 ---
 
-<details>
-<summary>Abilities</summary>
+<Collapsible title="Abilities" id="abilities-content">
 
 - Mana 🗯️
 - AOE ✅
@@ -152,12 +170,11 @@ Below is the current living backlog for our project.
 - Totems 🗯️
 - Follower Summons 🗯️
 
-</details>
+</Collapsible>
 
 ---
 
-<details>
-<summary>Gear</summary>
+<Collapsible title="Gear" id="gear-content">
 
 - Basic Sockets 🗯️
 - Runegems ✅
@@ -166,55 +183,50 @@ Below is the current living backlog for our project.
 - Base Items 🗯️
 - Potions 🗯️
 
-</details>
+</Collapsible>
 
 ---
 
-<details>
-<summary>Attributes</summary>
+<Collapsible title="Attributes" id="attributes-content">
 
 - Criticals ✅
 - Thorns ⛏️
 
-</details>
+</Collapsible>
 
 ---
 
-<details>
-<summary>Guilds</summary>
+<Collapsible title="Guilds" id="guilds-content">
 
 - Currency ⛏️
 - Stores ⛏️
 - Quests ⛏️
-- Rankings 🗯️ 
+- Rankings 🗯️
 
-</details>
-
----
-
-<details>
-<summary>Essences</summary>
-
-- TBD
-
-</details>
+</Collapsible>
 
 ---
 
-<details>
-<summary>Mod Support</summary>
+<Collapsible title="Essences" id="essences-content">
 
 - TBD
 
-</details>
+</Collapsible>
 
 ---
 
-<details>
-<summary>Hub World</summary>
+<Collapsible title="Mod Support" id="mod-support-content">
 
 - TBD
 
-</details>
+</Collapsible>
+
+---
+
+<Collapsible title="Hub World" id="hub-world-content">
+
+- TBD
+
+</Collapsible>
 
 ---
