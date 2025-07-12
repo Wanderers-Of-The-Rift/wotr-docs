@@ -60,3 +60,12 @@
   background: #9c27b0;
   color: white;
 }
+.status.empty {
+  visibility: hidden;
+  padding: 8px;
+  border-radius: 4px;
+  width: 160px;
+  text-align: center;
+  word-break: break-word;
+  margin-bottom: 8px;
+}
