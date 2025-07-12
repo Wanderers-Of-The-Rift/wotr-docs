@@ -1,7 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-export default function Collapsible({ title, id, children }) {
-  const [open, setOpen] = useState(false);
+export default function Collapsible({ title, id, forceOpen = false, children }) {
+  const [open, setOpen] = useState(forceOpen);
+
+  useEffect(() => {
+    if (forceOpen) setOpen(true);
+  }, [forceOpen]);
+
   return (
     <div style={{ marginBottom: "16px" }}>
       <div
