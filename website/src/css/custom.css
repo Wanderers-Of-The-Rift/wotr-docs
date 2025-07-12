@@ -28,3 +28,35 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* Used for Kanban */
+.status {
+  padding: 8px;
+  border-radius: 4px;
+  width: 160px;
+  text-align: center;
+  word-break: break-word;
+  margin-bottom: 8px;
+}
+
+/* Color by status type */
+.status.implemented {
+  background: #4caf50;
+  color: white;
+}
+.status.indev {
+  background: #2196f3;
+  color: white;
+}
+.status.idea, .status.pitch, .status.vote {
+  background: #ffeb3b;
+  color: black;
+}
+.status.mentioned {
+  background: #9e9e9e;
+  color: white;
+}
+.status.pitch {
+  background: #9c27b0;
+  color: white;
+}

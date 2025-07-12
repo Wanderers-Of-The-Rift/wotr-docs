@@ -63,22 +63,6 @@ This backlog tracks all planned, active and completed work on the various game s
   </div>
 </div>
 
-
-<div style={{display: "flex", alignItems: "center", marginBottom: "8px"}}>
-  <a href="#abilities" style={{flex: "0 0 140px", textAlign: "right", marginRight: "8px", cursor: "pointer", textDecoration: "underline", color: "#26ac8f"}}>
-    <strong>Abilities (9)</strong>
-  </a>
-    <div style={{flex: 1, display: "flex", borderRadius: "4px", overflow: "hidden", background: "#ddd", fontSize: "12px"}}>
-    <div style={{flex: 2, background: "#4caf50", color: "white", display: "flex", alignItems: "center", justifyContent: "center"}}>✅ 2</div>
-    <div style={{flex: 0, background: "#2196f3"}}></div>
-    <div style={{flex: 0, background: "#ff9800"}}></div>
-    <div style={{flex: 0, background: "#9c27b0"}}></div>
-    <div style={{flex: 0, background: "#ffeb3b"}}></div>
-    <div style={{flex: 7, background: "#9e9e9e", color: "white", display: "flex",alignItems: "center",justifyContent: "center"}}>🗯️ 7</div>
-  </div>
-</div>
-
-
 <div style={{display: "flex", alignItems: "center", marginBottom: "8px"}}>
   <div style={{flex: "0 0 140px", textAlign: "right", marginRight: "8px"}}><strong>Gear (6)</strong></div>
   <div style={{flex: 1, display: "flex", borderRadius: "4px", overflow: "hidden", background: "#ddd", fontSize: "12px"}}>
@@ -145,109 +129,247 @@ This backlog tracks all planned, active and completed work on the various game s
 This section tracks all planned, active, and completed work on the rift system.
 :::
 
-
 <div style={{ display: "flex", gap: "16px", marginTop: "24px", flexWrap: "wrap" }}>
 
   {/* Implemented ✅ */}
   <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
-    <div style={{ background: "#4caf50", color: "white", padding: "8px", borderRadius: "4px", width: "160px", textAlign: "center" }}>Generation</div>
-    <div style={{ background: "#4caf50", color: "white", padding: "8px", borderRadius: "4px", width: "160px", textAlign: "center" }}>Objectives</div>
+    <div className="status implemented">Generation</div>
+    <div className="status implemented">Objectives</div>
   </div>
 
   {/* In Development/vote passed ⛏️ */}
   <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
-    <div style={{ background: "#2196f3", color: "white", padding: "8px", borderRadius: "4px", width: "160px", textAlign: "center" }}>Mapper</div>
+    <div className="status indev">Mapper</div>
   </div>
 
   {/* Under Review/voting in progress 📝 💡 🗳️ */}
   <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
-    <div style={{ background: "#9c27b0", color: "white", padding: "8px", borderRadius: "4px", width: "160px", textAlign: "center" }}>Shrines</div>
-    <div style={{ background: "#ffeb3b", color: "black", padding: "8px", borderRadius: "4px", width: "160px", textAlign: "center" }}>Stability</div>
-    <div style={{ background: "#ffeb3b", color: "black", padding: "8px", borderRadius: "4px", width: "160px", textAlign: "center" }}>Loot Goblins</div>
-    <div style={{ background: "#ffeb3b", color: "black", padding: "8px", borderRadius: "4px", width: "160px", textAlign: "center" }}>Champions</div>
-    <div style={{ background: "#ffeb3b", color: "black", padding: "8px", borderRadius: "4px", width: "160px", textAlign: "center" }}>Gachapon</div>
+    <div className="status pitch">Shrines</div>
+    <div className="status idea">Stability</div>
+    <div className="status idea">Loot Goblins</div>
+    <div className="status idea">Champions</div>
+    <div className="status idea">Gachapon</div>
   </div>
 
   {/* Mention/Archived 🗯️ */}
   <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
-    <div style={{ background: "#9e9e9e", color: "white", padding: "8px", borderRadius: "4px", width: "160px", textAlign: "center" }}>Guild Rooms</div>
+    <div className="status mentioned">Guild Rooms</div>
   </div>
 
 </div>
 
 ---
 
-<h3 id="abilities">Abilities</h3>
-<Collapsible title="Click to expand" id="abilities-content">
+### Abilities
 
-- Mana 🗯️
-- AOE ✅
-- Projectiles ✅
-- DoT 🗯️
-- Cloud 🗯️
-- Melee 🗯️
-- Defensive 🗯️
-- Totems 🗯️
-- Follower Summons 🗯️
+<div style={{ display: "flex", gap: "16px", marginTop: "24px", flexWrap: "wrap" }}>
 
-</Collapsible>
+  {/* Implemented ✅ */}
+  <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+    <div className="status implemented">AOE</div>
+    <div className="status implemented">Projectiles</div>
+  </div>
+
+  {/* In Development/vote passed ⛏️ */}
+  <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+    <!-- In Dev -->
+  </div>
+
+  {/* Under Review/voting in progress 📝 💡 🗳️ */}
+  <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+    <div className="status mentioned">Mana</div>
+    <div className="status mentioned">DoT</div>
+    <div className="status mentioned">Cloud</div>
+    <div className="status mentioned">Melee</div>
+    <div className="status mentioned">Defensive</div>
+    <div className="status mentioned">Totems</div>
+    <div className="status mentioned">Follower Summons</div>
+  </div>
+
+  {/* Mention/Archived 🗯️ */}
+  <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+    <!-- Archived -->
+  </div>
+
+</div>
+
 
 ---
 ### Gear
-<Collapsible title="Click to expand" id="abilities-gear">
 
-- Basic Sockets 🗯️
-- Runegems ✅
-- Ability Based Sockets 🗯️
-- Special Sockets 🗯️
-- Base Items 🗯️
-- Potions 🗯️
+<div style={{ display: "flex", gap: "16px", marginTop: "24px", flexWrap: "wrap" }}>
 
-</Collapsible>
+  {/* Implemented ✅ */}
+  <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+    <div className="status implemented">Runegems</div>
+  </div>
+
+  {/* In Development/vote passed ⛏️ */}
+  <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+    <!-- In Dev -->
+  </div>
+
+  {/* Under Review/voting in progress 📝 💡 🗳️ */}
+  <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+    <div className="status mentioned">Basic Sockets</div>
+    <div className="status mentioned">Ability Based Sockets</div>
+    <div className="status mentioned">Special Sockets</div>
+    <div className="status mentioned">Base Items</div>
+    <div className="status mentioned">Potions</div>
+  </div>
+
+  {/* Mention/Archived 🗯️ */}
+  <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+    <!-- Archived -->
+  </div>
+
+</div>
+
 
 ---
 ### Attributes
-<Collapsible title="Click to expand" id="attributes-content">
 
-- Criticals ✅
-- Thorns ⛏️
+<div style={{ display: "flex", gap: "16px", marginTop: "24px", flexWrap: "wrap" }}>
 
-</Collapsible>
+  {/* Implemented ✅ */}
+  <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+    <div className="status implemented">Criticals</div>
+  </div>
+
+  {/* In Development/vote passed ⛏️ */}
+  <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+    <div className="status indev">Thorns</div>
+  </div>
+
+  {/* Under Review/voting in progress 📝 💡 🗳️ */}
+  <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+    <!-- Under Review -->
+  </div>
+
+  {/* Mention/Archived 🗯️ */}
+  <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+    <!-- Archived -->
+  </div>
+
+</div>
 
 ---
 ### Guilds
-<Collapsible title="Click to expand" id="guilds-content">
 
-- Currency ⛏️
-- Stores ⛏️
-- Quests ⛏️
-- Rankings 🗯️
+<div style={{ display: "flex", gap: "16px", marginTop: "24px", flexWrap: "wrap" }}>
 
-</Collapsible>
+  {/* Implemented ✅ */}
+  <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+    <!-- Implemented -->
+  </div>
+
+  {/* In Development/vote passed ⛏️ */}
+  <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+    <div className="status indev">Currency</div>
+    <div className="status indev">Stores</div>
+    <div className="status indev">Quests</div>
+  </div>
+
+  {/* Under Review/voting in progress 📝 💡 🗳️ */}
+  <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+    <div className="status mentioned">Rankings</div>
+  </div>
+
+  {/* Mention/Archived 🗯️ */}
+  <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+    <!-- Archived -->
+  </div>
+
+</div>
+
+
 
 ---
 ### Essences
-<Collapsible title="Click to expand" id="esssences-content">
 
-- TBD
+<div style={{ display: "flex", gap: "16px", marginTop: "24px", flexWrap: "wrap" }}>
 
-</Collapsible>
+  {/* Implemented ✅ */}
+  <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+    <!-- Implemented -->
+  </div>
+
+  {/* In Development/vote passed ⛏️ */}
+  <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+    <!-- In Dev -->
+  </div>
+
+  {/* Under Review/voting in progress 📝 💡 🗳️ */}
+  <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+    <!-- Under Review -->
+  </div>
+
+  {/* Mention/Archived 🗯️ */}
+  <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+    <!-- Archived -->
+  </div>
+
+</div>
+
+
 
 ---
 ### Hub World
-<Collapsible title="Click to expand" id="hubworld-content">
 
-- TBD
 
-</Collapsible>
+<div style={{ display: "flex", gap: "16px", marginTop: "24px", flexWrap: "wrap" }}>
+
+  {/* Implemented ✅ */}
+  <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+    <!-- Implemented -->
+  </div>
+
+  {/* In Development/vote passed ⛏️ */}
+  <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+    <!-- In Dev -->
+  </div>
+
+  {/* Under Review/voting in progress 📝 💡 🗳️ */}
+  <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+    <!-- Under Review -->
+  </div>
+
+  {/* Mention/Archived 🗯️ */}
+  <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+    <!-- Archived -->
+  </div>
+
+</div>
+
 
 ---
 
 ### Mod Support
-<Collapsible title="Click to expand" id="modsupport-content">
 
-- TBD
 
-</Collapsible>
+<div style={{ display: "flex", gap: "16px", marginTop: "24px", flexWrap: "wrap" }}>
+
+  {/* Implemented ✅ */}
+  <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+    <!-- Implemented -->
+  </div>
+
+  {/* In Development/vote passed ⛏️ */}
+  <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+    <!-- In Dev -->
+  </div>
+
+  {/* Under Review/voting in progress 📝 💡 🗳️ */}
+  <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+    <!-- Under Review -->
+  </div>
+
+  {/* Mention/Archived 🗯️ */}
+  <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+    <!-- Archived -->
+  </div>
+
+</div>
+
 
 ---
