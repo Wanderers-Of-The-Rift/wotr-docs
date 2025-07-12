@@ -3,6 +3,18 @@ import Collapsible from '@site/src/components/Collapsible';
 # Living Backlog
 
 Below is the current living backlog for our project.
+<a href="#abilities"
+  onClick={(e) => {
+    e.preventDefault();
+    const el = document.getElementById("abilities");
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+      window.scrollBy(0, -60);
+    }
+  }}
+>
+  <strong>Abilities (9)</strong>
+</a>
 
 <div style={{
   position: "sticky",
@@ -154,7 +166,7 @@ Below is the current living backlog for our project.
 
 ---
 
-<h3 id="abilities" style={{ scrollMarginTop: "60px" }}>Abilities</h3>
+<h3 id="abilities">Abilities</h3>
 <Collapsible title="Click to expand" id="abilities-content">
 
 - Mana 🗯️
