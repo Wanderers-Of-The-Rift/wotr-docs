@@ -1,8 +1,8 @@
 Jul-05-2025 Community Meeting
 
-**Kudos & Recognition**
+## Kudos & Recognition
 
-*  jyu - kudos to Sp3cialK for kick starting [MotR project](https://github.com/Wanderers-Of-The-Rift/motr)
+* jyu - kudos to Sp3cialK for kick starting [MotR project](https://github.com/Wanderers-Of-The-Rift/motr)
 * Melancholic Adventurer - kudos to anyone who did stuff the last two weeks
 * Sp3cialK - kudos to WarrenGore for getting a bunch of topics started in lore/game design/open ideas/etc.
 * Sp3cialK - kudos for andydirk for getting the new ‘[internal projects](https://discord.com/channels/1374772629298483202/1389334643546788021)’ area set up
@@ -12,7 +12,7 @@ Jul-05-2025 Community Meeting
 * EsZeph - kudos to MooMarMouse for their soundtrack and everyone else I’m missing: [Music tracks](https://discord.com/channels/1374772629298483202/1389014733893537833)
 * New member - Shinny-Byron! Welcome to the team!
 
-**\*otR Mods**
+## \*otR Mods
 
 * MotR \- Materials of the Rift ([now ready to go!](https://github.com/Wanderers-Of-The-Rift/motr))
     * Will be published in official modpack
@@ -26,18 +26,18 @@ Jul-05-2025 Community Meeting
     * Do not use any blocks from BotR in the builds as they will not work\!
     * Used for things that will only exist on the build server to assist builders, like the builder’s glasses
 
-**Section Updates**
+## Section Updates
 
-* Art Update
-    * MCDraws put together a [digital moodboard](https://app.milanote.com/1Uv6Es19VOekbd?p=BM1zkkiI18X), can view without an account but to add to it create a free account
-    * Tags were added in [assets-and-requests](https://discord.com/channels/1374772629298483202/1377672765926150174) for anything needed for MotR or BotR
+### Art Update
+* MCDraws put together a [digital moodboard](https://app.milanote.com/1Uv6Es19VOekbd?p=BM1zkkiI18X), can view without an account but to add to it create a free account
+* Tags were added in [assets-and-requests](https://discord.com/channels/1374772629298483202/1377672765926150174) for anything needed for MotR or BotR
 
-**Q\&A**
+## Q\&A
 
 * Melancholic Adventurer - What are the full names of the 2 extra mods
     * Attackeight - Materials of the Rift (MotR) and Builders of the Rift (BotR)
 
-**After Party Comments, Post Meeting**
+## After Party Comments, Post Meeting
 
 * Thoughts on pitch to feature
     * WarrenGore will look to get a rough draft of a flow chart together for review. Should hopefully help with confusion on moving between steps, visual representation of [definition-of-ready](https://discord.com/channels/1374772629298483202/1377663029595869254)
@@ -50,7 +50,7 @@ Jul-05-2025 Community Meeting
     * [Hub World](https://discord.com/channels/1374772629298483202/1390212047744143420) - posted a few days ago
         * A stable rift/dimension where NPCs, including guild members, reside
 
-**Attendance**  
+## Attendance
 Barry Allen  
 attackeight  
 WarrenGore  

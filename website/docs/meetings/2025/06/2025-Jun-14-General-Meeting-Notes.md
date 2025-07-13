@@ -1,18 +1,18 @@
 [Download the PDF version of Slidedeck](/other-files/meeting-notes/Wanderers-Weekly-Update-June-14-2025.pdf)
 Jun-14-2025 Community Meeting  
-**Kudos**
+## Kudos
 
 * Anorak \- recognise the good news that Pat is back
 * Patrigan \- kudos to everyone for the vote of confidence
 * Wout \- recognise people staying active
 * Patrigan \- kudos to everyone who voted on the palette poll
 
-**Team Updates**
+## Team Updates
 
 * Grimm stepped down from Lore Coordinator
 * Not sure if a new coordinator slot will open up, still need to discuss
 
-**Whats next?**
+## Whats next?
 
 * Server move preview
     * Vote isn’t over yet, but likely happening
@@ -22,7 +22,7 @@ Jun-14-2025 Community Meeting
     * Adjusted the server organization
 * Continued brainstorming in forums
 
-**Community Updates**
+## Community Updates
 
 * Server Move Preview
     * Project Hub
@@ -52,42 +52,42 @@ Jun-14-2025 Community Meeting
                 * System for them so we can have currencies in the modpack
             * Abilities
 
-**Team Updates**
+## Team Updates
 
-* Update from Lore
-    * Server move preview
-        * Introduction
-            * What to expect from the sections within lore
-        * Tasks
-            * Encourage diversity
-            * Maintain distributed leadership
-            * Efficiency
-            * Tasks created by lore leadership
-                * Volunteers will take ownership of tasks
-                * Drive conversation, push towards a vote
-                * Some small things might not have a vote
-                * Owner makes sure the task is in a ready state to move forward with it
-                * Goal is to have several things moving forward at one time
-* Update from Art
-    * Palette poll completed \- Celestial Woven
-    * Server move preview
-      * Art Bulletin is for 
-        * Our overall big to-do lists and where we post stuff like we did before 
-        * Meeting notes 
-        * General Minecraft Art How-to Guidelines like the one previously posted that talks about the darker outlines and such 
-        * Helpful links / programs post like before 
-        * Our Art Direction - like our palette we voted on and our branding 
-* Update from Build
-    * Server move preview
-        *  Feels familiar
-    * Mod poll completed \- add all the mods won\!
-    * Stairs poll completed \- Have 90% runable
-* Update from Modpack Dev
-    * Server Move Preview
-        * Integrating different mods together, coordinator by CyberDay
-        * Any updates or config changes will be mentioned here, but bigger discussions should happen elsewhere
+### Update from Lore
+* Server move preview
+    * Introduction
+        * What to expect from the sections within lore
+    * Tasks
+        * Encourage diversity
+        * Maintain distributed leadership
+        * Efficiency
+        * Tasks created by lore leadership
+            * Volunteers will take ownership of tasks
+            * Drive conversation, push towards a vote
+            * Some small things might not have a vote
+            * Owner makes sure the task is in a ready state to move forward with it
+            * Goal is to have several things moving forward at one time
+### Update from Art
+* Palette poll completed \- Celestial Woven
+* Server move preview
+  * Art Bulletin is for 
+    * Our overall big to-do lists and where we post stuff like we did before 
+    * Meeting notes 
+    * General Minecraft Art How-to Guidelines like the one previously posted that talks about the darker outlines and such 
+    * Helpful links / programs post like before 
+    * Our Art Direction - like our palette we voted on and our branding 
+### Update from Build
+* Server move preview
+    *  Feels familiar
+* Mod poll completed \- add all the mods won\!
+* Stairs poll completed \- Have 90% runable
+### Update from Modpack Dev
+* Server Move Preview
+    * Integrating different mods together, coordinator by CyberDay
+    * Any updates or config changes will be mentioned here, but bigger discussions should happen elsewhere
 
-**Q\&A**
+## Q\&A
 
 * Patrigan \- how is everyone feeling after seeing all of this?
     * People generally excited in chat
@@ -102,7 +102,7 @@ Jun-14-2025 Community Meeting
     * Req \- Majority of it is already summarized and doesn’t need to be moved over
     * Cjzech \- We will need to go through and move what is needed
 
-**Attendees**  
+## Attendees 
 Barry Allen  
 Patrigan  
 Robotmonkey  

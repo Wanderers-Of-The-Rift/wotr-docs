@@ -191,6 +191,7 @@ module.exports = {
           label: 'July 2025',
           items: [
             'meetings/2025/07/Jul-05-General-Meeting-Notes',
+            'meetings/2025/07/Jul-12-General-Meeting-Notes',
           ],
         },
       ],

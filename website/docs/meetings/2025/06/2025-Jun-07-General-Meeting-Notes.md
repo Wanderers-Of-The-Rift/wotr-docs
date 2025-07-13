@@ -1,12 +1,12 @@
 Jun-07-2025 Community Meeting  
-Kudos
+## Kudos
 
 * Wout and Melancholic Adventurer \- kudos to Barry Allen for hosting the meeting
 * Anorak \- kudos to the higherups and everyone else
 * Barry Allen \- kudos to Sp3cialK for the Objectives post
 * Sp3cialK \- kudos to poll creators (RiftedArt and Wout) for getting polls created.
 
-What’s Next?
+## What’s Next?
 
 * Pitch to Feature Updates
     * Still working through
@@ -19,8 +19,8 @@ What’s Next?
         * [Gear Implicits](https://discord.com/channels/1328761294085554176/1375921844166590494)
         * [Objectives](https://discord.com/channels/1328761294085554176/1375922167027597322)
         * [Ability Ideas](https://discord.com/channels/1328761294085554176/1373065058531410011)
-
-Update from Lore
+## Team Updates
+### Update from Lore
 
 * Workshops Wednesdays and Sunday
     * Previous meeting notes can be found here: [Historical Meeting Notes](https://discord.com/channels/1328761294085554176/1376374250453205075)
@@ -37,7 +37,7 @@ Update from Lore
         * [Pitch Prep](https://discord.com/channels/1328761294085554176/1379730928611627032)
         * [Brainstorming](https://discord.com/channels/1328761294085554176/1365731914723360860)
 
-Update from Art
+### Update from Art
 
 * [Palette poll for art is posted](https://discord.com/channels/1328761294085554176/1347951965245542521/1380962307386904637), make sure to vote\!
 * Options can be seen here
@@ -45,7 +45,7 @@ Update from Art
     * [Celestial Woven](https://discord.com/channels/1328761294085554176/1375228037771034656/1375696656359493733)
     * [Folklore Fantasy](https://discord.com/channels/1328761294085554176/1375228037771034656/1375721851002556528)
 
-Update from Build
+### Update from Build
 
 * See updates [here](https://discord.com/channels/1328761294085554176/1335631637769097236/1380641492380684309)
 * Build event every Monday\!
@@ -57,7 +57,7 @@ Update from Build
     * POIs: 89%
     * Themes: 90%
 
-Q\&A
+## Q\&A
 
 * Sp3cialK \- What is the status of accepting new members?
     * Barry Allen \- On hold until new server move and roles/responsibilities get sorted out
@@ -69,7 +69,7 @@ Q\&A
 * WarrenGore \- How far out from an Alpha are we? I would expect MVP to be a ways out from Alpha release. (it was mentioned as a pivotal point to another answer)
     * Barry Allen \- still a ways out
 
-Attendance
+## Attendance
 * attackeight
 * Barry Allen
 * Cjzech
