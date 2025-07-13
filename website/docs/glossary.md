@@ -16,8 +16,8 @@
  
 ## Project Management
 * **Contributor**: Any person who requested the role in the discord. These people are the amazing group that intend to bring you this mod.
-* **Coordinator**: Per subteam, two coordinators are assigned by popular vote. These coordinators have additional responsibilities within the project. They are responsible for ensuring all topics in their area are summarized and followed up on. You can contact your coordinator for any questions and challenges you face. Their role is purely assistance, they do not have any decisive power.
-* **PM Group**: The small group of Project Managers. Their role is to ensure the project moves forward. They break ties and they ensure the team remains on focus.
+* **Navigator**: Per subteam, navigators are assigned by popular vote. These navigators have additional responsibilities within the project. They are responsible for ensuring all topics in their area are summarized and followed up on. You can contact your navigator for any questions and challenges you face. Their role is purely assistance, they do not have any decisive power.
+* **PL Group**: The small group of Project Leaders. Their role is to ensure the project moves forward. They break ties and they ensure the team remains on focus.
 
 ## Dev Technical
 ### General terms
