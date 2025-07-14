@@ -95,7 +95,7 @@ module.exports = {
               label: 'Ability',
               items: [
                 'lore/concepts/guilds/ability/academyofthreads/concept-guild-ability-academyofthreads',
-                'lore/concepts/guilds/ability/academyofthreads/concept-guild-ability-sunderedhouses',
+                'lore/concepts/guilds/ability/sunderedhouses/concept-guild-ability-sunderedhouses',
                 'lore/concepts/guilds/ability/threadwrightatelier/concept-guild-ability-threadwrightatelier',
               ],
             },
