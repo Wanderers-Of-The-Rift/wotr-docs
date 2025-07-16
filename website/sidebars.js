@@ -96,6 +96,7 @@ module.exports = {
               items: [
                 'lore/concepts/guilds/ability/academyofthreads/concept-guild-ability-academyofthreads',
                 'lore/concepts/guilds/ability/sunderedhouses/concept-guild-ability-sunderedhouses',
+                'lore/concepts/guilds/ability/applieddevelopmentconsortium/concept-guild-ability-applieddevelopmentconsortium',
                 'lore/concepts/guilds/ability/threadwrightatelier/concept-guild-ability-threadwrightatelier',
               ],
             },
