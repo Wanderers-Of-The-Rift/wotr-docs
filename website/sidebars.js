@@ -102,6 +102,13 @@ module.exports = {
             },
             {
               type: 'category',
+              label: 'Gem',
+              items: [
+                'lore/concepts/guilds/gem/gemstewards/concept-guild-gem-gemstewards',
+              ],
+            },
+            {
+              type: 'category',
               label: 'Essence',
               items: [
                 'lore/concepts/guilds/essence/thewovenoctet/concept-guild-essence-thewovenoctet',
