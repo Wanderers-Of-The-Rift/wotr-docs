@@ -43,4 +43,4 @@ Next Phase focus on how these ideas take shape:
 - District types
 - How the Hub grows
 - Daily life and weird details
-**Element Matrix** to group everyone’s contributions and start fusing them together — no one’s voice gets lost.
+**Element Matrix** to group everyone’s contributions and start fusing them together; no one’s voice gets lost.
