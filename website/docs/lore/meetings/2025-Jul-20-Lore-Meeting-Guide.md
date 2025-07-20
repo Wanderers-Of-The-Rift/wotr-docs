@@ -22,25 +22,25 @@ Shared ideas we all agree are part of its identity. *Narrative truths* NOT gamep
 
 Recurring ideas that showed up across everyone's submissions:
 
-### 1. **The Hub is Stability in the Chaos**
+### 1. **The Hub is Stable in a Shifting Multiverse**
 
-### 2. **It Thrives Because of Connection**
+### 2. **It Works Because People Do**
 
-### 3. **It Remembers Lost Things**
+### 3. **It Remembers What Others Forget**
 
 ### 4. **It’s Still Being Built**
 
 ### 5. **It’s Made of Many Stories**
 
-### 6. **It’s Becoming Something New**
+### 6. **It’s a Place of Possibility**
 
----
 
 ## Next
 
-Next Phase focus on physical shape of the Hub:
+Next Phase focus on how these ideas take shape:
 - Rift access styles
 - Guild layouts
 - District types
 - How the Hub grows
 - Daily life and weird details
+**Element Matrix** to group everyone’s contributions and start fusing them together — no one’s voice gets lost.
