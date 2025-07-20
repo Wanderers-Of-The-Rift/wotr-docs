@@ -1,4 +1,4 @@
-# Design: Core Loop, Progression, Crafting, Genre Definition
+# Design: Genre, Core Loop, Motivation, Progression, Crafting
 
 > ### _July 19, 2025_
 > - @rachaelrose1212
