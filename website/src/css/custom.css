@@ -48,8 +48,12 @@
   background: #2196f3;
   color: white;
 }
-.status.idea, .status.pitch, .status.vote {
+.status.idea {
   background: #ffeb3b;
+  color: black;
+}
+.status.vote {
+  background: #ff9800;
   color: black;
 }
 .status.mentioned {
