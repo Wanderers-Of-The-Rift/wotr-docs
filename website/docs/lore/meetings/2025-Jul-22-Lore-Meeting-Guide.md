@@ -13,7 +13,7 @@ NOT deciding lore canon or picking “best” submissions.
 
 > **How do the ideas from Phase 1 show up in the design of the Hub?**
 
-Structural and narrative choices. All options here reflect someone's vision. *connect, combine, and collaborate.
+Structural and narrative choices. All options here reflect someone's vision. *connect, combine, and collaborate*
 
 ---
 
