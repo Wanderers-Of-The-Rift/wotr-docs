@@ -208,6 +208,7 @@ module.exports = {
           items: [
             'meetings/2025/07/Jul-05-General-Meeting-Notes',
             'meetings/2025/07/Jul-12-General-Meeting-Notes',
+            'meetings/2025/07/Jul-26-General-Meeting-Notes',
           ],
         },
       ],
