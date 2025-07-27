@@ -6,7 +6,7 @@ module.exports = {
       items: [
         'README',
         'glossary',
-        '/WotR Guide'
+        'WotR Guide'
         ],
     },
     {
