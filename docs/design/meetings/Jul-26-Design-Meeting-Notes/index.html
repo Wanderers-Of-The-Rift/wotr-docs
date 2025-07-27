@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-design/meetings/Jul-26-Design-Meeting-Notes" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.8.1">
+<title data-rh="true">Design: Vision, Player, and Loop | Wanderers of the Rift Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://wanderers-of-the-rift.github.io/wotr-docs/img/wotrdocCard.PNG"><meta data-rh="true" name="twitter:image" content="https://wanderers-of-the-rift.github.io/wotr-docs/img/wotrdocCard.PNG"><meta data-rh="true" property="og:url" content="https://wanderers-of-the-rift.github.io/wotr-docs/docs/design/meetings/Jul-26-Design-Meeting-Notes"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Design: Vision, Player, and Loop | Wanderers of the Rift Docs"><meta data-rh="true" name="description" content="### July 26, 2025"><meta data-rh="true" property="og:description" content="### July 26, 2025"><link data-rh="true" rel="icon" href="/wotr-docs/img/wotrdev.png"><link data-rh="true" rel="canonical" href="https://wanderers-of-the-rift.github.io/wotr-docs/docs/design/meetings/Jul-26-Design-Meeting-Notes"><link data-rh="true" rel="alternate" href="https://wanderers-of-the-rift.github.io/wotr-docs/docs/design/meetings/Jul-26-Design-Meeting-Notes" hreflang="en"><link data-rh="true" rel="alternate" href="https://wanderers-of-the-rift.github.io/wotr-docs/docs/design/meetings/Jul-26-Design-Meeting-Notes" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Design: Vision, Player, and Loop","item":"https://wanderers-of-the-rift.github.io/wotr-docs/docs/design/meetings/Jul-26-Design-Meeting-Notes"}]}</script><link rel="alternate" type="application/rss+xml" href="/wotr-docs/blog/rss.xml" title="Wanderers of the Rift Docs RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/wotr-docs/blog/atom.xml" title="Wanderers of the Rift Docs Atom Feed"><link rel="stylesheet" href="/wotr-docs/assets/css/styles.1cab420a.css">
+<script src="/wotr-docs/assets/js/runtime~main.a8039cca.js" defer="defer"></script>
+<script src="/wotr-docs/assets/js/main.501dfbc4.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t="dark";var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",e||t),document.documentElement.setAttribute("data-theme-choice",e||t)}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/wotr-docs/img/wotrdev.png"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/wotr-docs/"><div class="navbar__logo"><img src="/wotr-docs/img/wotrdev.png" alt="WotR Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/wotr-docs/img/wotrdev.png" alt="WotR Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">WotR Docs</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/wotr-docs/docs/">Documentation</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/Wanderers-Of-The-Rift/wotr-docs" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/wotr-docs/docs/">1. Overview</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/wotr-docs/docs/mvp">2. Design</a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/mvp">Minimum Viable Product (MVP)</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/design/DesignDocHome">DesignDocHome</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/design/livingbacklog">Living Backlog</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/wotr-docs/docs/ideas/summary/pitch-prep-shrines">Feature Prep</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" tabindex="0" href="/wotr-docs/docs/design/meetings/Jul-26-Design-Meeting-Notes">Design Meeting Notes</a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/wotr-docs/docs/design/meetings/Jul-26-Design-Meeting-Notes">Design: Vision, Player, and Loop</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/design/meetings/Jul-25-Design-Meeting-Guide">🧾 Game Design Identity: What WotR *Is* (Phase 1)</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/design/meetings/Jul-19-Design-Meeting-Notes">Design: Genre, Core Loop, Motivation, Progression, Crafting</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/design/meetings/Jul-10-Design-Meeting-Notes">Design: Anomalies, Guilds &amp; More</a></li></ul></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/wotr-docs/docs/art/style-guide/">3. Art</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/wotr-docs/docs/contribute">4. Development</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/wotr-docs/docs/builds/standards">5. Build</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/wotr-docs/docs/lore/topic/hubworld/concepts/Lore-Concept-Hubworld-1">6. Lore</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/wotr-docs/docs/meetings/2025/02/Feb-03-Summary-Meeting-Notes">7. General Meeting Notes</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/wotr-docs/docs/polls/">8. Polls</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/wotr-docs/docs/resources/mod-development">9. Resources</a></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/wotr-docs/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">2. Design</span></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Design Meeting Notes</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Design: Vision, Player, and Loop</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Design: Vision, Player, and Loop</h1></header>
+<blockquote>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="july-26-2025"><em>July 26, 2025</em><a href="#july-26-2025" class="hash-link" aria-label="Direct link to july-26-2025" title="Direct link to july-26-2025">​</a></h3>
+<ul>
+<li>@rachaelrose1212</li>
+<li>@Divides By Zero</li>
+<li>@Galactic_15</li>
+<li>@andydirk</li>
+<li>@HellFirePvP</li>
+<li>@ImplementsLegend</li>
+<li>@jyu</li>
+<li>@maloki</li>
+<li>@Sp3cialK</li>
+<li>@WarrenGore</li>
+<li>@Wout</li>
+<li>@Zing</li>
+</ul>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="game-vision--genre">Game Vision &amp; Genre<a href="#game-vision--genre" class="hash-link" aria-label="Direct link to Game Vision &amp; Genre" title="Direct link to Game Vision &amp; Genre">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="arpg-as-core-identity">ARPG as Core Identity<a href="#arpg-as-core-identity" class="hash-link" aria-label="Direct link to ARPG as Core Identity" title="Direct link to ARPG as Core Identity">​</a></h3>
+<ul>
+<li>General consensus is that <strong>Wanderers of the Rift is an Action RPG</strong> built in modded Minecraft.</li>
+<li>Central themes:<!-- -->
+<ul>
+<li>Combat and skill-based builds.</li>
+<li>Loot-focused exploration and player progression.</li>
+<li>Players define their fantasy through build crafting and choices.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="not-just-a-label">Not Just a Label<a href="#not-just-a-label" class="hash-link" aria-label="Direct link to Not Just a Label" title="Direct link to Not Just a Label">​</a></h3>
+<ul>
+<li>Avoid overcommitting to terms like “extraction shooter” or “roguelite.”</li>
+<li>Labels like these help communicate vibes, not strict mechanics</li>
+<li>Community and content creators may ultimately define the pack’s genre more than the devs</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="positioning-compared-to-other-packs">Positioning Compared to Other Packs<a href="#positioning-compared-to-other-packs" class="hash-link" aria-label="Direct link to Positioning Compared to Other Packs" title="Direct link to Positioning Compared to Other Packs">​</a></h3>
+<ul>
+<li>Emphasis on custom integration, not a kitchen sink modpack.</li>
+<li>Avoids leaning too heavily on automation, farming, or pure sandbox building</li>
+<li>Minecraft familiarity is a plus, but not the focus</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="target-players">Target Players<a href="#target-players" class="hash-link" aria-label="Direct link to Target Players" title="Direct link to Target Players">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="primary-players">Primary Players<a href="#primary-players" class="hash-link" aria-label="Direct link to Primary Players" title="Direct link to Primary Players">​</a></h3>
+<ul>
+<li>Players who:<!-- -->
+<ul>
+<li>Enjoy build-crafting and ARPG-style combat</li>
+<li>Are open to Minecraft’s modding systems</li>
+<li>Prefer solo or co-op PvE over PvP</li>
+<li>Are drawn to games like Path of Exile, Diablo, Last Epoch</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="audience--tone">Audience &amp; Tone<a href="#audience--tone" class="hash-link" aria-label="Direct link to Audience &amp; Tone" title="Direct link to Audience &amp; Tone">​</a></h3>
+<ul>
+<li>Not a hardcore experience</li>
+<li>Targeting <strong>casual ARPG fans</strong>, with flexibility for both structured progression and creative expression</li>
+<li>Okay if it’s “not for everyone.” Expect it may not appeal to some players</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="pvp-discussion">PvP Discussion<a href="#pvp-discussion" class="hash-link" aria-label="Direct link to PvP Discussion" title="Direct link to PvP Discussion">​</a></h3>
+<ul>
+<li>PvP considered problematic due to build imbalance</li>
+<li>Potential for instanced combat (e.g., gladiator arenas), but not core gameplay</li>
+<li>Shared sentiment: PvE remains the priority</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="gameplay-loop">Gameplay Loop<a href="#gameplay-loop" class="hash-link" aria-label="Direct link to Gameplay Loop" title="Direct link to Gameplay Loop">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="core-loop-summary">Core Loop Summary<a href="#core-loop-summary" class="hash-link" aria-label="Direct link to Core Loop Summary" title="Direct link to Core Loop Summary">​</a></h3>
+<ul>
+<li><strong>Out of Rift</strong>: Craft, upgrade gear, prepare builds.</li>
+<li><strong>In Rift</strong>: Kill mobs, complete objectives, loot rewards.</li>
+<li>The loop repeats with upgrades feeding into future Rifts.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="poll-results">Poll Results<a href="#poll-results" class="hash-link" aria-label="Direct link to Poll Results" title="Direct link to Poll Results">​</a></h3>
+<ul>
+<li>Interactive poll during the meeting showed:<!-- -->
+<ul>
+<li><strong>Rifting</strong> was the most enjoyable part of the loop.</li>
+<li>Reinforces that Rift runs are the core player draw.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="rift-entry">Rift Entry<a href="#rift-entry" class="hash-link" aria-label="Direct link to Rift Entry" title="Direct link to Rift Entry">​</a></h3>
+<ul>
+<li>Low friction emphasized.</li>
+<li>The goal is to make base Rift entry cheap, with power gains coming from in-Rift performance.</li>
+<li>Avoid forcing farming or gating basic access behind grind.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="mod-supported-arpg-loop">Mod-Supported ARPG Loop<a href="#mod-supported-arpg-loop" class="hash-link" aria-label="Direct link to Mod-Supported ARPG Loop" title="Direct link to Mod-Supported ARPG Loop">​</a></h3>
+<ul>
+<li>Proposed structure:<!-- -->
+<ul>
+<li><strong>Enter Rifts easily</strong>, with low barriers</li>
+<li><strong>Farm</strong> to get stronger within the Rifts. not just to access them</li>
+<li>Mods should feel like a natural extension of the progression loop</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="additional-topics">Additional Topics<a href="#additional-topics" class="hash-link" aria-label="Direct link to Additional Topics" title="Direct link to Additional Topics">​</a></h2>
+<p>Emerged organically through discussion</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2060-minute-session-target">20–60 Minute Session Target<a href="#2060-minute-session-target" class="hash-link" aria-label="Direct link to 20–60 Minute Session Target" title="Direct link to 20–60 Minute Session Target">​</a></h3>
+<ul>
+<li>Proposed range for a Rift run: <strong>20 to 60 minutes</strong></li>
+<li>Not a hard cap, but used to guide objective design and loot pacing</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="concerns">Concerns<a href="#concerns" class="hash-link" aria-label="Direct link to Concerns" title="Direct link to Concerns">​</a></h4>
+<ul>
+<li>60 minutes might feel long unless it&#x27;s a special quest or multi-part objective</li>
+<li>Player attention spans vary. shorter sessions may appeal to a broader audience</li>
+<li>Final duration will be adjusted based on playtesting</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="soft-timers--mechanics">Soft Timers &amp; Mechanics<a href="#soft-timers--mechanics" class="hash-link" aria-label="Direct link to Soft Timers &amp; Mechanics" title="Direct link to Soft Timers &amp; Mechanics">​</a></h4>
+<ul>
+<li>Suggestions included:<!-- -->
+<ul>
+<li><strong>Soft timers</strong>: Difficulty or instability increases over time</li>
+<li><strong>Loot-weight pressure</strong>: Limited inventory capacity discourages long stays</li>
+<li>Use of backpacks and skill trees to alter item weight and movement penalties</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="item-weight--inventory-design">Item Weight &amp; Inventory Design<a href="#item-weight--inventory-design" class="hash-link" aria-label="Direct link to Item Weight &amp; Inventory Design" title="Direct link to Item Weight &amp; Inventory Design">​</a></h3>
+<ul>
+<li><strong>Item &quot;weight&quot;</strong> discussed conceptually:<!-- -->
+<ul>
+<li>Refers to strategic value or interaction cost, not physical mechanics</li>
+</ul>
+</li>
+<li>Minecraft’s default system gives every item high weight (e.g., small inventory)</li>
+<li>Progression can involve upgrades that <strong>reduce friction</strong> while maintaining tension</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="player-guidance--onboarding">Player Guidance &amp; Onboarding<a href="#player-guidance--onboarding" class="hash-link" aria-label="Direct link to Player Guidance &amp; Onboarding" title="Direct link to Player Guidance &amp; Onboarding">​</a></h3>
+<ul>
+<li>Some guidance is necessary, especially for Minecraft-first players</li>
+<li>Example tutorial flow:<!-- -->
+<ul>
+<li>&quot;Here’s the ability bench. Here’s how you upgrade your gear. Now go do a Rift.&quot;</li>
+</ul>
+</li>
+<li>Not aimed at expert pack players or heavy tech automation fans</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="build-diversity--synergy">Build Diversity &amp; Synergy<a href="#build-diversity--synergy" class="hash-link" aria-label="Direct link to Build Diversity &amp; Synergy" title="Direct link to Build Diversity &amp; Synergy">​</a></h3>
+<ul>
+<li>Build crafting should support multiple viable paths</li>
+<li><strong>Synergy</strong> between abilities, gear, and stats is a defining mechanic</li>
+<li>Suggested skill interactions:<!-- -->
+<ul>
+<li>Minion builds</li>
+<li>Stat-based bonuses</li>
+<li>Movement/speed-based advantages</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><strong>Next Actions</strong></p>
+<ul>
+<li>Pillars discussion was postponed to a future session</li>
+<li>Create a pre-meeting post to gather and define proposed pillars</li>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/Wanderers-Of-The-Rift/wotr-docs/edit/main/website/docs/design/meetings/2025-Jul-26-Design-Meeting-Notes.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/wotr-docs/docs/ideas/summary/pitch-prep-shrines"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Shrines - Concept Pitch</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/wotr-docs/docs/design/meetings/Jul-25-Design-Meeting-Guide"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">🧾 Game Design Identity: What WotR *Is* (Phase 1)</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#july-26-2025" class="table-of-contents__link toc-highlight"><em>July 26, 2025</em></a></li><li><a href="#game-vision--genre" class="table-of-contents__link toc-highlight">Game Vision &amp; Genre</a><ul><li><a href="#arpg-as-core-identity" class="table-of-contents__link toc-highlight">ARPG as Core Identity</a></li><li><a href="#not-just-a-label" class="table-of-contents__link toc-highlight">Not Just a Label</a></li><li><a href="#positioning-compared-to-other-packs" class="table-of-contents__link toc-highlight">Positioning Compared to Other Packs</a></li></ul></li><li><a href="#target-players" class="table-of-contents__link toc-highlight">Target Players</a><ul><li><a href="#primary-players" class="table-of-contents__link toc-highlight">Primary Players</a></li><li><a href="#audience--tone" class="table-of-contents__link toc-highlight">Audience &amp; Tone</a></li><li><a href="#pvp-discussion" class="table-of-contents__link toc-highlight">PvP Discussion</a></li></ul></li><li><a href="#gameplay-loop" class="table-of-contents__link toc-highlight">Gameplay Loop</a><ul><li><a href="#core-loop-summary" class="table-of-contents__link toc-highlight">Core Loop Summary</a></li><li><a href="#poll-results" class="table-of-contents__link toc-highlight">Poll Results</a></li><li><a href="#rift-entry" class="table-of-contents__link toc-highlight">Rift Entry</a></li><li><a href="#mod-supported-arpg-loop" class="table-of-contents__link toc-highlight">Mod-Supported ARPG Loop</a></li></ul></li><li><a href="#additional-topics" class="table-of-contents__link toc-highlight">Additional Topics</a><ul><li><a href="#2060-minute-session-target" class="table-of-contents__link toc-highlight">20–60 Minute Session Target</a></li><li><a href="#item-weight--inventory-design" class="table-of-contents__link toc-highlight">Item Weight &amp; Inventory Design</a></li><li><a href="#player-guidance--onboarding" class="table-of-contents__link toc-highlight">Player Guidance &amp; Onboarding</a></li><li><a href="#build-diversity--synergy" class="table-of-contents__link toc-highlight">Build Diversity &amp; Synergy</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/wotr-docs/docs">Getting Started</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://discord.gg/VkSeepd59S" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/Wanderers-Of-The-Rift/wotr-docs" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 Wanderers of the Rift. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>
