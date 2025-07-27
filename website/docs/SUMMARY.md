@@ -44,6 +44,7 @@
 ### General Meeting Notes
 - Meeting Notes
     - General Meetings
+        - [Jul-26-2025 Community Meeting](meetings/2025/07/2025-Jul-26-General-Meeting-Notes.md)
         - [Jul-12-2025 Community Meeting](meetings/2025/07/2025-Jul-12-General-Meeting-Notes.md) 
         - [Jul-05-2025 Community Meeting](meetings/2025/07/2025-Jul-05-General-Meeting-Notes.md)
         - [Jun-28-2025 Community Meeting](meetings/2025/06/2025-Jun-28-General-Meeting-Notes.md)
