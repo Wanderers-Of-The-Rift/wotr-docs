@@ -1,4 +1,4 @@
-# **WotR 0.1.0 for dummies (WIP)**
+# **WotR Guide (WIP)**
 
 Wanderers of the Rift, or WotR for short, is an ARPG, dungeon crawler modpack for Minecraft Java Edition \[1.21.4\]. As one of the many rift wanderers, you must dive into rifts and discover new dimensions. Loot their resources to become stronger and fight side by side with various guilds against the hostile factions trying to take over every dimension. Establish a stronghold in a stabilised rift to keep your allies safe and automate the resources of the three large dimensions to sustain your explorations.
 
