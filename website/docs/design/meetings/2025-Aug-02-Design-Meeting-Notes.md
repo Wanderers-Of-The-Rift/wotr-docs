@@ -5,7 +5,7 @@
 > - @Sp3cialk
 > - ??? 
 
-## [Download Visual Working Board PDF](/other-files/meeting-notes/Visual-Working-Board-8-2-25.pdf)
+## [Visual Working Board PDF](/other-files/meeting-notes/Visual-Working-Board-8-2-25.pdf)
 
 ## Meeting Format
 - Meeting included:
