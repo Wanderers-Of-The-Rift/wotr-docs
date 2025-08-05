@@ -83,11 +83,11 @@
 
 ## Additional Design Values Submitted
 
-- **Risk Provides Reward** – Extra challenge yields stronger returns.
-- **Non-Gated Gameplay** – Minimize barriers to play or progression.
-- **Narrative Without Story** – Lore can be present without scripted sequences.
-- **Embrace Minecraft as a Game** – The modpack should leverage Minecraft deeply, not layer over it.
-- **Minimized Required Downtime** – Shorten re-entry time between Rifts.
+- **Risk Provides Reward** : Extra challenge yields stronger returns.
+- **Non-Gated Gameplay** : Minimize barriers to play or progression.
+- **Narrative Without Story** : Lore can be present without scripted sequences.
+- **Embrace Minecraft as a Game** : The modpack should leverage Minecraft deeply, not layer over it.
+- **Minimized Required Downtime** : Shorten re-entry time between Rifts.
 
 ## Grouping
 
