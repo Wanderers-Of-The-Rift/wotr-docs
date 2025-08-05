@@ -12,3 +12,4 @@ The namespace in a datapack works a bit like the mod name. Mods have their own d
 ## Datapack Format List
 - [Modifiers](code/datapack/format/modifiers.md)
 - [Runegems](code/datapack/format/runegems.md)
+- [Quests](format/quests.md)
