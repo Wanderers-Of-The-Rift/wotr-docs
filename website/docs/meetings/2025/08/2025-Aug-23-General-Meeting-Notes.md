@@ -10,15 +10,15 @@ August 23rd 2025
 ---
 
 ## Kudos
-@rachaelrose1212for design meetings and live whiteboard
-@Divides By Zero for their continued dev work
-@ImplementsLegend for their continued dev work
-@Breadcrumb5550 for helping with blockbench 
-@a1qs for helping with blockbench
-@Req for helping with blockbench
-@EsZeph for helping with blockbench 
-@Sp3cialK  keeping Lore going and contributions to design meetings
-@Sp3cialK for Documents
+- @rachaelrose1212for design meetings and live whiteboard 
+- @Divides By Zero for their continued dev work
+- @ImplementsLegend for their continued dev work
+- @Breadcrumb5550 for helping with blockbench 
+- @a1qs for helping with blockbench
+- @Req for helping with blockbench
+- @EsZeph for helping with blockbench 
+- @Sp3cialK  keeping Lore going and contributions to design meetings
+- @Sp3cialK for Documents
 
 ## Team Updates
 - GermanCoastGuard rejoined the team
