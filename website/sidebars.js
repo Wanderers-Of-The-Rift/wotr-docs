@@ -226,7 +226,7 @@ module.exports = {
           type: 'category',
           label: 'August 2025',
           items: [
-            'meetings/2025/07/Aug-23-General-Meeting-Notes'
+            'meetings/2025/08/Aug-23-General-Meeting-Notes'
           ],
         },
       ],
