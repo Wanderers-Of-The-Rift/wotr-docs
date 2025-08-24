@@ -25,6 +25,7 @@ module.exports = {
           type: 'category',
           label: 'Design Meeting Notes',
           items: [
+            'design/meetings/Aug-23-Design-Meeting-Notes'
             'design/meetings/Aug-16-Design-Meeting-Notes',
             'design/meetings/Aug-09-Design-Meeting-Notes',
             'design/meetings/Aug-02-Design-Meeting-Notes',
@@ -219,6 +220,13 @@ module.exports = {
             'meetings/2025/07/Jul-05-General-Meeting-Notes',
             'meetings/2025/07/Jul-12-General-Meeting-Notes',
             'meetings/2025/07/Jul-26-General-Meeting-Notes',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'August 2025',
+          items: [
+            'meetings/2025/07/Aug-23-General-Meeting-Notes',
           ],
         },
       ],
