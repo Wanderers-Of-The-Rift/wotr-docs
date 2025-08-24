@@ -25,7 +25,7 @@ August 23rd 2025
 - Departures:
     - Doro stepped away due to lack of time and interest
     - Barry Allen stepping down from his role but remaining in the community
-    - Grim stepped down from Lore Navigator role due to family constraints
+    - Grim left project
     - Hellfire departed (advisory role only)
 - Lin joined the moderation team.
 - Additional navigator spots to open
