@@ -60,7 +60,6 @@ module.exports = {
             'code/datapack/datapack-formats',
             'code/datapack/example',
             'code/datapack/format/modifiers',
-            'code/datapack/format/quests',
             'code/datapack/format/runegems',
             'code/decisions/decisions',
             'code/design/design-implementation',
