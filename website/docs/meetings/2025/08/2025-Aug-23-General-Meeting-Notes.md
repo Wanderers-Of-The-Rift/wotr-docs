@@ -1,4 +1,4 @@
-# Community Meeting
+Community Meeting
 August 23rd 2025
 
 > ## Summary
