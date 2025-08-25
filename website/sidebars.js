@@ -57,11 +57,17 @@ module.exports = {
             'code/api/api',
             'code/api/configurable-hud',
             'code/api/quickmover',
-            'code/datapack/datapack-formats',
-            'code/datapack/example',
-            'code/datapack/format/modifiers',
-            'code/datapack/format/quests',
-            'code/datapack/format/runegems',
+            {
+              type: 'category',
+              label: 'Datapacks',
+              items: [
+                'code/datapack/datapack-formats',
+                'code/datapack/example',
+                'code/datapack/format/modifiers',
+                'code/datapack/format/quests',
+                'code/datapack/format/runegems'
+              ],
+            },
             'code/decisions/decisions',
             'code/design/design-implementation',
             'code/design/gear-socket',
