@@ -1,6 +1,7 @@
 # Quest Data
 Quests are tasks the player can take that have goals that must be met and rewards that they provide. A quest can be a specific set of goals and rewards, or can have randomisation in what is required or rewarded.
 
+
 ## Location
 `data/wotr/wotr/quest` Take note of the second wotr.
 
