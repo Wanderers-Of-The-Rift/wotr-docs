@@ -50,15 +50,15 @@ August 23rd 2025
 - Suspend pitch-to-feature processing
 - Hold until dev team expands and activity rises
 - Refocus on what is already in the mod
-Stopping:
-- New feature pitches through pitch-to-feature pipeline
-- Expansive lore development
-Continuing:
-- Adding to backlog
-- Open Ideas Forum (Now Ideas-Backlog)
-- Current Development on existing systems
-- Datapack Development for immediate impact
-- Focused playtesting for current apabilities
+- Stopping:
+  - New feature pitches through pitch-to-feature pipeline
+  - Expansive lore development
+- Continuing:
+  - Adding to backlog
+  - Open Ideas Forum (Now Ideas-Backlog)
+  - Current Development on existing systems
+  - Datapack Development for immediate impact
+  - Focused playtesting for current apabilities
 
 ## Focus Areas
 - Keep lore concise, as players only read short snippets in-game
