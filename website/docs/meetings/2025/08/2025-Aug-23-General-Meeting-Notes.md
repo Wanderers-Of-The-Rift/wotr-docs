@@ -21,13 +21,13 @@ August 23rd 2025
 - @Sp3cialK for Documents
 
 ## Team Updates
-- GermanCoastGuard rejoined the team
+- German Coastguard rejoined the team
 - Departures:
-    - Doro stepped away due to lack of time and interest
+    - xD0R0x stepped away due to lack of time and interest
     - Barry Allen stepping down from his role but remaining in the community
-    - Grim left project
-    - Hellfire departed (advisory role only)
-- Lin joined the moderation team.
+    - Grimm left project
+    - HellFirePvP departed (advisory role only)
+- Lins joined the moderation team.
 - Additional navigator spots to open
 
 ## Navigator Spots
@@ -40,7 +40,7 @@ August 23rd 2025
 ---
 
 # Project Direction
-- Pat's departure created loss of direction
+- Patrigan's departure created loss of direction
 - Project slowed during summer due to availability
 - Creative energy remains high but implementation resources are limited
 - Expanding without a polished core leads to confusion and spent effort
@@ -64,7 +64,7 @@ Continuing:
 - Keep lore concise, as players only read short snippets in-game
 - Use the quest book mod to drip-feed recipes and content, leaving open-ended interpretation
 - Polish existing systems and use data packs for tweaks
-- Special K coordinating with Divides By Zero on data pack documentation and templates
+- Sp3cialK coordinating with Divides By Zero on data pack documentation and templates
 
 ---
 
@@ -97,7 +97,7 @@ Continuing:
 ---
 
 ## Mod Development and Data Pack Work
-- Divides by Zero working on guild system
+- Divides By Zero working on guild system
 - Req developing gear system, ability enhancements, anomalies/shrines, and bug fixes
 - Data pack work will be accessible once templates and documentation are ready
 - Goal: host a workshop where contributors design and test their own abilities
@@ -128,13 +128,13 @@ Continuing:
 ## Rift Spawners
 - Proposal: complete Rifts by clearing a percentage of spawners
 - Would require standardizing spawner counts per room
-- Warren created a spreadsheet of spawner data (may be outdated)
+- WarrenGore created a spreadsheet of spawner data (may be outdated)
 - Suggested to test with current info and adjust based on play
 
 ---
 
 ## MotR Discussion
-- Jyu interested in releasing first version of materials MotR
+- jyu interested in releasing first version of materials MotR
 - Request for list of missing items.
 - Status:
     - Slabs, walls, stairs mostly complete.
