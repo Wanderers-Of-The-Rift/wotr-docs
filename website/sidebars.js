@@ -228,7 +228,7 @@ module.exports = {
           label: 'August 2025',
           items: [
             'meetings/2025/08/Aug-23-General-Meeting-Notes',
-            'meetings/2025/08/2025-Aug-24-Guide-Foundations-Notes',
+            'meetings/2025/08/Aug-24-Guide-Foundations-Notes',
           ],
         },
       ],
