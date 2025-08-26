@@ -9,6 +9,10 @@ August 23rd 2025
 
 ---
 
+## [Power Point Presentation PDF](/other-files/meeting-notes/Wanderers-Weekly-Update-August-23.pdf)
+
+---
+
 ## Kudos
 - @rachaelrose1212 for design meetings and live whiteboard 
 - @Divides By Zero for their continued dev work
