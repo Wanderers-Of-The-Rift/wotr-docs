@@ -65,6 +65,7 @@ module.exports = {
                 'code/datapack/example',
                 'code/datapack/format/modifiers',
                 'code/datapack/format/quests',
+                'code/datapack/format/rift-spawner',
                 'code/datapack/format/runegems'
               ],
             },
