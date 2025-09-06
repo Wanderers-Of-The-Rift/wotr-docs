@@ -239,6 +239,13 @@ module.exports = {
             'meetings/2025/08/Aug-24-Guide-Foundations-Notes',
           ],
         },
+        {
+          type: 'category',
+          label: 'September 2025',
+          items: [
+            'meetings/2025/09/Sep-06-General-Meeting-Notes',
+          ],
+        },
       ],
     },
     {
