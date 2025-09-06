@@ -26,7 +26,7 @@
 
 * Working on refinement of ability system
 * Check out some clips and mind maps here\!
-    * [Mindmap](https://discord.com/channels/1374772629298483202/1377670542173278279/1413683938244956260)
+    * [Mind map](https://discord.com/channels/1374772629298483202/1377670542173278279/1413683938244956260)
     * [Multiple fireball ability getting interrupted](https://discord.com/channels/1374772629298483202/1377670542173278279/1411311256916197376)
     * [Chained ability](https://discord.com/channels/1374772629298483202/1377670542173278279/1411676534913372251)
     * [Ability changing after mana runs out](https://discord.com/channels/1374772629298483202/1377670542173278279/1413410657432244244)
