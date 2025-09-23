@@ -5,7 +5,7 @@
 <meta name="generator" content="Docusaurus v3.8.1">
 <title data-rh="true">Rift Spawners | Wanderers of the Rift Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://wanderers-of-the-rift.github.io/wotr-docs/img/wotrdocCard.PNG"><meta data-rh="true" name="twitter:image" content="https://wanderers-of-the-rift.github.io/wotr-docs/img/wotrdocCard.PNG"><meta data-rh="true" property="og:url" content="https://wanderers-of-the-rift.github.io/wotr-docs/docs/code/datapack/format/rift-spawner"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Rift Spawners | Wanderers of the Rift Docs"><meta data-rh="true" name="description" content="Rift Spawner"><meta data-rh="true" property="og:description" content="Rift Spawner"><link data-rh="true" rel="icon" href="/wotr-docs/img/wotrdev.png"><link data-rh="true" rel="canonical" href="https://wanderers-of-the-rift.github.io/wotr-docs/docs/code/datapack/format/rift-spawner"><link data-rh="true" rel="alternate" href="https://wanderers-of-the-rift.github.io/wotr-docs/docs/code/datapack/format/rift-spawner" hreflang="en"><link data-rh="true" rel="alternate" href="https://wanderers-of-the-rift.github.io/wotr-docs/docs/code/datapack/format/rift-spawner" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Rift Spawners","item":"https://wanderers-of-the-rift.github.io/wotr-docs/docs/code/datapack/format/rift-spawner"}]}</script><link rel="alternate" type="application/rss+xml" href="/wotr-docs/blog/rss.xml" title="Wanderers of the Rift Docs RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/wotr-docs/blog/atom.xml" title="Wanderers of the Rift Docs Atom Feed"><link rel="stylesheet" href="/wotr-docs/assets/css/styles.1cab420a.css">
-<script src="/wotr-docs/assets/js/runtime~main.042b6389.js" defer="defer"></script>
+<script src="/wotr-docs/assets/js/runtime~main.0acb319b.js" defer="defer"></script>
 <script src="/wotr-docs/assets/js/main.1666f7b3.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -18,22 +18,59 @@
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="location">Location<a href="#location" class="hash-link" aria-label="Direct link to Location" title="Direct link to Location">​</a></h4>
 <p><code>data/wotr/trial_spawner</code>.</p>
 <ul>
-<li>Default rift spawner will be rift.json.</li>
+<li>Default rift spawner will be rift.json if no other file, such as a theme specific one, is configured.</li>
 </ul>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="format">Format<a href="#format" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format">​</a></h4>
 <ul>
-<li><code>items_to_drop_when_ominous</code> : Loot table to use when spawner is ominous.</li>
-<li><code>loot_tables_to_eject</code> : Loot table to use when ejecting loot from completed spawner.</li>
-<li><code>simultaneous_mobs</code> : Number of mobs that can be spawned at once if one player is nearby.</li>
-<li><code>simultaneous_mobs_added_per_player</code> : Number added to simultaneousMobs for each additional player nearby.</li>
-<li><code>spawn_potentials</code> : A list of mobs and their respective attributes that could spawn from this spawner.</li>
-<li><code>spawn_range</code>: An integer for the max distance a mob could spawn from the spawner.</li>
-<li><code>ticks_between_spawn</code> : Number of game ticks between each mob spawn.</li>
-<li><code>total_mobs</code> : The total number of mobs that could spawn during activation if one player is nearby.</li>
-<li><code>total_mobs_added_per_player</code> : Number added to totalMobs for each additional player nearby.</li>
+<li><code>items_to_drop_when_ominous</code> : Loot table to use when spawner is ominous.<!-- -->
+<ul>
+<li>Not applicable as we are not using ominous spawners, will not be used even if filled in.</li>
+</ul>
+</li>
+<li><code>loot_tables_to_eject</code> : Loot table to use when ejecting loot from completed spawner.<!-- -->
+<ul>
+<li>Defaults to Minecraft trial spawner loot tables so this should be filled in with something in wotr\loot_table\chests\rift_spawner</li>
+</ul>
+</li>
+<li><code>simultaneous_mobs</code> : Number of mobs that can be spawned at once if one player is nearby.<!-- -->
+<ul>
+<li>Defaults to 2.0</li>
+</ul>
+</li>
+<li><code>simultaneous_mobs_added_per_player</code> : Number added to <code>simultaneousMobs</code> for each additional player nearby.<!-- -->
+<ul>
+<li>Defaults to 1.0</li>
+</ul>
+</li>
+<li><code>spawn_potentials</code> : A list of mobs and their respective attributes that could spawn from this spawner.<!-- -->
+<ul>
+<li>Defaults to an empty list, so needs to be filled in order to spawn anything.</li>
+</ul>
+</li>
+<li><code>spawn_range</code>: An integer for the max distance a mob could spawn from the spawner.<!-- -->
+<ul>
+<li>Can be between 1 and 128. Defaults to 4</li>
+</ul>
+</li>
+<li><code>ticks_between_spawn</code> : Number of game ticks between each mob spawn.<!-- -->
+<ul>
+<li>Defaults to 40</li>
+</ul>
+</li>
+<li><code>total_mobs</code> : The total number of mobs that could spawn during activation if one player is nearby.<!-- -->
+<ul>
+<li>Defaults to 6.0</li>
+</ul>
+</li>
+<li><code>total_mobs_added_per_player</code> : Number added to <code>totalMobs</code> for each additional player nearby.<!-- -->
+<ul>
+<li>Defaults to 2.0</li>
+</ul>
+</li>
 </ul>
 <ul>
 <li>See <a href="https://misode.github.io/trial-spawner/" target="_blank" rel="noopener noreferrer">https://misode.github.io/trial-spawner/</a> for example JSON builder</li>
+<li>See <a href="https://minecraft.wiki/w/Trial_Spawner" target="_blank" rel="noopener noreferrer">https://minecraft.wiki/w/Trial_Spawner</a> for trial spawner config (search for <code>normal_config</code>), including a wide range of options for <code>spawn_potentials</code></li>
 </ul>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="implementation-guidelines">Implementation Guidelines<a href="#implementation-guidelines" class="hash-link" aria-label="Direct link to Implementation Guidelines" title="Direct link to Implementation Guidelines">​</a></h4>
 <ul>
