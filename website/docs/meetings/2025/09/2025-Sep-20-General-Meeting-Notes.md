@@ -63,20 +63,7 @@ September 20 2025
 - Lore: 
   - Quest-related exploration paused, team to test quest functionality
 - Pack Dev:
-  - Holding mod updates until a significant new build; monitoring for needed mods. 
-
-
----
-
-## Data Packs
-- Capabilities include:
-    - Rift loot by tiers
-    - Essence values
-    - Crafting recipes
-    - Quest lines
-    - Gear implicit and rune gem modifiers
-    - Ability creation and upgrade paths
-    - Objective scaling and pacing adjustments
+  - Holding mod updates until a significant new build; monitoring for needed mods.
 
 ---
 
