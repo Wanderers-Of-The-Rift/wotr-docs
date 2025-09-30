@@ -13,8 +13,9 @@ module.exports = {
       type: 'category',
       label: '2. Design',
       items: [
-        'mvp',
         'design/DesignDocHome',
+        'design/GameDesignDocument',
+        'mvp',
         'design/livingbacklog',
         {
           type: 'category',
