@@ -249,6 +249,12 @@ module.exports = {
             'meetings/2025/09/Sep-06-General-Meeting-Notes',
             'meetings/2025/09/Sep-20-General-Meeting-Notes',
           ],
+        {
+          type: 'category',
+          label: 'October 2025',
+          items: [
+            'meetings/2025/10/Oct-04-General-Meeting-Notes',
+          ],
         },
       ],
     },
