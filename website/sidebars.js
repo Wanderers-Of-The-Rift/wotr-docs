@@ -77,7 +77,7 @@ module.exports = {
                 },
                 'code/datapack/datapack-formats',
                 'code/datapack/example',
-                'code/datapack/2025-Oct-04-Datapack-Meeting-Notes'
+                'code/datapack/Oct-04-Datapack-Meeting-Notes'
               ],
             },
             'code/decisions/decisions',
