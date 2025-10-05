@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-code/datapack/Oct-04-Datapack-Meeting-Notes" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.1">
+<title data-rh="true">Datapack: Quest/Task Demo | Wanderers of the Rift Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://wanderers-of-the-rift.github.io/wotr-docs/img/wotrdocCard.PNG"><meta data-rh="true" name="twitter:image" content="https://wanderers-of-the-rift.github.io/wotr-docs/img/wotrdocCard.PNG"><meta data-rh="true" property="og:url" content="https://wanderers-of-the-rift.github.io/wotr-docs/docs/code/datapack/Oct-04-Datapack-Meeting-Notes"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Datapack: Quest/Task Demo | Wanderers of the Rift Docs"><meta data-rh="true" name="description" content="### October 04, 2025"><meta data-rh="true" property="og:description" content="### October 04, 2025"><link data-rh="true" rel="icon" href="/wotr-docs/img/wotrdev.png"><link data-rh="true" rel="canonical" href="https://wanderers-of-the-rift.github.io/wotr-docs/docs/code/datapack/Oct-04-Datapack-Meeting-Notes"><link data-rh="true" rel="alternate" href="https://wanderers-of-the-rift.github.io/wotr-docs/docs/code/datapack/Oct-04-Datapack-Meeting-Notes" hreflang="en"><link data-rh="true" rel="alternate" href="https://wanderers-of-the-rift.github.io/wotr-docs/docs/code/datapack/Oct-04-Datapack-Meeting-Notes" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Datapack: Quest/Task Demo","item":"https://wanderers-of-the-rift.github.io/wotr-docs/docs/code/datapack/Oct-04-Datapack-Meeting-Notes"}]}</script><link rel="alternate" type="application/rss+xml" href="/wotr-docs/blog/rss.xml" title="Wanderers of the Rift Docs RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/wotr-docs/blog/atom.xml" title="Wanderers of the Rift Docs Atom Feed"><link rel="stylesheet" href="/wotr-docs/assets/css/styles.2ba4343f.css">
+<script src="/wotr-docs/assets/js/runtime~main.75a77209.js" defer="defer"></script>
+<script src="/wotr-docs/assets/js/main.685e82ba.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/wotr-docs/img/wotrdev.png"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/wotr-docs/"><div class="navbar__logo"><img src="/wotr-docs/img/wotrdev.png" alt="WotR Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/wotr-docs/img/wotrdev.png" alt="WotR Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">WotR Docs</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/wotr-docs/docs/">Documentation</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/Wanderers-Of-The-Rift/wotr-docs" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/wotr-docs/docs/"><span title="1. Overview" class="categoryLinkLabel_W154">1. Overview</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/wotr-docs/docs/design/DesignDocHome"><span title="2. Design" class="categoryLinkLabel_W154">2. Design</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/wotr-docs/docs/art/style-guide/"><span title="3. Art" class="categoryLinkLabel_W154">3. Art</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/wotr-docs/docs/contribute"><span title="4. Development" class="categoryLinkLabel_W154">4. Development</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/contribute"><span title="How to Contribute" class="linkLabel_WmDU">How to Contribute</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" tabindex="0" href="/wotr-docs/docs/code/"><span title="Code" class="categoryLinkLabel_W154">Code</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/code/"><span title="Code Home" class="linkLabel_WmDU">Code Home</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/code/api/"><span title="API" class="linkLabel_WmDU">API</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/code/api/configurable-hud"><span title="Configurable HUD" class="linkLabel_WmDU">Configurable HUD</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/code/api/quickmover"><span title="QuickMover" class="linkLabel_WmDU">QuickMover</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" tabindex="0" href="/wotr-docs/docs/code/datapack/format/modifiers"><span title="Datapacks" class="categoryLinkLabel_W154">Datapacks</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-4 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/wotr-docs/docs/code/datapack/format/modifiers"><span title="Formats" class="categoryLinkLabel_W154">Formats</span></a></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/code/datapack/datapack-formats"><span title="Datapack formats in WotR" class="linkLabel_WmDU">Datapack formats in WotR</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/code/datapack/example"><span title="example" class="linkLabel_WmDU">example</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/wotr-docs/docs/code/datapack/Oct-04-Datapack-Meeting-Notes"><span title="Datapack: Quest/Task Demo" class="linkLabel_WmDU">Datapack: Quest/Task Demo</span></a></li></ul></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/code/decisions/"><span title="Code Decisions" class="linkLabel_WmDU">Code Decisions</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/code/design/design-implementation"><span title="Design Implementation" class="linkLabel_WmDU">Design Implementation</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/code/design/gear-socket"><span title="Gear Sockets" class="linkLabel_WmDU">Gear Sockets</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/code/design/modifiers"><span title="Modifiers" class="linkLabel_WmDU">Modifiers</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/code/style/"><span title="Code Style" class="linkLabel_WmDU">Code Style</span></a></li></ul></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/wotr-docs/docs/builds/standards"><span title="5. Build" class="categoryLinkLabel_W154">5. Build</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/wotr-docs/docs/lore/topic/hubworld/concepts/Lore-Concept-Hubworld-1"><span title="6. Lore" class="categoryLinkLabel_W154">6. Lore</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/wotr-docs/docs/meetings/2025/02/Feb-03-Summary-Meeting-Notes"><span title="7. General Meeting Notes" class="categoryLinkLabel_W154">7. General Meeting Notes</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/wotr-docs/docs/polls/"><span title="8. Polls" class="categoryLinkLabel_W154">8. Polls</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/wotr-docs/docs/resources/mod-development"><span title="9. Resources" class="categoryLinkLabel_W154">9. Resources</span></a></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/wotr-docs/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">4. Development</span></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Code</span></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Datapacks</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Datapack: Quest/Task Demo</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Datapack: Quest/Task Demo</h1></header>
+<blockquote>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="october-04-2025"><em>October 04, 2025</em><a href="#october-04-2025" class="hash-link" aria-label="Direct link to october-04-2025" title="Direct link to october-04-2025" translate="no">​</a></h3>
+</blockquote>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="focus">Focus<a href="#focus" class="hash-link" aria-label="Direct link to Focus" title="Direct link to Focus" translate="no">​</a></h3>
+<blockquote>
+<ul>
+<li>Quest Hub system demonstration and functionality</li>
+<li>Data pack and resource pack creation process</li>
+<li>Step-by-step quest creation walkthrough</li>
+<li>Accessibility for non-technical contributors</li>
+</ul>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="quest-hub-overview">Quest Hub Overview<a href="#quest-hub-overview" class="hash-link" aria-label="Direct link to Quest Hub Overview" title="Direct link to Quest Hub Overview" translate="no">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="current-status">Current Status<a href="#current-status" class="hash-link" aria-label="Direct link to Current Status" title="Direct link to Current Status" translate="no">​</a></h3>
+<ul>
+<li>Not in official 0.1.4 release</li>
+<li>Available in unofficial release for build server</li>
+<li>Shows set of five quests (four if one completed)</li>
+<li>Completing all five gives new set</li>
+<li>Exiting rift resets quests</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="implementation-options">Implementation Options<a href="#implementation-options" class="hash-link" aria-label="Direct link to Implementation Options" title="Direct link to Implementation Options" translate="no">​</a></h3>
+<ul>
+<li>Intended as NPC or entity</li>
+<li>Could include notice board</li>
+<li>Placeholder sufficient for now, reassess later</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="guild-integration-question">Guild Integration Question<a href="#guild-integration-question" class="hash-link" aria-label="Direct link to Guild Integration Question" title="Direct link to Guild Integration Question" translate="no">​</a></h3>
+<ul>
+<li>Are quests only given by guild members?</li>
+<li>Will quests be guild-specific?</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="quest-system-structure">Quest System Structure<a href="#quest-system-structure" class="hash-link" aria-label="Direct link to Quest System Structure" title="Direct link to Quest System Structure" translate="no">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="two-part-system">Two-Part System<a href="#two-part-system" class="hash-link" aria-label="Direct link to Two-Part System" title="Direct link to Two-Part System" translate="no">​</a></h3>
+<p>Data Pack (functional information):</p>
+<ul>
+<li>Goal information (event, delivery items)</li>
+<li>Reward information (item, loot table)</li>
+<li>Task specifications (mob label, quantities)</li>
+<li>Rift tier requirements (min/max)</li>
+<li>Theme specifications</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="resource-pack-display-text-title">Resource Pack (display text)<!-- -->:Quest<!-- --> title<a href="#resource-pack-display-text-title" class="hash-link" aria-label="Direct link to resource-pack-display-text-title" title="Direct link to resource-pack-display-text-title" translate="no">​</a></h3>
+<ul>
+<li>Quest description (flavor text)</li>
+<li>Only two lines of code per quest</li>
+<li>Editable directly through Notepad</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="current-quest-capabilities">Current Quest Capabilities<a href="#current-quest-capabilities" class="hash-link" aria-label="Direct link to Current Quest Capabilities" title="Direct link to Current Quest Capabilities" translate="no">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="quest-types">Quest Types<a href="#quest-types" class="hash-link" aria-label="Direct link to Quest Types" title="Direct link to Quest Types" translate="no">​</a></h3>
+<ul>
+<li>Kill specific mob</li>
+<li>Complete rift</li>
+<li>Turn in item</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="quest-parameters">Quest Parameters<a href="#quest-parameters" class="hash-link" aria-label="Direct link to Quest Parameters" title="Direct link to Quest Parameters" translate="no">​</a></h3>
+<ul>
+<li>Mob type and quantity</li>
+<li>Rift tier range (min/max)</li>
+<li>Specific themes</li>
+<li>Reward items or loot tables</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="creation-process-walkthrough">Creation Process Walkthrough<a href="#creation-process-walkthrough" class="hash-link" aria-label="Direct link to Creation Process Walkthrough" title="Direct link to Creation Process Walkthrough" translate="no">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="example-quest-created">Example Quest Created<a href="#example-quest-created" class="hash-link" aria-label="Direct link to Example Quest Created" title="Direct link to Example Quest Created" translate="no">​</a></h3>
+<p>DemoQuest:</p>
+<ul>
+<li>Turn in: 1 gravel block</li>
+<li>Reward: 1 dirt block</li>
+<li>Title: &quot;This is a demo&quot;</li>
+<li>Description: &quot;Yay, dirt&quot;</li>
+</ul>
+<p>Step-by-Step Process</p>
+<ol>
+<li>Data Pack Creation:</li>
+</ol>
+<p>Create new file (e.g., &quot;DemoQuest&quot;)
+Copy template from existing quest (e.g., Skillthread)
+Modify reward item
+Modify turn-in item
+Set quantities</p>
+<ol start="2">
+<li>Resource Pack Update:</li>
+</ol>
+<p>Add quest title
+Add quest description
+Match quest name to data pack name</p>
+<ol start="3">
+<li>Loading Changes:</li>
+</ol>
+<p>Data pack: Loads automatically when launching world (if in correct location)</p>
+<p>Resource pack: Must be manually reloaded through options menu
+Quit to title screen for reliable data pack reloading</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="accessibility-for-non-technical-contributors">Accessibility for Non-Technical Contributors<a href="#accessibility-for-non-technical-contributors" class="hash-link" aria-label="Direct link to Accessibility for Non-Technical Contributors" title="Direct link to Accessibility for Non-Technical Contributors" translate="no">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="simplified-process">Simplified Process<a href="#simplified-process" class="hash-link" aria-label="Direct link to Simplified Process" title="Direct link to Simplified Process" translate="no">​</a></h3>
+<ul>
+<li>No fancy editors needed, Notepad works fine</li>
+<li>Copy-paste friendly, Two lines per quest in resource pack</li>
+<li>Template-based, Use existing quests as starting point</li>
+<li>Conversion support available, Contributors will convert text to JSON format</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-tool">??? Tool<a href="#-tool" class="hash-link" aria-label="Direct link to ??? Tool" title="Direct link to ??? Tool" translate="no">​</a></h3>
+<ul>
+<li>Write JSON by filling in elements</li>
+<li>Drop-down menus for types and items</li>
+<li>&quot;If you give me those six pieces of information, I can turn it into this easy enough&quot;</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="non-coder-approach">Non-Coder Approach<a href="#non-coder-approach" class="hash-link" aria-label="Direct link to Non-Coder Approach" title="Direct link to Non-Coder Approach" translate="no">​</a></h3>
+<p>Write out quest concept in text:</p>
+<ul>
+<li>Quest goal/task</li>
+<li>Items required</li>
+<li>Quantities</li>
+<li>Rewards</li>
+<li>Title</li>
+<li>Description</li>
+</ul>
+<p>Someone else converts to data pack/resource pack format.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="technical-details">Technical Details<a href="#technical-details" class="hash-link" aria-label="Direct link to Technical Details" title="Direct link to Technical Details" translate="no">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="file-locations">File Locations<a href="#file-locations" class="hash-link" aria-label="Direct link to File Locations" title="Direct link to File Locations" translate="no">​</a></h3>
+<ul>
+<li>Resource Packs:</li>
+</ul>
+<p>Highest level in Minecraft folder
+Alongside &quot;mods&quot; and &quot;config&quot; folders</p>
+<ul>
+<li>Data Packs:</li>
+</ul>
+<p>Within world save folder
+Under &quot;datapacks&quot; folder</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="quest-variants">Quest Variants<a href="#quest-variants" class="hash-link" aria-label="Direct link to Quest Variants" title="Direct link to Quest Variants" translate="no">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="mob-kill-quest">Mob Kill Quest:<a href="#mob-kill-quest" class="hash-link" aria-label="Direct link to Mob Kill Quest:" title="Direct link to Mob Kill Quest:" translate="no">​</a></h3>
+<ul>
+<li>No rift requirement</li>
+<li>Tracks specific entity defeats</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="rift-completion-quest">Rift Completion Quest:<a href="#rift-completion-quest" class="hash-link" aria-label="Direct link to Rift Completion Quest:" title="Direct link to Rift Completion Quest:" translate="no">​</a></h3>
+<ul>
+<li>Requires quest takes place in rift</li>
+<li>Can specify tier range and themes</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="item-delivery-quest">Item Delivery Quest:<a href="#item-delivery-quest" class="hash-link" aria-label="Direct link to Item Delivery Quest:" title="Direct link to Item Delivery Quest:" translate="no">​</a></h3>
+<ul>
+<li>Acquire and turn in items</li>
+<li>Can use single item or loot table rewards</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="overriding-quests">Overriding Quests<a href="#overriding-quests" class="hash-link" aria-label="Direct link to Overriding Quests" title="Direct link to Overriding Quests" translate="no">​</a></h3>
+<ul>
+<li>Name new quest same as existing quest</li>
+<li>Replaces original quest definition</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="ability-data-packing">Ability Data Packing<a href="#ability-data-packing" class="hash-link" aria-label="Direct link to Ability Data Packing" title="Direct link to Ability Data Packing" translate="no">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="current-status-1">Current Status<a href="#current-status-1" class="hash-link" aria-label="Direct link to Current Status" title="Direct link to Current Status" translate="no">​</a></h3>
+<ul>
+<li>Documentation planned after 0.2.0 changes</li>
+<li>Complexity depends on NBT data requirements</li>
+<li>More information per line than quests</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="template-usage">Template Usage<a href="#template-usage" class="hash-link" aria-label="Direct link to Template Usage" title="Direct link to Template Usage" translate="no">​</a></h3>
+<ul>
+<li>Existing abilities (e.g., Icicles) serve as templates</li>
+<li>Adjust settings: velocity, damage, mana cost</li>
+<li>Novel abilities more challenging until documentation complete</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="limitations">Limitations<a href="#limitations" class="hash-link" aria-label="Direct link to Limitations" title="Direct link to Limitations" translate="no">​</a></h3>
+<ul>
+<li>Depends on existence of modules defining desired functionality</li>
+<li>If modules unavailable, data packing may not be possible</li>
+<li>Upcoming release determines which functionalities can be data packed</li>
+<li>Dev team will assess what&#x27;s needed for new specifiable abilities</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="data-packs-vs-mod-integration">Data Packs vs Mod Integration<a href="#data-packs-vs-mod-integration" class="hash-link" aria-label="Direct link to Data Packs vs Mod Integration" title="Direct link to Data Packs vs Mod Integration" translate="no">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="current-approach">Current Approach<a href="#current-approach" class="hash-link" aria-label="Direct link to Current Approach" title="Direct link to Current Approach" translate="no">​</a></h3>
+<ul>
+<li>Use data packs for testing new quests and functionalities</li>
+<li>Eventually merge into mod itself</li>
+<li>Process applies to all data pack content, not just quests</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="when-to-use-data-packs">When to Use Data Packs<a href="#when-to-use-data-packs" class="hash-link" aria-label="Direct link to When to Use Data Packs" title="Direct link to When to Use Data Packs" translate="no">​</a></h3>
+<ul>
+<li>Testing new content</li>
+<li>Content intended for other mods (e.g., sophisticated backpack quest reward)</li>
+<li>Flexible experimentation without mod version updates</li>
+<li>&quot;I didn&#x27;t need to update my mod version. I didn&#x27;t need to go through GitHub to set it up. I could just change that text file directly myself.&quot;</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="key-takeaways">Key Takeaways<a href="#key-takeaways" class="hash-link" aria-label="Direct link to Key Takeaways" title="Direct link to Key Takeaways" translate="no">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="process-summary">Process Summary<a href="#process-summary" class="hash-link" aria-label="Direct link to Process Summary" title="Direct link to Process Summary" translate="no">​</a></h3>
+<ul>
+<li>Data pack contains functional quest information</li>
+<li>Resource pack contains player-facing text</li>
+<li>Data pack auto-loads from correct location</li>
+<li>Resource pack requires manual reload</li>
+<li>No GitHub or mod updates needed for testing</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="accessibility">Accessibility<a href="#accessibility" class="hash-link" aria-label="Direct link to Accessibility" title="Direct link to Accessibility" translate="no">​</a></h3>
+<ul>
+<li>Technical barriers minimized through templates and support</li>
+<li>Contributors can focus on quest design</li>
+<li>Technical implementation handled by others if needed</li>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/Wanderers-Of-The-Rift/wotr-docs/edit/main/website/docs/code/datapack/2025-Oct-04-Datapack-Meeting-Notes.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/wotr-docs/docs/code/datapack/example"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">example</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/wotr-docs/docs/code/decisions/"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Code Decisions</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#october-04-2025" class="table-of-contents__link toc-highlight"><em>October 04, 2025</em></a></li><li><a href="#focus" class="table-of-contents__link toc-highlight">Focus</a></li><li><a href="#quest-hub-overview" class="table-of-contents__link toc-highlight">Quest Hub Overview</a><ul><li><a href="#current-status" class="table-of-contents__link toc-highlight">Current Status</a></li><li><a href="#implementation-options" class="table-of-contents__link toc-highlight">Implementation Options</a></li><li><a href="#guild-integration-question" class="table-of-contents__link toc-highlight">Guild Integration Question</a></li></ul></li><li><a href="#quest-system-structure" class="table-of-contents__link toc-highlight">Quest System Structure</a><ul><li><a href="#two-part-system" class="table-of-contents__link toc-highlight">Two-Part System</a></li><li><a href="#resource-pack-display-text-title" class="table-of-contents__link toc-highlight">Resource Pack (display text) title</a></li></ul></li><li><a href="#current-quest-capabilities" class="table-of-contents__link toc-highlight">Current Quest Capabilities</a><ul><li><a href="#quest-types" class="table-of-contents__link toc-highlight">Quest Types</a></li><li><a href="#quest-parameters" class="table-of-contents__link toc-highlight">Quest Parameters</a></li></ul></li><li><a href="#creation-process-walkthrough" class="table-of-contents__link toc-highlight">Creation Process Walkthrough</a><ul><li><a href="#example-quest-created" class="table-of-contents__link toc-highlight">Example Quest Created</a></li></ul></li><li><a href="#accessibility-for-non-technical-contributors" class="table-of-contents__link toc-highlight">Accessibility for Non-Technical Contributors</a><ul><li><a href="#simplified-process" class="table-of-contents__link toc-highlight">Simplified Process</a></li><li><a href="#-tool" class="table-of-contents__link toc-highlight">??? Tool</a></li><li><a href="#non-coder-approach" class="table-of-contents__link toc-highlight">Non-Coder Approach</a></li></ul></li><li><a href="#technical-details" class="table-of-contents__link toc-highlight">Technical Details</a><ul><li><a href="#file-locations" class="table-of-contents__link toc-highlight">File Locations</a></li></ul></li><li><a href="#quest-variants" class="table-of-contents__link toc-highlight">Quest Variants</a><ul><li><a href="#mob-kill-quest" class="table-of-contents__link toc-highlight">Mob Kill Quest:</a></li><li><a href="#rift-completion-quest" class="table-of-contents__link toc-highlight">Rift Completion Quest:</a></li><li><a href="#item-delivery-quest" class="table-of-contents__link toc-highlight">Item Delivery Quest:</a></li><li><a href="#overriding-quests" class="table-of-contents__link toc-highlight">Overriding Quests</a></li></ul></li><li><a href="#ability-data-packing" class="table-of-contents__link toc-highlight">Ability Data Packing</a><ul><li><a href="#current-status-1" class="table-of-contents__link toc-highlight">Current Status</a></li><li><a href="#template-usage" class="table-of-contents__link toc-highlight">Template Usage</a></li><li><a href="#limitations" class="table-of-contents__link toc-highlight">Limitations</a></li></ul></li><li><a href="#data-packs-vs-mod-integration" class="table-of-contents__link toc-highlight">Data Packs vs Mod Integration</a><ul><li><a href="#current-approach" class="table-of-contents__link toc-highlight">Current Approach</a></li><li><a href="#when-to-use-data-packs" class="table-of-contents__link toc-highlight">When to Use Data Packs</a></li></ul></li><li><a href="#key-takeaways" class="table-of-contents__link toc-highlight">Key Takeaways</a><ul><li><a href="#process-summary" class="table-of-contents__link toc-highlight">Process Summary</a></li><li><a href="#accessibility" class="table-of-contents__link toc-highlight">Accessibility</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/wotr-docs/docs">Getting Started</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://discord.gg/VkSeepd59S" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/Wanderers-Of-The-Rift/wotr-docs" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 Wanderers of the Rift. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>
