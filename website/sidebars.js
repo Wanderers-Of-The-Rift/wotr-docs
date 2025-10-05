@@ -65,12 +65,19 @@ module.exports = {
               type: 'category',
               label: 'Datapacks',
               items: [
+                {
+                      type: 'category',
+                      label: 'Formats',
+                      items: [
+                        'code/datapack/format/modifiers',
+                        'code/datapack/format/quests',
+                        'code/datapack/format/rift-spawner',
+                        'code/datapack/format/runegems'
+                      ],
+                },
                 'code/datapack/datapack-formats',
                 'code/datapack/example',
-                'code/datapack/format/modifiers',
-                'code/datapack/format/quests',
-                'code/datapack/format/rift-spawner',
-                'code/datapack/format/runegems'
+                'code/datapack/2025-Oct-04-Datapack-Meeting-Notes.md'
               ],
             },
             'code/decisions/decisions',
