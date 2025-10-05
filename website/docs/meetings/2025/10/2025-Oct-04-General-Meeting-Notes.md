@@ -15,7 +15,6 @@ Community Meeting
 ---
 
 ## Kudos & Recognition
-Documentation & Organization
 - MooMar for working on resources for the Guides program
 - BlackFox for docs PR approvals
 - Warren for helping organize next major release
