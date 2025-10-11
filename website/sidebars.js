@@ -74,6 +74,7 @@ module.exports = {
                       type: 'category',
                       label: 'Formats',
                       items: [
+                        'code/datapack/format/abilities',
                         'code/datapack/format/modifiers',
                         'code/datapack/format/quests',
                         'code/datapack/format/rift-spawner',

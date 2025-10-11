@@ -3,6 +3,66 @@
 Abilities are the powers that a player can use. Sometimes actively by placing them in the ability bar, other times
 passively as triggers on gear.
 
+<!-- TOC -->
+
+* [Abilities](#abilities)
+    * [Concepts](#concepts)
+        * [Ability Types](#ability-types)
+        * [Requirements](#requirements)
+        * [Effects](#effects)
+            * [Attach Effect](#attach-effect)
+            * [Conditional Effects](#conditional-effects)
+        * [Targeting](#targeting)
+    * [Ability Types](#ability-types-1)
+        * [Instant](#instant)
+        * [Persistent](#persistent)
+        * [Chain](#chain)
+    * [Requirements](#requirements-1)
+        * [Ability Resource](#ability-resource)
+        * [Cooldown](#cooldown)
+        * [Food Level](#food-level)
+        * [Life](#life)
+        * [Own Attached Effect](#own-attached-effect)
+        * [No Move](#no-move)
+    * [Effects](#effects-1)
+        * [Attach](#attach)
+        * [Break](#break)
+        * [Conditional](#conditional)
+        * [Damage](#damage)
+        * [Detach Own](#detach-own)
+        * [Heal](#heal)
+        * [Movement](#movement)
+        * [No Op](#no-op)
+        * [Particle](#particle)
+        * [Projectile](#projectile)
+        * [Set Block](#set-block)
+        * [Simple Projectile](#simple-projectile)
+        * [Sound](#sound)
+        * [Status](#status)
+        * [Summon](#summon)
+        * [Targeting](#targeting-1)
+        * [Teleport](#teleport)
+    * [Targeting Types](#targeting-types)
+        * [Area](#area)
+        * [Caster](#caster)
+        * [Connected Block](#connected-block)
+        * [Random Subset](#random-subset)
+        * [Random Chance](#random-chance)
+        * [Raycast](#raycast)
+        * [Self](#self)
+        * [Source](#source)
+        * [Trigger Target](#trigger-target)
+    * [Target Entity Predicate](#target-entity-predicate)
+    * [Target Block Predicate](#target-block-predicate)
+        * [Additional Block Predicates](#additional-block-predicates)
+            * [Surface](#surface)
+    * [Related Datapack Formats](#related-datapack-formats)
+        * [Effect Marker](#effect-marker)
+        * [Trigger Modifiers](#trigger-modifiers)
+        * [Upgrades](#upgrades)
+
+<!-- TOC -->
+
 ## Concepts
 
 ### Ability Types
@@ -290,33 +350,261 @@ stationary.
 
 ### Attach
 
+__Applies to__: Entities
+
+This effect attaches to entities and persists, applying modifiers and/or triggering further effects when a condition
+is met.
+
+#### Format
+
+* `type`: `wotr:attach`
+* `id`: Optional. An identifier for this attach effect, as a resource location.
+* `effects`: Optional. A list of further effects that will be applied to the target whenever `trigger` is met.
+* `trigger`: Optional. A predicate checked each tick to determine whether to apply `effects`. If not specified then it
+  is always true. All conditions must be met to trigger.
+    * `target`: Optional. A standard minecraft entity predicate as described
+      in [Template: Nbt inherit/conditions/entity/template](https://minecraft.wiki/w/Template:Nbt_inherit/conditions/entity/template)
+      that will check the state of the target.
+    * `caster`: Optional. A standard minecraft entity predicate as described
+      in [Template: Nbt inherit/conditions/entity/template](https://minecraft.wiki/w/Template:Nbt_inherit/conditions/entity/template)
+      that will check the state of the caster.
+    * `frequency`: Optional, defaults to `1`. The frequency in ticks in which the predicate can be `true`. `1` means
+      every tick, `2` means every second tick, etc.
+    * `initial_delay`: Optional, defaults to `0`. How many ticks after the effect is attached before it can first
+      trigger, in ticks.
+* `continue`: Optional. A predicate checked each tick to determine whether the attach effect should continue. Defaults
+  to always continue.
+    * `target`: Optional. A standard minecraft entity predicate as described
+      in [Template: Nbt inherit/conditions/entity/template](https://minecraft.wiki/w/Template:Nbt_inherit/conditions/entity/template)
+      that will check the state of the target.
+    * `caster`: Optional. A standard minecraft entity predicate as described
+      in [Template: Nbt inherit/conditions/entity/template](https://minecraft.wiki/w/Template:Nbt_inherit/conditions/entity/template)
+      that will check the state of the caster.
+    * `duration`: Optional, defaults to `-1` (no duration). The maximum number of ticks the effect will remain attached.
+    * `max_trigger_count`: Optional, defaults to `-1` (no maximum). The maximum number of times the effect can trigger
+      before it is removed.
+* `display`: Optional. Defines an display that will appear in the hud for players affected by this effect.
+* `modifiers`: Optional. A list of modifiers to apply to the entity this effect is attached to, for the duration of the
+  attachment.
+
 ### Break
+
+__Applies to__: Blocks
+
+This effect destroys block, replacing them with air and optionally dropping them.
+
+#### Format
+
+* `type`: `wotr:break`
+* `drops`: Optional, defaults to `collate`. Can be one of:
+    * `normal`: Each block drops itself.
+    * `collate`: The drops of each block are combined whenever possible and dropped at the source.
+    * `none`: Nothing will drop.
+* `as_tool`: Optional, defaults to `none`. Can be either `none`, `ability_item` (in which case the item that has the
+  ability is used as the tool), or an item stack object. The block will be broken as if by the specified tool, for the
+  purpose of fortune, silk touch and similar.
+* `reward_mine_state`: Optional, defaults to `false`. Should blocks broken with this effect count for the blocks mined
+  stats.
 
 ### Conditional
 
+__Applies to__: All
+
+This effect applies different effects, depending on a condition. Conditions are Resource Locations that are applied by
+`ProviderAbilityConditionModifierEffect`s. All targets are passed on to the applied effects
+
+#### Format
+
+* `type`: `wotr:conditional`
+* `always`: Optional. A list of effects that are always applied. These are applied first.
+* `present`: Optional. A list of effects that are applied if the condition is present/met.
+* `missing`: Optional. A list of effects that are applied if the condition is missing/unmet.
+* `condition_name`: The condition to check.
+
 ### Damage
+
+__Applies to__: Living Entities
+
+This effect applies damage to living entities.
+
+#### Format
+
+* `type`: `wotr:damage`
+* `amount`: How much damage to apply. Boosted by the `wotr:ability_raw_damage` attribute.
+* `damage_type`: The damage type of the damage being applied.
 
 ### Detach Own
 
+__Applies to__: Entities
+
+This effect removes Attach Effects applied by this ability instance from the target entities.
+
+#### Format
+
+* `type`: `wotr:detach_own`
+* `id`: Optional. The id of the attach effect to remove. If not specified all attach effects from this ability instance
+  are removed.
+
 ### Heal
+
+__Applies to__: Living Entities
+
+This effect heals living entities.
+
+#### Format
+
+* `type`: `wotr:heal`
+* `amount`: The amount of health to heal. Boosted by the `wotr:ability_heal_power` attribute.
 
 ### Movement
 
+__Applies to__: Entities
+
+This effect applies velocity to entities.
+
+#### Format
+
+* `type`: `wotr:movement`
+* `velocity`: a vector (array of three numbers specifying the x (lateral), y (vertical) and z (forwards) velocities in
+  meters per second).
+* `relative_frame`: Optional, defaults to `target_facing`. Specifies the frame in which the velocity is applied. By
+  default this is relative to the direction the target is facing, so a forwards velocity moves the target in the
+  direction they are facing. Options are:
+    * `absolute`: velocity is in world coords
+    * `source_from_target`: velocity is relative to the direction of the source (previous target) from the target.
+    * `target_from_source`: velocity is relative to the direction of the target from the source (previous target).
+    * `source_facing`: velocity is relative to the direction the source (previous target) is facing.
+    * `target_facing`: velocity is relative to the direction the target is facing.
+    * `source_y_facing`: velocity is relative to the direction the source is facing, ignoring pitch.
+    * `target_y_facing`: velocity is relative to the direction the target is facing, ignoring pitch.
+
 ### No Op
+
+__Applies to__: Nothing
+
+This effect does nothing.
+
+#### Format
+
+* `type`: `wotr:noop`
 
 ### Particle
 
+__Applies to__: All
+
+This effect spawns a minecraft particle effect at the location of the target.
+
+#### Format
+
+* `type`: `wotr:particle`
+* `particle`: Resource Location of the particle effect to spawn.
+
 ### Projectile
+
+__Applies to__: Entities
+
+This effect spawns a projectile entity and fires it from in the facing direction of the target. Effects can be
+applied to the projectile, but unlike the Simple Projectile effect it doesn't have effects applied on hit. The
+projectile is owned by the target, so any damage will be considered to be theirs.
+
+#### Format
+
+* `type`: `wotr:projectile`
+* `effects`: Optional. A list of effects applied to the spawned projectiles.
+* `projectile_type`: The entity type of the projectile. Must be a subtype of Projectile.
+* `velocity`: The velocity at which the projectile is fired, relative to the facing of the target.
 
 ### Set Block
 
+__Applies to__: Blocks
+
+This effect replaces the target blocks with a new block.
+
+#### Format
+
+* `type`: `wotr:set_block`
+* `block`: The block state to set targets to.
+
 ### Simple Projectile
+
+__Applies to__: Entities
+
+This effect spawns one or more configurable projectiles and fires them in a spread in the direction the target is
+facing. Many attributes of the projectiles depend on attributes:
+
+* `wotr:projectile_count` determines the number of projectiles
+* `wotr:projectile_spread` determines the angle of spread of the projectiles
+* `wotr:projectile_speed` determines the speed of the projectiles
+* `wotr:projectile_pierce` determines the number of targets the projectiles move through
+
+#### Format
+
+* `type`: `wotr:simple_projectile`
+* `effects`: Optional. A list of effects that will be applied to what the projectile(s) hit.
+* `config`: Configuration of the projectile.
+    * `projectiles`: Optional, defaults to `1`. How many projectiles will be produced. Affected by the
+      `wotr:projectile_count` attribute. If there are more than one projectile additional projectiles will be fired in a
+      spread with the angle between them determined by the `wotr:projectile_spread` attribute.
+    * `pierce`: Optional, defaults to `0`. How many targets each projectile can pass through (hitting) before it comes
+      to rest. Affected by the `wotr:projectile_pierce` attribute.
+    * `pierce_blocks`: Optional, defaults to `false`. Whether blocks can also be pierced through, or just entities.
+    * `velocity`: The velocity of the projectiles, relative to the direction they are being fired. The magnitude is
+      affected by the `wotr:projectile_speed` attribute.
+    * `gravity_affected`: Optional, defaults to `true`. Whether the projectiles are affected by gravity.
+    * `gravity`: Optional, defaults to `0.05`. The strength of gravity affected the projectiles.
+    * `persist_ticks`: Optional, defaults to `1200` (1 minute). How long in ticks the projectiles will persist in
+      motion.
+    * `ground_persist_ticks`: Optional, defaults to `0`. How long in ticks the projectiles will persist after hitting
+      their final target.
+    * `render`: Configuration for how the projectile is displayed.
+        * `model`: ResourceLocation of the model used to render the projectile.
+        * `texture`: ResourceLocation of the texture used to render the projectile.
+        * `animations`: ResourceLocation of the animation used to render the projectile.
+    * `sound`: Optional, configuration of the sound of the projectile. Defaults to arrow sound on collision.
+        * `collision`: Optional, defaults to none. The sound made when the projectile collides.
+        * `fire`: Optional, defaults to none. The sound made when the projectile is fired.
+        * `travel`: Optional, defaults to none. The sound made when the projectile is travelling.
 
 ### Sound
 
+__Applies to__: All
+
+This effect plays a sound originating from the target's location.
+
+#### Format
+
+* `type`: `wotr:sound`
+* `sound`: Resource location of the sound event to play.
+
 ### Status
 
+__Applies to__: Living entities
+
+This effect applies a MobEffect to the target.
+
+#### Format
+
+* `type`: `wotr:status`
+* `status_effect`: Details of the mob effect to apply (this is a minecraft MobEffectInstance definition)
+    * `id`
+    * `amplifier`
+    * `duration`
+    * `ambient`
+    * `show_particles`
+    * `show_icon`
+    * `hidden_effect`
+
 ### Summon
+
+__Applies to__: All
+
+This effect summon an entity at the target locations.
+
+#### Format
+
+* `type`: `wot:summon`
+* `effects`: Optional. A list of effects to apply to the summoned entities.
+* `entity_type`: The type of entity to summon.
 
 ### Targeting
 
@@ -484,6 +772,10 @@ For finding spawnable blocks with sufficient space above them
 * `space`: Optional, default `2`. How many blocks of air must be able the surface block.
 
 ## Related Datapack Formats
+
+### Effect Marker
+
+Defines a display icon for an attached effect.
 
 ### Trigger Modifiers
 
