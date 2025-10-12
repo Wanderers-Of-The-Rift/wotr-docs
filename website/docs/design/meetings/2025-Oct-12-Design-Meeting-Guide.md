@@ -42,12 +42,62 @@ The following table consolidates all submissions (unaltered), grouped by common 
 Merged “fresh” versions combine repeated or similar phrasing into unified statements.
 During the meeting, we’ll adapt, remix, and fine tune the unified statements to ensure it matches the intent of submissions.
 
-| **Cluster #**                          | **Theme / Common Thread** | **Original Submissions** | **Merged “Fresh” Version Draft**                                                                                                         |
-|:---------------------------------------|:--|:--|:-----------------------------------------------------------------------------------------------------------------------------------------|
-| **1. Curiosity → Challenge → Mastery** | Discovery through rifts; curiosity leading to skill growth; shaping destiny | - “Journey into the boundless rifts and strange dimensions, where curiosity leads to challenge and reward, shaping your path through choice and mastery.” | **“I journey through shifting rifts where curiosity drives discovery, challenge forges mastery, and every step reshapes who I become.”** |
-| **2. Preparation → Growth & Return**   | Learning, improving builds, returning wiser | - “I prepare my build and inventory, then enter the rift. Armed with past learnings I explore, seeking out value and facing or avoiding the challenges I encounter. Discovering a new situation I approach with caution, but even if I do not make it out unscathed I will come out with lessons to apply in the future.”  <br>- “I set out to be challenged, to find more than I knew existed, and to be more than I am today.”  <br>- “When I enter a rift, I have no idea what will meet me on the other side, but I have prepared myself to the best of my ability to face what's there.” | **“I prepare, adapt, and learn through ever-changing rifts: facing the unknown, refining my craft, and returning stronger each time.”**  |
-| **3. Transformation & Resilience**     | Change through struggle; perseverance and self-discovery | - “I wander through a strange world, shaping what I discover. The world changes slowly, revealing its secrets to those who listen.” | **“Each rift changes me: through struggle, discovery, and survival I emerge wiser and more capable than before.”**                     |
-| **4. Shared Exploration (Social)**     | Cooperation, community, sharing discoveries | - “I discover a strange rift to a new world, I discover more worlds as I fight my way through one at the time returning to my home world as I go to resupply.”  <br>- “I fight unknown creatures, and make new friends. I find hidden gems in other people's trash.”  <br>- “I learn to create new things, cast new spells, and find new paths through dimensions. I discover things no one has seen before and return with news to a shared sanctuary other Wanderers have started to call home.” | **“Together we explore fractured realms, uncover lost knowledge, and return home with stories and strength to share.”**                  |
+<table>
+  <thead>
+    <tr>
+      <th>Cluster #</th>
+      <th>Theme / Common Thread</th>
+      <th>Original Submissions</th>
+      <th>Merged “Fresh” Version Draft</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>1</strong></td>
+      <td><strong>Curiosity → Challenge → Mastery</strong><br />Discovery through rifts; curiosity leading to skill growth; shaping destiny</td>
+      <td>
+        <ul>
+          <li>Journey into the boundless rifts and strange dimensions, where curiosity leads to challenge and reward, shaping your path through choice and mastery.</li>
+        </ul>
+      </td>
+      <td><strong>I journey through shifting rifts where curiosity drives discovery, challenge forges mastery, and every step reshapes who I become.</strong></td>
+    </tr>
+    <tr>
+      <td><strong>2</strong></td>
+      <td><strong>Preparation → Growth &amp; Return</strong><br />Learning, improving builds, returning wiser</td>
+      <td>
+        <ul>
+          <li>I prepare my build and inventory, then enter the rift. Armed with past learnings I explore, seeking out value and facing or avoiding the challenges I encounter. Discovering a new situation I approach with caution, but even if I do not make it out unscathed I will come out with lessons to apply in the future.</li>
+          <li>I set out to be challenged, to find more than I knew existed, and to be more than I am today.</li>
+          <li>When I enter a rift, I have no idea what will meet me on the other side, but I have prepared myself to the best of my ability to face what's there.</li>
+        </ul>
+      </td>
+      <td><strong>I prepare, adapt, and learn through ever-changing rifts: facing the unknown, refining my craft, and returning stronger each time.</strong></td>
+    </tr>
+    <tr>
+      <td><strong>3</strong></td>
+      <td><strong>Transformation &amp; Resilience</strong><br />Change through struggle; perseverance and self-discovery</td>
+      <td>
+        <ul>
+          <li>I wander through a strange world, shaping what I discover. The world changes slowly, revealing its secrets to those who listen.</li>
+        </ul>
+      </td>
+      <td><strong>Each rift changes me: through struggle, discovery, and survival I emerge wiser and more capable than before.</strong></td>
+    </tr>
+    <tr>
+      <td><strong>4</strong></td>
+      <td><strong>Shared Exploration (Social)</strong><br />Cooperation, community, sharing discoveries</td>
+      <td>
+        <ul>
+          <li>I discover a strange rift to a new world, I discover more worlds as I fight my way through one at the time returning to my home world as I go to resupply.</li>
+          <li>I fight unknown creatures, and make new friends. I find hidden gems in other people's trash.</li>
+          <li>I learn to create new things, cast new spells, and find new paths through dimensions. I discover things no one has seen before and return with news to a shared sanctuary other Wanderers have started to call home.</li>
+        </ul>
+      </td>
+      <td><strong>Together we explore fractured realms, uncover lost knowledge, and return home with stories and strength to share.</strong></td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
