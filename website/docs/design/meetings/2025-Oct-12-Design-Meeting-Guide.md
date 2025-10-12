@@ -109,7 +109,7 @@ During the meeting, we’ll confirm one **representative verb** for each.
 
 | **#**                            | **Verb Theme**                | **Submitted Words / Concepts** | **Representative Verb** |
 |:---------------------------------|:------------------------------|:--|:------------------------|
-| 1.| Exploration                   | Explore, Discover, Trailblaze, Pioneer | ?Explore?<br>           |
+| 1.| Exploration                   | Explore, Discover, Trailblaze, Pioneer | ?Explore?          |
 | 2.| Growth & Adaptation           | Adapt, Learn, Improve, Evolve    | ?Adapt?                 |
 | 3.| Mastery & Craft               | Craft, Build, Refine, Perfect    | ?Craft?                 |
 | 4.| Challenge & Perseverance      | Persevere, Overcome, Survive     | ?Overcome?              |
