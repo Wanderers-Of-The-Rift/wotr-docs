@@ -119,7 +119,7 @@ During the meeting, we’ll confirm one **representative verb** for each.
 | 1.| Exploration                   | Explore, Discover, Trailblaze, Pioneer | Explore                 |
 | 2.| Growth & Adaptation           | Adapt, Learn, Improve, Evolve    | Adapt + Learn           |
 | 3.| Mastery & Craft               | Craft, Build, Refine, Perfect    | Hone                    |
-| 4.| Challenge & Perseverance      | Persevere, Overcome, Survive     | Stive + Endevor         |
+| 4.| Challenge & Perseverance      | Persevere, Overcome, Survive     | Stive + Endeavor        |
 | 5.| Progression & Achievement     | Progress, Advance, Accomplish    | Progress                |
 | 6.| Acquisition & Resourcefulness | Acquire, Scavenge, Collect, Earn | Scavange                |
 | 7.| Transformation & Return*      | Change, Grow, Become, Emerge   | Evolve                  |
@@ -134,8 +134,8 @@ Each group contains submissions from the community, paired by shared meaning.
 
 | **#**         | **Emotion Theme**        | **Submitted Words / Concepts** | **Representative Emotion** |
 |:--------------|:-------------------------|:--|:---------------------------|
-| 1.| Curiosity & Discovery    | Curiosity, Wonder, Mystery | Curiosity?                 |
-| 2.| Challenge & Resilience*  | Perseverance, Tension, Confidence, Grit | Resilience + Challenged    |
+| 1.| Curiosity & Discovery    | Curiosity, Wonder, Mystery | Curiosity                  |
+| 2.| Challenge & Resilience*  | Perseverance, Tension, Confidence, Grit | Resiliency + Challenged    |
 | 3.| Mastery & Accomplishment | Accomplishment, Pride, Joy         | Accomplishment             |
 | 4.| Growth & Transformation  | Progress, Change, Improvement      | ~~Growth~~                 |
 | 5.| Awe & Amazement          | Awe, Amazement, Inspiration        | Awe                        |
