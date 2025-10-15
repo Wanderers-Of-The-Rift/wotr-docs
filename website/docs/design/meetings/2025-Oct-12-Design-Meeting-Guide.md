@@ -99,6 +99,13 @@ During the meeting, we’ll adapt, remix, and fine tune the unified statements t
   </tbody>
 </table>
 
+Drafts refined into:
+- I journey through shifting rifts where curiosity drives discovery, challenge forges mastery, and every step reshapes who I become.
+- I prepare, adapt, and learn through ever-changing rifts: facing the unknown, honing my craft, and returning stronger each time.
+- Each rift changes me: through struggle, pioneering, and survival I emerge wiser and more capable than before.
+- Together we explore fractured rifts, uncover lost knowledge, and return home with stories and strength to share.
+
+
 ---
 
 ## Verb Themes
@@ -109,14 +116,14 @@ During the meeting, we’ll confirm one **representative verb** for each.
 
 | **#**                            | **Verb Theme**                | **Submitted Words / Concepts** | **Representative Verb** |
 |:---------------------------------|:------------------------------|:--|:------------------------|
-| 1.| Exploration                   | Explore, Discover, Trailblaze, Pioneer | ?Explore?          |
-| 2.| Growth & Adaptation           | Adapt, Learn, Improve, Evolve    | ?Adapt?                 |
-| 3.| Mastery & Craft               | Craft, Build, Refine, Perfect    | ?Craft?                 |
-| 4.| Challenge & Perseverance      | Persevere, Overcome, Survive     | ?Overcome?              |
-| 5.| Progression & Achievement     | Progress, Advance, Accomplish    | ?Progress?              |
-| 6.| Acquisition & Resourcefulness | Acquire, Scavenge, Collect, Earn | ?Acquire?               |
-| 7.| Transformation & Return*      | Change, Grow, Become, Emerge   | ?Emerge?                |
-| 8.| Cooperation                   | Support, Share, Unite         | ?Cooperate?             |
+| 1.| Exploration                   | Explore, Discover, Trailblaze, Pioneer | Explore                 |
+| 2.| Growth & Adaptation           | Adapt, Learn, Improve, Evolve    | Adapt + Learn           |
+| 3.| Mastery & Craft               | Craft, Build, Refine, Perfect    | Hone                    |
+| 4.| Challenge & Perseverance      | Persevere, Overcome, Survive     | Stive + Endevor         |
+| 5.| Progression & Achievement     | Progress, Advance, Accomplish    | Progress                |
+| 6.| Acquisition & Resourcefulness | Acquire, Scavenge, Collect, Earn | Scavange                |
+| 7.| Transformation & Return*      | Change, Grow, Become, Emerge   | Evolve                  |
+| 8.| Cooperation                   | Support, Share, Unite         | Cooperate               |
 
 ---
 
@@ -126,14 +133,14 @@ Emotion themes describe the *feelings* we want players to experience while playi
 Each group contains submissions from the community, paired by shared meaning.
 
 | **#**         | **Emotion Theme**        | **Submitted Words / Concepts** | **Representative Emotion** |
-|:--------------|:-------------------------|:--|:----------------------------------------|
-| 1.| Curiosity & Discovery    | Curiosity, Wonder, Mystery | Curiosity?                              |
-| 2.| Challenge & Resilience*  | Perseverance, Tension, Confidence, Grit | Resilience?                             |
-| 3.| Mastery & Accomplishment | Accomplishment, Pride, Joy         | Accomplishment?                         |
-| 4.| Growth & Transformation  | Progress, Change, Improvement      | Growth?                                 |
-| 5.| Awe & Amazement          | Awe, Amazement, Inspiration        | Awe?                                    |
-| 6.| Anticipation & Risk      | Fear, Excitement, Uncertainty      | Anticipation?                           |
-| 7.| Belonging & Cooperation  | Friendship, Teamwork, Shared Pride | Belonging?                              |
-| 8.| Freedom & Exploration    | Wanderlust, Adventure, Liberation | Freedom?                                |
+|:--------------|:-------------------------|:--|:---------------------------|
+| 1.| Curiosity & Discovery    | Curiosity, Wonder, Mystery | Curiosity?                 |
+| 2.| Challenge & Resilience*  | Perseverance, Tension, Confidence, Grit | Resilience + Challenged    |
+| 3.| Mastery & Accomplishment | Accomplishment, Pride, Joy         | Accomplishment             |
+| 4.| Growth & Transformation  | Progress, Change, Improvement      | ~~Growth~~                 |
+| 5.| Awe & Amazement          | Awe, Amazement, Inspiration        | Awe                        |
+| 6.| Anticipation & Risk      | Fear, Excitement, Uncertainty      | Anticipation               |
+| 7.| Belonging & Cooperation  | Friendship, Teamwork, Shared Pride | Belonging                  |
+| 8.| Freedom & Exploration    | Wanderlust, Adventure, Liberation | Wanderlust                 |
 
 ---
