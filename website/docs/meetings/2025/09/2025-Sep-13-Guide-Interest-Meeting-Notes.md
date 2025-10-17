@@ -1,3 +1,5 @@
+# Guide Program: Interest Meeting & Guidelines
+
 September 13th Community Meeting
 
 > ## Summary
@@ -42,7 +44,7 @@ _Which Teams do you want to be a guide for, and why do you want to be a guide?_
 
 ## Agenda
 
-### Channel or Forum Setup, for Info and Guidelines etc.
+### Channel or Forum Setup, for Info and Guidelines
 
 _How do we want this setup? What would people prefer?_
 
