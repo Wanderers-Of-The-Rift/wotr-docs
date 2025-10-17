@@ -256,6 +256,7 @@ module.exports = {
           label: 'September 2025',
           items: [
             'meetings/2025/09/Sep-06-General-Meeting-Notes',
+            'meetings/2025/09/Sep-13-Guide-Interest-Meeting-Notes',
             'meetings/2025/09/Sep-20-General-Meeting-Notes',
           ],
         },
