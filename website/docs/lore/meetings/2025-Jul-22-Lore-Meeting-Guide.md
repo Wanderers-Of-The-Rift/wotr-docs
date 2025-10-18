@@ -1,5 +1,5 @@
 
-# Hubworld Lore : How the Hub *Takes Shape* (Phase 2)
+# Hubworld Lore : How the Hub *Takes Shape* (Steps 1-9)
 
 Submitted ideas in categories to help blend, vote, and build Hub or remix
 
