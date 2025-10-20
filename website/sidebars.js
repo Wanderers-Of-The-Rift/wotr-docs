@@ -264,7 +264,8 @@ module.exports = {
           type: 'category',
           label: 'October 2025',
           items: [
-            'meetings/2025/10/Oct-04-General-Meeting-Notes'
+            'meetings/2025/10/Oct-04-General-Meeting-Notes',
+            'meetings/2025/10/Oct-18-General-Meeting-Notes'
           ],
         },
       ],
