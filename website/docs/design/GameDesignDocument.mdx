@@ -67,9 +67,9 @@ Everything else in the game ()systems, rewards, content) ultimately feeds into a
 
 ```mermaid
 flowchart LR
-    A((Prepare)) --> B((Rift)) --> C((Advance))
-    C -->|loop| A
-
+    classDef sameSize width:100px,height:100px,text-align:center;
+    A((Prepare)):::sameSize --> B((Rift)):::sameSize --> C((Advance)):::sameSize
+    C --> A
 ```
 ---
 
