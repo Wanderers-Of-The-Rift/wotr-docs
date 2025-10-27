@@ -14,29 +14,31 @@
 > - @wwwwwwhale
 
 ## Focus
-- Core Player Experience (CPE) mini vote check-in
-- Phase Three launch: Core Loop definition
-- Identify repeatable cycle of actions, motivations, rewards
-- Establish entry conditions, action phases, risk elements, rewards, reset conditions
+- Reach consensus on core game loop for GDD update
+- Define downtime/cool-off phase role
+- Plan 0.3.0 Rift expansion focus
+- Establish next design meeting process
 
 ---
 
-## Core Player Experience (Phase Two)
-### Mini Vote Status
-- Engagement and front runners already emerging
-- Open discussion of votes encouraged
-- Guideline: Keep persuasion positive, don't down-talk other options
+## Core Game Loop Structure
+### Basic Rhythm Agreed Upon
+- Beginning phase
+- The Rift
+- Reset/cleanup phase
 
-### Statement Feedback
-- Comments that statements sound "cheesy"
-- Response: Typical of CPE - trying to fit much into one sentence
-- GDD is internal, so acceptable
-- Focus on what we want, not necessarily what currently exists
+### Simple Loop Draft (Consensus)
+Prepare → Rift → Advance → `loop`
+- Prepare: Equip Gear, Equip Abilities, Form Party, Select Contract, Food, Potions, Rift modification
+- Rift: exploration, combat, loot, objective
+- Advance: Delooting, upgrading (gear,abilities,guilds)
+`Loop`
 
-### Wording Adjustments
-- Changed for consistency (e.g., Wanderlust → Curiosity and Yearning)
-- Ensures right tense, perspective, and actual emotions
-- Note: If you want Wanderlust, vote for Curiosity and Yearning
+Implementation
+
+Put simple loop into GDD
+Expand with subcategories and sub-loops later if needed
+Balance between descriptive and concise language
 
 ---
 
