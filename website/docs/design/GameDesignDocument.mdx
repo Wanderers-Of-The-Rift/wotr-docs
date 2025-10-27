@@ -67,9 +67,39 @@ Everything else in the game ()systems, rewards, content) ultimately feeds into a
 
 ```mermaid
 flowchart LR
-    classDef sameSize width:100px,height:100px,text-align:center;
-    A((Prepare)):::sameSize --> B((Rift)):::sameSize --> C((Advance)):::sameSize
+    A[Prepare] --> B[Rift] --> C[Advance]
     C --> A
+```
+```mermaid
+stateDiagram-v2
+    [*] --> Prepare
+    Prepare --> Rift
+    Rift --> Advance
+    Advance --> Prepare
+```
+```mermaid
+sequenceDiagram
+    participant Prepare
+    participant Rift
+    participant Advance
+    Prepare->>Rift: Move to Rift
+    Rift->>Advance: Move to Advance
+    Advance->>Prepare: Loop back
+```
+```mermaid
+journey
+    title The Cycle
+    section Loop
+      Prepare: 5: You
+      Rift: 5: You
+      Advance: 5: You
+```
+```mermaid
+mindmap
+  root((Prepare))
+    Rift
+      Advance
+        Prepare
 ```
 ---
 
