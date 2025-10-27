@@ -67,17 +67,16 @@ Everything else in the game ()systems, rewards, content) ultimately feeds into a
 
 ```mermaid
 flowchart TB
-    Prepare(("Prepare"))
-    Rift(("Rift"))
-    Advance(("Advance"))
+    A((Prepare)) --> B((Rift))
+    B --> C((Advance))
+    C --> A
 
-    Prepare --> Rift
-    Rift --> Advance
-    Advance --> Prepare
-
-    style Prepare fill:#fdf6e3,stroke:#333,stroke-width:2px
-    style Rift fill:#fdf6e3,stroke:#333,stroke-width:2px
-    style Advance fill:#fdf6e3,stroke:#333,stroke-width:2px
+    A -.-> D(( ))
+    D -.-> B
+    B -.-> E(( ))
+    E -.-> C
+    C -.-> F(( ))
+    F -.-> A
 ```
 ---
 
