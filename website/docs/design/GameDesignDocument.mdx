@@ -4,7 +4,7 @@ title: Game Design Document
 sidebar_label: Game Design Document
 ---
 # Game Design Document
-Version 0.2.0
+Version 0.3.0
 
 This is the living design document for the Wanderers of the Rift.
 It captures the defining principles, player experience, core and meta loops, systems, and content structure of the game.
@@ -65,12 +65,13 @@ Everything else in the game ()systems, rewards, content) ultimately feeds into a
 3. **Reward** – *Duis aute irure dolor.*
 4. **Progress** – *Excepteur sint occaecat cupidatat.*
 
+```markdown
 ```mermaid
-flowchart LR
-    A[Engage] --> B[Challenge]
-    B --> C[Reward]
-    C --> D[Progress]
-    D --> A
+flowchart TD
+    A((Prepare))
+    B((Rift))
+    C((Advance))
+    A --> B --> C --> A
 ```
 ---
 
