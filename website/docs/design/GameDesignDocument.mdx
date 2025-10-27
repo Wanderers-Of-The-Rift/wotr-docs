@@ -60,47 +60,16 @@ It is what players *actually do* in a short session, and it must be engaging eno
 Everything else in the game ()systems, rewards, content) ultimately feeds into and enriches this loop.
 
 ### Repeatable Play Cycle
-1. **Engage** – *Lorem ipsum dolor sit amet.*
-2. **Challenge** – *Ut enim ad minim veniam.*
-3. **Reward** – *Duis aute irure dolor.*
-4. **Progress** – *Excepteur sint occaecat cupidatat.*
+1. Prepare: Equip Gear, Equip Abilities, Form Party, Select Contract, Food, Potions, Rift modification
+2. Rift: exploration, combat, loot, objective
+3. Advance: Delooting, upgrading (gear,abilities,guilds)
 
 ```mermaid
 flowchart LR
     A[Prepare] --> B[Rift] --> C[Advance]
     C --> A
 ```
-```mermaid
-stateDiagram-v2
-    [*] --> Prepare
-    Prepare --> Rift
-    Rift --> Advance
-    Advance --> Prepare
-```
-```mermaid
-sequenceDiagram
-    participant Prepare
-    participant Rift
-    participant Advance
-    Prepare->>Rift: Move to Rift
-    Rift->>Advance: Move to Advance
-    Advance->>Prepare: Loop back
-```
-```mermaid
-journey
-    title The Cycle
-    section Loop
-      Prepare: 5: You
-      Rift: 5: You
-      Advance: 5: You
-```
-```mermaid
-mindmap
-  root((Prepare))
-    Rift
-      Advance
-        Prepare
-```
+
 ---
 
 ## Meta Loop & Progression
