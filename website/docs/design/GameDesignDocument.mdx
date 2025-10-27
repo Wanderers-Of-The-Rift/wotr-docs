@@ -66,11 +66,18 @@ Everything else in the game ()systems, rewards, content) ultimately feeds into a
 4. **Progress** – *Excepteur sint occaecat cupidatat.*
 
 ```mermaid
-flowchart TD
-    A((Prepare))
-    B((  Rift  ))
-    C((Advance))
-    A --> B --> C --> A
+flowchart TB
+    Prepare(("Prepare"))
+    Rift(("Rift"))
+    Advance(("Advance"))
+
+    Prepare --> Rift
+    Rift --> Advance
+    Advance --> Prepare
+
+    style Prepare fill:#fdf6e3,stroke:#333,stroke-width:2px
+    style Rift fill:#fdf6e3,stroke:#333,stroke-width:2px
+    style Advance fill:#fdf6e3,stroke:#333,stroke-width:2px
 ```
 ---
 
