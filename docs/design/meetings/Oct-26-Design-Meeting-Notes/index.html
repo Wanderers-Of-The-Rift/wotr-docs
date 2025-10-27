@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-design/meetings/Oct-26-Design-Meeting-Notes" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.1">
+<title data-rh="true">Design: Core Loop Development | Wanderers of the Rift Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://wanderers-of-the-rift.github.io/wotr-docs/img/wotrdocCard.PNG"><meta data-rh="true" name="twitter:image" content="https://wanderers-of-the-rift.github.io/wotr-docs/img/wotrdocCard.PNG"><meta data-rh="true" property="og:url" content="https://wanderers-of-the-rift.github.io/wotr-docs/docs/design/meetings/Oct-26-Design-Meeting-Notes"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Design: Core Loop Development | Wanderers of the Rift Docs"><meta data-rh="true" name="description" content="### October 26, 2025"><meta data-rh="true" property="og:description" content="### October 26, 2025"><link data-rh="true" rel="icon" href="/wotr-docs/img/wotrdev.png"><link data-rh="true" rel="canonical" href="https://wanderers-of-the-rift.github.io/wotr-docs/docs/design/meetings/Oct-26-Design-Meeting-Notes"><link data-rh="true" rel="alternate" href="https://wanderers-of-the-rift.github.io/wotr-docs/docs/design/meetings/Oct-26-Design-Meeting-Notes" hreflang="en"><link data-rh="true" rel="alternate" href="https://wanderers-of-the-rift.github.io/wotr-docs/docs/design/meetings/Oct-26-Design-Meeting-Notes" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/wotr-docs/blog/rss.xml" title="Wanderers of the Rift Docs RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/wotr-docs/blog/atom.xml" title="Wanderers of the Rift Docs Atom Feed"><link rel="stylesheet" href="/wotr-docs/assets/css/styles.2ba4343f.css">
+<script src="/wotr-docs/assets/js/runtime~main.b933719b.js" defer="defer"></script>
+<script src="/wotr-docs/assets/js/main.2970c74b.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/wotr-docs/img/wotrdev.png"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/wotr-docs/"><div class="navbar__logo"><img src="/wotr-docs/img/wotrdev.png" alt="WotR Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/wotr-docs/img/wotrdev.png" alt="WotR Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">WotR Docs</b></a><a class="navbar__item navbar__link" href="/wotr-docs/docs/">Documentation</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/Wanderers-Of-The-Rift/wotr-docs" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Design: Core Loop Development</h1></header>
+<blockquote>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="october-26-2025"><em>October 26, 2025</em><a href="#october-26-2025" class="hash-link" aria-label="Direct link to october-26-2025" title="Direct link to october-26-2025" translate="no">​</a></h3>
+<ul>
+<li>@Galactic_15</li>
+<li>@ImplementsLegend</li>
+<li>@Lins</li>
+<li>@maloki</li>
+<li>@rachaelrose1212</li>
+<li>@Rev</li>
+<li>@Rora</li>
+<li>@Sp3cialK</li>
+<li>@WarrenGore</li>
+<li>@Wout</li>
+<li>@wwwwwwhale</li>
+</ul>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="focus">Focus<a href="#focus" class="hash-link" aria-label="Direct link to Focus" title="Direct link to Focus" translate="no">​</a></h2>
+<ul>
+<li>Core Player Experience (CPE) mini vote check-in</li>
+<li>Phase Three launch: Core Loop definition</li>
+<li>Identify repeatable cycle of actions, motivations, rewards</li>
+<li>Establish entry conditions, action phases, risk elements, rewards, reset conditions</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="core-player-experience-phase-two">Core Player Experience (Phase Two)<a href="#core-player-experience-phase-two" class="hash-link" aria-label="Direct link to Core Player Experience (Phase Two)" title="Direct link to Core Player Experience (Phase Two)" translate="no">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="mini-vote-status">Mini Vote Status<a href="#mini-vote-status" class="hash-link" aria-label="Direct link to Mini Vote Status" title="Direct link to Mini Vote Status" translate="no">​</a></h3>
+<ul>
+<li>Engagement and front runners already emerging</li>
+<li>Open discussion of votes encouraged</li>
+<li>Guideline: Keep persuasion positive, don&#x27;t down-talk other options</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="statement-feedback">Statement Feedback<a href="#statement-feedback" class="hash-link" aria-label="Direct link to Statement Feedback" title="Direct link to Statement Feedback" translate="no">​</a></h3>
+<ul>
+<li>Comments that statements sound &quot;cheesy&quot;</li>
+<li>Response: Typical of CPE - trying to fit much into one sentence</li>
+<li>GDD is internal, so acceptable</li>
+<li>Focus on what we want, not necessarily what currently exists</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="wording-adjustments">Wording Adjustments<a href="#wording-adjustments" class="hash-link" aria-label="Direct link to Wording Adjustments" title="Direct link to Wording Adjustments" translate="no">​</a></h3>
+<ul>
+<li>Changed for consistency (e.g., Wanderlust → Curiosity and Yearning)</li>
+<li>Ensures right tense, perspective, and actual emotions</li>
+<li>Note: If you want Wanderlust, vote for Curiosity and Yearning</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="core-loop-definition-phase-three">Core Loop Definition (Phase Three)<a href="#core-loop-definition-phase-three" class="hash-link" aria-label="Direct link to Core Loop Definition (Phase Three)" title="Direct link to Core Loop Definition (Phase Three)" translate="no">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="official-launch">Official Launch<a href="#official-launch" class="hash-link" aria-label="Direct link to Official Launch" title="Direct link to Official Launch" translate="no">​</a></h3>
+<p>Phase Three now open for submissions</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="core-loop-components">Core Loop Components<a href="#core-loop-components" class="hash-link" aria-label="Direct link to Core Loop Components" title="Direct link to Core Loop Components" translate="no">​</a></h3>
+<ul>
+<li>Definition: Repeatable cycle of actions, motivations, and rewards that keeps player engaged</li>
+<li>Not: Full progression or bunch of features</li>
+<li>Target: 4-6 steps</li>
+<li>Format: Couple words or phrase per step (avoid sentences/paragraphs between arrows)</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="example-loops">Example Loops<a href="#example-loops" class="hash-link" aria-label="Direct link to Example Loops" title="Direct link to Example Loops" translate="no">​</a></h3>
+<ul>
+<li>Minecraft: Gather → Craft → Build → Explore → Repeat</li>
+<li>Roguelite: Battle → Upgrade → Attempt → Die → Return → Upgrade → Repeat</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="key-components-to-consider">Key Components to Consider<a href="#key-components-to-consider" class="hash-link" aria-label="Direct link to Key Components to Consider" title="Direct link to Key Components to Consider" translate="no">​</a></h3>
+<ul>
+<li>Entry condition: What starts the loop</li>
+<li>Action phase: What player does</li>
+<li>Risk or challenge: What causes tension</li>
+<li>Reward phase: Loot, what player gets</li>
+<li>Reset: What causes repeat</li>
+</ul>
+<p>Note: 4-6 components ideal, but acceptable with only 3</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="core-question">Core Question<a href="#core-question" class="hash-link" aria-label="Direct link to Core Question" title="Direct link to Core Question" translate="no">​</a></h3>
+<p><em>&quot;If we strip everything out of the game, what does the player actually repeat between logins or plays?&quot;</em></p>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="entry-condition-and-preparation">Entry Condition and Preparation<a href="#entry-condition-and-preparation" class="hash-link" aria-label="Direct link to Entry Condition and Preparation" title="Direct link to Entry Condition and Preparation" translate="no">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="first-step-discussion">First Step Discussion<a href="#first-step-discussion" class="hash-link" aria-label="Direct link to First Step Discussion" title="Direct link to First Step Discussion" translate="no">​</a></h4>
+<p>What players do right before entering Rift</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="hub-world-role">Hub World Role<a href="#hub-world-role" class="hash-link" aria-label="Direct link to Hub World Role" title="Direct link to Hub World Role" translate="no">​</a></h4>
+<ul>
+<li>Suggested as place where players spend considerable time</li>
+<li>Starting point for activities</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="preparation-steps">Preparation Steps<a href="#preparation-steps" class="hash-link" aria-label="Direct link to Preparation Steps" title="Direct link to Preparation Steps" translate="no">​</a></h4>
+<ul>
+<li>Planning: Set next goal for Rift run (resource needs, guild focus, gear)</li>
+<li>Gear preparation: Personal choices</li>
+<li>Food/buffs: Preparing food, potions, buff foods</li>
+<li>Purchasing: Buying items</li>
+<li>Contract selection: Quest or campaign for 20-30 minute objective</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="opening-the-rift">Opening the Rift<a href="#opening-the-rift" class="hash-link" aria-label="Direct link to Opening the Rift" title="Direct link to Opening the Rift" translate="no">​</a></h4>
+<ul>
+<li>Choosing or crafting Rift type</li>
+<li>Personal choices (e.g., Cave-themed Rift with right essences)</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="selling-phase">Selling Phase<a href="#selling-phase" class="hash-link" aria-label="Direct link to Selling Phase" title="Direct link to Selling Phase" translate="no">​</a></h4>
+<ul>
+<li>Currency and selling items discussion (Vault Hunters didn&#x27;t have this)</li>
+<li>What can be done differently from Vault Hunters?</li>
+<li>Assumed part of &quot;getting ready&quot; phase</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="downtime">Downtime<a href="#downtime" class="hash-link" aria-label="Direct link to Downtime" title="Direct link to Downtime" translate="no">​</a></h4>
+<ul>
+<li>May be side loop rather than sub-loop</li>
+<li>Should be at end of core loop</li>
+<li>Players make choices about starting new Rift</li>
+<li>Flowchart can include decision points and branches to side loops</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="action-phase">Action Phase<a href="#action-phase" class="hash-link" aria-label="Direct link to Action Phase" title="Direct link to Action Phase" translate="no">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="consistent-player-actions">Consistent Player Actions<a href="#consistent-player-actions" class="hash-link" aria-label="Direct link to Consistent Player Actions" title="Direct link to Consistent Player Actions" translate="no">​</a></h4>
+<p>What players do to progress or gather things</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="core-actions">Core Actions<a href="#core-actions" class="hash-link" aria-label="Direct link to Core Actions" title="Direct link to Core Actions" translate="no">​</a></h4>
+<ul>
+<li>Enter Rift</li>
+<li>Kill</li>
+<li>Loot</li>
+<li>Collect</li>
+<li>Explore</li>
+<li>Progress objective
+Summary: Loot, fight, explore</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="sub-loops">Sub-Loops<a href="#sub-loops" class="hash-link" aria-label="Direct link to Sub-Loops" title="Direct link to Sub-Loops" translate="no">​</a></h4>
+<ul>
+<li>Each action can be own sub loop</li>
+<li>Dying, victory, or leaving changes loop</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="anomalies">Anomalies<a href="#anomalies" class="hash-link" aria-label="Direct link to Anomalies" title="Direct link to Anomalies" translate="no">​</a></h4>
+<ul>
+<li>Still being developed</li>
+<li>May spawn enemies when triggered</li>
+<li>Original pitch: Click on anomaly and it does something</li>
+<li>Player resource management (health, mana)</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="secrets-and-hidden-content">Secrets and Hidden Content<a href="#secrets-and-hidden-content" class="hash-link" aria-label="Direct link to Secrets and Hidden Content" title="Direct link to Secrets and Hidden Content" translate="no">​</a></h4>
+<ul>
+<li>Looking for secrets/hidden things</li>
+<li>Fits under explore</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="building">Building<a href="#building" class="hash-link" aria-label="Direct link to Building" title="Direct link to Building" translate="no">​</a></h4>
+<ul>
+<li>No submissions about building</li>
+<li>People don&#x27;t see as integral</li>
+<li>Could be sub-loop or side loop for relaxation</li>
+<li>Not mandatory activity</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="risk-element-and-challenge">Risk Element and Challenge<a href="#risk-element-and-challenge" class="hash-link" aria-label="Direct link to Risk Element and Challenge" title="Direct link to Risk Element and Challenge" translate="no">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="risk-discussion">Risk Discussion<a href="#risk-discussion" class="hash-link" aria-label="Direct link to Risk Discussion" title="Direct link to Risk Discussion" translate="no">​</a></h4>
+<p>Where uncertainty or challenge naturally occurs</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="risk-sources">Risk Sources<a href="#risk-sources" class="hash-link" aria-label="Direct link to Risk Sources" title="Direct link to Risk Sources" translate="no">​</a></h4>
+<ul>
+<li>Quantity of mobs</li>
+<li>Unknown mob spawner types</li>
+<li>Soft time limit: Things get harder or rift starts collapsing</li>
+<li>Rift spawners: Might reset after 30 minutes, making return harder</li>
+<li>Traps: In old design document</li>
+<li>Environmental risk: Gravity, difficult terrain</li>
+<li>Chaos rooms: Harder to navigate, difficult return to main portal</li>
+<li>Rift shape variation: Not all rifts same shape long-term (adds uncertainty)</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="time-based-mechanics">Time-Based Mechanics<a href="#time-based-mechanics" class="hash-link" aria-label="Direct link to Time-Based Mechanics" title="Direct link to Time-Based Mechanics" translate="no">​</a></h4>
+<ul>
+<li>Quicker objective completion = better reward
+Potential exploits:<!-- -->
+<ul>
+<li>Rush objective, get out</li>
+<li>Enter and wait 20 minutes for rift to get hard enough before starting (min-max)</li>
+</ul>
+</li>
+<li>Need to consider how players will cheese systems</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="challenge-pois">Challenge POIs<a href="#challenge-pois" class="hash-link" aria-label="Direct link to Challenge POIs" title="Direct link to Challenge POIs" translate="no">​</a></h4>
+<ul>
+<li>Offer challenge POIs to encourage exploration (instead of timers)</li>
+<li>High difficulty but chance for great loot</li>
+<li>Questions: Relying on RNG? Does POI look different so player knows approaching it?</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="tiered-rift-idea">Tiered Rift Idea<a href="#tiered-rift-idea" class="hash-link" aria-label="Direct link to Tiered Rift Idea" title="Direct link to Tiered Rift Idea" translate="no">​</a></h4>
+<ul>
+<li>Find entrance to another rift inside your rift (up to 5 levels)</li>
+<li>Finish objective → chance for another rift opening</li>
+<li>Slightly harder version each level</li>
+<li>At fifth level: leave and get multiplied loot rewards</li>
+<li>Each rift one tier higher than starting rift</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="accessibility-considerations">Accessibility Considerations<a href="#accessibility-considerations" class="hash-link" aria-label="Direct link to Accessibility Considerations" title="Direct link to Accessibility Considerations" translate="no">​</a></h4>
+<ul>
+<li>Arachnophobia setting with alternative mobs to spiders</li>
+<li>Alternative should have similar collision</li>
+<li>No specific mob decided yet</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="reward-and-feedback-system">Reward and Feedback System<a href="#reward-and-feedback-system" class="hash-link" aria-label="Direct link to Reward and Feedback System" title="Direct link to Reward and Feedback System" translate="no">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="tangible-rewards">Tangible Rewards<a href="#tangible-rewards" class="hash-link" aria-label="Direct link to Tangible Rewards" title="Direct link to Tangible Rewards" translate="no">​</a></h4>
+<ul>
+<li>Opening chests and getting loot</li>
+<li>Reputation gains</li>
+<li>Guild progression</li>
+<li>Gear leveling (instead of player leveling)</li>
+<li>Access to new rift types</li>
+<li>Unlock unique rifts or different kinds</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="intangible-rewards">Intangible Rewards<a href="#intangible-rewards" class="hash-link" aria-label="Direct link to Intangible Rewards" title="Direct link to Intangible Rewards" translate="no">​</a></h4>
+<ul>
+<li>Dopamine</li>
+<li>Excitement of fighting bigger bosses</li>
+<li>Getting better (even if skill-based)</li>
+<li>Learning mob attack patterns</li>
+<li>Learning rift layouts</li>
+<li>Guild ranks unlocking different rifts</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="reset-condition">Reset Condition<a href="#reset-condition" class="hash-link" aria-label="Direct link to Reset Condition" title="Direct link to Reset Condition" translate="no">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="loop-reset-triggers">Loop Reset Triggers<a href="#loop-reset-triggers" class="hash-link" aria-label="Direct link to Loop Reset Triggers" title="Direct link to Loop Reset Triggers" translate="no">​</a></h4>
+<ul>
+<li>Death</li>
+<li>Completed rift and feel done (leave voluntarily)</li>
+<li>Struggling with objective and decide to abandon</li>
+<li>Time constraints or IRL stuff</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="additional-topics">Additional Topics<a href="#additional-topics" class="hash-link" aria-label="Direct link to Additional Topics" title="Direct link to Additional Topics" translate="no">​</a></h2>
+<p>Emerged organically through discussion</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="guild-quests-and-objectives">Guild Quests and Objectives<a href="#guild-quests-and-objectives" class="hash-link" aria-label="Direct link to Guild Quests and Objectives" title="Direct link to Guild Quests and Objectives" translate="no">​</a></h3>
+<p>Quest System Integration</p>
+<ul>
+<li>Objectives framed as guild quests for reputation</li>
+<li>Quest system tied to guilds</li>
+<li>Each guild might have own quest set
+Implementation Questions</li>
+<li>Option 1: Selecting quest determines next objective</li>
+<li>Option 2: Entering Rift randomly assigns quest for random unlocked guild</li>
+<li>Either option could work
+Quest-Objective Tie-In
+-Guild quests implementable if quest system tied to objective system</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="exploration-context">Exploration Context<a href="#exploration-context" class="hash-link" aria-label="Direct link to Exploration Context" title="Direct link to Exploration Context" translate="no">​</a></h3>
+<p>Exploration Definition</p>
+<ul>
+<li>Doesn&#x27;t just mean walking through Overworld</li>
+<li>Can mean room-to-room within Rifts
+Planning Component</li>
+<li>Didn&#x27;t come up initially in submissions</li>
+<li>Setting next goal for Rift run is part of planning</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="collaboration-and-process">Collaboration and Process<a href="#collaboration-and-process" class="hash-link" aria-label="Direct link to Collaboration and Process" title="Direct link to Collaboration and Process" translate="no">​</a></h3>
+<p>Tools Discussion</p>
+<ul>
+<li>Suggestions: Canva, Google Sheets, FigJam, Mural, Miro</li>
+<li>WotR-Docs: Has Mermaid built in (supports flowcharts)</li>
+<li>Obsidian: Has collaboration features (speaker uses for project)
+Submission Format</li>
+<li>Can submit own drawings (perfection not required)</li>
+<li>Collaborative creation encouraged</li>
+</ul>
+<hr>
+<p><strong>Next Actions</strong></p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="forum-submissions">Forum Submissions<a href="#forum-submissions" class="hash-link" aria-label="Direct link to Forum Submissions" title="Direct link to Forum Submissions" translate="no">​</a></h4>
+<ul>
+<li>Post ideas in forum</li>
+<li>Goal: Collaborate, refine ideas, reach consensus by next meeting</li>
+<li>Potentially mini-vote to move options into GDD</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="feedback-channels">Feedback Channels<a href="#feedback-channels" class="hash-link" aria-label="Direct link to Feedback Channels" title="Direct link to Feedback Channels" translate="no">​</a></h4>
+<ul>
+<li>Sp3cialk DMs open</li>
+<li>Design general channel</li>
+<li>Report ticket for anonymous feedback</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="meeting-feedback">Meeting Feedback<a href="#meeting-feedback" class="hash-link" aria-label="Direct link to Meeting Feedback" title="Direct link to Meeting Feedback" translate="no">​</a></h4>
+<ul>
+<li>Sp3cialk hopes everyone happy with game design direction</li>
+<li>Open to suggestions for improvement</li>
+</ul>
+<hr>
+<p><strong>Timeline</strong></p>
+<ul>
+<li>Two week given for Phase 3 (Loop)</li>
+<li>Goal: Start on mechanics by November</li>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/Wanderers-Of-The-Rift/wotr-docs/edit/main/website/docs/design/meetings/2025-Oct-26-Design-Meeting-Notes.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#october-26-2025" class="table-of-contents__link toc-highlight"><em>October 26, 2025</em></a></li><li><a href="#focus" class="table-of-contents__link toc-highlight">Focus</a></li><li><a href="#core-player-experience-phase-two" class="table-of-contents__link toc-highlight">Core Player Experience (Phase Two)</a><ul><li><a href="#mini-vote-status" class="table-of-contents__link toc-highlight">Mini Vote Status</a></li><li><a href="#statement-feedback" class="table-of-contents__link toc-highlight">Statement Feedback</a></li><li><a href="#wording-adjustments" class="table-of-contents__link toc-highlight">Wording Adjustments</a></li></ul></li><li><a href="#core-loop-definition-phase-three" class="table-of-contents__link toc-highlight">Core Loop Definition (Phase Three)</a><ul><li><a href="#official-launch" class="table-of-contents__link toc-highlight">Official Launch</a></li><li><a href="#core-loop-components" class="table-of-contents__link toc-highlight">Core Loop Components</a></li><li><a href="#example-loops" class="table-of-contents__link toc-highlight">Example Loops</a></li><li><a href="#key-components-to-consider" class="table-of-contents__link toc-highlight">Key Components to Consider</a></li><li><a href="#core-question" class="table-of-contents__link toc-highlight">Core Question</a></li><li><a href="#entry-condition-and-preparation" class="table-of-contents__link toc-highlight">Entry Condition and Preparation</a></li><li><a href="#action-phase" class="table-of-contents__link toc-highlight">Action Phase</a></li><li><a href="#risk-element-and-challenge" class="table-of-contents__link toc-highlight">Risk Element and Challenge</a></li><li><a href="#reward-and-feedback-system" class="table-of-contents__link toc-highlight">Reward and Feedback System</a></li><li><a href="#reset-condition" class="table-of-contents__link toc-highlight">Reset Condition</a></li></ul></li><li><a href="#additional-topics" class="table-of-contents__link toc-highlight">Additional Topics</a><ul><li><a href="#guild-quests-and-objectives" class="table-of-contents__link toc-highlight">Guild Quests and Objectives</a></li><li><a href="#exploration-context" class="table-of-contents__link toc-highlight">Exploration Context</a></li><li><a href="#collaboration-and-process" class="table-of-contents__link toc-highlight">Collaboration and Process</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/wotr-docs/docs">Getting Started</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://discord.gg/VkSeepd59S" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/Wanderers-Of-The-Rift/wotr-docs" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 Wanderers of the Rift. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>
