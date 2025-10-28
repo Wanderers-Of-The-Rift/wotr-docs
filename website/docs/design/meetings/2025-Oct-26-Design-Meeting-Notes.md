@@ -1,4 +1,4 @@
-# Design: Core Loop Development
+# Design: Core Loop Development Consensus & Next Steps
 
 > ### _October 26, 2025_
 > - @Galactic_15
@@ -32,221 +32,242 @@ Prepare → Rift → Advance → `loop`
 - Prepare: Equip Gear, Equip Abilities, Form Party, Select Contract, Food, Potions, Rift modification
 - Rift: exploration, combat, loot, objective
 - Advance: Delooting, upgrading (gear,abilities,guilds)
-`Loop`
+- `Loop`
 
-Implementation
+### Implementation
+- Put simple loop into GDD
+- Expand with subcategories and sub-loops later if needed
+- Balance between descriptive and concise language
 
-Put simple loop into GDD
-Expand with subcategories and sub-loops later if needed
-Balance between descriptive and concise language
+---
+
+## Downtime/Cool-Off Phase Discussion
+### Arguments For Including Downtime
+- Significant part of game (upgrading gear, leveling up)
+- DBZ's three subcategories: advanced preparation, preparation, relax
+- Important part of player experience
+
+### Arguments Against Core Loop Inclusion
+- Not required for progression
+- More of side or alternative option
+- Not done every time
+
+### Proposed Solutions
+- Rename: "After action" instead of "downtime" (better reflects building, Overworld exploration)
+- Alternative: "Occasional activities"
+- Could be part of core loop if cooldown on opening Rifts exists
+- Making potions and expanding base can be part of preparation phase
+
+### Clarification
+- Core loop is what you describe when introducing mod
+- Different loops exist: core loop, sub-loops, choices to go into other loops
+- Core loop doesn't mean other elements don't exist
+- One Rift isn't necessarily only one loop
 
 ---
 
-## Core Loop Definition (Phase Three)
-### Official Launch
-Phase Three now open for submissions
-### Core Loop Components
-- Definition: Repeatable cycle of actions, motivations, and rewards that keeps player engaged
-- Not: Full progression or bunch of features
-- Target: 4-6 steps
-- Format: Couple words or phrase per step (avoid sentences/paragraphs between arrows)
+## Loot and Cleanup Systems
+### Cleanup Phase Discussion
+- Modern games have better loot systems
+- Question: Is cleanup as primary step necessary?
+- Ideas: Minimize cleanup or cut entirely (special bags/pouches)
 
-### Example Loops
-- Minecraft: Gather → Craft → Build → Explore → Repeat
-- Roguelite: Battle → Upgrade → Attempt → Die → Return → Upgrade → Repeat
+### Meaningful Loot Philosophy
+- Everything in chest should be worthwhile
+- Avoid "bunch of stuff just to sort through" (Vault Hunters trap)
+- Balance between loot quantity and inventory management
+- Meaningful loot may require fewer chests
 
-### Key Components to Consider
-- Entry condition: What starts the loop
-- Action phase: What player does
-- Risk or challenge: What causes tension
-- Reward phase: Loot, what player gets
-- Reset: What causes repeat
+### Current System Issues
+- Many chests feels good initially
+- Inventory fills quickly
+- Necessitates inventory management mods (backpacks, sorting systems)
+- Basic chests giving early game loot become bloat later
 
-Note: 4-6 components ideal, but acceptable with only 3
+### Proposed Solutions
+Packrat:
+- Rift pack holds unlimited stacks of Rift items
+- Lost upon death
+- Incentivizes removing valuable items
 
-### Core Question
-_"If we strip everything out of the game, what does the player actually repeat between logins or plays?"_
+Quality over Quantity:
+- Less loot, more meaningful items
+- Sell/buy system makes items more valuable
+- Players weigh pros/cons of keeping items
 
----
-### Entry Condition and Preparation
-#### First Step Discussion
-What players do right before entering Rift
+Upgradeable Systems:
+- Bag upgraded to only hold useless loot
+- Keeps relevant loot in main inventory
 
-#### Hub World Role
-- Suggested as place where players spend considerable time
-- Starting point for activities
+Special Chest Design:
+- 3x3 POIs: One chest with choice of one out of three good items
+- Special rooms: Single chest with three good items, can only choose one
+- 3x3 POIs as catch-all for special events (anomalies, choice chests)
 
-#### Preparation Steps
-- Planning: Set next goal for Rift run (resource needs, guild focus, gear)
-- Gear preparation: Personal choices
-- Food/buffs: Preparing food, potions, buff foods
-- Purchasing: Buying items
-- Contract selection: Quest or campaign for 20-30 minute objective
+### Quality of Life vs Friction
+ARPG Examples:
+- POE: Currency in inventory slots (feels more important)
+- Last Epoch: Currency auto-stored (less friction)
 
-#### Opening the Rift
-- Choosing or crafting Rift type
-- Personal choices (e.g., Cave-themed Rift with right essences)
+Design Principles:
+- Automatic loot can diminish reward feeling
+- Good loot needs some friction
+- Too much QoL makes game too easy
+- Streamlining too much loses value
+- Player choice important: limited inventory forces choices
 
-#### Selling Phase
-- Currency and selling items discussion (Vault Hunters didn't have this)
-- What can be done differently from Vault Hunters?
-- Assumed part of "getting ready" phase
-
-#### Downtime
-- May be side loop rather than sub-loop
-- Should be at end of core loop
-- Players make choices about starting new Rift
-- Flowchart can include decision points and branches to side loops
-
----
-### Action Phase
-#### Consistent Player Actions
-What players do to progress or gather things
-
-#### Core Actions
-- Enter Rift
-- Kill
-- Loot
-- Collect
-- Explore
-- Progress objective
-Summary: Loot, fight, explore
-
-#### Sub-Loops
-- Each action can be own sub loop
-- Dying, victory, or leaving changes loop
-
-#### Anomalies
-- Still being developed
-- May spawn enemies when triggered
-- Original pitch: Click on anomaly and it does something
-- Player resource management (health, mana)
-
-#### Secrets and Hidden Content
-- Looking for secrets/hidden things
-- Fits under explore
-
-#### Building
-- No submissions about building
-- People don't see as integral
-- Could be sub-loop or side loop for relaxation
-- Not mandatory activity
+### Inventory Management Question
+- Should inventory cleanup be dedicated step or integrated into advancement after Rift?
+- Suggestion: "Pack rat guild" introduces players to inventory management mechanics
+- Consider beginning vs end game loop for inventory management
 
 ---
-### Risk Element and Challenge
-#### Risk Discussion
-Where uncertainty or challenge naturally occurs
+## Version 0.3.0 Planning: Rift Expansion
+### Focus
+Expand content of Rifts rather than sub-loop detail
+Expansion Content: 
+- New mobs
+- Special rooms
+- Points of interest
+- Theme differences and uniqueness
+- More objectives for variability
+- Expanded anomalies
+- Loot goblin/piñata entities (different focuses and decisions)
 
-#### Risk Sources
-- Quantity of mobs
-- Unknown mob spawner types
-- Soft time limit: Things get harder or rift starts collapsing
-- Rift spawners: Might reset after 30 minutes, making return harder
-- Traps: In old design document
-- Environmental risk: Gravity, difficult terrain
-- Chaos rooms: Harder to navigate, difficult return to main portal
-- Rift shape variation: Not all rifts same shape long-term (adds uncertainty)
+### Proposal Philosophy
+- Make Rift more interesting
+- Expand upon existing experiences within Rift
+- Rift is core piece of mod's gameplay loop
 
-#### Time-Based Mechanics
-- Quicker objective completion = better reward
-Potential exploits:
-    - Rush objective, get out
-    - Enter and wait 20 minutes for rift to get hard enough before starting (min-max)
-- Need to consider how players will cheese systems
+### Scope Management
+- Focus on ideas fitting core game loop (avoid scope creep)
+- Focus on elements like loot and food buffs
+- Take ideas from submission and analyze through GDD lens
 
-#### Challenge POIs
-- Offer challenge POIs to encourage exploration (instead of timers)
-- High difficulty but chance for great loot
-- Questions: Relying on RNG? Does POI look different so player knows approaching it?
-
-#### Tiered Rift Idea
-- Find entrance to another rift inside your rift (up to 5 levels)
-- Finish objective → chance for another rift opening
-- Slightly harder version each level
-- At fifth level: leave and get multiplied loot rewards
-- Each rift one tier higher than starting rift
-
-#### Accessibility Considerations
-- Arachnophobia setting with alternative mobs to spiders
-- Alternative should have similar collision
-- No specific mob decided yet
+### Caveats
+- Much still goes through pitch to feature
+- Don't treat as definitive list
+- These are goals to work towards
+- Don't all necessarily have to happen
 
 ---
-### Reward and Feedback System
-#### Tangible Rewards
-- Opening chests and getting loot
-- Reputation gains
-- Guild progression
-- Gear leveling (instead of player leveling)
-- Access to new rift types
-- Unlock unique rifts or different kinds
+## Design Process Moving Forward
+### Phase Status
+- Confident with first three phases of GDD
+- Moving to more directed design analysis and discussions
 
-#### Intangible Rewards
-- Dopamine
-- Excitement of fighting bigger bosses
-- Getting better (even if skill-based)
-- Learning mob attack patterns
-- Learning rift layouts
-- Guild ranks unlocking different rifts
+### Question: Sub-Loops vs 0.3.0 Content
+- Should design continue nailing down sub-loops (Phase 2) or support project by working on content directly impacting 0.3.0?
+- Decision: Start helping rest of project with next update content
+- Next Meeting Topic Selection
+### Process Options Discussed:
+- Democratic: Everybody votes on next design meeting topic
+- Structured: Leadership selects
 
----
-### Reset Condition
-#### Loop Reset Triggers
-- Death
-- Completed rift and feel done (leave voluntarily)
-- Struggling with objective and decide to abandon
-- Time constraints or IRL stuff
+### Voting Considerations:
+- How long to leave vote open?
+- 24-hour voting window suggested
+- Set deadline (e.g., end of Sunday/Monday)
+- Quick vote for meeting subject different than feature vote
+- Consider if people need to write things before meeting
+- Barrier concern: people feel they must contribute something
+
+### Decision:
+- Put quick vote together for design team
+- Vote on which ideas from backlog to discuss at next meeting
+- Also: Contributor-wide vote for GDD draft
+
+### Design Team Actions
+- Start looking at stuff in idea backlog
+- Help pitch to feature process for 0.3.0 items
+- With GDD work: should be able to answer questions that come up for 0.3.0 features
+- At least bare minimum of what features can be
 
 ---
 ## Additional Topics
 Emerged organically through discussion
 
-### Guild Quests and Objectives
-Quest System Integration
-- Objectives framed as guild quests for reputation
-- Quest system tied to guilds
-- Each guild might have own quest set
-Implementation Questions
-- Option 1: Selecting quest determines next objective
-- Option 2: Entering Rift randomly assigns quest for random unlocked guild
-- Either option could work
-Quest-Objective Tie-In
--Guild quests implementable if quest system tied to objective system
+### Gathering and Essence Mechanics
+#### Current State
+- Requires processing materials into essence (diminished step)
 
-### Exploration Context
-Exploration Definition
-- Doesn't just mean walking through Overworld
-- Can mean room-to-room within Rifts
-Planning Component
-- Didn't come up initially in submissions
-- Setting next goal for Rift run is part of planning
+#### Discussion Points
+- Should gathering be more important, requiring resource collection to enter next Rift?
+- Plan to include essences as loot in chests (self-replication through Rifts)
+- Suggestion: Allow essence to be turned into materials (interesting for Skyblock version)
 
-### Collaboration and Process
-Tools Discussion
-- Suggestions: Canva, Google Sheets, FigJam, Mural, Miro
-- WotR-Docs: Has Mermaid built in (supports flowcharts)
-- Obsidian: Has collaboration features (speaker uses for project)
-Submission Format
-- Can submit own drawings (perfection not required)
-- Collaborative creation encouraged
+#### Integration Proposals
+- Tie essence more to Rift-only loot (incentivize Rift exploration)
+- Offer Overworld side quests that reward essence (give players options)
+- Use Overworld as boost instead of wall
+- Example: If short on currency for merchant item, quick Overworld side quest provides needed amount
+
+### Overworld and Vanilla Integration
+#### Current Philosophy
+- Mod is Rift-centric, separating Rift and Overworld activities
+- Focus primarily on Rift stuff
+- Overworld currently defined by Mojang
+- Not vanilla plus pack, ARPG with progression based around player
+
+#### Integration Questions
+- How much should mod interact with vanilla Minecraft?
+- How much to integrate vanilla dimensions and existing elements?
+- Avoid alienating players by removing too much Overworld
+
+#### Overworld as Frontier Dimension
+- Re-flavor Overworld as frontier dimension with homesteading quests
+- Could be secret sandbox portion where players use unlocked skills/abilities
+- Challenge: Integrating Overworld into rigid progression and balancing system is near impossible
+- Core player experience has little explicitly calling out Overworld
+
+#### Vanilla Elements Discussion
+- Vault Hunters comparison: VH3 removed Overworld (considered useless)
+- Terraria comparison: Different because Terraria's world scales with player and is main part of game
+- Could retool Minecraft and make each dimension unique with add-ons
+- Option: Remove elements from vanilla and put inside Rifts
+
+#### Development Considerations
+- Removing dimensions like Nether: worth dev time if players might want to sandbox?
+- Could be less about modded Minecraft, more about using Minecraft as engine
+- Everything retooled into pack
+- Focus on Rifts and their content
+
+### Rift Creation and Progression
+#### Creating the Rift
+- Question: Dedicated beat or part of preparation?
+- Depends on how involved Rift opener creation is
+- If requires extensive farming: could become annoying
+- Philosophy: Reward players for doing it instead of punishing for not doing it
+
+#### Game Loop and Player Progression
+- Exploring Rifts always core element
+- How it's done changes with progression
+- Progression affects loop execution
+
+### Important Core Topics to Address
+Before Feature Pitching should answer these before feature adding phases:
+- Overworld vanilla importance
+- Loot density and importance
+- Minecraft hunger and health system
+- How loot works
+- Most important parts of game
+
+Rationale: Ideas closer to core are more important than others at the moment
 
 ---
 
 **Next Actions**
-#### Forum Submissions
-- Post ideas in forum
-- Goal: Collaborate, refine ideas, reach consensus by next meeting
-- Potentially mini-vote to move options into GDD
-#### Feedback Channels
-- Sp3cialk DMs open
-- Design general channel
-- Report ticket for anonymous feedback
-#### Meeting Feedback
-- Sp3cialk hopes everyone happy with game design direction
-- Open to suggestions for improvement
+#### Forum Discussion
+- Minecraft hunger/health
+
+#### GDD Draft Vote
+- In the upcoming week, 1 week long, vote of confidence
+
+#### Idea Submission
+- Overworld/Vanilla importance/integration
 
 ---
 
 **Timeline**
-- Two week given for Phase 3 (Loop)
-- Goal: Start on mechanics by November
+- One week for GDD draft vote
+- Select topic for next week's Design Meeting though poll
