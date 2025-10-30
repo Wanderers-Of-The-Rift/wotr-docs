@@ -20,6 +20,34 @@
 
 ---
 
+## Lore Creation Process
+### Question: How should lore be created process-wise?
+Response:
+- Allow for creativity and brainstorming
+- Include interaction with others' ideas
+- Collaboration with ability to ask questions and draw out ideas
+- Feedback loop between teams (game design, art, build)
+- Integrate ideas and build lore together
+
+Response:
+- Brainstorming should not be limited but eventually focus on specific goals
+- Feedback is crucial
+- Initiative from other teams, especially game design, to establish mechanics
+- Game design should lead in developing systems
+- Brainstorming and new ideas still valuable
+
+Response:
+- Lore should be primarily led by tasks (similar to other teams)
+- Task-based with priorities for what's important
+- Identity of Lore has been ambiguous, making suggestions difficult
+
+### Follow-Up Question
+Anything had been done that fits the ideal lore process description?
+
+**No one could provide examples.**
+
+---
+
 ## Lore in Player Experience
 ### Question: Where should lore exist and how should players experience it?
 Delivery Methods:
