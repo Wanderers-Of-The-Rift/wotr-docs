@@ -270,6 +270,7 @@ module.exports = {
             'meetings/2025/10/Oct-04-General-Meeting-Notes',
             'meetings/2025/10/Oct-18-General-Meeting-Notes'
           ],
+        },
         {
           type: 'category',
           label: 'November 2025',
