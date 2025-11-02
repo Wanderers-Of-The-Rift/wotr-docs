@@ -54,16 +54,15 @@ Planning Phase
 ---
 
 ## Art Completed
+- Updated art tag guidelines (pinned in asset request)
+- More Mob skins
+- Rune Gem Sound submissions (geode opening effect)
 
 Model votes expected soon:
 - Rune Anvil
 - Riftspawner
 - Skillbench
 - Rift portals
-
-- Updated art tag guidelines (pinned in asset request)
-- More MOB skins
-- Rune Gem Sound submissions (geode opening effect)
 
 ## Art Tasks
 
