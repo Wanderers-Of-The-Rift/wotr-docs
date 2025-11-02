@@ -15,10 +15,13 @@ Community Meeting
 ---
 
 ## Kudos & Recognition
-- Rora: Game reference library entry
-- Design team: Catching up to other teams
-- MooMarmouse: Runegem sounds
-- Guides: Supporting new wanderers through program
+- Kudos for `Rora`, made a Game Reference Library entry
+- Kudos for `MooMarMouse`, made gem sounds
+- `Lore` Team in general for working very hard
+- Special thanks to `Warren`, `Sp3cialK` and `Maloki` for helping a lot with that long meeting
+- Kudos to `Design` for helping us get caught up with the rest of the team
+- Kudos to our `Guides` for the work they have been doing with new contributors
+- `Nid` already on the build server and making stuff after just one day
 
 ---
 
