@@ -92,6 +92,13 @@ module.exports = {
             'code/style/style',
           ],
         },
+        {
+          type: 'category',
+          label: 'Dev Meeting Notes',
+          items: [
+            'Dev-Meeting-Notes-2025-11-01',
+          ],
+        },
       ],
     },
     {
