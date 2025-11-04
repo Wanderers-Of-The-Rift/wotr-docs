@@ -96,7 +96,7 @@ module.exports = {
           type: 'category',
           label: 'Dev Meeting Notes',
           items: [
-            'Dev-Meeting-Notes-2025-11-01',
+            'code/meetings/Dev-Meeting-Notes-2025-11-01',
           ],
         },
       ],
