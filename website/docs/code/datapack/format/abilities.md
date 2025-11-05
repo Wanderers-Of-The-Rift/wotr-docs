@@ -291,7 +291,7 @@ This requirement checks and optionally consumes an amount of an ability resource
 #### Format
 
 * `type`: Must be `wotr:ability_resource`.
-* `resource_type`: The resource type required.
+* `resource_type`: The resource type required. Most commonly `wotr:mana`.
 * `amount`: Optional, defaults to (near) `0`. The amount of the resource required.
 * `consume`: Optional boolean, defaults to `true`. Is the resource consumed as part of the requirement.
 
@@ -585,8 +585,9 @@ This effect applies a MobEffect to the target.
 #### Format
 
 * `type`: `wotr:status`
-* `status_effect`: Details of the mob effect to apply (this is a minecraft MobEffectInstance definition)
-    * `id`
+* `status_effect`: Details of the mob effect to apply. This is a minecraft MobEffectInstance definition, which is
+  documented at https://docs.neoforged.net/docs/items/mobeffects/#mobeffectinstances.
+    * `id` - The built-in minecraft effects are listed on [the wiki](https://minecraft.wiki/w/Effect).
     * `amplifier`
     * `duration`
     * `ambient`
@@ -608,7 +609,34 @@ This effect summon an entity at the target locations.
 
 ### Targeting
 
+__Applies to__: All
+
+This effect applies a series of targeting types to determine a new list of targets. These will be processed in order,
+with the targets from the proceeding targeting type being passed to the next.
+The final list may contain the same target multiple times, if it is targeted through multiple intermediate sources. For example,
+if the targeting types are two Area types, the first may target out to all mobs surrounding the player and the second may target
+the player from all surrounding mobs - the final list of targets will contain the player once for each mob in the initial area.
+
+#### Format
+
+* `type`: `wotr:targeting`
+* `targeting`: A single or a list of targeting types.
+* `effects`: A list of effects to apply to the final set of targets.
+
 ### Teleport
+
+__Applies to__: Entities
+
+This effect teleports the source or target. Note: this effect needs some work.
+
+#### Format
+
+* `type`: `wotr:teleport`
+* `tele_info`: Information controlling the behavior of the effect.
+  * `teleport_target`: One of `user` or `target`. Determines whether the source or target (respectively) will be teleported. 
+    For `user`, the source will be teleported to the location of a random target, offset by `position`. For `target`, each target will be teleported.   
+  * `position`: The position or offset to teleport by.
+  * `relative`: Optional. If true and `teleport_target` is `target`, each target will be moved by `position`. Otherwise each target will move to `position`. 
 
 ## Targeting Types
 
@@ -769,7 +797,7 @@ This predicate is used to filter blocks involved in abilities.
 For finding spawnable blocks with sufficient space above them
 
 * `type`: `wotr:surface`
-* `space`: Optional, default `2`. How many blocks of air must be able the surface block.
+* `space`: Optional, default `2`. How many blocks of air must be above the surface block.
 
 ## Related Datapack Formats
 
