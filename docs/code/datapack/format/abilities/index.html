@@ -1,0 +1,654 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-code/datapack/format/abilities" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.1">
+<title data-rh="true">Abilities | Wanderers of the Rift Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://wanderers-of-the-rift.github.io/wotr-docs/img/wotrdocCard.PNG"><meta data-rh="true" name="twitter:image" content="https://wanderers-of-the-rift.github.io/wotr-docs/img/wotrdocCard.PNG"><meta data-rh="true" property="og:url" content="https://wanderers-of-the-rift.github.io/wotr-docs/docs/code/datapack/format/abilities"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Abilities | Wanderers of the Rift Docs"><meta data-rh="true" name="description" content="Abilities are the powers that a player can use. Sometimes actively by placing them in the ability bar, other times"><meta data-rh="true" property="og:description" content="Abilities are the powers that a player can use. Sometimes actively by placing them in the ability bar, other times"><link data-rh="true" rel="icon" href="/wotr-docs/img/wotrdev.png"><link data-rh="true" rel="canonical" href="https://wanderers-of-the-rift.github.io/wotr-docs/docs/code/datapack/format/abilities"><link data-rh="true" rel="alternate" href="https://wanderers-of-the-rift.github.io/wotr-docs/docs/code/datapack/format/abilities" hreflang="en"><link data-rh="true" rel="alternate" href="https://wanderers-of-the-rift.github.io/wotr-docs/docs/code/datapack/format/abilities" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Abilities","item":"https://wanderers-of-the-rift.github.io/wotr-docs/docs/code/datapack/format/abilities"}]}</script><link rel="alternate" type="application/rss+xml" href="/wotr-docs/blog/rss.xml" title="Wanderers of the Rift Docs RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/wotr-docs/blog/atom.xml" title="Wanderers of the Rift Docs Atom Feed"><link rel="stylesheet" href="/wotr-docs/assets/css/styles.2ba4343f.css">
+<script src="/wotr-docs/assets/js/runtime~main.9875ac9f.js" defer="defer"></script>
+<script src="/wotr-docs/assets/js/main.d0af1155.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/wotr-docs/img/wotrdev.png"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/wotr-docs/"><div class="navbar__logo"><img src="/wotr-docs/img/wotrdev.png" alt="WotR Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/wotr-docs/img/wotrdev.png" alt="WotR Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">WotR Docs</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/wotr-docs/docs/">Documentation</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/Wanderers-Of-The-Rift/wotr-docs" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/wotr-docs/docs/"><span title="1. Overview" class="categoryLinkLabel_W154">1. Overview</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/wotr-docs/docs/design/DesignDocHome"><span title="2. Design" class="categoryLinkLabel_W154">2. Design</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/wotr-docs/docs/art/style-guide/"><span title="3. Art" class="categoryLinkLabel_W154">3. Art</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/wotr-docs/docs/contribute"><span title="4. Development" class="categoryLinkLabel_W154">4. Development</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/contribute"><span title="How to Contribute" class="linkLabel_WmDU">How to Contribute</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" tabindex="0" href="/wotr-docs/docs/code/"><span title="Code" class="categoryLinkLabel_W154">Code</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/code/"><span title="Code Home" class="linkLabel_WmDU">Code Home</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/code/api/"><span title="API" class="linkLabel_WmDU">API</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/code/api/configurable-hud"><span title="Configurable HUD" class="linkLabel_WmDU">Configurable HUD</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/code/api/quickmover"><span title="QuickMover" class="linkLabel_WmDU">QuickMover</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" tabindex="0" href="/wotr-docs/docs/code/datapack/format/abilities"><span title="Datapacks" class="categoryLinkLabel_W154">Datapacks</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-4 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" tabindex="0" href="/wotr-docs/docs/code/datapack/format/abilities"><span title="Formats" class="categoryLinkLabel_W154">Formats</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-5 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/wotr-docs/docs/code/datapack/format/abilities"><span title="Abilities" class="linkLabel_WmDU">Abilities</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-5 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/code/datapack/format/modifiers"><span title="Modifiers" class="linkLabel_WmDU">Modifiers</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-5 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/code/datapack/format/quests"><span title="Quest Data" class="linkLabel_WmDU">Quest Data</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-5 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/code/datapack/format/rift-spawner"><span title="Rift Spawners" class="linkLabel_WmDU">Rift Spawners</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-5 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/code/datapack/format/runegems"><span title="Runegems" class="linkLabel_WmDU">Runegems</span></a></li></ul></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/code/datapack/datapack-formats"><span title="Datapack formats in WotR" class="linkLabel_WmDU">Datapack formats in WotR</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/code/datapack/example"><span title="example" class="linkLabel_WmDU">example</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/code/datapack/Oct-04-Datapack-Meeting-Notes"><span title="Datapack: Quest/Task Demo" class="linkLabel_WmDU">Datapack: Quest/Task Demo</span></a></li></ul></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/code/decisions/"><span title="Code Decisions" class="linkLabel_WmDU">Code Decisions</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/code/design/design-implementation"><span title="Design Implementation" class="linkLabel_WmDU">Design Implementation</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/code/design/gear-socket"><span title="Gear Sockets" class="linkLabel_WmDU">Gear Sockets</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/code/design/modifiers"><span title="Modifiers" class="linkLabel_WmDU">Modifiers</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/code/style/"><span title="Code Style" class="linkLabel_WmDU">Code Style</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/wotr-docs/docs/code/meetings/Dev-Meeting-Notes-2025-11-01"><span title="Dev Meeting Notes" class="categoryLinkLabel_W154">Dev Meeting Notes</span></a></div></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/wotr-docs/docs/builds/standards"><span title="5. Build" class="categoryLinkLabel_W154">5. Build</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/wotr-docs/docs/lore/topic/hubworld/concepts/Lore-Concept-Hubworld-1"><span title="6. Lore" class="categoryLinkLabel_W154">6. Lore</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/wotr-docs/docs/meetings/2025/02/Feb-03-Summary-Meeting-Notes"><span title="7. General Meeting Notes" class="categoryLinkLabel_W154">7. General Meeting Notes</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/wotr-docs/docs/polls/"><span title="8. Polls" class="categoryLinkLabel_W154">8. Polls</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/wotr-docs/docs/resources/mod-development"><span title="9. Resources" class="categoryLinkLabel_W154">9. Resources</span></a></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/wotr-docs/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">4. Development</span></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Code</span></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Datapacks</span></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Formats</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Abilities</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Abilities</h1></header>
+<p>Abilities are the powers that a player can use. Sometimes actively by placing them in the ability bar, other times
+passively as triggers on gear.</p>
+<ul>
+<li><a href="#abilities">Abilities</a>
+<ul>
+<li><a href="#concepts">Concepts</a>
+<ul>
+<li><a href="#ability-types">Ability Types</a></li>
+<li><a href="#requirements">Requirements</a></li>
+<li><a href="#effects">Effects</a>
+<ul>
+<li><a href="#attach-effect">Attach Effect</a></li>
+<li><a href="#conditional-effects">Conditional Effects</a></li>
+</ul>
+</li>
+<li><a href="#targeting">Targeting</a></li>
+</ul>
+</li>
+<li><a href="#ability-types-1">Ability Types</a>
+<ul>
+<li><a href="#instant">Instant</a></li>
+<li><a href="#persistent">Persistent</a></li>
+<li><a href="#chain">Chain</a></li>
+</ul>
+</li>
+<li><a href="#requirements-1">Requirements</a>
+<ul>
+<li><a href="#ability-resource">Ability Resource</a></li>
+<li><a href="#cooldown">Cooldown</a></li>
+<li><a href="#food-level">Food Level</a></li>
+<li><a href="#life">Life</a></li>
+<li><a href="#own-attached-effect">Own Attached Effect</a></li>
+<li><a href="#no-move">No Move</a></li>
+</ul>
+</li>
+<li><a href="#effects-1">Effects</a>
+<ul>
+<li><a href="#attach">Attach</a></li>
+<li><a href="#break">Break</a></li>
+<li><a href="#conditional">Conditional</a></li>
+<li><a href="#damage">Damage</a></li>
+<li><a href="#detach-own">Detach Own</a></li>
+<li><a href="#heal">Heal</a></li>
+<li><a href="#movement">Movement</a></li>
+<li><a href="#no-op">No Op</a></li>
+<li><a href="#particle">Particle</a></li>
+<li><a href="#projectile">Projectile</a></li>
+<li><a href="#set-block">Set Block</a></li>
+<li><a href="#simple-projectile">Simple Projectile</a></li>
+<li><a href="#sound">Sound</a></li>
+<li><a href="#status">Status</a></li>
+<li><a href="#summon">Summon</a></li>
+<li><a href="#targeting-1">Targeting</a></li>
+<li><a href="#teleport">Teleport</a></li>
+</ul>
+</li>
+<li><a href="#targeting-types">Targeting Types</a>
+<ul>
+<li><a href="#area">Area</a></li>
+<li><a href="#caster">Caster</a></li>
+<li><a href="#connected-block">Connected Block</a></li>
+<li><a href="#random-subset">Random Subset</a></li>
+<li><a href="#random-chance">Random Chance</a></li>
+<li><a href="#raycast">Raycast</a></li>
+<li><a href="#self">Self</a></li>
+<li><a href="#source">Source</a></li>
+<li><a href="#trigger-target">Trigger Target</a></li>
+</ul>
+</li>
+<li><a href="#target-entity-predicate">Target Entity Predicate</a></li>
+<li><a href="#target-block-predicate">Target Block Predicate</a>
+<ul>
+<li><a href="#additional-block-predicates">Additional Block Predicates</a>
+<ul>
+<li><a href="#surface">Surface</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#related-datapack-formats">Related Datapack Formats</a>
+<ul>
+<li><a href="#effect-marker">Effect Marker</a></li>
+<li><a href="#trigger-modifiers">Trigger Modifiers</a></li>
+<li><a href="#upgrades">Upgrades</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="concepts">Concepts<a href="#concepts" class="hash-link" aria-label="Direct link to Concepts" title="Direct link to Concepts" translate="no">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="ability-types">Ability Types<a href="#ability-types" class="hash-link" aria-label="Direct link to Ability Types" title="Direct link to Ability Types" translate="no">​</a></h3>
+<p>Ability types determine the overall activation behavior of the ability.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="requirements">Requirements<a href="#requirements" class="hash-link" aria-label="Direct link to Requirements" title="Direct link to Requirements" translate="no">​</a></h3>
+<p>Requirements both specify the conditions required to activate or maintain an ability, and any costs consumed.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="effects">Effects<a href="#effects" class="hash-link" aria-label="Direct link to Effects" title="Direct link to Effects" translate="no">​</a></h3>
+<p>Abilities are composed of a tree of effects, with each effect performing an action. This can include playing a sound,
+or doing damage, or just gathering targets for child effects.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="attach-effect">Attach Effect<a href="#attach-effect" class="hash-link" aria-label="Direct link to Attach Effect" title="Direct link to Attach Effect" translate="no">​</a></h4>
+<p>The Attach effect is worth special mention - this effect attaches to an entity, and can apply modifiers and/or activate
+child effects when conditions are met. This allows for having effects that continue to act over time.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="conditional-effects">Conditional Effects<a href="#conditional-effects" class="hash-link" aria-label="Direct link to Conditional Effects" title="Direct link to Conditional Effects" translate="no">​</a></h4>
+<p>Conditional effects allow abilities to have behavior that changes based on upgrades. When activated a conditional effect
+will check to see if its condition is met, and apply different effects based on whether it is or is not.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="targeting">Targeting<a href="#targeting" class="hash-link" aria-label="Direct link to Targeting" title="Direct link to Targeting" translate="no">​</a></h3>
+<p>All abilities start by targeting the caster, but as the tree of effects is processed new targets can be selected - both
+entities and blocks. The TargetingEffect in particular allows for a range of different ways to select new targets, but
+many
+effects may also select new targets for their child effects based on their actions. For example, child effects of the
+SummonEffect will target the summoned entities.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="ability-types-1">Ability Types<a href="#ability-types-1" class="hash-link" aria-label="Direct link to Ability Types" title="Direct link to Ability Types" translate="no">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="instant">Instant<a href="#instant" class="hash-link" aria-label="Direct link to Instant" title="Direct link to Instant" translate="no">​</a></h3>
+<p>Instant abilities charge their costs and apply their effects immediately, then go straight to cooldown.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="format">Format<a href="#format" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h4>
+<ul>
+<li><code>type</code>: Must be <code>wotr:instant</code>.</li>
+<li><code>icon</code>: The 16x16 icon used to display the ability in the ability bar</li>
+<li><code>small_icon</code>: Optional. A 16x16 icon, but intended to smaller to display on the ability holder when the ability is in
+an
+inventory or dropped. If not specified <code>icon</code> will be used.</li>
+<li><code>in_creative_menu</code>: Optional, defaults to <code>true</code>. Whether this ability will be available in the creative menu.</li>
+<li><code>requirements</code>: Optional. An array of requirements that must be met for the ability to be usable.</li>
+<li><code>effects</code>: Optional. An array of effects that are applied when the ability is activated.</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="example">Example<a href="#example" class="hash-link" aria-label="Direct link to Example" title="Direct link to Example" translate="no">​</a></h4>
+<p>This example heals the user 2 for the cost of 10 mana, with a 200 tick (10 second) cooldown.</p>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token property">&quot;type&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">&quot;wotr:instant&quot;</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token property">&quot;icon&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">&quot;minecraft:textures/mob_effect/regeneration.png&quot;</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token property">&quot;requirements&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">[</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">      </span><span class="token property">&quot;type&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">&quot;wotr:ability_resource&quot;</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">      </span><span class="token property">&quot;resource_type&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">&quot;wotr:mana&quot;</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">      </span><span class="token property">&quot;amount&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token number">10</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token punctuation" style="color:rgb(248, 248, 242)">}</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">      </span><span class="token property">&quot;type&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">&quot;wotr:cooldown&quot;</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">      </span><span class="token property">&quot;ticks&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token number">200</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token punctuation" style="color:rgb(248, 248, 242)">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token punctuation" style="color:rgb(248, 248, 242)">]</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token property">&quot;effects&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">[</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">      </span><span class="token property">&quot;type&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">&quot;wotr:heal&quot;</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">      </span><span class="token property">&quot;amount&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token number">2.0</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token punctuation" style="color:rgb(248, 248, 242)">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token punctuation" style="color:rgb(248, 248, 242)">]</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token punctuation" style="color:rgb(248, 248, 242)">}</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="persistent">Persistent<a href="#persistent" class="hash-link" aria-label="Direct link to Persistent" title="Direct link to Persistent" translate="no">​</a></h3>
+<p>Persistent abilities run over a period of time - either a fixed duration, until ongoing requirements are no longer met
+or the user deactivates them.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="format-1">Format<a href="#format-1" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h4>
+<ul>
+<li><code>type</code>: Must be <code>wotr:persistent</code>.</li>
+<li><code>icon</code>: The 16x16 icon used to display the ability in the ability bar.</li>
+<li><code>small_icon</code>: Optional. A 16x16 icon, but intended to smaller to display on the ability holder when the ability is in
+an
+inventory or dropped. If not specified <code>icon</code> will be used.</li>
+<li><code>in_creative_menu</code>: Optional, defaults to <code>true</code>. Whether this ability will be available in the creative menu.</li>
+<li><code>warmup_time</code>: Optional, defaults to <code>0</code>. How long after activating the ability before its activation effects are
+executed.</li>
+<li><code>can_deactive</code>: Optional, defaults to <code>true</code>. Can the user deactivate the ability manually.</li>
+<li><code>channelled</code>: Optional, defaults to <code>false</code>. Is this ability interrupted by the use of an item, weapon, or another
+ability.</li>
+<li><code>requirements</code>: Optional. An array of requirements that must be met for the ability to be usable.</li>
+<li><code>ongoing_requirements</code>: Optional. An array of requirements that must be met for the ability to remain active.</li>
+<li><code>on_deactivation_costs</code>: Optional. An array of requirements that are used to apply costs when the ability is
+deactivated.
+(e.g. cooldowns)</li>
+<li><code>activation_effects</code>: Optional. An array of effects that are applied when the ability is activated (after
+<code>warmup_time</code>).</li>
+<li><code>on_deactivation_effects</code>: Optional. An array of effects that are applied when the ability becomes deactivated.</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="example-1">Example<a href="#example-1" class="hash-link" aria-label="Direct link to Example" title="Direct link to Example" translate="no">​</a></h4>
+<p>This ability, for the cost of 10 mana and a 200 tick (10 second) cooldown, pushes away entities in a 10m cubic area
+around
+the user for 3 times, at 0.5 second intervals.</p>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token property">&quot;type&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">&quot;wotr:persistent&quot;</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token property">&quot;icon&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">&quot;minecraft:textures/item/fire_charge.png&quot;</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token property">&quot;can_deactivate&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token boolean">false</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token property">&quot;channelled&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token boolean">false</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token property">&quot;requirements&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">[</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">      </span><span class="token property">&quot;type&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">&quot;wotr:ability_resource&quot;</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">      </span><span class="token property">&quot;resource_type&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">&quot;wotr:mana&quot;</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">      </span><span class="token property">&quot;amount&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token number">10</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token punctuation" style="color:rgb(248, 248, 242)">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token punctuation" style="color:rgb(248, 248, 242)">]</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token property">&quot;on_deactivation_costs&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">[</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">      </span><span class="token property">&quot;type&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">&quot;wotr:cooldown&quot;</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">      </span><span class="token property">&quot;ticks&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token number">200</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token punctuation" style="color:rgb(248, 248, 242)">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token punctuation" style="color:rgb(248, 248, 242)">]</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token property">&quot;ongoing_requirements&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">[</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">      </span><span class="token property">&quot;type&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">&quot;wotr:own_attached_effect&quot;</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">      </span><span class="token property">&quot;id&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">&quot;main&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token punctuation" style="color:rgb(248, 248, 242)">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token punctuation" style="color:rgb(248, 248, 242)">]</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token property">&quot;activation_effects&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">[</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">      </span><span class="token property">&quot;type&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">&quot;wotr:attach&quot;</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">      </span><span class="token property">&quot;id&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">&quot;main&quot;</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">      </span><span class="token property">&quot;trigger&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">        </span><span class="token property">&quot;frequency&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token number">10</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">      </span><span class="token punctuation" style="color:rgb(248, 248, 242)">}</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">      </span><span class="token property">&quot;continue&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">        </span><span class="token property">&quot;max_trigger_count&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token number">3</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">      </span><span class="token punctuation" style="color:rgb(248, 248, 242)">}</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">      </span><span class="token property">&quot;effects&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">[</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">        </span><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">          </span><span class="token property">&quot;type&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">&quot;wotr:targeting&quot;</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">          </span><span class="token property">&quot;targeting&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">            </span><span class="token property">&quot;type&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">&quot;wotr:area&quot;</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">            </span><span class="token property">&quot;shape&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">              </span><span class="token property">&quot;type&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">&quot;wotr:cube&quot;</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">              </span><span class="token property">&quot;range&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token number">10</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">            </span><span class="token punctuation" style="color:rgb(248, 248, 242)">}</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">            </span><span class="token property">&quot;entities&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">              </span><span class="token property">&quot;exclude_source&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token boolean">true</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">            </span><span class="token punctuation" style="color:rgb(248, 248, 242)">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">          </span><span class="token punctuation" style="color:rgb(248, 248, 242)">}</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">          </span><span class="token property">&quot;effects&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">[</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">            </span><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">              </span><span class="token property">&quot;type&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">&quot;wotr:movement&quot;</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">              </span><span class="token property">&quot;velocity&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">[</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">                </span><span class="token number">0</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">                </span><span class="token number">0</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">                </span><span class="token number">5</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">              </span><span class="token punctuation" style="color:rgb(248, 248, 242)">]</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">              </span><span class="token property">&quot;relative_frame&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">&quot;target_from_source&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">            </span><span class="token punctuation" style="color:rgb(248, 248, 242)">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">          </span><span class="token punctuation" style="color:rgb(248, 248, 242)">]</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">        </span><span class="token punctuation" style="color:rgb(248, 248, 242)">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">      </span><span class="token punctuation" style="color:rgb(248, 248, 242)">]</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token punctuation" style="color:rgb(248, 248, 242)">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token punctuation" style="color:rgb(248, 248, 242)">]</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token property">&quot;on_deactivation_effects&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">[</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">      </span><span class="token property">&quot;type&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">&quot;wotr:detach_own&quot;</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">      </span><span class="token property">&quot;id&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">&quot;main&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token punctuation" style="color:rgb(248, 248, 242)">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token punctuation" style="color:rgb(248, 248, 242)">]</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token punctuation" style="color:rgb(248, 248, 242)">}</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="chain">Chain<a href="#chain" class="hash-link" aria-label="Direct link to Chain" title="Direct link to Chain" translate="no">​</a></h3>
+<p>Chain abilities are composed of a number of other abilities, which they cycle through when used. After a time the
+chain ability will reset back to the first ability if subsequent abilities are not used.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="format-2">Format<a href="#format-2" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h4>
+<ul>
+<li><code>type</code>: Must be <code>wotr:chain</code>.</li>
+<li><code>in_creative_menu</code>: Optional, defaults to <code>true</code>. Whether this ability will be available in the creative menu.</li>
+<li><code>abilities</code>: An array of one or more ability entries, specifying the abilities the chain ability will cycle through.<!-- -->
+<ul>
+<li><code>ability</code>: The ability for this entry.</li>
+<li><code>ticks_to_reset</code>: Optional, default <code>100</code>. How long (in ticks) before the chain ability will reset if this ability
+is not used.</li>
+<li><code>auto_activate</code>: Optional, default <code>false</code>. When this entry is reached, will it be automatically activated.</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="example-2">Example<a href="#example-2" class="hash-link" aria-label="Direct link to Example" title="Direct link to Example" translate="no">​</a></h4>
+<p>This ability applies the <code>wotr:strength</code> ability when used, and when that is deactivated switches automatically to a
+<code>wotr:weak_strength</code> ability.</p>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token property">&quot;type&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">&quot;wotr:chain&quot;</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token property">&quot;icon&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">&quot;minecraft:textures/mob_effect/strength.png&quot;</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token property">&quot;abilities&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">[</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">      </span><span class="token property">&quot;ability&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">&quot;wotr:strength&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token punctuation" style="color:rgb(248, 248, 242)">}</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">      </span><span class="token property">&quot;ability&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">&quot;wotr:weak_strength&quot;</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">      </span><span class="token property">&quot;auto_activate&quot;</span><span class="token operator">:</span><span class="token plain"> </span><span class="token boolean">true</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token punctuation" style="color:rgb(248, 248, 242)">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token punctuation" style="color:rgb(248, 248, 242)">]</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token punctuation" style="color:rgb(248, 248, 242)">}</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="requirements-1">Requirements<a href="#requirements-1" class="hash-link" aria-label="Direct link to Requirements" title="Direct link to Requirements" translate="no">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="ability-resource">Ability Resource<a href="#ability-resource" class="hash-link" aria-label="Direct link to Ability Resource" title="Direct link to Ability Resource" translate="no">​</a></h3>
+<p>This requirement checks and optionally consumes an amount of an ability resources, such as mana.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="format-3">Format<a href="#format-3" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h4>
+<ul>
+<li><code>type</code>: Must be <code>wotr:ability_resource</code>.</li>
+<li><code>resource_type</code>: The resource type required. Most commonly <code>wotr:mana</code>.</li>
+<li><code>amount</code>: Optional, defaults to (near) <code>0</code>. The amount of the resource required.</li>
+<li><code>consume</code>: Optional boolean, defaults to <code>true</code>. Is the resource consumed as part of the requirement.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="cooldown">Cooldown<a href="#cooldown" class="hash-link" aria-label="Direct link to Cooldown" title="Direct link to Cooldown" translate="no">​</a></h3>
+<p>This requirement applies a cooldown on the ability.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="format-4">Format<a href="#format-4" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h4>
+<ul>
+<li><code>type</code>: Must be <code>wotr:cooldown</code>.</li>
+<li><code>ticks</code>: Optional, defaults to <code>20</code> ticks (one second). Time (in ticks) the ability will be on cooldown.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="food-level">Food Level<a href="#food-level" class="hash-link" aria-label="Direct link to Food Level" title="Direct link to Food Level" translate="no">​</a></h3>
+<p>This requirement requires the user to have sufficient food level, and optionally consumes the user&#x27;s saturation (first)
+and food level (second).</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="format-5">Format<a href="#format-5" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h4>
+<ul>
+<li><code>type</code>: Must be <code>wotr:food_level</code>.</li>
+<li><code>amount</code>: Optional, defaults to <code>1</code>. The amount of food level required.</li>
+<li><code>consume</code>: Optional, defaults to <code>true</code>. Whether the required food level is consumed.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="life">Life<a href="#life" class="hash-link" aria-label="Direct link to Life" title="Direct link to Life" translate="no">​</a></h3>
+<p>This requirement requires the user to have an amount of life, and optionally consumes it.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="format-6">Format<a href="#format-6" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h4>
+<ul>
+<li><code>type</code>: Must be <code>wotr:life</code>.</li>
+<li><code>amount</code>: The amount of life required.</li>
+<li><code>consume</code>: Optional, defaults to <code>true</code>. Whether the required life is consumed.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="own-attached-effect">Own Attached Effect<a href="#own-attached-effect" class="hash-link" aria-label="Direct link to Own Attached Effect" title="Direct link to Own Attached Effect" translate="no">​</a></h3>
+<p>Used for ongoing requirements, this requirement checks that the user has an ongoing attach effect from the ability. This
+enables the ability to end when the attach effect ends.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="format-7">Format<a href="#format-7" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h4>
+<ul>
+<li><code>type</code>: Must be <code>wotr:own_attached_effect</code>.</li>
+<li><code>id</code>: Optional. The id of the attach effect to check for the presence of. If not specified will check for the presence
+of any attach effect from the ability.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="no-move">No Move<a href="#no-move" class="hash-link" aria-label="Direct link to No Move" title="Direct link to No Move" translate="no">​</a></h3>
+<p>This requirement requires the user to be below a specified speed. For use by abilities that require the user to remain
+stationary.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="format-8">Format<a href="#format-8" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h4>
+<ul>
+<li><code>type</code>: Must be <code>wotr:no_move</code>.</li>
+<li><code>max_speed</code>: Optional, defaults to <code>0.01</code>. The maximum speed the user can have.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="effects-1">Effects<a href="#effects-1" class="hash-link" aria-label="Direct link to Effects" title="Direct link to Effects" translate="no">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="attach">Attach<a href="#attach" class="hash-link" aria-label="Direct link to Attach" title="Direct link to Attach" translate="no">​</a></h3>
+<p><strong>Applies to</strong>: Entities</p>
+<p>This effect attaches to entities and persists, applying modifiers and/or triggering further effects when a condition
+is met.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="format-9">Format<a href="#format-9" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h4>
+<ul>
+<li><code>type</code>: <code>wotr:attach</code></li>
+<li><code>id</code>: Optional. An identifier for this attach effect, as a resource location.</li>
+<li><code>effects</code>: Optional. A list of further effects that will be applied to the target whenever <code>trigger</code> is met.</li>
+<li><code>trigger</code>: Optional. A predicate checked each tick to determine whether to apply <code>effects</code>. If not specified then it
+is always true. All conditions must be met to trigger.<!-- -->
+<ul>
+<li><code>target</code>: Optional. A standard minecraft entity predicate as described
+in <a href="https://minecraft.wiki/w/Template:Nbt_inherit/conditions/entity/template" target="_blank" rel="noopener noreferrer">Template: Nbt inherit/conditions/entity/template</a>
+that will check the state of the target.</li>
+<li><code>caster</code>: Optional. A standard minecraft entity predicate as described
+in <a href="https://minecraft.wiki/w/Template:Nbt_inherit/conditions/entity/template" target="_blank" rel="noopener noreferrer">Template: Nbt inherit/conditions/entity/template</a>
+that will check the state of the caster.</li>
+<li><code>frequency</code>: Optional, defaults to <code>1</code>. The frequency in ticks in which the predicate can be <code>true</code>. <code>1</code> means
+every tick, <code>2</code> means every second tick, etc.</li>
+<li><code>initial_delay</code>: Optional, defaults to <code>0</code>. How many ticks after the effect is attached before it can first
+trigger, in ticks.</li>
+</ul>
+</li>
+<li><code>continue</code>: Optional. A predicate checked each tick to determine whether the attach effect should continue. Defaults
+to always continue.<!-- -->
+<ul>
+<li><code>target</code>: Optional. A standard minecraft entity predicate as described
+in <a href="https://minecraft.wiki/w/Template:Nbt_inherit/conditions/entity/template" target="_blank" rel="noopener noreferrer">Template: Nbt inherit/conditions/entity/template</a>
+that will check the state of the target.</li>
+<li><code>caster</code>: Optional. A standard minecraft entity predicate as described
+in <a href="https://minecraft.wiki/w/Template:Nbt_inherit/conditions/entity/template" target="_blank" rel="noopener noreferrer">Template: Nbt inherit/conditions/entity/template</a>
+that will check the state of the caster.</li>
+<li><code>duration</code>: Optional, defaults to <code>-1</code> (no duration). The maximum number of ticks the effect will remain attached.</li>
+<li><code>max_trigger_count</code>: Optional, defaults to <code>-1</code> (no maximum). The maximum number of times the effect can trigger
+before it is removed.</li>
+</ul>
+</li>
+<li><code>display</code>: Optional. Defines an display that will appear in the hud for players affected by this effect.</li>
+<li><code>modifiers</code>: Optional. A list of modifiers to apply to the entity this effect is attached to, for the duration of the
+attachment.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="break">Break<a href="#break" class="hash-link" aria-label="Direct link to Break" title="Direct link to Break" translate="no">​</a></h3>
+<p><strong>Applies to</strong>: Blocks</p>
+<p>This effect destroys block, replacing them with air and optionally dropping them.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="format-10">Format<a href="#format-10" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h4>
+<ul>
+<li><code>type</code>: <code>wotr:break</code></li>
+<li><code>drops</code>: Optional, defaults to <code>collate</code>. Can be one of:<!-- -->
+<ul>
+<li><code>normal</code>: Each block drops itself.</li>
+<li><code>collate</code>: The drops of each block are combined whenever possible and dropped at the source.</li>
+<li><code>none</code>: Nothing will drop.</li>
+</ul>
+</li>
+<li><code>as_tool</code>: Optional, defaults to <code>none</code>. Can be either <code>none</code>, <code>ability_item</code> (in which case the item that has the
+ability is used as the tool), or an item stack object. The block will be broken as if by the specified tool, for the
+purpose of fortune, silk touch and similar.</li>
+<li><code>reward_mine_state</code>: Optional, defaults to <code>false</code>. Should blocks broken with this effect count for the blocks mined
+stats.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="conditional">Conditional<a href="#conditional" class="hash-link" aria-label="Direct link to Conditional" title="Direct link to Conditional" translate="no">​</a></h3>
+<p><strong>Applies to</strong>: All</p>
+<p>This effect applies different effects, depending on a condition. Conditions are Resource Locations that are applied by
+<code>ProviderAbilityConditionModifierEffect</code>s. All targets are passed on to the applied effects</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="format-11">Format<a href="#format-11" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h4>
+<ul>
+<li><code>type</code>: <code>wotr:conditional</code></li>
+<li><code>always</code>: Optional. A list of effects that are always applied. These are applied first.</li>
+<li><code>present</code>: Optional. A list of effects that are applied if the condition is present/met.</li>
+<li><code>missing</code>: Optional. A list of effects that are applied if the condition is missing/unmet.</li>
+<li><code>condition_name</code>: The condition to check.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="damage">Damage<a href="#damage" class="hash-link" aria-label="Direct link to Damage" title="Direct link to Damage" translate="no">​</a></h3>
+<p><strong>Applies to</strong>: Living Entities</p>
+<p>This effect applies damage to living entities.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="format-12">Format<a href="#format-12" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h4>
+<ul>
+<li><code>type</code>: <code>wotr:damage</code></li>
+<li><code>amount</code>: How much damage to apply. Boosted by the <code>wotr:ability_raw_damage</code> attribute.</li>
+<li><code>damage_type</code>: The damage type of the damage being applied.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="detach-own">Detach Own<a href="#detach-own" class="hash-link" aria-label="Direct link to Detach Own" title="Direct link to Detach Own" translate="no">​</a></h3>
+<p><strong>Applies to</strong>: Entities</p>
+<p>This effect removes Attach Effects applied by this ability instance from the target entities.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="format-13">Format<a href="#format-13" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h4>
+<ul>
+<li><code>type</code>: <code>wotr:detach_own</code></li>
+<li><code>id</code>: Optional. The id of the attach effect to remove. If not specified all attach effects from this ability instance
+are removed.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="heal">Heal<a href="#heal" class="hash-link" aria-label="Direct link to Heal" title="Direct link to Heal" translate="no">​</a></h3>
+<p><strong>Applies to</strong>: Living Entities</p>
+<p>This effect heals living entities.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="format-14">Format<a href="#format-14" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h4>
+<ul>
+<li><code>type</code>: <code>wotr:heal</code></li>
+<li><code>amount</code>: The amount of health to heal. Boosted by the <code>wotr:ability_heal_power</code> attribute.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="movement">Movement<a href="#movement" class="hash-link" aria-label="Direct link to Movement" title="Direct link to Movement" translate="no">​</a></h3>
+<p><strong>Applies to</strong>: Entities</p>
+<p>This effect applies velocity to entities.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="format-15">Format<a href="#format-15" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h4>
+<ul>
+<li><code>type</code>: <code>wotr:movement</code></li>
+<li><code>velocity</code>: a vector (array of three numbers specifying the x (lateral), y (vertical) and z (forwards) velocities in
+meters per second).</li>
+<li><code>relative_frame</code>: Optional, defaults to <code>target_facing</code>. Specifies the frame in which the velocity is applied. By
+default this is relative to the direction the target is facing, so a forwards velocity moves the target in the
+direction they are facing. Options are:<!-- -->
+<ul>
+<li><code>absolute</code>: velocity is in world coords</li>
+<li><code>source_from_target</code>: velocity is relative to the direction of the source (previous target) from the target.</li>
+<li><code>target_from_source</code>: velocity is relative to the direction of the target from the source (previous target).</li>
+<li><code>source_facing</code>: velocity is relative to the direction the source (previous target) is facing.</li>
+<li><code>target_facing</code>: velocity is relative to the direction the target is facing.</li>
+<li><code>source_y_facing</code>: velocity is relative to the direction the source is facing, ignoring pitch.</li>
+<li><code>target_y_facing</code>: velocity is relative to the direction the target is facing, ignoring pitch.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="no-op">No Op<a href="#no-op" class="hash-link" aria-label="Direct link to No Op" title="Direct link to No Op" translate="no">​</a></h3>
+<p><strong>Applies to</strong>: Nothing</p>
+<p>This effect does nothing.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="format-16">Format<a href="#format-16" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h4>
+<ul>
+<li><code>type</code>: <code>wotr:noop</code></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="particle">Particle<a href="#particle" class="hash-link" aria-label="Direct link to Particle" title="Direct link to Particle" translate="no">​</a></h3>
+<p><strong>Applies to</strong>: All</p>
+<p>This effect spawns a minecraft particle effect at the location of the target.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="format-17">Format<a href="#format-17" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h4>
+<ul>
+<li><code>type</code>: <code>wotr:particle</code></li>
+<li><code>particle</code>: Resource Location of the particle effect to spawn.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="projectile">Projectile<a href="#projectile" class="hash-link" aria-label="Direct link to Projectile" title="Direct link to Projectile" translate="no">​</a></h3>
+<p><strong>Applies to</strong>: Entities</p>
+<p>This effect spawns a projectile entity and fires it from in the facing direction of the target. Effects can be
+applied to the projectile, but unlike the Simple Projectile effect it doesn&#x27;t have effects applied on hit. The
+projectile is owned by the target, so any damage will be considered to be theirs.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="format-18">Format<a href="#format-18" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h4>
+<ul>
+<li><code>type</code>: <code>wotr:projectile</code></li>
+<li><code>effects</code>: Optional. A list of effects applied to the spawned projectiles.</li>
+<li><code>projectile_type</code>: The entity type of the projectile. Must be a subtype of Projectile.</li>
+<li><code>velocity</code>: The velocity at which the projectile is fired, relative to the facing of the target.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="set-block">Set Block<a href="#set-block" class="hash-link" aria-label="Direct link to Set Block" title="Direct link to Set Block" translate="no">​</a></h3>
+<p><strong>Applies to</strong>: Blocks</p>
+<p>This effect replaces the target blocks with a new block.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="format-19">Format<a href="#format-19" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h4>
+<ul>
+<li><code>type</code>: <code>wotr:set_block</code></li>
+<li><code>block</code>: The block state to set targets to.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="simple-projectile">Simple Projectile<a href="#simple-projectile" class="hash-link" aria-label="Direct link to Simple Projectile" title="Direct link to Simple Projectile" translate="no">​</a></h3>
+<p><strong>Applies to</strong>: Entities</p>
+<p>This effect spawns one or more configurable projectiles and fires them in a spread in the direction the target is
+facing. Many attributes of the projectiles depend on attributes:</p>
+<ul>
+<li><code>wotr:projectile_count</code> determines the number of projectiles</li>
+<li><code>wotr:projectile_spread</code> determines the angle of spread of the projectiles</li>
+<li><code>wotr:projectile_speed</code> determines the speed of the projectiles</li>
+<li><code>wotr:projectile_pierce</code> determines the number of targets the projectiles move through</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="format-20">Format<a href="#format-20" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h4>
+<ul>
+<li><code>type</code>: <code>wotr:simple_projectile</code></li>
+<li><code>effects</code>: Optional. A list of effects that will be applied to what the projectile(s) hit.</li>
+<li><code>config</code>: Configuration of the projectile.<!-- -->
+<ul>
+<li><code>projectiles</code>: Optional, defaults to <code>1</code>. How many projectiles will be produced. Affected by the
+<code>wotr:projectile_count</code> attribute. If there are more than one projectile additional projectiles will be fired in a
+spread with the angle between them determined by the <code>wotr:projectile_spread</code> attribute.</li>
+<li><code>pierce</code>: Optional, defaults to <code>0</code>. How many targets each projectile can pass through (hitting) before it comes
+to rest. Affected by the <code>wotr:projectile_pierce</code> attribute.</li>
+<li><code>pierce_blocks</code>: Optional, defaults to <code>false</code>. Whether blocks can also be pierced through, or just entities.</li>
+<li><code>velocity</code>: The velocity of the projectiles, relative to the direction they are being fired. The magnitude is
+affected by the <code>wotr:projectile_speed</code> attribute.</li>
+<li><code>gravity_affected</code>: Optional, defaults to <code>true</code>. Whether the projectiles are affected by gravity.</li>
+<li><code>gravity</code>: Optional, defaults to <code>0.05</code>. The strength of gravity affected the projectiles.</li>
+<li><code>persist_ticks</code>: Optional, defaults to <code>1200</code> (1 minute). How long in ticks the projectiles will persist in
+motion.</li>
+<li><code>ground_persist_ticks</code>: Optional, defaults to <code>0</code>. How long in ticks the projectiles will persist after hitting
+their final target.</li>
+<li><code>render</code>: Configuration for how the projectile is displayed.<!-- -->
+<ul>
+<li><code>model</code>: ResourceLocation of the model used to render the projectile.</li>
+<li><code>texture</code>: ResourceLocation of the texture used to render the projectile.</li>
+<li><code>animations</code>: ResourceLocation of the animation used to render the projectile.</li>
+</ul>
+</li>
+<li><code>sound</code>: Optional, configuration of the sound of the projectile. Defaults to arrow sound on collision.<!-- -->
+<ul>
+<li><code>collision</code>: Optional, defaults to none. The sound made when the projectile collides.</li>
+<li><code>fire</code>: Optional, defaults to none. The sound made when the projectile is fired.</li>
+<li><code>travel</code>: Optional, defaults to none. The sound made when the projectile is travelling.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="sound">Sound<a href="#sound" class="hash-link" aria-label="Direct link to Sound" title="Direct link to Sound" translate="no">​</a></h3>
+<p><strong>Applies to</strong>: All</p>
+<p>This effect plays a sound originating from the target&#x27;s location.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="format-21">Format<a href="#format-21" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h4>
+<ul>
+<li><code>type</code>: <code>wotr:sound</code></li>
+<li><code>sound</code>: Resource location of the sound event to play.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="status">Status<a href="#status" class="hash-link" aria-label="Direct link to Status" title="Direct link to Status" translate="no">​</a></h3>
+<p><strong>Applies to</strong>: Living entities</p>
+<p>This effect applies a MobEffect to the target.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="format-22">Format<a href="#format-22" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h4>
+<ul>
+<li><code>type</code>: <code>wotr:status</code></li>
+<li><code>status_effect</code>: Details of the mob effect to apply. This is a minecraft MobEffectInstance definition, which is
+documented at <a href="https://docs.neoforged.net/docs/items/mobeffects/#mobeffectinstances" target="_blank" rel="noopener noreferrer">https://docs.neoforged.net/docs/items/mobeffects/#mobeffectinstances</a>.<!-- -->
+<ul>
+<li><code>id</code> - The built-in minecraft effects are listed on <a href="https://minecraft.wiki/w/Effect" target="_blank" rel="noopener noreferrer">the wiki</a>.</li>
+<li><code>amplifier</code></li>
+<li><code>duration</code></li>
+<li><code>ambient</code></li>
+<li><code>show_particles</code></li>
+<li><code>show_icon</code></li>
+<li><code>hidden_effect</code></li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="summon">Summon<a href="#summon" class="hash-link" aria-label="Direct link to Summon" title="Direct link to Summon" translate="no">​</a></h3>
+<p><strong>Applies to</strong>: All</p>
+<p>This effect summon an entity at the target locations.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="format-23">Format<a href="#format-23" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h4>
+<ul>
+<li><code>type</code>: <code>wot:summon</code></li>
+<li><code>effects</code>: Optional. A list of effects to apply to the summoned entities.</li>
+<li><code>entity_type</code>: The type of entity to summon.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="targeting-1">Targeting<a href="#targeting-1" class="hash-link" aria-label="Direct link to Targeting" title="Direct link to Targeting" translate="no">​</a></h3>
+<p><strong>Applies to</strong>: All</p>
+<p>This effect applies a series of targeting types to determine a new list of targets. These will be processed in order,
+with the targets from the proceeding targeting type being passed to the next.
+The final list may contain the same target multiple times, if it is targeted through multiple intermediate sources. For example,
+if the targeting types are two Area types, the first may target out to all mobs surrounding the player and the second may target
+the player from all surrounding mobs - the final list of targets will contain the player once for each mob in the initial area.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="format-24">Format<a href="#format-24" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h4>
+<ul>
+<li><code>type</code>: <code>wotr:targeting</code></li>
+<li><code>targeting</code>: A single or a list of targeting types.</li>
+<li><code>effects</code>: A list of effects to apply to the final set of targets.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="teleport">Teleport<a href="#teleport" class="hash-link" aria-label="Direct link to Teleport" title="Direct link to Teleport" translate="no">​</a></h3>
+<p><strong>Applies to</strong>: Entities</p>
+<p>This effect teleports the source or target. Note: this effect needs some work.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="format-25">Format<a href="#format-25" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h4>
+<ul>
+<li><code>type</code>: <code>wotr:teleport</code></li>
+<li><code>tele_info</code>: Information controlling the behavior of the effect.<!-- -->
+<ul>
+<li><code>teleport_target</code>: One of <code>user</code> or <code>target</code>. Determines whether the source or target (respectively) will be teleported.
+For <code>user</code>, the source will be teleported to the location of a random target, offset by <code>position</code>. For <code>target</code>, each target will be teleported.</li>
+<li><code>position</code>: The position or offset to teleport by.</li>
+<li><code>relative</code>: Optional. If true and <code>teleport_target</code> is <code>target</code>, each target will be moved by <code>position</code>. Otherwise each target will move to <code>position</code>.</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="targeting-types">Targeting Types<a href="#targeting-types" class="hash-link" aria-label="Direct link to Targeting Types" title="Direct link to Targeting Types" translate="no">​</a></h2>
+<p>Targeting types, used by the Targeting Effect, select new entity and/or block targets around each previous target. The
+same entity or block may be targeted multiple times if they are targeted off of multiple previous targets.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="area">Area<a href="#area" class="hash-link" aria-label="Direct link to Area" title="Direct link to Area" translate="no">​</a></h3>
+<p>This targeting type selects all entities and/or blocks within an area, determines by a &quot;shape&quot;. Both entities and
+blocks can be filtered through predicates to better control what may be targeted.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="format-26">Format<a href="#format-26" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h4>
+<ul>
+<li><code>type</code>: Must be <code>wotr:area</code>.</li>
+<li><code>shape</code>: The shape of the area, options listed below.</li>
+<li><code>entities</code>: Optional, defaults to <code>all</code>. Can be <code>all</code>, <code>none</code> or a Target Entity Predicate as described below.
+Determines what entities in the area will be targeted.</li>
+<li><code>blocks</code>: Optional, defaults to <code>none</code>. Can be <code>all</code>, <code>none</code> or a Target Block Predicate as described below.
+Determines what blocks in the area will be targeted.</li>
+</ul>
+<p>There are currently two possible shapes, with the following fields:</p>
+<h5 class="anchor anchorWithStickyNavbar_LWe7" id="cube">Cube<a href="#cube" class="hash-link" aria-label="Direct link to Cube" title="Direct link to Cube" translate="no">​</a></h5>
+<p>This shape is an axis-aligned cube.</p>
+<ul>
+<li><code>type</code>: <code>wotr:cube</code></li>
+<li><code>range</code>: the distance, in meters/blocks, that the cube extends from the center. A cube with range <code>3</code> is a 6x6x6 cube.</li>
+<li><code>align_to_block</code>: Optional, defaults to <code>false</code>. If true, the center of the cube will be aligned to the center of a
+block. This ensures a consistent shape to blocks that are targeted.</li>
+</ul>
+<h5 class="anchor anchorWithStickyNavbar_LWe7" id="sphere">Sphere<a href="#sphere" class="hash-link" aria-label="Direct link to Sphere" title="Direct link to Sphere" translate="no">​</a></h5>
+<p>This shape is a sphere. Entities and blocks are included if their center falls within the sphere.</p>
+<ul>
+<li><code>type</code>: <code>wotr:sphere</code></li>
+<li><code>range</code>: the distance, in meters/blocks, that the sphere extends from the center.</li>
+<li><code>align_to_block</code>: Optional, defaults to <code>false</code>. If true, the center of the sphere will be aligned to the center of a
+block. This ensures a consistent shape to blocks that are targeted.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="caster">Caster<a href="#caster" class="hash-link" aria-label="Direct link to Caster" title="Direct link to Caster" translate="no">​</a></h3>
+<p>This targeting type selects the caster (off of each current target).</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="format-27">Format<a href="#format-27" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h4>
+<ul>
+<li><code>type</code>: Must be <code>wotr:caster</code>.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="connected-block">Connected Block<a href="#connected-block" class="hash-link" aria-label="Direct link to Connected Block" title="Direct link to Connected Block" translate="no">​</a></h3>
+<p>This targeting type targets valid connected blocks following block adjacency from each target block. This is done in a
+breadth-first fashion, so all blocks adjacent to the initial block will be targeted (if valid) before proceeding to more
+distant blocks.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="format-28">Format<a href="#format-28" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h4>
+<ul>
+<li><code>type</code>: Must be <code>wotr:connected_block</code>.</li>
+<li><code>blocks</code>: Optional, defaulting to <code>all</code>. May be <code>all</code>, <code>none</code> or a Target Block Predicate as described below.
+Determines what blocks are valid for targeting.</li>
+<li><code>count</code>: Integer, minimum of <code>1</code>. The maximum number of blocks that will be targeted. Less will be targeted if there
+are not enough valid connected blocks.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="random-subset">Random Subset<a href="#random-subset" class="hash-link" aria-label="Direct link to Random Subset" title="Direct link to Random Subset" translate="no">​</a></h3>
+<p>This targeting type selects a random subset of available targets.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="format-29">Format<a href="#format-29" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h4>
+<ul>
+<li><code>type</code>: Must be <code>wotr:random_subset</code>.</li>
+<li><code>count</code>: Positive integer. The size of the subset to select. If there are less targets than <code>count</code> then all targets
+will be selected.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="random-chance">Random Chance<a href="#random-chance" class="hash-link" aria-label="Direct link to Random Chance" title="Direct link to Random Chance" translate="no">​</a></h3>
+<p>This targeting type will filter the existing targets against a probability of being selected.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="format-30">Format<a href="#format-30" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h4>
+<ul>
+<li><code>type</code>: Must be <code>wotr:random_chance</code></li>
+<li><code>chance</code>: A number between 0 and 1 inclusive. The chance of each target being kept.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="raycast">Raycast<a href="#raycast" class="hash-link" aria-label="Direct link to Raycast" title="Direct link to Raycast" translate="no">​</a></h3>
+<p>Selects up to a single target by raycasting from existing targets. For entity targets this is in the direction the
+entity is looking. For block targets this is in the direction the block was hit in.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="format-31">Format<a href="#format-31" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h4>
+<ul>
+<li><code>type</code>: <code>wotr:raycast</code></li>
+<li><code>entities</code>: Optional, defaults to <code>all</code>. May be <code>all</code>, <code>none</code> or a Target Entity Predicate. Determines what entities
+may be targeted by the ray.</li>
+<li><code>blocks</code>: Optional, defaults to <code>all</code>. May be <code>all</code>, <code>none</code> or a Target Block Predicate. Determines what blocks may be
+targeted by the ray.</li>
+<li><code>range</code>: Max range of the ray.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="self">Self<a href="#self" class="hash-link" aria-label="Direct link to Self" title="Direct link to Self" translate="no">​</a></h3>
+<p>This targeting type merely filters the existing set of targets.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="format-32">Format<a href="#format-32" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h4>
+<ul>
+<li><code>type</code>: <code>wotr:self</code></li>
+<li><code>entities</code>: Optional, defaults to <code>all</code>. May be <code>all</code>, <code>none</code> or a Target Entity Predicate. Determines what entity
+targets to retain.</li>
+<li><code>blocks</code>: Optional, defaults to <code>none</code>. May be <code>all</code>, <code>none</code> or a Target Block Predicate. Determines what block
+targets to retain.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="source">Source<a href="#source" class="hash-link" aria-label="Direct link to Source" title="Direct link to Source" translate="no">​</a></h3>
+<p>This targeting type retargets the source (the preceding target) from each target. For example, if all entities in a 20m
+sphere were targeted from the caster, this will target the caster from each entity targeted by the sphere.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="format-33">Format<a href="#format-33" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h4>
+<ul>
+<li><code>type</code>: <code>wotr:source</code></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="trigger-target">Trigger Target<a href="#trigger-target" class="hash-link" aria-label="Direct link to Trigger Target" title="Direct link to Trigger Target" translate="no">​</a></h3>
+<p>This targeting type will select the entity or block that triggered the ability, for abilities triggered by a trigger
+modifier. For example, if an ability is triggered by taking damage, this will be the entity that caused the damage.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="format-34">Format<a href="#format-34" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h4>
+<ul>
+<li><code>type</code>: <code>wotr:trigger_target</code></li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="target-entity-predicate">Target Entity Predicate<a href="#target-entity-predicate" class="hash-link" aria-label="Direct link to Target Entity Predicate" title="Direct link to Target Entity Predicate" translate="no">​</a></h2>
+<p>This predicate is used to filter entities involved in abilities.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="format-35">Format<a href="#format-35" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h3>
+<ul>
+<li><code>filter</code>: Optional. A standard minecraft entity predicate, as described
+in <a href="https://minecraft.wiki/w/Template:Nbt_inherit/conditions/entity/template" target="_blank" rel="noopener noreferrer">Template: Nbt inherit/conditions/entity/template</a></li>
+<li><code>sentiment</code>: Optional, defaults to <code>ANY</code>. The sentiment between the caster and the target. One of<!-- -->
+<ul>
+<li><code>ANY</code></li>
+<li><code>FRIEND</code></li>
+<li><code>NOT_FRIEND</code></li>
+<li><code>NEUTRAL</code></li>
+<li><code>NOT_FOE</code></li>
+<li><code>FOE</code></li>
+</ul>
+</li>
+<li><code>exclude_caster</code>: Optional, defaults to <code>false</code>. Should the caster be excluded from targeting.</li>
+<li><code>exclude_source</code>: Optional, defaults to <code>false</code>. Should the source (preceding target) be excluded from targeting.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="target-block-predicate">Target Block Predicate<a href="#target-block-predicate" class="hash-link" aria-label="Direct link to Target Block Predicate" title="Direct link to Target Block Predicate" translate="no">​</a></h2>
+<p>This predicate is used to filter blocks involved in abilities.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="format-36">Format<a href="#format-36" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h3>
+<ul>
+<li><code>filter</code>: Optional. A standard minecraft block predicate, as described
+in <a href="https://minecraft.wiki/w/Block_predicate" target="_blank" rel="noopener noreferrer">Block Predicate</a>.</li>
+<li><code>match_source</code>: Optional, defaults to <code>false</code>. Whether the targets must match the source (preceding target) block.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="additional-block-predicates">Additional Block Predicates<a href="#additional-block-predicates" class="hash-link" aria-label="Direct link to Additional Block Predicates" title="Direct link to Additional Block Predicates" translate="no">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="surface">Surface<a href="#surface" class="hash-link" aria-label="Direct link to Surface" title="Direct link to Surface" translate="no">​</a></h4>
+<p>For finding spawnable blocks with sufficient space above them</p>
+<ul>
+<li><code>type</code>: <code>wotr:surface</code></li>
+<li><code>space</code>: Optional, default <code>2</code>. How many blocks of air must be above the surface block.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="related-datapack-formats">Related Datapack Formats<a href="#related-datapack-formats" class="hash-link" aria-label="Direct link to Related Datapack Formats" title="Direct link to Related Datapack Formats" translate="no">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="effect-marker">Effect Marker<a href="#effect-marker" class="hash-link" aria-label="Direct link to Effect Marker" title="Direct link to Effect Marker" translate="no">​</a></h3>
+<p>Defines a display icon for an attached effect.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="trigger-modifiers">Trigger Modifiers<a href="#trigger-modifiers" class="hash-link" aria-label="Direct link to Trigger Modifiers" title="Direct link to Trigger Modifiers" translate="no">​</a></h3>
+<p>Modifier can be created that, when active on living entity, will trigger an ability when a condition is met.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="upgrades">Upgrades<a href="#upgrades" class="hash-link" aria-label="Direct link to Upgrades" title="Direct link to Upgrades" translate="no">​</a></h3>
+<p>Ability upgrades can be applied to an ability to provide modifiers for when that ability is used.</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/Wanderers-Of-The-Rift/wotr-docs/edit/main/website/docs/code/datapack/format/abilities.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/wotr-docs/docs/code/api/quickmover"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">QuickMover</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/wotr-docs/docs/code/datapack/format/modifiers"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Modifiers</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#concepts" class="table-of-contents__link toc-highlight">Concepts</a><ul><li><a href="#ability-types" class="table-of-contents__link toc-highlight">Ability Types</a></li><li><a href="#requirements" class="table-of-contents__link toc-highlight">Requirements</a></li><li><a href="#effects" class="table-of-contents__link toc-highlight">Effects</a></li><li><a href="#targeting" class="table-of-contents__link toc-highlight">Targeting</a></li></ul></li><li><a href="#ability-types-1" class="table-of-contents__link toc-highlight">Ability Types</a><ul><li><a href="#instant" class="table-of-contents__link toc-highlight">Instant</a></li><li><a href="#persistent" class="table-of-contents__link toc-highlight">Persistent</a></li><li><a href="#chain" class="table-of-contents__link toc-highlight">Chain</a></li></ul></li><li><a href="#requirements-1" class="table-of-contents__link toc-highlight">Requirements</a><ul><li><a href="#ability-resource" class="table-of-contents__link toc-highlight">Ability Resource</a></li><li><a href="#cooldown" class="table-of-contents__link toc-highlight">Cooldown</a></li><li><a href="#food-level" class="table-of-contents__link toc-highlight">Food Level</a></li><li><a href="#life" class="table-of-contents__link toc-highlight">Life</a></li><li><a href="#own-attached-effect" class="table-of-contents__link toc-highlight">Own Attached Effect</a></li><li><a href="#no-move" class="table-of-contents__link toc-highlight">No Move</a></li></ul></li><li><a href="#effects-1" class="table-of-contents__link toc-highlight">Effects</a><ul><li><a href="#attach" class="table-of-contents__link toc-highlight">Attach</a></li><li><a href="#break" class="table-of-contents__link toc-highlight">Break</a></li><li><a href="#conditional" class="table-of-contents__link toc-highlight">Conditional</a></li><li><a href="#damage" class="table-of-contents__link toc-highlight">Damage</a></li><li><a href="#detach-own" class="table-of-contents__link toc-highlight">Detach Own</a></li><li><a href="#heal" class="table-of-contents__link toc-highlight">Heal</a></li><li><a href="#movement" class="table-of-contents__link toc-highlight">Movement</a></li><li><a href="#no-op" class="table-of-contents__link toc-highlight">No Op</a></li><li><a href="#particle" class="table-of-contents__link toc-highlight">Particle</a></li><li><a href="#projectile" class="table-of-contents__link toc-highlight">Projectile</a></li><li><a href="#set-block" class="table-of-contents__link toc-highlight">Set Block</a></li><li><a href="#simple-projectile" class="table-of-contents__link toc-highlight">Simple Projectile</a></li><li><a href="#sound" class="table-of-contents__link toc-highlight">Sound</a></li><li><a href="#status" class="table-of-contents__link toc-highlight">Status</a></li><li><a href="#summon" class="table-of-contents__link toc-highlight">Summon</a></li><li><a href="#targeting-1" class="table-of-contents__link toc-highlight">Targeting</a></li><li><a href="#teleport" class="table-of-contents__link toc-highlight">Teleport</a></li></ul></li><li><a href="#targeting-types" class="table-of-contents__link toc-highlight">Targeting Types</a><ul><li><a href="#area" class="table-of-contents__link toc-highlight">Area</a></li><li><a href="#caster" class="table-of-contents__link toc-highlight">Caster</a></li><li><a href="#connected-block" class="table-of-contents__link toc-highlight">Connected Block</a></li><li><a href="#random-subset" class="table-of-contents__link toc-highlight">Random Subset</a></li><li><a href="#random-chance" class="table-of-contents__link toc-highlight">Random Chance</a></li><li><a href="#raycast" class="table-of-contents__link toc-highlight">Raycast</a></li><li><a href="#self" class="table-of-contents__link toc-highlight">Self</a></li><li><a href="#source" class="table-of-contents__link toc-highlight">Source</a></li><li><a href="#trigger-target" class="table-of-contents__link toc-highlight">Trigger Target</a></li></ul></li><li><a href="#target-entity-predicate" class="table-of-contents__link toc-highlight">Target Entity Predicate</a><ul><li><a href="#format-35" class="table-of-contents__link toc-highlight">Format</a></li></ul></li><li><a href="#target-block-predicate" class="table-of-contents__link toc-highlight">Target Block Predicate</a><ul><li><a href="#format-36" class="table-of-contents__link toc-highlight">Format</a></li><li><a href="#additional-block-predicates" class="table-of-contents__link toc-highlight">Additional Block Predicates</a></li></ul></li><li><a href="#related-datapack-formats" class="table-of-contents__link toc-highlight">Related Datapack Formats</a><ul><li><a href="#effect-marker" class="table-of-contents__link toc-highlight">Effect Marker</a></li><li><a href="#trigger-modifiers" class="table-of-contents__link toc-highlight">Trigger Modifiers</a></li><li><a href="#upgrades" class="table-of-contents__link toc-highlight">Upgrades</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/wotr-docs/docs">Getting Started</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://discord.gg/VkSeepd59S" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/Wanderers-Of-The-Rift/wotr-docs" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 Wanderers of the Rift. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>
