@@ -26,6 +26,7 @@ module.exports = {
           type: 'category',
           label: 'Design Meeting Notes',
           items: [
+            'design/meetings/Nov-09-Design-Meeting-Notes',
             'design/meetings/Nov-01-Design-Meeting-Notes',
             'design/meetings/Oct-26-Design-Meeting-Notes',
             'design/meetings/Oct-18-Design-Meeting-Notes',
