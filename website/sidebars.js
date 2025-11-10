@@ -75,6 +75,7 @@ module.exports = {
                       type: 'category',
                       label: 'Formats',
                       items: [
+                        'code/datapack/format/abilities',
                         'code/datapack/format/modifiers',
                         'code/datapack/format/quests',
                         'code/datapack/format/rift-spawner',
@@ -91,6 +92,13 @@ module.exports = {
             'code/design/gear-socket',
             'code/design/modifiers',
             'code/style/style',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Dev Meeting Notes',
+          items: [
+            'code/meetings/Dev-Meeting-Notes-2025-11-01',
           ],
         },
       ],

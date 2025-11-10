@@ -75,6 +75,7 @@
 - [Code](code/README.md)
     - [Style](code/style/style.md)
     - [Datapack Formats](code/datapack/datapack-formats.md)
+      - [Abilities](code/datapack/format/abilities.md) 
       - [Modifiers](code/datapack/format/modifiers.md)
       - [Runegems](code/datapack/format/runegems.md)
       - [Quests](code/datapack/format/quests.md)
