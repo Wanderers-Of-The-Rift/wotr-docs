@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-design/meetings/Nov-09-Design-Meeting-Notes" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.1">
+<title data-rh="true">Design: Loot Categories | Wanderers of the Rift Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://wanderers-of-the-rift.github.io/wotr-docs/img/wotrdocCard.PNG"><meta data-rh="true" name="twitter:image" content="https://wanderers-of-the-rift.github.io/wotr-docs/img/wotrdocCard.PNG"><meta data-rh="true" property="og:url" content="https://wanderers-of-the-rift.github.io/wotr-docs/docs/design/meetings/Nov-09-Design-Meeting-Notes"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Design: Loot Categories | Wanderers of the Rift Docs"><meta data-rh="true" name="description" content="### November 9, 2025"><meta data-rh="true" property="og:description" content="### November 9, 2025"><link data-rh="true" rel="icon" href="/wotr-docs/img/wotrdev.png"><link data-rh="true" rel="canonical" href="https://wanderers-of-the-rift.github.io/wotr-docs/docs/design/meetings/Nov-09-Design-Meeting-Notes"><link data-rh="true" rel="alternate" href="https://wanderers-of-the-rift.github.io/wotr-docs/docs/design/meetings/Nov-09-Design-Meeting-Notes" hreflang="en"><link data-rh="true" rel="alternate" href="https://wanderers-of-the-rift.github.io/wotr-docs/docs/design/meetings/Nov-09-Design-Meeting-Notes" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Design: Loot Categories","item":"https://wanderers-of-the-rift.github.io/wotr-docs/docs/design/meetings/Nov-09-Design-Meeting-Notes"}]}</script><link rel="alternate" type="application/rss+xml" href="/wotr-docs/blog/rss.xml" title="Wanderers of the Rift Docs RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/wotr-docs/blog/atom.xml" title="Wanderers of the Rift Docs Atom Feed"><link rel="stylesheet" href="/wotr-docs/assets/css/styles.2ba4343f.css">
+<script src="/wotr-docs/assets/js/runtime~main.143b10f2.js" defer="defer"></script>
+<script src="/wotr-docs/assets/js/main.a8ed5801.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/wotr-docs/img/wotrdev.png"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/wotr-docs/"><div class="navbar__logo"><img src="/wotr-docs/img/wotrdev.png" alt="WotR Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/wotr-docs/img/wotrdev.png" alt="WotR Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">WotR Docs</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/wotr-docs/docs/">Documentation</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/Wanderers-Of-The-Rift/wotr-docs" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/wotr-docs/docs/"><span title="1. Overview" class="categoryLinkLabel_W154">1. Overview</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/wotr-docs/docs/design/DesignDocHome"><span title="2. Design" class="categoryLinkLabel_W154">2. Design</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/design/DesignDocHome"><span title="DesignDocHome" class="linkLabel_WmDU">DesignDocHome</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/design/GameDesignDocument"><span title="Game Design Document" class="linkLabel_WmDU">Game Design Document</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/mvp"><span title="Minimum Viable Product (MVP)" class="linkLabel_WmDU">Minimum Viable Product (MVP)</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/design/livingbacklog"><span title="Living Backlog" class="linkLabel_WmDU">Living Backlog</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/wotr-docs/docs/ideas/summary/pitch-prep-shrines"><span title="Feature Prep" class="categoryLinkLabel_W154">Feature Prep</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" tabindex="0" href="/wotr-docs/docs/design/meetings/Nov-09-Design-Meeting-Notes"><span title="Design Meeting Notes" class="categoryLinkLabel_W154">Design Meeting Notes</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/wotr-docs/docs/design/meetings/Nov-09-Design-Meeting-Notes"><span title="Design: Loot Categories" class="linkLabel_WmDU">Design: Loot Categories</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/design/meetings/Nov-01-Design-Meeting-Notes"><span title="Design: Vanilla Integration" class="linkLabel_WmDU">Design: Vanilla Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/design/meetings/Oct-26-Design-Meeting-Notes"><span title="Design: Core Loop Development Consensus &amp; Next Steps" class="linkLabel_WmDU">Design: Core Loop Development Consensus &amp; Next Steps</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/design/meetings/Oct-18-Design-Meeting-Notes"><span title="Design: Core Loop Development" class="linkLabel_WmDU">Design: Core Loop Development</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/design/meetings/Oct-12-Design-Meeting-Notes"><span title="Design: Core Player Experience (Consensus)" class="linkLabel_WmDU">Design: Core Player Experience (Consensus)</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/design/meetings/Oct-12-Design-Meeting-Guide"><span title="🧾 Core Player Experience (Phase 2) [Handout]" class="linkLabel_WmDU">🧾 Core Player Experience (Phase 2) [Handout]</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/design/meetings/Oct-04-Design-Meeting-Notes"><span title="Design: Core Player Experience" class="linkLabel_WmDU">Design: Core Player Experience</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/design/meetings/Sept-28-Design-Meeting-Notes"><span title="Design: Pillars" class="linkLabel_WmDU">Design: Pillars</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/design/meetings/Aug-30-Design-Meeting-Notes"><span title="Design: Itemization, Guide System" class="linkLabel_WmDU">Design: Itemization, Guide System</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/design/meetings/Aug-23-Design-Meeting-Notes"><span title="Design: Classes, Skill Tree, Progression" class="linkLabel_WmDU">Design: Classes, Skill Tree, Progression</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/design/meetings/Aug-16-Design-Meeting-Notes"><span title="Design: Potion System, Player Progression" class="linkLabel_WmDU">Design: Potion System, Player Progression</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/design/meetings/Aug-09-Design-Meeting-Notes"><span title="Design: Rune Tiering, Rift Refreshments, Divine Essences, and Player Progression" class="linkLabel_WmDU">Design: Rune Tiering, Rift Refreshments, Divine Essences, and Player Progression</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/design/meetings/Aug-02-Design-Meeting-Notes"><span title="Design: Wanderer&#x27;s Charm, Hunger Regen, and Pillars" class="linkLabel_WmDU">Design: Wanderer&#x27;s Charm, Hunger Regen, and Pillars</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/design/meetings/Jul-26-Design-Meeting-Notes"><span title="Design: Vision, Player, and Loop" class="linkLabel_WmDU">Design: Vision, Player, and Loop</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/design/meetings/Jul-25-Design-Meeting-Guide"><span title="🧾 Game Design Identity: What WotR *Is* (Phase 1)" class="linkLabel_WmDU">🧾 Game Design Identity: What WotR *Is* (Phase 1)</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/design/meetings/Jul-19-Design-Meeting-Notes"><span title="Design: Genre, Core Loop, Motivation, Progression, Crafting" class="linkLabel_WmDU">Design: Genre, Core Loop, Motivation, Progression, Crafting</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/wotr-docs/docs/design/meetings/Jul-10-Design-Meeting-Notes"><span title="Design: Anomalies, Guilds &amp; More" class="linkLabel_WmDU">Design: Anomalies, Guilds &amp; More</span></a></li></ul></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/wotr-docs/docs/art/style-guide/"><span title="3. Art" class="categoryLinkLabel_W154">3. Art</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/wotr-docs/docs/contribute"><span title="4. Development" class="categoryLinkLabel_W154">4. Development</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/wotr-docs/docs/builds/standards"><span title="5. Build" class="categoryLinkLabel_W154">5. Build</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/wotr-docs/docs/lore/topic/hubworld/concepts/Lore-Concept-Hubworld-1"><span title="6. Lore" class="categoryLinkLabel_W154">6. Lore</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/wotr-docs/docs/meetings/2025/02/Feb-03-Summary-Meeting-Notes"><span title="7. General Meeting Notes" class="categoryLinkLabel_W154">7. General Meeting Notes</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/wotr-docs/docs/polls/"><span title="8. Polls" class="categoryLinkLabel_W154">8. Polls</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/wotr-docs/docs/resources/mod-development"><span title="9. Resources" class="categoryLinkLabel_W154">9. Resources</span></a></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/wotr-docs/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">2. Design</span></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Design Meeting Notes</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Design: Loot Categories</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Design: Loot Categories</h1></header>
+<blockquote>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="november-9-2025"><em>November 9, 2025</em><a href="#november-9-2025" class="hash-link" aria-label="Direct link to november-9-2025" title="Direct link to november-9-2025" translate="no">​</a></h3>
+<ul>
+<li>jyu</li>
+<li>mal</li>
+<li>moomar</li>
+<li>rev</li>
+<li>rora</li>
+<li>special</li>
+<li>warren</li>
+<li>whale</li>
+<li>wout</li>
+<li>dany</li>
+<li>rachael</li>
+<li>galactic</li>
+</ul>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="focus">Focus<a href="#focus" class="hash-link" aria-label="Direct link to Focus" title="Direct link to Focus" translate="no">​</a></h2>
+<p>Define loot/reward system for 0.3.0 (Rift Expansion)</p>
+<ul>
+<li>categories</li>
+<li>sources/earning methods</li>
+<li>integration with core loop (Prepare, Rift, Advance)</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="loot-purpose--pillars-alignment">Loot Purpose &amp; Pillars Alignment<a href="#loot-purpose--pillars-alignment" class="hash-link" aria-label="Direct link to Loot Purpose &amp; Pillars Alignment" title="Direct link to Loot Purpose &amp; Pillars Alignment" translate="no">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="core-questions">Core Questions<a href="#core-questions" class="hash-link" aria-label="Direct link to Core Questions" title="Direct link to Core Questions" translate="no">​</a></h3>
+<ul>
+<li>What rewards motivate re-entering Rifts?</li>
+<li>What do players prioritize when opening chests?</li>
+<li>Does loot align with pillars?</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="pillar-framework">Pillar Framework<a href="#pillar-framework" class="hash-link" aria-label="Direct link to Pillar Framework" title="Direct link to Pillar Framework" translate="no">​</a></h3>
+<ul>
+<li>Meaningful Progression: Does loot make players stronger or open new build options?</li>
+<li>Shape Your Own Path: Does loot allow customization or different playstyles?</li>
+<li>Curiosity and Awe: Is loot exciting and cool to find?</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="player-responses">Player Responses<a href="#player-responses" class="hash-link" aria-label="Direct link to Player Responses" title="Direct link to Player Responses" translate="no">​</a></h3>
+<ul>
+<li>Satisfying and useful loot (crafting resources, weapon fragments)</li>
+<li>Currently: Geodes for gear upgrades</li>
+<li>Gear-related rewards priority</li>
+<li>Gear improvements expected every 3-4 runs</li>
+<li>Abilities and environmental looting for streamlined crafting</li>
+<li>Short-term goals keep engagement</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="integration-approaches">Integration Approaches<a href="#integration-approaches" class="hash-link" aria-label="Direct link to Integration Approaches" title="Direct link to Integration Approaches" translate="no">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="hybrid-approach">Hybrid Approach<a href="#hybrid-approach" class="hash-link" aria-label="Direct link to Hybrid Approach" title="Direct link to Hybrid Approach" translate="no">​</a></h3>
+<ul>
+<li>Mix Vanilla and Rift aspects</li>
+<li>Keep Vanilla for sandbox farming and familiarity</li>
+<li>Build into Rift system without removing Vanilla unless necessary</li>
+<li>Maintain Minecraft vernacular for newer players (eg. &quot;Rift biomes&quot; vs &quot;Rift themes&quot;)</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="rift-focused-approach">Rift-Focused Approach<a href="#rift-focused-approach" class="hash-link" aria-label="Direct link to Rift-Focused Approach" title="Direct link to Rift-Focused Approach" translate="no">​</a></h3>
+<ul>
+<li>Design systems within Wanderers of the Rift framework</li>
+<li>Overworld still exists but not required for progression</li>
+<li>Players can complete mod entirely without Overworld interaction</li>
+<li>Use Minecraft as game engine rather than framework (total conversion approach)</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="loot-categories">Loot Categories<a href="#loot-categories" class="hash-link" aria-label="Direct link to Loot Categories" title="Direct link to Loot Categories" translate="no">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="category-list">Category List<a href="#category-list" class="hash-link" aria-label="Direct link to Category List" title="Direct link to Category List" translate="no">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="gear--weapons">Gear &amp; Weapons<a href="#gear--weapons" class="hash-link" aria-label="Direct link to Gear &amp; Weapons" title="Direct link to Gear &amp; Weapons" translate="no">​</a></h4>
+<ul>
+<li>Gear bases and/or components for crafting</li>
+<li>Keep as single category until further clarification</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="gear-upgrademodification-related">Gear Upgrade/modification Related<a href="#gear-upgrademodification-related" class="hash-link" aria-label="Direct link to Gear Upgrade/modification Related" title="Direct link to Gear Upgrade/modification Related" translate="no">​</a></h4>
+<ul>
+<li>Runegems+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="ability-related">Ability Related<a href="#ability-related" class="hash-link" aria-label="Direct link to Ability Related" title="Direct link to Ability Related" translate="no">​</a></h4>
+<ul>
+<li>Skill thread</li>
+<li>Abilities</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="rift-related">Rift Related<a href="#rift-related" class="hash-link" aria-label="Direct link to Rift Related" title="Direct link to Rift Related" translate="no">​</a></h4>
+<ul>
+<li>Essence</li>
+<li>Modifiers</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="transmog--vanity">Transmog &amp; Vanity<a href="#transmog--vanity" class="hash-link" aria-label="Direct link to Transmog &amp; Vanity" title="Direct link to Transmog &amp; Vanity" translate="no">​</a></h4>
+<ul>
+<li>Skins, paints</li>
+<li>Not one-time collectibles (find multiple times for new gear pieces)</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="collectibles">Collectibles<a href="#collectibles" class="hash-link" aria-label="Direct link to Collectibles" title="Direct link to Collectibles" translate="no">​</a></h4>
+<ul>
+<li>Lore bits, hints</li>
+<li>Maps or clues for exploration</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="consumables">Consumables<a href="#consumables" class="hash-link" aria-label="Direct link to Consumables" title="Direct link to Consumables" translate="no">​</a></h4>
+<ul>
+<li>Looted items used from inventory (food, potions)</li>
+<li>Provide bonus stats</li>
+<li>Option if player didn&#x27;t prepare well</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="instant-loot">Instant Loot<a href="#instant-loot" class="hash-link" aria-label="Direct link to Instant Loot" title="Direct link to Instant Loot" translate="no">​</a></h4>
+<ul>
+<li>Immediate effect upon pickup (doesn&#x27;t enter inventory)</li>
+<li>Examples: Dropped hearts for instant healing, directional maps</li>
+<li>Combat-related drops from spawners or mobs</li>
+<li>Buffs: Increased loot chance on next chest after clearing mobs</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="questobjective-loot">Quest/Objective Loot<a href="#questobjective-loot" class="hash-link" aria-label="Direct link to Quest/Objective Loot" title="Direct link to Quest/Objective Loot" translate="no">​</a></h4>
+<ul>
+<li>Items requested by guilds</li>
+<li>Rift-specific objectives</li>
+<li>Example: Scavenger items (Vault Hunters reference)</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="resourcesmaterials">Resources/Materials<a href="#resourcesmaterials" class="hash-link" aria-label="Direct link to Resources/Materials" title="Direct link to Resources/Materials" translate="no">​</a></h4>
+<ul>
+<li>Building blocks</li>
+<li>Crafting recipe components</li>
+<li>Mod components linking Rifts to Overworld</li>
+<li>Support builders and extra mod users</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="sellablesjunkfiller">Sellables/Junk/Filler<a href="#sellablesjunkfiller" class="hash-link" aria-label="Direct link to Sellables/Junk/Filler" title="Direct link to Sellables/Junk/Filler" translate="no">​</a></h4>
+<ul>
+<li>No real purpose but take inventory space</li>
+<li>Minor resource gain when sold to traders</li>
+<li>Example: Soul Harvester extractor (Vault Hunters)</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="categories-removedreconsidered">Categories Removed/Reconsidered<a href="#categories-removedreconsidered" class="hash-link" aria-label="Direct link to Categories Removed/Reconsidered" title="Direct link to Categories Removed/Reconsidered" translate="no">​</a></h3>
+<ul>
+<li>Currency: Technically loot but not physical item (less focus)</li>
+<li>Thematic loot: Problematic as category (some vanity items already thematic)</li>
+<li>Guild-specific loot: Difficult to conceptualize beyond existing mechanics</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="loot-sources-by-category">Loot Sources by Category<a href="#loot-sources-by-category" class="hash-link" aria-label="Direct link to Loot Sources by Category" title="Direct link to Loot Sources by Category" translate="no">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="gear--weapons-1">Gear &amp; Weapons<a href="#gear--weapons-1" class="hash-link" aria-label="Direct link to Gear &amp; Weapons" title="Direct link to Gear &amp; Weapons" translate="no">​</a></h3>
+<p>Sources:</p>
+<ul>
+<li>Mob drops (zombies/skeletons for components)</li>
+<li>Chests (components or upgrades)</li>
+<li>Weapon and armor stands</li>
+<li>Bosses or elite mobs</li>
+<li>Quest completions</li>
+<li>Rift completion rewards</li>
+<li>Theme-specific mobs</li>
+</ul>
+<p>Design Note: Jyu prefers gear as basic loot, not locked behind defeating enemies</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="rune-gems">Rune Gems<a href="#rune-gems" class="hash-link" aria-label="Direct link to Rune Gems" title="Direct link to Rune Gems" translate="no">​</a></h3>
+<p>Primary Sources:</p>
+<ul>
+<li>Geode POIs (break open for colorful crystals)</li>
+<li>Mining tasks: Ores or clusters</li>
+<li>Ore: Singular item, one drop when mined</li>
+<li>Amethyst-style: Six sides, six different drops</li>
+</ul>
+<p>Secondary Sources:</p>
+<ul>
+<li>Quests and Rift completions</li>
+<li>Trade (stop-gap when can&#x27;t find in Rifts)</li>
+<li>Dust from recycling</li>
+<li>Geode pieces milled down to make runes/gems</li>
+<li>Special rune gem from completing mob spawner</li>
+<li>Anomalies</li>
+<li>Pre-rolled jewels in jewelry chests/bags</li>
+</ul>
+<p>Current State:</p>
+<ul>
+<li>Health, offense, ability-related rune gems exist</li>
+<li>Offense has ability-related modifiers</li>
+<li>Two implemented monster rune gems copy Pentagon versions</li>
+<li>MVP 2.0 source: Monster spawner and loot chests</li>
+</ul>
+<p>Implementation Ideas:</p>
+<ul>
+<li>Cave themes with cave-generating rooms spawn geodes in walls</li>
+<li>Geode item becomes rune gem, rolls shape and modifiers</li>
+<li>Players seeking POI mining action</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="essences">Essences<a href="#essences" class="hash-link" aria-label="Direct link to Essences" title="Direct link to Essences" translate="no">​</a></h3>
+<p>Purpose: Rift crafting related</p>
+<p>Distribution Philosophy:</p>
+<ul>
+<li>Available everywhere in Rift</li>
+<li>Sprinkled in any loot container, mining POI, or activity</li>
+<li>Completing Rift objective = net positive essence gain</li>
+</ul>
+<p>Sources:</p>
+<ul>
+<li>Fountain anomaly that spews essence</li>
+<li>Mobs that turn into dust when defeated</li>
+<li>Dead players become pile of essence (their Rift loot converts to equivalent essence)</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="abilities-skillability-related-items">Abilities (Skill/Ability Related Items)<a href="#abilities-skillability-related-items" class="hash-link" aria-label="Direct link to Abilities (Skill/Ability Related Items)" title="Direct link to Abilities (Skill/Ability Related Items)" translate="no">​</a></h3>
+<p>Acquisition:</p>
+<ul>
+<li>Keep in quests, completion chests, and trading</li>
+<li>NOT in random loot containers (avoid RNG acquisition)</li>
+</ul>
+<p>Upgrade Path:</p>
+<ul>
+<li>Abilities upgradeable within Rifts</li>
+<li>Craftable abilities: Basic start, upgrade to certain point</li>
+<li>Lootable abilities: Consumable scrolls (stack to 64)</li>
+<li>Experience abilities via scrolls before investing in crafting</li>
+</ul>
+<p>Progression Gates:</p>
+<ul>
+<li>Not all abilities craftable immediately</li>
+<li>Lock behind rare crafting resources or guild progression</li>
+<li>Guild levels gate top-tier permanent ability purchases</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="mod-componentsresources">Mod Components/Resources<a href="#mod-componentsresources" class="hash-link" aria-label="Direct link to Mod Components/Resources" title="Direct link to Mod Components/Resources" translate="no">​</a></h3>
+<p>Purpose: Link Rifts to Overworld/mods</p>
+<p>Use Cases:</p>
+<ul>
+<li>Support builders</li>
+<li>Players using extra mods/tools</li>
+<li>Harder-to-find or non-renewable Overworld resources</li>
+</ul>
+<p>Sources:</p>
+<ul>
+<li>Resource chests (general resources)</li>
+<li>Specialized shipping crate anomaly</li>
+<li>Guild shipment-related anomalies</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="transmog--vanity-1">Transmog &amp; Vanity<a href="#transmog--vanity-1" class="hash-link" aria-label="Direct link to Transmog &amp; Vanity" title="Direct link to Transmog &amp; Vanity" translate="no">​</a></h3>
+<p>Case-by-case basis for sources</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="collectibles-1">Collectibles<a href="#collectibles-1" class="hash-link" aria-label="Direct link to Collectibles" title="Direct link to Collectibles" translate="no">​</a></h3>
+<p>Sources:</p>
+<ul>
+<li>Special rooms</li>
+<li>Personalized POIs</li>
+<li>Each collectible with own POI (player knows what they&#x27;re hunting)</li>
+</ul>
+<p>Benefit: Know what to search for or when set is complete</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="consumables-1">Consumables<a href="#consumables-1" class="hash-link" aria-label="Direct link to Consumables" title="Direct link to Consumables" translate="no">​</a></h3>
+<p>Considerations:</p>
+<ul>
+<li>Mixed in generic loot pool or own container?</li>
+<li>From mobs or Rift spawners?</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="theme-dependent-loot">Theme-Dependent Loot<a href="#theme-dependent-loot" class="hash-link" aria-label="Direct link to Theme-Dependent Loot" title="Direct link to Theme-Dependent Loot" translate="no">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="benefits">Benefits<a href="#benefits" class="hash-link" aria-label="Direct link to Benefits" title="Direct link to Benefits" translate="no">​</a></h3>
+<ul>
+<li>Adds value to themes</li>
+<li>Allows targeted looting</li>
+<li>Remixes loot ratios (increase chances of specific items in certain locations)</li>
+</ul>
+<p>Examples</p>
+<ul>
+<li>Chase resources specific to themes (snow biome, forest)</li>
+<li>Nether-themed focus on gear</li>
+<li>Cave-theme focus on helmets</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="additional-topics">Additional Topics<a href="#additional-topics" class="hash-link" aria-label="Direct link to Additional Topics" title="Direct link to Additional Topics" translate="no">​</a></h2>
+<p>Emerged organically through discussion</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="inventory-management">Inventory Management<a href="#inventory-management" class="hash-link" aria-label="Direct link to Inventory Management" title="Direct link to Inventory Management" translate="no">​</a></h3>
+<ul>
+<li>Current Vanilla Constraints - 36 total slots</li>
+<li>27 slots remaining for loot</li>
+<li>Non-stackable gear problematic</li>
+<li>High loot volume requires larger capacity</li>
+<li>Item design impacts space (geodes dropping many gems/dust types)</li>
+<li>Loot every piece for resources (dislike leaving items)</li>
+<li>Quick runs, fill backpacks, sort later</li>
+<li>Pre-programmed slots for stackable Rift items</li>
+<li>Example: Silk thread always goes to specific slot</li>
+<li>Mod-specific solution to avoid taking numerous slots</li>
+<li>Built-in slots instead of 26 inventory slots</li>
+<li>Reduce needed quantity to match inventory constraints</li>
+</ul>
+<p>ARPG Comparison:</p>
+<ul>
+<li>Limited inventory space standard</li>
+<li>Players leave items behind</li>
+</ul>
+<p>Lean Loot vs Volume:</p>
+<ul>
+<li>Determine expected loot amount and needed space</li>
+<li>Goal: Understand loot design, not eliminate backpacks</li>
+<li>Purposeful loot preferred over massive inventory bloat</li>
+<li>Weight systems often ignored; slot-based easier to manage</li>
+</ul>
+<p>Tension &amp; Gameplay:</p>
+<ul>
+<li>Lean loot minimizes Rift downtime</li>
+<li>Removed timer reduced tension</li>
+<li>Limited inventory creates hard choices (reintroduce tension)</li>
+<li>Disagreement: Some find leaving loot disheartening</li>
+</ul>
+<p>Chest Design</p>
+<ul>
+<li>One chest per POI</li>
+<li>Better chests in bigger POIs</li>
+<li>Open chests to see contents (not mine them)</li>
+<li>Sell unwanted gear to traders</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="new-rift-objective-swarm-hot--cold">New Rift Objective: Swarm Hot &amp; Cold<a href="#new-rift-objective-swarm-hot--cold" class="hash-link" aria-label="Direct link to New Rift Objective: Swarm Hot &amp; Cold" title="Direct link to New Rift Objective: Swarm Hot &amp; Cold" translate="no">​</a></h3>
+<ul>
+<li>Enter Rift with safe room</li>
+<li>Get swarmed by mobs continuously</li>
+<li>After killing certain number: Audio/visual &quot;hot and cold&quot; indications</li>
+<li>Directions lead to treasure room</li>
+<li>All loot in end room</li>
+</ul>
+<p>Environment:</p>
+<ul>
+<li>No chests or spawners</li>
+<li>Possibly derelict POIs with cosmetics</li>
+<li>Mobs provide direction hints to reward room</li>
+<li>Stressful continuous spawning</li>
+<li>Similar to mob nest protecting treasure hoard</li>
+</ul>
+<p>Completion:</p>
+<ul>
+<li>Reward room has loot and portal for objective completion</li>
+<li>Could spawn as random POI becoming the objective</li>
+</ul>
+<hr>
+<p><strong>Next Actions</strong></p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="forum-discussion">Forum Discussion<a href="#forum-discussion" class="hash-link" aria-label="Direct link to Forum Discussion" title="Direct link to Forum Discussion" translate="no">​</a></h4>
+<ul>
+<li>Continue Loot discussion, branch out into inventory management and expected loot quantities</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="pitch-prep">Pitch Prep<a href="#pitch-prep" class="hash-link" aria-label="Direct link to Pitch Prep" title="Direct link to Pitch Prep" translate="no">​</a></h4>
+<ul>
+<li>Start drafting pitches based on discussion of loot.</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="next-major-topic">Next major topic<a href="#next-major-topic" class="hash-link" aria-label="Direct link to Next major topic" title="Direct link to Next major topic" translate="no">​</a></h4>
+<ul>
+<li>Mobs</li>
+</ul>
+<hr>
+<p><strong>Timeline</strong></p>
+<ul>
+<li>Pitch Votes on Loot after next meeting</li>
+<li>Start drafting mob pitches around same time</li>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/Wanderers-Of-The-Rift/wotr-docs/edit/main/website/docs/design/meetings/2025-Nov-09-Design-Meeting-Notes.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/wotr-docs/docs/ideas/summary/pitch-prep-shrines"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Shrines - Concept Pitch</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/wotr-docs/docs/design/meetings/Nov-01-Design-Meeting-Notes"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Design: Vanilla Integration</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#november-9-2025" class="table-of-contents__link toc-highlight"><em>November 9, 2025</em></a></li><li><a href="#focus" class="table-of-contents__link toc-highlight">Focus</a></li><li><a href="#loot-purpose--pillars-alignment" class="table-of-contents__link toc-highlight">Loot Purpose &amp; Pillars Alignment</a><ul><li><a href="#core-questions" class="table-of-contents__link toc-highlight">Core Questions</a></li><li><a href="#pillar-framework" class="table-of-contents__link toc-highlight">Pillar Framework</a></li><li><a href="#player-responses" class="table-of-contents__link toc-highlight">Player Responses</a></li></ul></li><li><a href="#integration-approaches" class="table-of-contents__link toc-highlight">Integration Approaches</a><ul><li><a href="#hybrid-approach" class="table-of-contents__link toc-highlight">Hybrid Approach</a></li><li><a href="#rift-focused-approach" class="table-of-contents__link toc-highlight">Rift-Focused Approach</a></li></ul></li><li><a href="#loot-categories" class="table-of-contents__link toc-highlight">Loot Categories</a><ul><li><a href="#category-list" class="table-of-contents__link toc-highlight">Category List</a></li><li><a href="#categories-removedreconsidered" class="table-of-contents__link toc-highlight">Categories Removed/Reconsidered</a></li></ul></li><li><a href="#loot-sources-by-category" class="table-of-contents__link toc-highlight">Loot Sources by Category</a><ul><li><a href="#gear--weapons-1" class="table-of-contents__link toc-highlight">Gear &amp; Weapons</a></li><li><a href="#rune-gems" class="table-of-contents__link toc-highlight">Rune Gems</a></li><li><a href="#essences" class="table-of-contents__link toc-highlight">Essences</a></li><li><a href="#abilities-skillability-related-items" class="table-of-contents__link toc-highlight">Abilities (Skill/Ability Related Items)</a></li><li><a href="#mod-componentsresources" class="table-of-contents__link toc-highlight">Mod Components/Resources</a></li><li><a href="#transmog--vanity-1" class="table-of-contents__link toc-highlight">Transmog &amp; Vanity</a></li><li><a href="#collectibles-1" class="table-of-contents__link toc-highlight">Collectibles</a></li><li><a href="#consumables-1" class="table-of-contents__link toc-highlight">Consumables</a></li></ul></li><li><a href="#theme-dependent-loot" class="table-of-contents__link toc-highlight">Theme-Dependent Loot</a><ul><li><a href="#benefits" class="table-of-contents__link toc-highlight">Benefits</a></li></ul></li><li><a href="#additional-topics" class="table-of-contents__link toc-highlight">Additional Topics</a><ul><li><a href="#inventory-management" class="table-of-contents__link toc-highlight">Inventory Management</a></li><li><a href="#new-rift-objective-swarm-hot--cold" class="table-of-contents__link toc-highlight">New Rift Objective: Swarm Hot &amp; Cold</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/wotr-docs/docs">Getting Started</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://discord.gg/VkSeepd59S" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/Wanderers-Of-The-Rift/wotr-docs" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 Wanderers of the Rift. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>
