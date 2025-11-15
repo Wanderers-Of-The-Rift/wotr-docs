@@ -1,27 +1,67 @@
-# **WotR 0.1.0 for dummies (WIP)**
+# **WotR 0.2.0 for dummies (WIP)**
 
-Wanderers of the Rift, or WotR for short, is an ARPG, dungeon crawler modpack for Minecraft Java Edition \[1.21.4\]. As one of the many rift wanderers, you must dive into rifts and discover new dimensions. Loot their resources to become stronger and fight side by side with various guilds against the hostile factions trying to take over every dimension. Establish a stronghold in a stabilised rift to keep your allies safe and automate the resources of the three large dimensions to sustain your explorations.
+Welcome Wanderers
 
-*If something is temporary or has not been decided on by the team yet. It will be highlighted via \[brackets\].*
+This is a guide through Wanderers of the Rift (WotR), before you ask what is Wanderers of the Rift and how do I play it, I will answer that in this guide 
 
-# **The new dimensions**
+Wanderers of the Rift (WotR), is an ARPG, dungeon crawler modpack for Minecraft Java 1.21.1+, and is based around you **A Rift Wanderer**.
 
-You can create rifts that lead to new dimensions. To enter a rift, you must weave your own rifts through the use of a [Rift Key] and a [Rift Spawner]. You can craft a [Rift Key] using a [Key Forge] by feeding it [Vanilla] items. Each item has an invisible essence value, and the tier of the rift increases with the total value of items you put into the forge. The items you supply will influence the theme of the rift you are creating. Currently, only a forest theme can be crafted using nature-themed items. Right-clicking on a [Rift Spawner] with a [Rift Key] will open a rift. Each rift leads to a procedurally generated dimension with tons of loot in the form of mob drops, chests and special encounters. Below, you can find the recipes for the [Rift Spawner] and the [Key Forge].
+What is A Rift Wanderer?
+
+A Rift Wanderer goes into Rifts to defeat enemies and loots the rift for any good items that may help them on their journey and help guilds with their quests.
+
+How do I get started and enter one of these Rifts?
+
+# **How To Get Started**
+
+To get started in WotR you will need to obtain a ***Rift Key*** and a ***Rift Spawner***.
+
+But WolfsWeb how do I, a Wanderer obtain a ***Rift Key*** and a ***Rift Spawner***?
+
+Well that is easy Wanderer to obtain both Key and Spawner you will have to craft both:
+
+# **Rift Spawner**
+
+The ***Rift Spawner*** is a simple craft only two types of items need, 1 ender pearl and 8 stone please see image below for how to craft it.
+
+(Image of rift spawner recipe)
+
+# **Rift Key**
+Now as for the ***Rift Key*** on the other hand you will have to craft yourself a ***Key Forge*** in order to obtain a Key.
 
 
-### The \[rift spawner\] recipe
+# **Key Forge**
+Is it hard to craft a ***Key Forge*** and what will I as a Wanderer need?
 
-![][image1]
+No it's not hard at all. All you need is a flower pot an iron block a blast furnace and any type of log, see image below for crafting Recipe.
 
-### The \[key forge\] recipe (any vanilla anvil can be used)
+(Image to go here of KeyForge recipe)
 
-![][image2]
+After Crafting yourself a ***Key Forge*** you can now obtain a key by right-clicking the forge and giving it any 1-5 vanilla items that inturn will give you a level one key.
 
-### A \[rift key\]
+(Image of inside the Key Forge)
 
-![][image3]
 
-### Theme & structure
+# **Rifts**
+Once the Wanderer has given their items to the forge they will see once hovered upon, the key will give information. The info the Key will give is the following: *Tier*, *Theme*, *Objectives*. (Try giving the forge different items for different themes).
+
+Now with Key in hand the Wanderer can go up to their ***Rift Spawner*** and right-click the Key onto the Spawner to open the Rift.
+
+Once inside the rift the Wanderer will have the objective shown to them on-the top of the screen and are now free to travel through the different rooms in the rift looting and killing Rift enemies.
+
+
+## **Themes**
+How many themes are there for the rift?
+
+There are currently No. of themes avalible and more to come.
+
+What items give me what themes?
+
+
+
+
+
+
 
 Each rift has a tier, a theme and an objective. Themes dictate what the rift looks like and the mobs and loot you will find. Other than the theme, all rifts have a similar structure. When you enter a rift, you appear in a portal room, where you can exit the rift when you are done with the objective or have looted enough. The portal room is connected to 4 other rooms via small entrances. Rooms have a cave-like structure with many small points of interest or POIs. They contain a spawner which spews out monsters and chests to loot. If you choose to go further away from the portal room. You can find chaos or unstable rooms. These rooms don’t follow the same pattern as the rooms close to the entrance. They can have many exits and can lead to smaller rooms, and overall have a much more chaotic, labyrinth-like feeling.
 
