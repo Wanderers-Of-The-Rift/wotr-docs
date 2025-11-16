@@ -99,6 +99,7 @@ module.exports = {
           label: 'Dev Meeting Notes',
           items: [
             'code/meetings/Dev-Meeting-Notes-2025-11-01',
+            'code/meetings/Dev-Meeting-Notes-2025-11-15',
           ],
         },
       ],

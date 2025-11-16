@@ -1,0 +1,23 @@
+# 2025-11-15 Dev Meeting
+- 0.2.1 - What’s left?
+  - Moved remaining items to 0.3.0
+  - Can push interim updates as we progress through changes
+- 0.3.0 - What’s next?
+  - Review 0.3.0 proposal for forward thinking and feasibility
+    - [0.3.0 proposal](https://discord.com/channels/1374772629298483202/1430773057785561108)
+  - Any feedback?
+  - New features moving to pitch prep
+    - Implementation Meetings
+  - Framework expansion
+    - Objectives
+- Backlog refinement
+  - Take a look at the existing issues and see what we have
+  - Make comments if you have thoughts on what to do
+- Organizational Tasks
+  - Delete branches! Clean up after merging
+  - Have an issue for every PR
+  - Codifying
+    - [code review/PR process](https://discord.com/channels/1374772629298483202/1402884168467087390)
+    - [commit message guidelines](https://discord.com/channels/1374772629298483202/1385788288090247168)
+    - testing
+    - issue/branch/PR process
