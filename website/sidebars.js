@@ -287,6 +287,7 @@ module.exports = {
           label: 'November 2025',
           items: [
             'meetings/2025/11/Nov-01-General-Meeting-Notes',
+            'meetings/2025/11/Nov-15-General-Meeting-Notes',
           ],
         },
       ],
