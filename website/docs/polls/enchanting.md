@@ -21,5 +21,12 @@ Enchanting will remain in the mod. Items can still be enchanted as normal. But m
 ### No, Enchanting should stay and be usable in rifts
 Enchanting will remain in the mod. Items can still be enchanted as normal. Rifts will be balanced around this, this will make the modifier system less useful and less impactful, especially when overpowered modded enchants are added. Consideration need to be made to make enchanting the main modifier system.
 
+### This requires more discussion
+
 ## Results
-This poll is currently running in discord until saturday the 22th of March
+The poll was ran from the 16/03/2025 until 22/03/2025 with the following results:
+1. Yes, remove Enchanting completely - 58%
+2. Yes, but only remove for WotRift items - 29%
+3. No, Enchanting should stay, but disabled in rifts - 2%
+4. No, Enchanting should stay and be usable in rifts - 8%
+5. This requires more discussion - 4%
