@@ -303,6 +303,13 @@ module.exports = {
         'polls/Wall depth Poll',
         'polls/Decorative & Building Block Mods Poll',
         'polls/Stairs Poll',
+        'polls/WotR Mod Theme',
+        'polls/Guilds',
+        'polls/Art Palette',
+        'polls/Hub World',
+        'polls/essence',
+        'polls/anomalies',
+        'polls/Guild System',
       ],
     },
     {
