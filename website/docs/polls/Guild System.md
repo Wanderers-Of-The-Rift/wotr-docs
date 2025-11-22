@@ -49,7 +49,7 @@ The poll was ran from the 24/07/2025 until 31/07/2025 with the following results
 - Guild Shops Poll How should shops work in guilds?
     - No shops at all. Guild only exist for quest/progression - 0%
     - A single Market Guild, only place with merchants - 53%
-    - Each guild has its own merchants -47%
+    - Each guild has its own merchants - 47%
 
 - Currency System Poll: How should currency work between guilds? (If we have merchants)
     - No currency system, have another form of trading. - 6%

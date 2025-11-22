@@ -50,7 +50,7 @@ While Shredding is more targeted and could provide a higher yield.
 The proposed chart: 
 Any spell, ability, etc falls under the alignments/and or a combination of them 
 
-___Aligment:___ the alignments themselves are based entirely the rift essence chart that the dev team came up with (huge shout out to them). This feels like it would fit better in the lore than any standard element system. 
+___Alignment:___ the alignments themselves are based entirely the rift essence chart that the dev team came up with (huge shout out to them). This feels like it would fit better in the lore than any standard element system. 
 
 ___Lore:___ all essence comes from the void. Some believe it's a primordial sea of essence, others believe its a God. Essence itself is the threads that support reality, and the force that all reality patterns itself off of. Using magic, these threads can be drawn into reality for use in various tasks. The threads can be further combined with each other to form unique essences in the form of thick ropes of power known as yarn.
 
@@ -131,7 +131,7 @@ ___Notable Features:___
 ### Abstaining
 
 ## Results
-The poll was ran from the 17/07/2025 until 24/07/2025 with the following results:
+The poll was ran from the 21/06/2025 until 24/06/2025 with the following results:
 1. Conceptual - 44%
 2. MVP - 44%
 3. Color - 9%
