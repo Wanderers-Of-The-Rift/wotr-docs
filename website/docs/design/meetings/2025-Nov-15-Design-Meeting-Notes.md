@@ -12,6 +12,7 @@
 > - @WarrenGore 
 > - @WolfsWeb
 
+### [Visual Working Board PDF](/other-files/meeting-notes/2025-Nov-15-Design-Visual-Working-Board.pdf)
 
 ## Focus
 - Define loot categories and sources for pitch prep 
