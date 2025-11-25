@@ -1,4 +1,4 @@
-# Design: Loot & Mob Design
+# Design: Mob Archetype and Special Room Framework
 
 > ### _November 15, 2025_
 > - @danymaddox
