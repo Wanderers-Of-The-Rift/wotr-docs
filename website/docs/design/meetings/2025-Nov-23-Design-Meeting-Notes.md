@@ -1,6 +1,6 @@
 # Design: Mob Archetype and Special Room Framework
 
-> ### _November 15, 2025_
+> ### _November 23, 2025_
 > - @danymaddox
 > - @rachaelrose1212
 > - @jyutta
