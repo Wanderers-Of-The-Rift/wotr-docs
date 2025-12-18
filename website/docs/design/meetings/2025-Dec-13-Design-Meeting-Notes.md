@@ -1,3 +1,4 @@
+# Design: Loot, Rooms, Mobs, and Guilds #
 Design Meeting December 13  
 ## Attendance ##
 WarrenGore  
@@ -5,7 +6,7 @@ Danymaddox
 Divides By Zero  
 Galactic_15  
 maloki  
-Rev
+Rev  
 Wout
 
 - [Loot Categories/Sources](https://discord.com/channels/1374772629298483202/1439338634397483198)
