@@ -293,6 +293,13 @@ module.exports = {
             'meetings/2025/11/Nov-15-General-Meeting-Notes',
           ],
         },
+        {
+          type: 'category',
+          label: 'December 2025',
+          items: [
+            'meetings/2025/12/Dec-13-General-Meeting-Notes',
+          ],
+        },
       ],
     },
     {
