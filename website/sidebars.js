@@ -103,6 +103,7 @@ module.exports = {
           items: [
             'code/meetings/Dev-Meeting-Notes-2025-11-01',
             'code/meetings/Dev-Meeting-Notes-2025-11-15',
+            'code/meetings/Dev-Meeting-Notes-2025-12-13',
           ],
         },
       ],
