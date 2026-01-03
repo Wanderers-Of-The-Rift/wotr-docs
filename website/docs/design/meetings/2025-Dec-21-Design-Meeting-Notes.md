@@ -110,6 +110,7 @@ Discussion Points
 **Voting**
 
 Five separate yes/no votes (one per room type)
+
 ---
 ## Loot Framework
 Components
