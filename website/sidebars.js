@@ -55,7 +55,7 @@ module.exports = {
       type: 'category',
       label: '3. Art',
       items: [
-        'art/style-guide/README',
+        'art/style-guide/Art Guidelines',
         ],
     },
     {
