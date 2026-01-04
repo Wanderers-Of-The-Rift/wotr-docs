@@ -23,7 +23,7 @@
 - Design
     - OUR DESIGN TOPICS HERE
 - Art
-    - [Style Guide](art/style-guide/README.md)
+    - [Style Guide](art/style-guide/Art%20Guidelines.md)
 
 ### Feature Prep
 - Ideas
