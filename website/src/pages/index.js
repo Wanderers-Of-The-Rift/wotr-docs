@@ -26,7 +26,7 @@ export default function Home() {
           </Link>
           <Link
             className="button button--secondary"
-            to="/wotr-docs/docs/art/style-guide/"
+            to="/wotr-docs/docs/art/style-guide/Art%20Guidelines"
             style={{ padding: '1rem 2rem', fontSize: '1.2rem' }}
           >
             🎨 Art Style Guide
