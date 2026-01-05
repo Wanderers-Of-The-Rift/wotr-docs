@@ -1,34 +1,35 @@
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
 # Threadwright Atelier (Ability Guild)
 
 [**Concept Art**](#concept-art) • [**Story**](#story) • [**Concept**](#concept) • [**TLDR**](#tldr)
 
 ---
-
+ 
 ## Concept Art
-<a href="/img/threadwrightatelier/twa-f.jpg">
-  <img src="/img/threadwrightatelier/twa-f.jpg" alt="Threadwright Atelier Concept Art" width="300" />
+<a href={useBaseUrl('/img/threadwrightatelier/twa-f.jpg')}>
+  <img src={useBaseUrl('/img/threadwrightatelier/twa-f.jpg')} alt="Threadwright Atelier Concept Art" width="300" />
 </a>
-<a href="/img/threadwrightatelier/twa-d5.jpg">
-  <img src="/img/threadwrightatelier/twa-d5.jpg" alt="Threadwright Atelier Concept Art" width="200"/>
-</a>
-<br />
-<a href="/img/threadwrightatelier/twa-d1.jpg">
-  <img src="/img/threadwrightatelier/twa-d1.jpg" alt="Threadwright Atelier Concept Art" width="200"/>
-</a>
-<a href="/img/threadwrightatelier/twa-d2.jpg">
-  <img src="/img/threadwrightatelier/twa-d2.jpg" alt="Threadwright Atelier Concept Art" width="200"/>
-</a>
-<a href="/img/threadwrightatelier/twa-d3.jpg">
-  <img src="/img/threadwrightatelier/twa-d3.jpg" alt="Threadwright Atelier Concept Art" width="200"/>
+<a href={useBaseUrl('/img/threadwrightatelier/twa-d5.jpg')}>
+  <img src={useBaseUrl('/img/threadwrightatelier/twa-d5.jpg')} alt="Threadwright Atelier Concept Art" width="200"/>
 </a>
 <br />
-<a href="/img/threadwrightatelier/twa-d4.jpg">
-  <img src="/img/threadwrightatelier/twa-d4.jpg" alt="Threadwright Atelier Concept Art" width="400"/>
+<a href={useBaseUrl('/img/threadwrightatelier/twa-d1.jpg')}>
+  <img src={useBaseUrl('/img/threadwrightatelier/twa-d1.jpg')} alt="Threadwright Atelier Concept Art" width="200"/>
 </a>
-<a href="/img/threadwrightatelier/twa-fd.jpg">
-  <img src="/img/threadwrightatelier/twa-fd.jpg" alt="Threadwright Atelier Concept Art" width="200"/>
+<a href={useBaseUrl('/img/threadwrightatelier/twa-d2.jpg')}>
+  <img src={useBaseUrl('/img/threadwrightatelier/twa-d2.jpg')} alt="Threadwright Atelier Concept Art" width="200"/>
 </a>
-
+<a href={useBaseUrl('/img/threadwrightatelier/twa-d3.jpg')}>
+  <img src={useBaseUrl('/img/threadwrightatelier/twa-d3.jpg')} alt="Threadwright Atelier Concept Art" width="200"/>
+</a>
+<br />
+<a href={useBaseUrl('/img/threadwrightatelier/twa-d4.jpg')}>
+  <img src={useBaseUrl('/img/threadwrightatelier/twa-d4.jpg')} alt="Threadwright Atelier Concept Art" width="400"/>
+</a>
+<a href={useBaseUrl('/img/threadwrightatelier/twa-fd.jpg')}>
+  <img src={useBaseUrl('/img/threadwrightatelier/twa-fd.jpg')} alt="Threadwright Atelier Concept Art" width="200"/>
+</a>
 
 ---
 

@@ -51,7 +51,7 @@ Jigsaw blocks are the blocks that make generation of Rooms and POIs possible. Th
 ### Processor blocks
 Processor blocks are the blocks we (mostly) use to create rooms and POIs. They will be themed with a processor every time they are generated in game. For example, 
 a processor block in a cave theme will turn into stone, but the same block in a forest theme will turn into wood. An example is shown below.  
-<img src="example_hall.png" alt="example_hall" width="50%"/>
+![example_hall](example_hall.png)
 
 ### Guides in game
 At the spawn location of the build server, a few guides are placed that give examples of the things above, and empty templates
@@ -116,7 +116,7 @@ Every family of processor blocks contains:
  - Glass pane
  - Trapdoor
 
-<img src="processor_family.png" alt="processor_family" width="50%"/>
+![processor_family](processor_family.png)
 
 ### Using custom processor blocks
 You can also use custom processor blocks, if you want a block that does not fit in any of the fixed categories, or if you want a block 
@@ -128,17 +128,17 @@ The reason those are not fixed processor blocks, is that only a small amount of 
 If you use custom processor blocks, you must provide the processor yourself. This will be explained in a later Chapter.  
 The full set of processor blocks is shown below, where the first 8 are fixed families, and the last 7 are custom.
 
-<img src="palette_full.png" alt="palette_full" width="50%"/>
+![palette_full](palette_full.png)
 
 ### Lighting
 A low level nightvision is given to players when entering the rift, so adding light in rooms is not required. Natural lighting (torches, lanterns) may be added, as well as the creative lights (operator utilities tab), to highlight certain locations.
 
 ### POIs in Rooms 
 When building a room, you need to include POIs. This can be done by adding Jigsaw Blocks. A POI will be generated against the Jigsaw, so it must be placed a bit further. This means that for a free standing poi, the Jigsaw must be placed 2 blocks deep in the floor. The same applies to halfway POIs, but for those you must also have the small line on the Jigsaw block towards you, and away from the wall. It should also be placed against the wall. The ceiling Jigsaw must be placed 2 layers in the ceiling. For the in-wall Jigsaw, however, placement is different. Those must be placed against the wall, with the face towards the wall. This is because when it generates, it generates towards the wall, and thus be placed inside. A placement example is on the server, or can be loaded with `wotr:guides/jigsaw_placement`.  
-<img src="Jigsaw_example.png" alt="jigsaw_example" width="50%"/>
+![Jigsaw_example](Jigsaw_example.png)
 
 Load `wotr:guides/jigsaw_palette` to get the correct settings for all Jigsaw blocks. You can control middle-click the one you want, and place it on the correct location. They are named, so they are distinguishable in your inventory. Keep in mind how far the POI you place will reach in every dimension, they will destroy blocks when necessary! In-wall POIs do carve deep, and free standing go up high.  
-<img src="jigsaw_palette.png" alt="jigsaw_palette" width="50%"/>
+![jigsaw_palette](jigsaw_palette.png)
 
 ### Server Build Indicators
 On the server, wool blocks are used to indicate the status of your Room, and the sizes of the POIs. If you've installed the resource pack, they have replaced the wool textures. POI size indicators have a number on them. The status blocks indicate:
@@ -149,13 +149,13 @@ On the server, wool blocks are used to indicate the status of your Room, and the
  - Cyan: The POIs are placed by builder.
 
 To set your structure as finished, you have to add the name on the Builders sheet. Only then it can be put in the mod.  
-<img src="status_blocks.png" alt="status_blocks" width="50%"/>
+![status_blocks](status_blocks.png)
 
 
 ### Saving
 To save your created structure, locate the structure block for saving. For rooms, they are the inner structure block. For 
 POIs, they are the top structure block. Make sure you use the correct naming convention, as written in rules. To save, press the right "SAVE" button.  
-<img src="save_room.png" alt="save_room" width="50%"/><img src="save_poi.png" alt="save_poi" width="50%"/>
+![save_room](save_room.png)save_poi.png)
 
 
 To allow the mod to use your structure, copy-paste the structure name into the Builders Sheet in the correct location (Room and POI 
@@ -222,8 +222,8 @@ and rightclick bedrock in the opposing corner with the wooden axe, and type `/co
 block family. Then, type `/schem share`, and click the generated link. Download the file, and rename it to `processor#.schem`, but replace
 the `#` with the number processor block you've copied. Repeat this for all families, you should have 8 `.schem` files. 
 
-<img src="builders_theme_north.png" alt="processor_north" width="50%"/>
-<img src="build_theme_worldedit_PBfill.png" alt="processor_theme" width="50%"/>
+![builders_theme_north](builders_theme_north.png)
+![build_theme_worldedit_PBfill](build_theme_worldedit_PBfill.png)
 
 Now, download [the theme json generator ZIP](https://github.com/Bullzey/schematic_to_json_wotr/blob/main/dist/theme_json_generator.zip) (right side, little download icon), and extract anywhere. In the `theme_json_generator` folder (which should include an exe 
 file and some folders) create a new folder with name `theme_#`, replacing `#` with the name you want to give your theme, 
