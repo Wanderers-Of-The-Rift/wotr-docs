@@ -1,4 +1,4 @@
-# **WotR 0.2.0 for dummies (WIP)**
+# **WotR 0.3.0 for dummies (WIP)**
 
 Welcome Wanderers
 
@@ -43,7 +43,8 @@ After Crafting yourself a ***Key Forge*** you can now obtain a key by right-clic
 
 
 # **Rifts**
-Once the Wanderer has given their items to the forge they will see once hovered upon, the key will give information. The info the Key will give is the following: *Tier*, *Theme*, *Objectives*. (Try giving the forge different items for different themes).
+Once the Wanderer has given their items to the forge they will see once hovered upon, the key will give information. The info the Key will give is the following: 
+*Tier*, *Theme*, *Objectives*. (Try giving the forge different items for different themes).
 
 Now with Key in hand the Wanderer can go up to their ***Rift Spawner*** and right-click the Key onto the Spawner to open the Rift.
 
@@ -53,19 +54,68 @@ Once inside the rift the Wanderer will have the objective shown to them on-the t
 ## **Themes**
 How many themes are there for the rift?
 
-There are currently No. of themes avalible and more to come.
+There are currently # Number of themes avalible and more to come.
 
 What items give me what themes?
 
+# - Item gives = #Theme
 
-
-
-
-
-
-Each rift has a tier, a theme and an objective. Themes dictate what the rift looks like and the mobs and loot you will find. Other than the theme, all rifts have a similar structure. When you enter a rift, you appear in a portal room, where you can exit the rift when you are done with the objective or have looted enough. The portal room is connected to 4 other rooms via small entrances. Rooms have a cave-like structure with many small points of interest or POIs. They contain a spawner which spews out monsters and chests to loot. If you choose to go further away from the portal room. You can find chaos or unstable rooms. These rooms don’t follow the same pattern as the rooms close to the entrance. They can have many exits and can lead to smaller rooms, and overall have a much more chaotic, labyrinth-like feeling.
+Themes determine the mobs, loot and what the actual rifts look & feel.
 
 ### Objective
+
+The Objective of each rift at the current time is the following: 
+- Kill Mobs
+- Close Anomalies
+- Objective Blocks
+
+Where will I find the objective?
+- The Objective will be shown at the top of your screen 
+
+(Image To be given here)
+
+# Kill Mobs:
+How many Mobs would a Wanderer like me have to kill?
+- Anywhere between # - #
+
+Where do these mobs come from?
+The mobs in the rifts come from spawners located in each room of the rift and each one of these spawners have chests that spawn under and around said spawner.
+(Please note that the spawners and chests - aka POI's are found throughout all our rifts) 
+
+How many spawners are located in one room?
+- Depends on the room and the type of theme of the  rift and who build the room, some can have 5 where other could have 8 but on average about #
+
+# Close Anomalies
+How many Anomalies would a Wanderer like me have to close?
+- Anywhere between # - #
+
+Are these Anomalies in every room?
+- No they are not in every room but spread out throughout the whole rift.
+
+# Objective Block
+What is an Objective Block?
+- An objective block is what it sounds like it a block that u have to find in the rift.
+
+What Does this block look like?
+- The objective block currently is a red glowing block and it spawns in almost every room?
+
+(Image to go here)
+
+What do I as a Wanderer have to do with these objective blocks?
+- That is simple all you need to do is right click on one of these blocks that it will add the count to your objective
+
+How many of these Objective blocks would a Wanderer such as myself have to click on?
+- Anywhere between # - #
+
+
+
+
+
+
+
+
+
+
 
 Objectives provide a goal to pursue in each rift expedition. Currently, there are 2 objectives: kill mobs and stealth. The mob kill objective is a simple task to kill monsters. Each monster kill fills up a bar. When the bar fills up, you can exit the rift and receive your rewards. There is also a stealth objective. 
 
