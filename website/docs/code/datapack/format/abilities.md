@@ -46,6 +46,8 @@ passively as triggers on gear.
         * [Area](#area)
         * [Caster](#caster)
         * [Connected Block](#connected-block)
+        * [Field of View](#field-of-view)
+        * [Offset](#offset)
         * [Random Subset](#random-subset)
         * [Random Chance](#random-chance)
         * [Raycast](#raycast)
@@ -339,7 +341,7 @@ enables the ability to end when the attach effect ends.
 ### No Move
 
 This requirement requires the user to be below a specified speed. For use by abilities that require the user to remain
-stationary.
+stationary. _WIP_
 
 #### Format
 
@@ -443,7 +445,7 @@ This effect removes Attach Effects applied by this ability instance from the tar
 
 * `type`: `wotr:detach_own`
 * `id`: Optional. The id of the attach effect to remove. If not specified all attach effects from this ability instance
-  are removed.
+  are removed. Can only remove attach effects applied by the same ability instance.
 
 ### Heal
 
@@ -498,6 +500,9 @@ This effect spawns a minecraft particle effect at the location of the target.
 
 * `type`: `wotr:particle`
 * `particle`: Resource Location of the particle effect to spawn.
+* `count`: Optional, defaults to `1`. The number of particles to spawn.
+* `distribution`: Optional, defaults to `[0, 0, 0]`. Distribution volume of particles around center point.
+* `speed`: Optional, defaults to `0`. The speed of the particles.
 
 ### Projectile
 
@@ -599,13 +604,14 @@ This effect applies a MobEffect to the target.
 
 __Applies to__: All
 
-This effect summon an entity at the target locations.
+This effect summon an entity at the target locations. To summon a temporary entity, a `wotr:kill` status effect can be applied to the summoned entity, removing the entity at the last tick of the duration.
 
 #### Format
 
 * `type`: `wot:summon`
 * `effects`: Optional. A list of effects to apply to the summoned entities.
 * `entity_type`: The type of entity to summon.
+* `nbt`: Optional. A compoundTag of entity data applied to the summoned entities. See [Entity Format](https://minecraft.wiki/w/Entity_format). 
 
 ### Targeting
 
@@ -656,8 +662,10 @@ blocks can be filtered through predicates to better control what may be targeted
   Determines what entities in the area will be targeted.
 * `blocks`: Optional, defaults to `none`. Can be `all`, `none` or a Target Block Predicate as described below.
   Determines what blocks in the area will be targeted.
+* `use_origin_direction`: Optional, default to 'true'. If true, the shape will be oriented based on the direction of 
+    the original source (prior to area target). If false, the shape will be oriented based wotr:area source.
 
-There are currently two possible shapes, with the following fields:
+There are currently three possible shapes, with the following fields:
 
 ##### Cube
 
@@ -666,6 +674,15 @@ This shape is an axis-aligned cube.
 * `type`: `wotr:cube`
 * `range`: the distance, in meters/blocks, that the cube extends from the center. A cube with range `3` is a 6x6x6 cube.
 * `align_to_block`: Optional, defaults to `false`. If true, the center of the cube will be aligned to the center of a
+  block. This ensures a consistent shape to blocks that are targeted.
+
+##### Cuboid
+
+This shape is an axis-aligned horizontal cuboid.
+
+* `type`: `wotr:cuboid`
+* `area`: the volume vector, in meters/blocks, that the cuboid extends around the center. A cuboid with area `[2, 3, 4]` is a 2x3x4 cuboid.
+* `align_to_block`: Optional, defaults to `false`. If true, the center of the cuboid will be aligned to the center of a
   block. This ensures a consistent shape to blocks that are targeted.
 
 ##### Sphere
@@ -698,6 +715,29 @@ distant blocks.
   Determines what blocks are valid for targeting.
 * `count`: Integer, minimum of `1`. The maximum number of blocks that will be targeted. Less will be targeted if there
   are not enough valid connected blocks.
+
+### Field of View
+
+This targeting selects targets within range an angle of entity's viewing direction.
+
+#### Format
+
+* `type`: Must be `wotr:field_of_view`.
+* `entities`: Optional. An entity predicate filtering what entities may be targeted.
+* `blocks`: Optional. A block predicate filtering what blocks may be targeted. _WIP_
+* `range`: Maximum distance of targets.
+* `angle_degrees`: The angle in which targets are selected.
+
+### Offset
+
+This targeting type moves the targeting location by a given vector.
+
+#### Format
+
+* `type`: Must be `wotr:offset`.
+* `offset`: A vector offset in meters/blocks.
+* `isXZViewRelative`: Optional, default `true`. Whether X and Z are relative to view direction (equivalent to using ^x ^y ^z in commands) or not (equivalent to using ~x ~y ~z in commands). See [Commands coordinates](https://minecraft.wiki/w/Coordinates#Commands).
+* `isYViewRelative`: Optional, default `false`. Whether Y is relative to view direction.
 
 ### Random Subset
 
