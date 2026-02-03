@@ -5,7 +5,7 @@
 <meta name="generator" content="Docusaurus v3.9.1">
 <title data-rh="true">Abilities | Wanderers of the Rift Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://wanderers-of-the-rift.github.io/wotr-docs/img/wotrdocCard.PNG"><meta data-rh="true" name="twitter:image" content="https://wanderers-of-the-rift.github.io/wotr-docs/img/wotrdocCard.PNG"><meta data-rh="true" property="og:url" content="https://wanderers-of-the-rift.github.io/wotr-docs/docs/code/datapack/format/abilities"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Abilities | Wanderers of the Rift Docs"><meta data-rh="true" name="description" content="Abilities are the powers that a player can use. Sometimes actively by placing them in the ability bar, other times"><meta data-rh="true" property="og:description" content="Abilities are the powers that a player can use. Sometimes actively by placing them in the ability bar, other times"><link data-rh="true" rel="icon" href="/wotr-docs/img/wotrdev.png"><link data-rh="true" rel="canonical" href="https://wanderers-of-the-rift.github.io/wotr-docs/docs/code/datapack/format/abilities"><link data-rh="true" rel="alternate" href="https://wanderers-of-the-rift.github.io/wotr-docs/docs/code/datapack/format/abilities" hreflang="en"><link data-rh="true" rel="alternate" href="https://wanderers-of-the-rift.github.io/wotr-docs/docs/code/datapack/format/abilities" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Abilities","item":"https://wanderers-of-the-rift.github.io/wotr-docs/docs/code/datapack/format/abilities"}]}</script><link rel="alternate" type="application/rss+xml" href="/wotr-docs/blog/rss.xml" title="Wanderers of the Rift Docs RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/wotr-docs/blog/atom.xml" title="Wanderers of the Rift Docs Atom Feed"><link rel="stylesheet" href="/wotr-docs/assets/css/styles.2ba4343f.css">
-<script src="/wotr-docs/assets/js/runtime~main.50ab54fd.js" defer="defer"></script>
+<script src="/wotr-docs/assets/js/runtime~main.8f40f2de.js" defer="defer"></script>
 <script src="/wotr-docs/assets/js/main.a6a8c3b6.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -74,6 +74,8 @@ passively as triggers on gear.</p>
 <li><a href="#area">Area</a></li>
 <li><a href="#caster">Caster</a></li>
 <li><a href="#connected-block">Connected Block</a></li>
+<li><a href="#field-of-view">Field of View</a></li>
+<li><a href="#offset">Offset</a></li>
 <li><a href="#random-subset">Random Subset</a></li>
 <li><a href="#random-chance">Random Chance</a></li>
 <li><a href="#raycast">Raycast</a></li>
@@ -234,7 +236,7 @@ of any attach effect from the ability.</li>
 </ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="no-move">No Move<a href="#no-move" class="hash-link" aria-label="Direct link to No Move" title="Direct link to No Move" translate="no">​</a></h3>
 <p>This requirement requires the user to be below a specified speed. For use by abilities that require the user to remain
-stationary.</p>
+stationary. <em>WIP</em></p>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="format-8">Format<a href="#format-8" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h4>
 <ul>
 <li><code>type</code>: Must be <code>wotr:no_move</code>.</li>
@@ -330,7 +332,7 @@ stats.</li>
 <ul>
 <li><code>type</code>: <code>wotr:detach_own</code></li>
 <li><code>id</code>: Optional. The id of the attach effect to remove. If not specified all attach effects from this ability instance
-are removed.</li>
+are removed. Can only remove attach effects applied by the same ability instance.</li>
 </ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="heal">Heal<a href="#heal" class="hash-link" aria-label="Direct link to Heal" title="Direct link to Heal" translate="no">​</a></h3>
 <p><strong>Applies to</strong>: Living Entities</p>
@@ -376,6 +378,9 @@ direction they are facing. Options are:<!-- -->
 <ul>
 <li><code>type</code>: <code>wotr:particle</code></li>
 <li><code>particle</code>: Resource Location of the particle effect to spawn.</li>
+<li><code>count</code>: Optional, defaults to <code>1</code>. The number of particles to spawn.</li>
+<li><code>distribution</code>: Optional, defaults to <code>[0, 0, 0]</code>. Distribution volume of particles around center point.</li>
+<li><code>speed</code>: Optional, defaults to <code>0</code>. The speed of the particles.</li>
 </ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="projectile">Projectile<a href="#projectile" class="hash-link" aria-label="Direct link to Projectile" title="Direct link to Projectile" translate="no">​</a></h3>
 <p><strong>Applies to</strong>: Entities</p>
@@ -473,12 +478,13 @@ documented at <a href="https://docs.neoforged.net/docs/items/mobeffects/#mobeffe
 </ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="summon">Summon<a href="#summon" class="hash-link" aria-label="Direct link to Summon" title="Direct link to Summon" translate="no">​</a></h3>
 <p><strong>Applies to</strong>: All</p>
-<p>This effect summon an entity at the target locations.</p>
+<p>This effect summon an entity at the target locations. To summon a temporary entity, a <code>wotr:kill</code> status effect can be applied to the summoned entity, removing the entity at the last tick of the duration.</p>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="format-23">Format<a href="#format-23" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h4>
 <ul>
 <li><code>type</code>: <code>wot:summon</code></li>
 <li><code>effects</code>: Optional. A list of effects to apply to the summoned entities.</li>
 <li><code>entity_type</code>: The type of entity to summon.</li>
+<li><code>nbt</code>: Optional. A compoundTag of entity data applied to the summoned entities. See <a href="https://minecraft.wiki/w/Entity_format" target="_blank" rel="noopener noreferrer">Entity Format</a>.</li>
 </ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="targeting-1">Targeting<a href="#targeting-1" class="hash-link" aria-label="Direct link to Targeting" title="Direct link to Targeting" translate="no">​</a></h3>
 <p><strong>Applies to</strong>: All</p>
@@ -522,14 +528,24 @@ blocks can be filtered through predicates to better control what may be targeted
 Determines what entities in the area will be targeted.</li>
 <li><code>blocks</code>: Optional, defaults to <code>none</code>. Can be <code>all</code>, <code>none</code> or a Target Block Predicate as described below.
 Determines what blocks in the area will be targeted.</li>
+<li><code>use_origin_direction</code>: Optional, default to &#x27;true&#x27;. If true, the shape will be oriented based on the direction of
+the original source (prior to area target). If false, the shape will be oriented based wotr<!-- -->:area<!-- --> source.</li>
 </ul>
-<p>There are currently two possible shapes, with the following fields:</p>
+<p>There are currently three possible shapes, with the following fields:</p>
 <h5 class="anchor anchorWithStickyNavbar_LWe7" id="cube">Cube<a href="#cube" class="hash-link" aria-label="Direct link to Cube" title="Direct link to Cube" translate="no">​</a></h5>
 <p>This shape is an axis-aligned cube.</p>
 <ul>
 <li><code>type</code>: <code>wotr:cube</code></li>
 <li><code>range</code>: the distance, in meters/blocks, that the cube extends from the center. A cube with range <code>3</code> is a 6x6x6 cube.</li>
 <li><code>align_to_block</code>: Optional, defaults to <code>false</code>. If true, the center of the cube will be aligned to the center of a
+block. This ensures a consistent shape to blocks that are targeted.</li>
+</ul>
+<h5 class="anchor anchorWithStickyNavbar_LWe7" id="cuboid">Cuboid<a href="#cuboid" class="hash-link" aria-label="Direct link to Cuboid" title="Direct link to Cuboid" translate="no">​</a></h5>
+<p>This shape is an axis-aligned horizontal cuboid.</p>
+<ul>
+<li><code>type</code>: <code>wotr:cuboid</code></li>
+<li><code>area</code>: the volume vector, in meters/blocks, that the cuboid extends around the center. A cuboid with area <code>[2, 3, 4]</code> is a 2x3x4 cuboid.</li>
+<li><code>align_to_block</code>: Optional, defaults to <code>false</code>. If true, the center of the cuboid will be aligned to the center of a
 block. This ensures a consistent shape to blocks that are targeted.</li>
 </ul>
 <h5 class="anchor anchorWithStickyNavbar_LWe7" id="sphere">Sphere<a href="#sphere" class="hash-link" aria-label="Direct link to Sphere" title="Direct link to Sphere" translate="no">​</a></h5>
@@ -558,9 +574,28 @@ Determines what blocks are valid for targeting.</li>
 <li><code>count</code>: Integer, minimum of <code>1</code>. The maximum number of blocks that will be targeted. Less will be targeted if there
 are not enough valid connected blocks.</li>
 </ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="field-of-view">Field of View<a href="#field-of-view" class="hash-link" aria-label="Direct link to Field of View" title="Direct link to Field of View" translate="no">​</a></h3>
+<p>This targeting selects targets within range an angle of entity&#x27;s viewing direction.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="format-29">Format<a href="#format-29" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h4>
+<ul>
+<li><code>type</code>: Must be <code>wotr:field_of_view</code>.</li>
+<li><code>entities</code>: Optional. An entity predicate filtering what entities may be targeted.</li>
+<li><code>blocks</code>: Optional. A block predicate filtering what blocks may be targeted. <em>WIP</em></li>
+<li><code>range</code>: Maximum distance of targets.</li>
+<li><code>angle_degrees</code>: The angle in which targets are selected.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="offset">Offset<a href="#offset" class="hash-link" aria-label="Direct link to Offset" title="Direct link to Offset" translate="no">​</a></h3>
+<p>This targeting type moves the targeting location by a given vector.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="format-30">Format<a href="#format-30" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h4>
+<ul>
+<li><code>type</code>: Must be <code>wotr:offset</code>.</li>
+<li><code>offset</code>: A vector offset in meters/blocks.</li>
+<li><code>isXZViewRelative</code>: Optional, default <code>true</code>. Whether X and Z are relative to view direction (equivalent to using ^x ^y ^z in commands) or not (equivalent to using ~x ~y ~z in commands). See <a href="https://minecraft.wiki/w/Coordinates#Commands" target="_blank" rel="noopener noreferrer">Commands coordinates</a>.</li>
+<li><code>isYViewRelative</code>: Optional, default <code>false</code>. Whether Y is relative to view direction.</li>
+</ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="random-subset">Random Subset<a href="#random-subset" class="hash-link" aria-label="Direct link to Random Subset" title="Direct link to Random Subset" translate="no">​</a></h3>
 <p>This targeting type selects a random subset of available targets.</p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="format-29">Format<a href="#format-29" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="format-31">Format<a href="#format-31" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h4>
 <ul>
 <li><code>type</code>: Must be <code>wotr:random_subset</code>.</li>
 <li><code>count</code>: Positive integer. The size of the subset to select. If there are less targets than <code>count</code> then all targets
@@ -568,7 +603,7 @@ will be selected.</li>
 </ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="random-chance">Random Chance<a href="#random-chance" class="hash-link" aria-label="Direct link to Random Chance" title="Direct link to Random Chance" translate="no">​</a></h3>
 <p>This targeting type will filter the existing targets against a probability of being selected.</p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="format-30">Format<a href="#format-30" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="format-32">Format<a href="#format-32" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h4>
 <ul>
 <li><code>type</code>: Must be <code>wotr:random_chance</code></li>
 <li><code>chance</code>: A number between 0 and 1 inclusive. The chance of each target being kept.</li>
@@ -576,7 +611,7 @@ will be selected.</li>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="raycast">Raycast<a href="#raycast" class="hash-link" aria-label="Direct link to Raycast" title="Direct link to Raycast" translate="no">​</a></h3>
 <p>Selects up to a single target by raycasting from existing targets. For entity targets this is in the direction the
 entity is looking. For block targets this is in the direction the block was hit in.</p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="format-31">Format<a href="#format-31" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="format-33">Format<a href="#format-33" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h4>
 <ul>
 <li><code>type</code>: <code>wotr:raycast</code></li>
 <li><code>entities</code>: Optional, defaults to <code>all</code>. May be <code>all</code>, <code>none</code> or a Target Entity Predicate. Determines what entities
@@ -587,7 +622,7 @@ targeted by the ray.</li>
 </ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="self">Self<a href="#self" class="hash-link" aria-label="Direct link to Self" title="Direct link to Self" translate="no">​</a></h3>
 <p>This targeting type merely filters the existing set of targets.</p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="format-32">Format<a href="#format-32" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="format-34">Format<a href="#format-34" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h4>
 <ul>
 <li><code>type</code>: <code>wotr:self</code></li>
 <li><code>entities</code>: Optional, defaults to <code>all</code>. May be <code>all</code>, <code>none</code> or a Target Entity Predicate. Determines what entity
@@ -598,20 +633,20 @@ targets to retain.</li>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="source">Source<a href="#source" class="hash-link" aria-label="Direct link to Source" title="Direct link to Source" translate="no">​</a></h3>
 <p>This targeting type retargets the source (the preceding target) from each target. For example, if all entities in a 20m
 sphere were targeted from the caster, this will target the caster from each entity targeted by the sphere.</p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="format-33">Format<a href="#format-33" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="format-35">Format<a href="#format-35" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h4>
 <ul>
 <li><code>type</code>: <code>wotr:source</code></li>
 </ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="trigger-target">Trigger Target<a href="#trigger-target" class="hash-link" aria-label="Direct link to Trigger Target" title="Direct link to Trigger Target" translate="no">​</a></h3>
 <p>This targeting type will select the entity or block that triggered the ability, for abilities triggered by a trigger
 modifier. For example, if an ability is triggered by taking damage, this will be the entity that caused the damage.</p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="format-34">Format<a href="#format-34" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="format-36">Format<a href="#format-36" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h4>
 <ul>
 <li><code>type</code>: <code>wotr:trigger_target</code></li>
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="target-entity-predicate">Target Entity Predicate<a href="#target-entity-predicate" class="hash-link" aria-label="Direct link to Target Entity Predicate" title="Direct link to Target Entity Predicate" translate="no">​</a></h2>
 <p>This predicate is used to filter entities involved in abilities.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="format-35">Format<a href="#format-35" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="format-37">Format<a href="#format-37" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h3>
 <ul>
 <li><code>filter</code>: Optional. A standard minecraft entity predicate, as described
 in <a href="https://minecraft.wiki/w/Template:Nbt_inherit/conditions/entity/template" target="_blank" rel="noopener noreferrer">Template: Nbt inherit/conditions/entity/template</a></li>
@@ -630,7 +665,7 @@ in <a href="https://minecraft.wiki/w/Template:Nbt_inherit/conditions/entity/temp
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="target-block-predicate">Target Block Predicate<a href="#target-block-predicate" class="hash-link" aria-label="Direct link to Target Block Predicate" title="Direct link to Target Block Predicate" translate="no">​</a></h2>
 <p>This predicate is used to filter blocks involved in abilities.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="format-36">Format<a href="#format-36" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="format-38">Format<a href="#format-38" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h3>
 <ul>
 <li><code>filter</code>: Optional. A standard minecraft block predicate, as described
 in <a href="https://minecraft.wiki/w/Block_predicate" target="_blank" rel="noopener noreferrer">Block Predicate</a>.</li>
@@ -649,6 +684,6 @@ in <a href="https://minecraft.wiki/w/Block_predicate" target="_blank" rel="noope
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="trigger-modifiers">Trigger Modifiers<a href="#trigger-modifiers" class="hash-link" aria-label="Direct link to Trigger Modifiers" title="Direct link to Trigger Modifiers" translate="no">​</a></h3>
 <p>Modifier can be created that, when active on living entity, will trigger an ability when a condition is met.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="upgrades">Upgrades<a href="#upgrades" class="hash-link" aria-label="Direct link to Upgrades" title="Direct link to Upgrades" translate="no">​</a></h3>
-<p>Ability upgrades can be applied to an ability to provide modifiers for when that ability is used.</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/Wanderers-Of-The-Rift/wotr-docs/edit/main/website/docs/code/datapack/format/abilities.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/wotr-docs/docs/code/api/quickmover"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">QuickMover</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/wotr-docs/docs/code/datapack/format/modifiers"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Modifiers</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#concepts" class="table-of-contents__link toc-highlight">Concepts</a><ul><li><a href="#ability-types" class="table-of-contents__link toc-highlight">Ability Types</a></li><li><a href="#requirements" class="table-of-contents__link toc-highlight">Requirements</a></li><li><a href="#effects" class="table-of-contents__link toc-highlight">Effects</a></li><li><a href="#targeting" class="table-of-contents__link toc-highlight">Targeting</a></li></ul></li><li><a href="#ability-types-1" class="table-of-contents__link toc-highlight">Ability Types</a><ul><li><a href="#instant" class="table-of-contents__link toc-highlight">Instant</a></li><li><a href="#persistent" class="table-of-contents__link toc-highlight">Persistent</a></li><li><a href="#chain" class="table-of-contents__link toc-highlight">Chain</a></li></ul></li><li><a href="#requirements-1" class="table-of-contents__link toc-highlight">Requirements</a><ul><li><a href="#ability-resource" class="table-of-contents__link toc-highlight">Ability Resource</a></li><li><a href="#cooldown" class="table-of-contents__link toc-highlight">Cooldown</a></li><li><a href="#food-level" class="table-of-contents__link toc-highlight">Food Level</a></li><li><a href="#life" class="table-of-contents__link toc-highlight">Life</a></li><li><a href="#own-attached-effect" class="table-of-contents__link toc-highlight">Own Attached Effect</a></li><li><a href="#no-move" class="table-of-contents__link toc-highlight">No Move</a></li></ul></li><li><a href="#effects-1" class="table-of-contents__link toc-highlight">Effects</a><ul><li><a href="#attach" class="table-of-contents__link toc-highlight">Attach</a></li><li><a href="#break" class="table-of-contents__link toc-highlight">Break</a></li><li><a href="#conditional" class="table-of-contents__link toc-highlight">Conditional</a></li><li><a href="#damage" class="table-of-contents__link toc-highlight">Damage</a></li><li><a href="#detach-own" class="table-of-contents__link toc-highlight">Detach Own</a></li><li><a href="#heal" class="table-of-contents__link toc-highlight">Heal</a></li><li><a href="#movement" class="table-of-contents__link toc-highlight">Movement</a></li><li><a href="#no-op" class="table-of-contents__link toc-highlight">No Op</a></li><li><a href="#particle" class="table-of-contents__link toc-highlight">Particle</a></li><li><a href="#projectile" class="table-of-contents__link toc-highlight">Projectile</a></li><li><a href="#set-block" class="table-of-contents__link toc-highlight">Set Block</a></li><li><a href="#simple-projectile" class="table-of-contents__link toc-highlight">Simple Projectile</a></li><li><a href="#sound" class="table-of-contents__link toc-highlight">Sound</a></li><li><a href="#status" class="table-of-contents__link toc-highlight">Status</a></li><li><a href="#summon" class="table-of-contents__link toc-highlight">Summon</a></li><li><a href="#targeting-1" class="table-of-contents__link toc-highlight">Targeting</a></li><li><a href="#teleport" class="table-of-contents__link toc-highlight">Teleport</a></li></ul></li><li><a href="#targeting-types" class="table-of-contents__link toc-highlight">Targeting Types</a><ul><li><a href="#area" class="table-of-contents__link toc-highlight">Area</a></li><li><a href="#caster" class="table-of-contents__link toc-highlight">Caster</a></li><li><a href="#connected-block" class="table-of-contents__link toc-highlight">Connected Block</a></li><li><a href="#random-subset" class="table-of-contents__link toc-highlight">Random Subset</a></li><li><a href="#random-chance" class="table-of-contents__link toc-highlight">Random Chance</a></li><li><a href="#raycast" class="table-of-contents__link toc-highlight">Raycast</a></li><li><a href="#self" class="table-of-contents__link toc-highlight">Self</a></li><li><a href="#source" class="table-of-contents__link toc-highlight">Source</a></li><li><a href="#trigger-target" class="table-of-contents__link toc-highlight">Trigger Target</a></li></ul></li><li><a href="#target-entity-predicate" class="table-of-contents__link toc-highlight">Target Entity Predicate</a><ul><li><a href="#format-35" class="table-of-contents__link toc-highlight">Format</a></li></ul></li><li><a href="#target-block-predicate" class="table-of-contents__link toc-highlight">Target Block Predicate</a><ul><li><a href="#format-36" class="table-of-contents__link toc-highlight">Format</a></li><li><a href="#additional-block-predicates" class="table-of-contents__link toc-highlight">Additional Block Predicates</a></li></ul></li><li><a href="#related-datapack-formats" class="table-of-contents__link toc-highlight">Related Datapack Formats</a><ul><li><a href="#effect-marker" class="table-of-contents__link toc-highlight">Effect Marker</a></li><li><a href="#trigger-modifiers" class="table-of-contents__link toc-highlight">Trigger Modifiers</a></li><li><a href="#upgrades" class="table-of-contents__link toc-highlight">Upgrades</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/wotr-docs/docs">Getting Started</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://discord.gg/VkSeepd59S" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/Wanderers-Of-The-Rift/wotr-docs" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Wanderers of the Rift. Built with Docusaurus.</div></div></div></footer></div>
+<p>Ability upgrades can be applied to an ability to provide modifiers for when that ability is used.</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/Wanderers-Of-The-Rift/wotr-docs/edit/main/website/docs/code/datapack/format/abilities.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/wotr-docs/docs/code/api/quickmover"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">QuickMover</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/wotr-docs/docs/code/datapack/format/modifiers"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Modifiers</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#concepts" class="table-of-contents__link toc-highlight">Concepts</a><ul><li><a href="#ability-types" class="table-of-contents__link toc-highlight">Ability Types</a></li><li><a href="#requirements" class="table-of-contents__link toc-highlight">Requirements</a></li><li><a href="#effects" class="table-of-contents__link toc-highlight">Effects</a></li><li><a href="#targeting" class="table-of-contents__link toc-highlight">Targeting</a></li></ul></li><li><a href="#ability-types-1" class="table-of-contents__link toc-highlight">Ability Types</a><ul><li><a href="#instant" class="table-of-contents__link toc-highlight">Instant</a></li><li><a href="#persistent" class="table-of-contents__link toc-highlight">Persistent</a></li><li><a href="#chain" class="table-of-contents__link toc-highlight">Chain</a></li></ul></li><li><a href="#requirements-1" class="table-of-contents__link toc-highlight">Requirements</a><ul><li><a href="#ability-resource" class="table-of-contents__link toc-highlight">Ability Resource</a></li><li><a href="#cooldown" class="table-of-contents__link toc-highlight">Cooldown</a></li><li><a href="#food-level" class="table-of-contents__link toc-highlight">Food Level</a></li><li><a href="#life" class="table-of-contents__link toc-highlight">Life</a></li><li><a href="#own-attached-effect" class="table-of-contents__link toc-highlight">Own Attached Effect</a></li><li><a href="#no-move" class="table-of-contents__link toc-highlight">No Move</a></li></ul></li><li><a href="#effects-1" class="table-of-contents__link toc-highlight">Effects</a><ul><li><a href="#attach" class="table-of-contents__link toc-highlight">Attach</a></li><li><a href="#break" class="table-of-contents__link toc-highlight">Break</a></li><li><a href="#conditional" class="table-of-contents__link toc-highlight">Conditional</a></li><li><a href="#damage" class="table-of-contents__link toc-highlight">Damage</a></li><li><a href="#detach-own" class="table-of-contents__link toc-highlight">Detach Own</a></li><li><a href="#heal" class="table-of-contents__link toc-highlight">Heal</a></li><li><a href="#movement" class="table-of-contents__link toc-highlight">Movement</a></li><li><a href="#no-op" class="table-of-contents__link toc-highlight">No Op</a></li><li><a href="#particle" class="table-of-contents__link toc-highlight">Particle</a></li><li><a href="#projectile" class="table-of-contents__link toc-highlight">Projectile</a></li><li><a href="#set-block" class="table-of-contents__link toc-highlight">Set Block</a></li><li><a href="#simple-projectile" class="table-of-contents__link toc-highlight">Simple Projectile</a></li><li><a href="#sound" class="table-of-contents__link toc-highlight">Sound</a></li><li><a href="#status" class="table-of-contents__link toc-highlight">Status</a></li><li><a href="#summon" class="table-of-contents__link toc-highlight">Summon</a></li><li><a href="#targeting-1" class="table-of-contents__link toc-highlight">Targeting</a></li><li><a href="#teleport" class="table-of-contents__link toc-highlight">Teleport</a></li></ul></li><li><a href="#targeting-types" class="table-of-contents__link toc-highlight">Targeting Types</a><ul><li><a href="#area" class="table-of-contents__link toc-highlight">Area</a></li><li><a href="#caster" class="table-of-contents__link toc-highlight">Caster</a></li><li><a href="#connected-block" class="table-of-contents__link toc-highlight">Connected Block</a></li><li><a href="#field-of-view" class="table-of-contents__link toc-highlight">Field of View</a></li><li><a href="#offset" class="table-of-contents__link toc-highlight">Offset</a></li><li><a href="#random-subset" class="table-of-contents__link toc-highlight">Random Subset</a></li><li><a href="#random-chance" class="table-of-contents__link toc-highlight">Random Chance</a></li><li><a href="#raycast" class="table-of-contents__link toc-highlight">Raycast</a></li><li><a href="#self" class="table-of-contents__link toc-highlight">Self</a></li><li><a href="#source" class="table-of-contents__link toc-highlight">Source</a></li><li><a href="#trigger-target" class="table-of-contents__link toc-highlight">Trigger Target</a></li></ul></li><li><a href="#target-entity-predicate" class="table-of-contents__link toc-highlight">Target Entity Predicate</a><ul><li><a href="#format-37" class="table-of-contents__link toc-highlight">Format</a></li></ul></li><li><a href="#target-block-predicate" class="table-of-contents__link toc-highlight">Target Block Predicate</a><ul><li><a href="#format-38" class="table-of-contents__link toc-highlight">Format</a></li><li><a href="#additional-block-predicates" class="table-of-contents__link toc-highlight">Additional Block Predicates</a></li></ul></li><li><a href="#related-datapack-formats" class="table-of-contents__link toc-highlight">Related Datapack Formats</a><ul><li><a href="#effect-marker" class="table-of-contents__link toc-highlight">Effect Marker</a></li><li><a href="#trigger-modifiers" class="table-of-contents__link toc-highlight">Trigger Modifiers</a></li><li><a href="#upgrades" class="table-of-contents__link toc-highlight">Upgrades</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/wotr-docs/docs">Getting Started</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://discord.gg/VkSeepd59S" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/Wanderers-Of-The-Rift/wotr-docs" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Wanderers of the Rift. Built with Docusaurus.</div></div></div></footer></div>
 </body>
 </html>
