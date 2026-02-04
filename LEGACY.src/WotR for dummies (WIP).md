@@ -183,3 +183,4 @@ Once the Ability is in the slot on the left a list will appear just under the sk
 (Image of an item in the ability bench)
 
 ### Geodes
+Geodes are
