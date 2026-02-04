@@ -24,7 +24,7 @@ Well that is easy Wanderer to obtain both Key and Spawner you will have to craft
 
 The ***Rift Spawner*** is a simple craft only two types of items need, 1 ender pearl and 8 stone please see image below for how to craft it.
 
-(Image of Rift Spawner Crafting recipe)
+[Rift Portal Recipe.png](Rift%20Portal%20Recipe.png)
 
 # **Rift Key**
 Now as for the ***Rift Key*** on the other hand you will have to craft yourself a ***Key Forge*** in order to obtain a Key.
@@ -58,7 +58,7 @@ There are currently # Number of themes avalible and more to come.
 
 What items give me what themes?
 
-# - Item gives = #Theme
+Item gives = #Theme
 
 Themes determine the mobs, loot and what the actual rifts look & feel.
 
