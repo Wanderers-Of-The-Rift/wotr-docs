@@ -24,7 +24,7 @@ Well that is easy Wanderer to obtain both Key and Spawner you will have to craft
 
 The ***Rift Spawner*** is a simple craft only two types of items need, 1 ender pearl and 8 stone please see image below for how to craft it.
 
-[Rift Portal Recipe.png](Rift%20Portal%20Recipe.png)
+![Rift Portal Recipe.png](Rift%20Portal%20Recipe.png)
 
 # **Rift Key**
 Now as for the ***Rift Key*** on the other hand you will have to craft yourself a ***Key Forge*** in order to obtain a Key.
@@ -35,11 +35,11 @@ Is it hard to craft a ***Key Forge*** and what will I as a Wanderer need?
 
 No it's not hard at all. All you need is a flower pot an iron block a blast furnace and any type of log, see image below for crafting Recipe.
 
-(Image to go here of KeyForge recipe)
+![Key Forge.png](Key%20Forge.png)
 
 After Crafting yourself a ***Key Forge*** you can now obtain a key by right-clicking the forge and giving it any 1-5 vanilla items that inturn will give you a level one key.
 
-(Image of inside the Key Forge)
+![Key Forge UI.png](Key%20Forge%20UI.png)
 
 
 # **Rifts**
@@ -73,7 +73,7 @@ The Objective of each rift at the current time is the following:
 Where will I find the objective?
 - The Objective will be shown at the top of your screen 
 
-(Image To be given here)
+![Objectives.png](Objectives.png)
 
 # Kill Mobs:
 How many Mobs would a Wanderer like me have to kill?
