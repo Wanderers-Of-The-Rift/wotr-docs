@@ -403,7 +403,7 @@ This effect destroys block, replacing them with air and optionally dropping them
     * `collate`: The drops of each block are combined whenever possible and dropped at the source.
     * `none`: Nothing will drop.
 * `as_tool`: Optional, defaults to `none`. Can be either `none`, `ability_item` (in which case the item that has the
-  ability is used as the tool), or an item stack object. The block will be broken as if by the specified tool, for the
+  ability is used as the tool), `caster_held_item` (where the mainhand item of the caster is used), `source_held_item` (use the mainhand item of the source), or an item stack object. The block will be broken as if by the specified tool, for the
   purpose of fortune, silk touch and similar.
 * `reward_mine_state`: Optional, defaults to `false`. Should blocks broken with this effect count for the blocks mined
   stats.
@@ -804,7 +804,7 @@ modifier. For example, if an ability is triggered by taking damage, this will be
 
 ## Target Entity Predicate
 
-This predicate is used to filter entities involved in abilities.
+This predicate is used to filter entities involved in abilities. A single entity predicate may be used, or a logic operator (`operator` : default `or`, `not`, `and`) with a list (`conditions`) containing multiple entity predicates, or nested logic combinations.
 
 ### Format
 
