@@ -5,7 +5,7 @@
 <meta name="generator" content="Docusaurus v3.9.1">
 <title data-rh="true">Abilities | Wanderers of the Rift Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://wanderers-of-the-rift.github.io/wotr-docs/img/wotrdocCard.PNG"><meta data-rh="true" name="twitter:image" content="https://wanderers-of-the-rift.github.io/wotr-docs/img/wotrdocCard.PNG"><meta data-rh="true" property="og:url" content="https://wanderers-of-the-rift.github.io/wotr-docs/docs/code/datapack/format/abilities"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Abilities | Wanderers of the Rift Docs"><meta data-rh="true" name="description" content="Abilities are the powers that a player can use. Sometimes actively by placing them in the ability bar, other times"><meta data-rh="true" property="og:description" content="Abilities are the powers that a player can use. Sometimes actively by placing them in the ability bar, other times"><link data-rh="true" rel="icon" href="/wotr-docs/img/wotrdev.png"><link data-rh="true" rel="canonical" href="https://wanderers-of-the-rift.github.io/wotr-docs/docs/code/datapack/format/abilities"><link data-rh="true" rel="alternate" href="https://wanderers-of-the-rift.github.io/wotr-docs/docs/code/datapack/format/abilities" hreflang="en"><link data-rh="true" rel="alternate" href="https://wanderers-of-the-rift.github.io/wotr-docs/docs/code/datapack/format/abilities" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Abilities","item":"https://wanderers-of-the-rift.github.io/wotr-docs/docs/code/datapack/format/abilities"}]}</script><link rel="alternate" type="application/rss+xml" href="/wotr-docs/blog/rss.xml" title="Wanderers of the Rift Docs RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/wotr-docs/blog/atom.xml" title="Wanderers of the Rift Docs Atom Feed"><link rel="stylesheet" href="/wotr-docs/assets/css/styles.2ba4343f.css">
-<script src="/wotr-docs/assets/js/runtime~main.8f40f2de.js" defer="defer"></script>
+<script src="/wotr-docs/assets/js/runtime~main.a53a6e75.js" defer="defer"></script>
 <script src="/wotr-docs/assets/js/main.a6a8c3b6.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -299,7 +299,7 @@ attachment.</li>
 </ul>
 </li>
 <li><code>as_tool</code>: Optional, defaults to <code>none</code>. Can be either <code>none</code>, <code>ability_item</code> (in which case the item that has the
-ability is used as the tool), or an item stack object. The block will be broken as if by the specified tool, for the
+ability is used as the tool), <code>caster_held_item</code> (where the mainhand item of the caster is used), <code>source_held_item</code> (use the mainhand item of the source), or an item stack object. The block will be broken as if by the specified tool, for the
 purpose of fortune, silk touch and similar.</li>
 <li><code>reward_mine_state</code>: Optional, defaults to <code>false</code>. Should blocks broken with this effect count for the blocks mined
 stats.</li>
@@ -645,7 +645,7 @@ modifier. For example, if an ability is triggered by taking damage, this will be
 <li><code>type</code>: <code>wotr:trigger_target</code></li>
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="target-entity-predicate">Target Entity Predicate<a href="#target-entity-predicate" class="hash-link" aria-label="Direct link to Target Entity Predicate" title="Direct link to Target Entity Predicate" translate="no">​</a></h2>
-<p>This predicate is used to filter entities involved in abilities.</p>
+<p>This predicate is used to filter entities involved in abilities. A single entity predicate may be used, or a logic operator (<code>operator</code> : default <code>or</code>, <code>not</code>, <code>and</code>) with a list (<code>conditions</code>) containing multiple entity predicates, or nested logic combinations.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="format-37">Format<a href="#format-37" class="hash-link" aria-label="Direct link to Format" title="Direct link to Format" translate="no">​</a></h3>
 <ul>
 <li><code>filter</code>: Optional. A standard minecraft entity predicate, as described
