@@ -1,0 +1,55 @@
+Design meeting Feb 7
+# Spawners, Materials, and Ability Casting
+Attendance
+- Aurora
+- Divides By Zero
+- Galactic_15
+- Rachaelrose1212
+- Rev
+- Sp3cialK
+- Wout
+- WarrenGore
+- Zing
+
+- [Rift Spawner Rework](https://discord.com/channels/1374772629298483202/1467360948804260086)
+  - Completion Reward
+    - Remove spawner at completion, talked through options around:
+      - replacing with chest/block, 
+      - replacing with air and dropping an item in its former space
+      - placing a reward in a more reachable location
+      - having instant use reward trigger within X blocks of the spawner's former location
+  - Improved Wave Mechanics
+    - Instead of mobs trickling in one at a time when a mob dies, have them appear in waves
+      - waves can be planned/designed
+      - can mix and match mob archetypes
+      - can have a new wave spawn based on previous wave being defeated and an amount of time, whichever is first
+      - speeds up gameplay
+  - Multiple Spawner Trigger Types
+    - Add additional mob spawner types
+      - Distance based
+      - Line of sight
+      - Sound
+      - Redstone
+    - Allow builder to determine what spawner to use
+    - Make sure spawners have both a visual and audio cue for their trigger type
+  - Team was in favor of these changes, planning to move forward to pitch prep
+- [Material Rarity and Quality Framework](https://discord.com/channels/1374772629298483202/1468533736692781170)
+  - Concerns on stacks, ~20 distinct riftwoods in the example
+    - Have quality determined at a station instead of a tool?
+      - Would allow inventory to be more forgiving
+  - Concerns on implementing at this time before knowing how exactly it’ll be used
+    - Suggestion to return to the topic when we have more crafting needs for the rarity and quality framework
+  - Potential ties to potion brewing, food cooking, or gear crafting ideas proposed before
+    - Work on those systems/mechanics and then determine if we want to add rarity/quality to those systems
+- [Ability Casting Rework](https://discord.com/channels/1374772629298483202/1468364625786699949) 
+  - Abilities as a separate bar/hot keys felt clunky, 9 is too many, doesn't feel like Minecraft
+  - Move abilities to items
+  - Use existing hot key mechanics (left/right click)
+  - Concerns around using the hot bar when there may be other needs for that hot bar space
+  - Suggestion to have player see a keybind entry screen at startup - allow them to set ability keybinds
+    - Concerns this may turn a player away, or at least they wouldn't know what to do with it until they start playing
+  - Hybrid system suggestion
+    - Wands have left/right click ability function
+    - 9 ability bar selections (like today)
+    - Allows player to decide how they want to set up their abilities
+  - Suggestion to table for now and carry out discussion in the post
