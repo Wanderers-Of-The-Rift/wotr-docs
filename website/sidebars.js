@@ -105,6 +105,7 @@ module.exports = {
           type: 'category',
           label: 'Dev Meeting Notes',
           items: [
+            'code/meetings/Dev-Meeting-Notes-2026-02-14',
             'code/meetings/Dev-Meeting-Notes-2026-01-17',
             'code/meetings/Dev-Meeting-Notes-2026-01-03',
             'code/meetings/Dev-Meeting-Notes-2025-12-13',
