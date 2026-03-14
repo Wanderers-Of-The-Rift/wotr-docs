@@ -1,8 +1,8 @@
 # 2026-02-14 Dev Meeting
-Attendance
-WarrenGore
-Divides By Zero
-ImplementsLegend
+**Attendance**  
+WarrenGore  
+Divides By Zero  
+ImplementsLegend  
 Rev
 
 - Pull Requests
