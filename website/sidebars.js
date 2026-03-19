@@ -56,7 +56,7 @@ module.exports = {
           type: 'category',
           label: 'Design Reference Tools',
           items: [
-            'design/attributes/attribute-build-calculator',
+            'design/attributes/attribute-build-calculator.html',
           ],
         },
       ],
