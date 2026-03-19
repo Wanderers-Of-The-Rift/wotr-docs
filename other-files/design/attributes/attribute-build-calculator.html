@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wanderers of the Rift - Attribute/Build Calculator</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #ffffff;
+    --bg2: #f5f5f3;
+    --bg3: #eeecea;
+    --text: #1a1a18;
+    --text2: #6b6b67;
+    --text3: #9b9b96;
+    --border: rgba(0,0,0,0.12);
+    --border2: rgba(0,0,0,0.22);
+    --danger: #c0392b;
+    --radius: 8px;
+    --radius-lg: 12px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1e1e1c;
+      --bg2: #2a2a28;
+      --bg3: #333331;
+      --text: #e8e6e0;
+      --text2: #9b9b96;
+      --text3: #6b6b67;
+      --border: rgba(255,255,255,0.1);
+      --border2: rgba(255,255,255,0.2);
+      --danger: #e74c3c;
+    }
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+    min-height: 100vh;
+  }
+
+  .page { max-width: 720px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+
+  h1 { font-size: 20px; font-weight: 600; margin-bottom: 4px; }
+  .subtitle { font-size: 13px; color: var(--text2); margin-bottom: 2rem; }
+
+  .level-row {
+    display: flex; align-items: center; gap: 12px; margin-bottom: 6px; flex-wrap: wrap;
+  }
+  .level-row label { font-size: 13px; color: var(--text2); white-space: nowrap; }
+  .level-row input[type=range] { flex: 1; min-width: 160px; }
+  .level-row .pts-label { font-size: 13px; color: var(--text2); white-space: nowrap; }
+  .level-row strong { color: var(--text); }
+
+  .stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 1.25rem 0; }
+  @media (max-width: 500px) { .stat-grid { grid-template-columns: repeat(2, 1fr); } }
+  .scard { background: var(--bg2); border-radius: var(--radius); padding: 10px 12px; }
+  .snum { font-size: 22px; font-weight: 600; }
+  .slbl { font-size: 11px; color: var(--text2); margin-top: 2px; }
+  .snum.danger { color: var(--danger); }
+
+  .attr-block {
+    border: 0.5px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 14px 16px;
+    margin-bottom: 12px;
+  }
+  .attr-header {
+    display: flex; justify-content: space-between; align-items: baseline;
+    margin-bottom: 8px; flex-wrap: wrap; gap: 4px;
+  }
+  .attr-name { font-size: 14px; font-weight: 600; }
+  .attr-sub { font-size: 11px; color: var(--text2); }
+  .attr-pts { font-size: 12px; color: var(--text2); min-width: 50px; text-align: right; }
+
+  input[type=range] {
+    width: 100%; height: 4px; border-radius: 2px; outline: none;
+    -webkit-appearance: none; appearance: none; background: var(--bg3); cursor: pointer;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none; width: 18px; height: 18px; border-radius: 50%;
+    background: var(--thumb-color, #7F77DD); border: 2px solid var(--bg);
+    box-shadow: 0 0 0 1px var(--border2);
+  }
+  input[type=range]::-moz-range-thumb {
+    width: 18px; height: 18px; border-radius: 50%;
+    background: var(--thumb-color, #7F77DD); border: 2px solid var(--bg);
+    box-shadow: 0 0 0 1px var(--border2);
+  }
+
+  .bar-track { display: flex; gap: 2px; margin: 8px 0 4px; min-height: 8px; }
+  .seg { display: inline-block; height: 8px; border-radius: 2px; min-width: 1px; }
+
+  .axis { display: flex; justify-content: space-between; font-size: 10px; color: var(--text3); margin-bottom: 8px; }
+  .axis-c2 { font-weight: 600; }
+  .axis-c3 { color: #c0392b; font-weight: 600; }
+
+  .perk-row { display: flex; gap: 3px; flex-wrap: nowrap; margin-top: 6px; }
+  .pip { width: 14px; height: 14px; border-radius: 3px; flex-shrink: 0; }
+  .perk-gap { width: 8px; }
+
+  .attr-info { margin-top: 6px; font-size: 12px; color: var(--text2); }
+  .badge {
+    display: inline-block; font-size: 11px; padding: 2px 7px;
+    border-radius: 4px; font-weight: 500; margin-right: 4px;
+  }
+
+  .presets { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; margin: 1rem 0; }
+  .presets label { font-size: 12px; color: var(--text2); }
+  .preset-btn {
+    font-size: 12px; padding: 5px 10px;
+    border: 0.5px solid var(--border2); border-radius: 6px;
+    background: transparent; cursor: pointer; color: var(--text2);
+    font-family: inherit;
+  }
+  .preset-btn:hover { background: var(--bg2); color: var(--text); }
+
+  .legend {
+    border-top: 0.5px solid var(--border); padding-top: 12px; margin-top: 8px;
+    display: flex; gap: 16px; flex-wrap: wrap; font-size: 11px; color: var(--text2);
+  }
+  .legend span { display: flex; align-items: center; gap: 5px; }
+  .lpip { width: 12px; height: 12px; border-radius: 3px; flex-shrink: 0; }
+
+  .design-notes {
+    margin-top: 2rem; padding: 1rem 1.25rem;
+    background: var(--bg2); border-radius: var(--radius-lg);
+    font-size: 13px; color: var(--text2); line-height: 1.7;
+  }
+  .design-notes h2 { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+  .design-notes table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 12px; }
+  .design-notes th { text-align: left; color: var(--text3); font-weight: 500; padding: 4px 8px 4px 0; border-bottom: 0.5px solid var(--border); }
+  .design-notes td { padding: 5px 8px 5px 0; border-bottom: 0.5px solid var(--border); color: var(--text2); }
+  .design-notes td:first-child { font-weight: 500; color: var(--text); font-family: monospace; font-size: 11px; }
+
+  footer { margin-top: 3rem; font-size: 11px; color: var(--text3); text-align: center; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <h1>Wanderers of the Rift</h1>
+  <p class="subtitle">Attribute &amp; Perk Calculator · Level 1-100</p>
+
+  <div class="level-row">
+    <label for="lvl-range">Player level: <strong id="lvl-out">100</strong></label>
+    <input type="range" min="1" max="100" value="100" id="lvl-range">
+    <span class="pts-label">Points available: <strong id="total-pts">243</strong></span>
+  </div>
+
+  <div class="stat-grid">
+    <div class="scard"><div class="snum" id="s-remain">243</div><div class="slbl">Points remaining</div></div>
+    <div class="scard"><div class="snum" id="s-perks">0</div><div class="slbl">Total perks</div></div>
+    <div class="scard"><div class="snum" id="s-effpts">243</div><div class="slbl">Effective pts</div></div>
+    <div class="scard"><div class="snum" id="s-dr">0</div><div class="slbl">Pts under dim. returns</div></div>
+  </div>
+
+  <div id="attr-container"></div>
+
+  <div class="presets">
+    <label>Presets:</label>
+    <button class="preset-btn" onclick="applyPreset([243,0,0,0,0])">243/0/0/0/0</button>
+    <button class="preset-btn" onclick="applyPreset([126,117,0,0,0])">126/117/0/0/0</button>
+    <button class="preset-btn" onclick="applyPreset([90,90,63,0,0])">90/90/63/0/0</button>
+    <button class="preset-btn" onclick="applyPreset([81,81,81,0,0])">81/81/81/0/0</button>
+    <button class="preset-btn" onclick="applyPreset([63,45,45,45,45])">63/45/45/45/45</button>
+    <button class="preset-btn" onclick="applyPreset([0,0,0,0,0])">Reset</button>
+  </div>
+
+  <div class="legend">
+    <span><span class="lpip" style="background:#7F77DD;"></span> Cycle 1 perk (your choice)</span>
+    <span><span class="lpip" style="background:#7F77DD;opacity:0.45;outline:1.5px solid #7F77DD;outline-offset:-1px;"></span> Cycle 2 perk (auto-unlocked)</span>
+    <span><span class="lpip" style="background:#ddd;"></span> Locked</span>
+  </div>
+
+  <div class="design-notes">
+    <h2>How the system works</h2>
+    <p>Points are divided into <strong>cycles of 90</strong>. Each cycle past the first applies diminishing returns to raw stat contributions but <strong>perk effects are never diminished</strong>.</p>
+    <p style="margin-top:8px;">A perk unlocks every 9 points in an attribute. In cycle 1 you choose one of two. In cycle 2 the unchosen perk unlocks automatically. Cycle 3 grants no new perks.</p>
+    <table>
+      <thead><tr><th>Distribution</th><th>Perks</th><th>Dim. returns</th><th>Character</th></tr></thead>
+      <tbody>
+        <tr><td>243/0/0/0/0</td><td>20</td><td>Cycles 2 &amp; 3</td><td>Pure specialist</td></tr>
+        <tr><td>126/117/0/0/0</td><td>27</td><td>Minor</td><td>Dual primary, cycle 2 on both</td></tr>
+        <tr><td>90/90/63/0/0</td><td>27</td><td>None</td><td>Dual primary + support</td></tr>
+        <tr><td>81/81/81/0/0</td><td>27</td><td>None</td><td>Triple even</td></tr>
+        <tr><td>63/45/45/45/45</td><td>26</td><td>None</td><td>Five-spread</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer>Wanderers of the Rift · Design reference tool · Not final · Subject to change</footer>
+</div>
+
+<script>
+const ATTRS = [
+  {id:'a', name:'Attribute A', sub:'Physical magnitude',      col:'#7F77DD', bg:'rgba(127,119,221,0.12)'},
+  {id:'b', name:'Attribute B', sub:'Non-physical magnitude',  col:'#1D9E75', bg:'rgba(29,158,117,0.12)'},
+  {id:'c', name:'Attribute C', sub:'Execution & tempo',      col:'#D85A30', bg:'rgba(216,90,48,0.12)'},
+  {id:'d', name:'Attribute D', sub:'Persistence',            col:'#378ADD', bg:'rgba(55,138,221,0.12)'},
+  {id:'e', name:'Attribute E', sub:'Sustain & efficiency',   col:'#BA7517', bg:'rgba(186,117,23,0.12)'},
+];
+
+const vals = {a:0,b:0,c:0,d:0,e:0};
+let totalAvail = 243;
+
+function calcLevel(lv) {
+  let pts = 3;
+  for (let i = 1; i <= lv; i++) {
+    pts += 2;
+    if (i % 5 === 0) pts += 1;
+    if (i % 25 === 0) pts += 5;
+  }
+  return pts;
+}
+
+function cycleInfo(v) {
+  const c1 = Math.min(v, 90);
+  const c2 = Math.min(Math.max(v - 90, 0), 90);
+  const c3 = Math.max(v - 180, 0);
+  return {
+    c1, c2, c3,
+    perksC1: Math.floor(c1 / 9),
+    perksC2: Math.floor(c2 / 9),
+    effectivePts: c1 * 1.0 + c2 * 0.9 + c3 * 0.8
+  };
+}
+
+function spent() { return Object.values(vals).reduce((s, v) => s + v, 0); }
+
+function update() {
+  const used = spent();
+  const remaining = totalAvail - used;
+  const over = remaining < 0;
+
+  const remEl = document.getElementById('s-remain');
+  remEl.textContent = remaining;
+  remEl.className = 'snum' + (over ? ' danger' : '');
+
+  let totalPerks = 0, totalEff = 0, totalDR = 0;
+
+  ATTRS.forEach(a => {
+    const v = vals[a.id];
+    const { c1, c2, c3, perksC1, perksC2, effectivePts } = cycleInfo(v);
+    totalPerks += perksC1 + perksC2;
+    totalEff += effectivePts;
+    totalDR += c2 + c3;
+
+    const MAX_DISPLAY = 270;
+    const bw = 280;
+    const s1w = Math.round((Math.min(c1, 90) / MAX_DISPLAY) * bw);
+    const s2w = Math.round((Math.min(c2, 90) / MAX_DISPLAY) * bw);
+    const s3w = Math.round((Math.min(c3, 90) / MAX_DISPLAY) * bw);
+
+    const barEl = document.getElementById('bar-' + a.id);
+    if (barEl) {
+      barEl.innerHTML =
+        `<div class="seg" style="width:${s1w}px;background:${a.col};"></div>` +
+        (s2w ? `<div class="seg" style="width:${s2w}px;background:${a.col};opacity:0.55;"></div>` : '') +
+        (s3w ? `<div class="seg" style="width:${s3w}px;background:${a.col};opacity:0.28;"></div>` : '');
+    }
+
+    let phtml = '';
+    for (let i = 0; i < 10; i++) {
+      phtml += i < perksC1
+        ? `<div class="pip" style="background:${a.col};"></div>`
+        : `<div class="pip" style="background:var(--bg3);"></div>`;
+    }
+    phtml += '<div class="perk-gap"></div>';
+    for (let i = 0; i < 10; i++) {
+      if (i < perksC2)
+        phtml += `<div class="pip" style="background:${a.col};opacity:0.5;outline:1.5px solid ${a.col};outline-offset:-1px;"></div>`;
+      else if (i < perksC1)
+        phtml += `<div class="pip" style="background:transparent;outline:1.5px solid ${a.col};outline-offset:-1px;opacity:0.35;"></div>`;
+      else
+        phtml += `<div class="pip" style="background:var(--bg3);opacity:0.3;"></div>`;
+    }
+    const perkRow = document.getElementById('perks-' + a.id);
+    if (perkRow) perkRow.innerHTML = phtml;
+
+    let badges = '';
+    if (c2 > 0) badges += `<span class="badge" style="background:${a.bg};color:${a.col};">90% zone</span>`;
+    if (c3 > 0) badges += `<span class="badge" style="background:rgba(192,57,43,0.1);color:#c0392b;">80% zone</span>`;
+
+    const infoEl = document.getElementById('info-' + a.id);
+    if (infoEl) infoEl.innerHTML =
+      `Effective: <strong style="color:var(--text);">${effectivePts.toFixed(1)}</strong> pts &nbsp;${badges}`;
+
+    const valEl = document.getElementById('val-' + a.id);
+    if (valEl) valEl.textContent = v + ' pts';
+  });
+
+  document.getElementById('s-perks').textContent = totalPerks;
+  document.getElementById('s-effpts').textContent = Math.round(totalEff);
+  document.getElementById('s-dr').textContent = totalDR;
+}
+
+function applyPreset(arr) {
+  ATTRS.forEach((a, i) => {
+    vals[a.id] = arr[i] || 0;
+    const r = document.getElementById('range-' + a.id);
+    if (r) { r.value = vals[a.id]; r.style.setProperty('--thumb-color', a.col); }
+  });
+  update();
+}
+
+function buildUI() {
+  const container = document.getElementById('attr-container');
+  ATTRS.forEach(a => {
+    const div = document.createElement('div');
+    div.className = 'attr-block';
+    div.innerHTML = `
+      <div class="attr-header">
+        <span class="attr-name" style="color:${a.col};">${a.name}</span>
+        <span class="attr-sub">${a.sub}</span>
+        <span class="attr-pts" id="val-${a.id}">0 pts</span>
+      </div>
+      <input type="range" min="0" max="243" step="1" value="0" id="range-${a.id}" style="--thumb-color:${a.col};">
+      <div class="bar-track" id="bar-${a.id}"></div>
+      <div class="axis">
+        <span>0</span>
+        <span class="axis-c2" style="color:${a.col};">↑ cycle 2 at 90</span>
+        <span class="axis-c3">↑ cycle 3 at 180</span>
+        <span>270</span>
+      </div>
+      <div class="perk-row" id="perks-${a.id}"></div>
+      <div class="attr-info" id="info-${a.id}"></div>
+    `;
+    container.appendChild(div);
+
+    const range = document.getElementById('range-' + a.id);
+    range.style.setProperty('--thumb-color', a.col);
+    range.addEventListener('input', function () {
+      const nv = parseInt(this.value);
+      const maxAllowed = totalAvail - (spent() - vals[a.id]);
+      vals[a.id] = Math.max(0, Math.min(nv, maxAllowed));
+      this.value = vals[a.id];
+      update();
+    });
+  });
+}
+
+document.getElementById('lvl-range').addEventListener('input', function () {
+  const lv = parseInt(this.value);
+  document.getElementById('lvl-out').textContent = lv;
+  totalAvail = calcLevel(lv);
+  document.getElementById('total-pts').textContent = totalAvail;
+  const currentSpent = spent();
+  if (currentSpent > totalAvail) {
+    let excess = currentSpent - totalAvail;
+    [...ATTRS].reverse().forEach(a => {
+      const cut = Math.min(vals[a.id], excess);
+      vals[a.id] -= cut; excess -= cut;
+      const r = document.getElementById('range-' + a.id);
+      if (r) r.value = vals[a.id];
+    });
+  }
+  update();
+});
+
+buildUI();
+update();
+</script>
+</body>
+</html>
