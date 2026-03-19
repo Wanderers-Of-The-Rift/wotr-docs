@@ -52,6 +52,13 @@ module.exports = {
             'design/meetings/Jul-10-Design-Meeting-Notes',
           ],
         },
+        {
+          type: 'category',
+          label: 'Design Reference Tools',
+          items: [
+            'design/attributes/attribute-build-calculator',
+          ],
+        },
       ],
     },
     {
