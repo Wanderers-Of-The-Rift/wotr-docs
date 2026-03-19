@@ -59,7 +59,7 @@ module.exports = {
             {
               type: 'link',
               label: 'Attribute Build Calculator',
-              href: '/design/attributes/attribute-build-calculator.html',
+              href: '/other-files/design/attributes/attribute-build-calculator.html',
             },
           ],
         },
