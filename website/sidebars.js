@@ -14,6 +14,7 @@ module.exports = {
       label: '2. Design',
       items: [
         'design/DesignDocHome',
+        'design/Vision',
         'design/GameDesignDocument',
         'mvp',
         'design/livingbacklog',
