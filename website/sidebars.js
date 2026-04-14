@@ -16,6 +16,7 @@ module.exports = {
         'design/DesignDocHome',
         'design/Vision',
         'design/GameDesignDocument',
+        'design/RiftSystem',
         'mvp',
         'design/livingbacklog',
         {

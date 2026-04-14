@@ -1,0 +1,293 @@
+# Rift System
+> version: 1.1.1
+
+---
+The rift is the core of the game. Everything else ()guilds, crafting, progressiom) exists in service of the rift loop. This document defines the full rift system.
+---
+
+## Overview
+
+A rift is a procedurally generated dimension entered through the Rift Creation Block on the hub. Each run is a self contained session with a defined room range, a theme, and a tier. Players navigate a series of rooms, make choices at each junction, collect rewards, and either extract early or push to completion for a bonus.
+
+The rift has a shape, a length, and an end. It is not infinite and not permadeath. The tension is in the decisions made along the way: which rooms to enter, when to extract, how far to push a good run.
+
+---
+
+## Rift Creation Block
+
+The Rift Creation Block is the physical workstation on the hub where players open and configure a rift. It is the player's first interaction with the rift system each session.
+
+At its most basic (no Rift Guild investment, no materials spent) the block opens a T1 rift with a randomly selected theme from the T1 pool at no cost. All configuration options beyond this (tier selection, theme selection, modifiers) require Rift Guild progression and rift material costs.
+
+The interface expands as the player invests in the Rift Guild. Early players see a minimal screen. Invested players see a full configuration suite. The block itself is the same object and the interface reflects the player's current progression state.
+
+:::warning SSD detail required
+Block UI states per Rift Guild unlock level
+:::
+
+---
+
+## Tiers
+
+Tiers define the difficulty, material pool, and theme pool of a rift. They are 'unlocked' by accumulating enough rift materials from previous runs. Player level is a soft readiness reference, not a hard gate.
+
+| Tier | Theme pool | Cost |
+|---|---|---|
+| T1 | Themes A–D | Always available — free entry |
+| T2 | Themes A–H | Accumulated T1 rift materials |
+| T3 | Themes A–L | Accumulated T2 rift materials |
+| T4 | Themes A–P | Accumulated T3 rift materials |
+| T5 | Themes A–T | Accumulated T4 rift materials |
+
+### Rift Material Tables
+
+The materials needed to open a higher tier come primarily from the tier below it.
+
+| Rift tier | Primary material drop | Secondary material drop (smaller chance) |
+|---|---|---|
+| T1 | T0 rift materials | T1 rift materials |
+| T2 | T1 rift materials | T2 rift materials |
+| T3 | T2 rift materials | T3 rift materials |
+| T4 | T3 rift materials | T4 rift materials |
+| T5 | T4 rift materials | T5 rift materials |
+
+T0 rift materials serve as base cost and are used in the most basic rift modifications and early modifiers.
+This offset ensures players must spend meaningful time in each tier before they can reliably open the next.
+
+---
+
+## Themes
+
+There are 20 themes planned across all tiers, introduced in groups of 4. Each new tier adds 4 themes to the eligible pool. All previous themes remain available at higher tiers.
+
+### Theme selection and cost
+
+Selecting a specific theme when creating a rift costs additional rift materials of that theme's associated type on top of the base tier cost. If the player does not pay the theme selection cost, a theme is randomly drawn from the eligible pool for that tier.
+
+**Mismatched theme and tier:** If a higher tier rift rolls or selects a lower tier theme (example: a T3 rift with Theme B, a T1 theme), the run is considered easier than a native T3 run. The reward is compensated with a percentage loot boost (the player gets more of what that theme drops but the loot table itself reflects the lower tier theme). This keeps lower tier themes viable for targeted farming at higher tiers.
+
+### Theme properties
+
+Each theme has four defining properties:
+
+**1. Visual and environmental identity**
+Block palette, lighting, ambient effects, prop sets. Defines what the rift looks, sounds, and feels like. Most of the 20 themes are primarily differentiated here. Rooms share structural templates, reskinned to match the theme's visual identity.
+
+**2. Loot weighting**
+Themes influence which items are more likely to roll from loot tables. This rotates across tiers so that a player does not get stuck farming the same theme and rift material set every tier. The exact weighting table is defined per theme in the theme SDD.
+
+**3. Junction layout and interconnectedness**
+Themes vary how rooms connect to each other. How many choices are presented at each junction, how branching the map is, whether backtracking is possible, and how interconnected the overall layout feels. Some themes produce a linear feel with occasional branches. Others produce a more open web with many parallel paths. This is distinct from junction information visibility.
+
+**4. Junction information rules**
+What the player sees before choosing a room at a junction. This varies by theme and is one of the primary mechanical differentiators.
+Options examples:
+- full information (room type and reward category visible)
+- partial (room type only)
+- obscured (reward category only)
+- Hidden (room types hidden until adjacent)
+Defined per theme in the theme SDD.
+
+:::warning SSD detail required
+One SDD per theme covering all four properties
+:::
+
+---
+
+## Rift Generation
+
+A rift generates a range of 15–20 rooms per run across all tiers. This range may be extended by paying for additional at creation. The target run time is 15–20 minutes regardless of tier. Higher tiers increase room complexity and encounter demand.
+
+Generation guarantees:
+- At least one of each core room type appears in every run
+- Every generated path has a valid route through all rooms
+- Room distribution is weighted by theme tendency and junction layout rules
+- Room count visibility on the map is theme-dependent ()some themes show the full room count, others do not)
+
+:::warning SSD detail required
+Generation algorithm, room weight tables per theme, branching rules
+:::
+
+---
+
+## Room Environment Rules
+
+All rift rooms operate under adventure mode constraints. Players cannot freely mine the environment or place blocks. Rooms are authored spaces ()the integrity of objective design, navigation, and puzzle rooms depends on the environment being fixed.)
+
+**Destructible props** exist as a designed mechanic within this constraint. Props are block built structures within rooms that behave in one of two ways:
+
+- **Mineable props** are destroyed by mining. No material yield. Purely a tactile Minecraft interaction within the authored space. May open shortcuts or clear obstacles.
+- **Damageable props** are destroyed by taking enough damage from combat. Used for cover, obstacles, and environmental hazards in combat rooms. Mobs may destroy these to prevent players from entrenching behind cover indefinitely.
+
+Props are theme specific and room type specific. The same structural room template uses different prop sets per theme, providing visual variety and layout variation without requiring unique room geometry per theme.
+
+---
+
+## Room Types
+
+Rooms are categorised by their objective type. The reward for completing a room is not fixed per room type it is drawn from the loot category pool, weighted by room type, theme, and tier. The objective defines what the player must do. The loot system defines what they get.
+
+### Combat rooms
+
+The player must defeat enemies to complete the room. Combat rooms use arena-style layouts with props providing tactical variety. Three combat objective variants exist:
+
+- **Elimination** — defeat all enemies in the room
+- **Waves** — survive and defeat a defined number of enemy waves
+- **Defense** — protect a designated prop (which has its own health pool) for a set duration while waves of enemies attack it. The prop must survive for the room to count as successful.
+
+Whether the map displays the combat variant type or just shows "combat" is determined by the active theme's information rules.
+
+### Resource rooms
+
+The player collects resources within the room. This will be impacted by the player's tool progression as various sources in these rooms will provide crafting materials for gear and gear modification but players will have limited time to identify which sources provides the materials they want to collect and then collect it. As their tool progresses they will be capable of collecting from increasingly more sources within the alloted time.
+
+### Loot rooms
+
+A chest room. The player opens the chest and receives a reward draw from the loot table. No combat objective. Lower engagement ceiling but reliable reward delivery.
+
+### Parkour rooms
+
+The player must reach the end of the room within a time limit. Failure state: time expires, no reward, exit opens normally. No death. No rollback. Players simply move on without the reward.
+
+### Sequence rooms
+
+The player must activate a series of triggers in the correct order. Failure state: incorrect activation or time expiry resets the sequence. Players may retry within the room until they succeed or choose to leave. Leaving without completing forfeits the reward.
+
+### Collection rooms
+
+Scattered items are placed throughout the room. The player must find and return all of them to a central point within the room. May involve light platforming or exploration. Failure state: leaving without collecting all items forfeits the reward.
+
+### Guild rooms
+
+A guild representative or workstation appears in the room. The room awards guild XP for the associated guild on entry, plus a bonus interaction. The bonus interaction is guild specific (examples include a reduced-cost workstation, a temporary buff, or access to a guild service).
+
+Whether the map displays the room as a generic "Guild Room" or identifies the specific guild is determined by the active theme's information rules.
+
+### Shop rooms
+
+A derivative of the guild room associated with the Merchant Guild. Players can purchase items.
+
+---
+
+## Loot Categories
+
+All room rewards draw from the following categories. Weighting varies by room type, theme, and tier. Not every category appears in every room.
+
+| Category | Description |
+|---|---|
+| Gear / Weapons | Direct equipment drops. Rare. Subject to the cumulative drop chance system. |
+| Gear materials | Used at guild workstations to create Gear / Weapons.|
+| Enhancement Materials | Gear enhancement materials. Used to augment Gear / Weapons. |
+| Rift materials | Used to open and configure rifts. Tier-offset drop tables (see Tiers section). Theme weighted by associated material type. |
+| Ability related | Materials used to craft and upgrade abilities at the Ability Guild. |
+| Transmog / Vanity | Cosmetic appearances. One time use consumable application to a gear piece. |
+| Collectables | Lore fragments, codex entries, discoverable details. Rare from any room. |
+| Consumables | Health potions, meals, buff items.|
+| Consumables materials | Crafting ingredients for related Guild. |
+| Instant items | heals, mana and stamina refills, temporary buffs, map reveals, etc. |
+| Builder bundles | A curated selection of blocks matching the active rift theme. Compensates players for the loss of free environmental harvesting inside rifts. |
+
+**Map reveal** as an instant item warrants specific note. Finding one mid-run reveals room information on the map according to its own rules overriding theme visibility.
+
+### Gear drop system
+
+Direct gear and weapon drops are rare by design. They should feel like an event.
+
+**Cumulative chance:** Each run begins with a ?1%? base chance of a gear drop per room completion. Each successful room adds ?0.1%? to the chance for the following room. When a gear drop occurs the chance resets to 1%.
+This ensures players rarely see two gear drops in a single run, rewards longer and more complete runs with increasing probability and keeps the chance nonzero throughout. Gear drops are awarded on top of the room's standard reward  they do not replace it.
+
+---
+
+## Junction and Extraction
+
+If extraction is available the player is presented with the their choices for the next room, plus an extraction option.
+
+**Extraction** is available as a choice at every junction in T1. In higher tiers and certain themes extraction may only be available at defined intervals or specific room types. The "Extract after every room" modifier overrides theme restrictions and restores extraction availability to every junction regardless of tier or theme.
+
+Taking extraction ends the run. The player returns to the hub with all items collected during that run.
+
+---
+
+## Completion and Completion Reward
+
+A rift is complete when all generated rooms have been entered and resolved. Whether the player can see the total room count or how many remain is theme-dependent.
+
+**Completion reward:**
+- A partial refund of the rift materials spent to open that rift, scaled to tier and theme difficulty. Reduces the cost of the next run without trivialising the progression grind.
+- A 10% bonus multiplier applied to all player XP earned during the run.
+
+The completion reward softens the "should I extract or keep going" tension. Completing the run is acknowledged and partially reimbursed. Early extraction with a good loot haul remains a fully valid choice.
+
+---
+
+## Player XP
+
+All rooms award player XP on successful completion. Combat rooms (Elimination, Waves, Defense) award a bonus on top of the base amount reflecting the additional engagement demand. XP is awarded at room completion. Enemies do not drop XP individually.
+
+---
+
+## Workstation Instance Toggle
+
+Guild workstations on the hub have instanced inventories. Items and stored progress are not shared across all players on the server. Players can toggle between three instances at any workstation:
+
+- **Personal** is default for solo players. Only that player's inventory and progress.
+- **Team** is default for players on a team. Shared with all team members.
+- **Public** is a shared instance accessible by any player on the server.
+
+The toggle is a view control, not a transfer. Switching instances shows that instance's current state. Players interact with whichever instance is currently selected.
+
+---
+
+## Modifiers
+
+Modifiers are optional rules applied to a rift at creation that alter difficulty, reward profile, or run conditions. Modifiers unlock through Rift Guild progression.
+
+Players read descriptions and choose modifiers without category labels. The tradeoffs are expressed in the modifier description itself.
+
+**Example modifiers:**
+
+| Modifier | Effect |
+|---|---|
+| No Death Penalty | Death incurs no XP loss and rewards are not lost. All rewards are heavily reduced for the run. |
+| Extract Anywhere | Extraction is available at every junction regardless of theme or tier restrictions. |
+| Room Type Weighting | Increases the frequency of a specific room type in generation. One modifier per room type. |
+| Sealed Rift | No extraction available until the run is complete. Maximum commitment, maximum completion reward. |
+
+:::warning SSD detail required
+Full modifier list, unlock requirements per modifier, stability slot cost, stacking rules
+:::
+
+---
+
+## Rift Guild
+
+The Rift Guild governs all rift creation and configuration access. It is the first guild most players invest in and the primary driver of rift system depth.
+
+Guild progression unlocks access to configuration options on the Rift Creation Block. Early levels unlock the most impactful options (tier access and theme selection). Later levels unlock modifier slots and advanced configuration.
+
+Guild contracts are cumulative over runs. Meeting specific conditions progresses contracts. Contract design is defined in the Rift Guild SDD.
+
+:::warning SSD detail required
+Full unlock tree, contract types, workstation design
+:::
+
+---
+
+## Open Details Required
+
+The following are unresolved and must be addressed before the Rift System SDD is considered ready:
+- Block UI states per Rift Guild unlock level
+- One SDD per theme covering all four properties
+- Generation algorithm, room weight tables per theme, branching rules
+- Full modifier list, unlock requirements per modifier, stability slot cost, stacking rules
+- Full unlock tree, contract types, workstation design
+
+---
+
+## Changelog
+
+| Version | Changes |
+|---|---|
+| 1.1.1 | Typos. Open details documented|
+| 1.1.0 | T1 free entry. Rift material offset tables. Theme loot weighting corrected. Guild, Shop, rooms added. Combat variants added. Modifier list updated.|
+| 1.0.0 | Initial draft. |
