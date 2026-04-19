@@ -1,0 +1,243 @@
+# Gear System
+> version: 1.0.0
+
+---
+
+# Gear System
+
+> Defines weapons, armor, offhand items, the gem enhancement system and the core crafting system. Gear is created at the Gear Guild and enhanced at the Enhancement Guild.
+
+---
+
+## Overview
+
+Gear is the primary expression of a player's build alongside their attribute investment and ability loadout. Weapons define the baseline combat action. Armor provides the stat foundation. Offhand items provide a third build axis. Gems enhance all of the above with targeted stat investment.
+
+Gear is crafted, not primarily found. Direct gear drops from rifts exist but are rare. The intended path is Gear Guild crafting using materials collected from rift runs. Enhancement through gems is a separate system layered on top of crafted gear.
+
+All gear is tier gated through the core system. A player cannot craft high tier gear until they have the materials that only drop from the corresponding rift tier.
+
+---
+
+## Armor
+
+### Slots
+
+Armor occupies four slots. Each slot has a predisposition toward certain attributes, meaning its affix pool and base stat contribution lean in that direction. Exact predispositions are to be defined during the attribute naming and balancing pass.
+
+| Slot | Predisposition (TBD) |
+|---|---|
+| Head | TBD |
+| Chest | TBD |
+| Legs | TBD |
+| Feet | TBD |
+
+### Armor Classes
+
+Three armor classes exist, differentiated by their socket shape likelihood pool and stat predisposition. Class shifts the probability of which gem shapes appear in sockets making each class more likely to accept gems aligned with certain attribute clusters.
+
+| Class | Socket shape bias | Attribute cluster |
+|---|---|---|
+| Class A | Shapes biased toward non-physical and sustain stats | Attributes B and E |
+| Class B | Shapes biased toward tempo and execution stats | Attributes A and C |
+| Class C | Shapes biased toward defense and persistence stats | Attribute D, with overlap |
+
+Class names, material identities, and visual direction are content decisions made during art and theme development. The system requires three distinct classes with the above mechanical differentiation. The class is a nudge toward certain gem shapes, not a hard restriction on what can be equipped.
+
+### Tiers
+
+Five tiers of gear exist. Each tier requires materials that only drop from the corresponding rift tier, gating crafting progression behind rift progression. Material names, visual identity, and specific crafting ingredients per tier and class are defined in the Gear Guild SDD.
+
+Higher tier gear has more sockets, a wider affix pool, and access to stronger implicit effects.
+
+### Implicit Bonuses
+
+Armor pieces crafted have a rare chance of rolling an implicit bonus in addition to their rolled affixes. A guaranteed implicit can be purchased by spending the core ingredient from the tier above the armor being crafted, guaranteeing a T1 implicit requires a T2 core ingredient, guaranteeing a T2 implicit requires a T3 core ingredient, and so on.
+
+This creates a deliberate tradeoff: a player who has reached T2 can craft a T1 armor piece with a guaranteed implicit, trading raw stat ceiling for build reliability. A T2 piece with a chance at an implicit is not strictly better than a guaranteed-implicit T1 piece. The choice is meaningful.
+
+T5 gear has no tier above it, so guaranteed implicits are not available at the highest tier. T5 implicit bonuses rely on the random chance only. Whether an endgame solution exists for this ceiling is an open design question.
+
+Implicit bonuses are meaningful, build relevant effects that go beyond simple stat increments. Examples from a draft design include effects like resource cost refund on kill, cooldown reduction on taking a hit, or health restoration on ability use. The exact implicit pool per tier and class is defined in the Gear Guild SDD.
+
+### Affixes
+
+Each armor piece rolls a number of affixes determined by its tier. Affixes are the primary source of granular stat bonuses on gear.
+
+Affix count only ranges between 1 and 2, but higher tiers have a larger pool of affixes to roll from. The specific affix pool per class and tier is defined in the Gear Guild SDD.
+
+---
+
+## Weapons
+
+### Categories and Types
+
+Three weapon categories, three types each. Weapons fill the player's baseline combat action and are the reliable output between ability uses. Some abilities scale with weapon stats.
+
+**Melee**
+
+| Weapon | Role |
+|---|---|
+| Sword | Baseline melee. Identity and differentiation TBD. |
+| Axe | Heavyweight melee. Identity and differentiation TBD. |
+| Mace | Disruptive melee. Identity and differentiation TBD. |
+
+**Ranged**
+
+| Weapon | Role |
+|---|---|
+| Bow | Draw based ranged. Identity and differentiation TBD. |
+| Crossbow | Prepared ranged. Identity and differentiation TBD. |
+| Trident | Thrown ranged. Identity and differentiation TBD. |
+
+**Magic**
+
+| Weapon | Role |
+|---|---|
+| Wand | Fast magic baseline. No mana cost.|
+| Staff | Slow impact magic baseline. No mana cost.|
+| Tome | Summon-based magic baseline. No mana cost for maintaining summons.|
+
+Magic weapons deal low damage freely and are the mana free baseline that keeps a magic build active when abilities are on cooldown or depleted. Mana is reserved for abilities, not baseline weapon actions.
+
+Weapon identity differentiation (how each type plays differently from others in its category) is an open design question flagged for the Combat System SDD.
+
+### Weapon Sockets
+
+Weapons use the same gem socket system as armor. Socket count is determined by the weapon's tier core. Socket shape likelihood is based on weapon, weapon shape pools are to be defined in the Gear Guild SDD, likely with a bias toward offensive stat shapes.
+
+---
+
+## Offhand Items
+
+Three offhand items each covering a distinct stat category. Offhand items are interchangeable across all weapon types. A player may equip any offhand with any mainhand weapon. They are passive items with no active mechanic.
+
+| Offhand | Stat category | Attribute alignment |
+|---|---|---|
+| Shield | Survivability, defense, health, damage reduction | Attribute D |
+| Charm | Amplification, weapon stats, ability stats | Attributes A and B |
+| Gauntlet | Tempo, resource regeneration, resource cost reduction, cooldown reduction | Attributes C and E |
+
+Offhand items follow the same tier and socket system as armor and weapons. A higher-tier Shield provides more survivability stats and more sockets for further gem investment.
+
+---
+
+## Gem System
+
+Gems are the primary enhancement layer for all gear and weapons. They are collected from rifts as raw gems or gem dust, processed at the Enhancement Guild and socketed into gear to provide targeted stat boosts.
+
+### Gem Colors
+
+Five gem colors, one per attribute. Color determines which attribute's stat pool the gem draws from.
+
+| Color | Attribute |
+|---|---|
+| Color A | Attribute A  Physical Magnitude |
+| Color B | Attribute B  Non-Physical Magnitude |
+| Color C | Attribute C  Execution and Tempo |
+| Color D | Attribute D  Persistence and Tolerance |
+| Color E | Attribute E  Sustain and Efficiency |
+
+*Gem color names are placeholders pending the attribute naming pass.*
+
+### Gem Shapes
+
+Each color has multiple shapes. Shape determines one specific stat within that color's attribute. A Color A gem in Shape 1 always boosts the same specific Attribute A stat. A Color A gem in Shape 2 boosts a different Attribute A stat.
+
+Shapes within each color are grouped to align with armor class socket biases.
+
+This grouping means a player wearing a Class A armor set will naturally collect gems suited to their build. A gem can be socketed into any socket of matching shape, regardless of the gem's color or the armor's class. Color and class do not restrict socket compatibility — shape does.
+
+The number of shapes per color and the exact stat each shape provides is defined in the Enhancement Guild SDD. The stat count per attribute (roughly 3-6 distinct stats per attribute based on the draft design data) suggests a similar number of shapes per color.
+
+### Gem Clarity
+
+Clarity is the quality tier of a gem. Higher clarity means a stronger version of the same stat. Clarity is improved using gem dust at the Enhancement Guild.
+
+**Clarity ceiling:** Every time a gem is improved a roll determines that gem's clarity success or failure. Upon failure the gem has reached its ceiling of maximum clarity. This ceiling is random, two gems of the same shape may have different maximum clarity values. This creates meaningful quality variance on top of shape variance.
+
+**Polishing:** Gem dust is spent to increase a gem's clarity. Players spend dust, gems improve, gems never break, but at some point they will no longer be able to increase in clarity.
+
+**Crushing:** Any gem can be crushed back into dust at any time. This creates a continuous cycle. Unwanted gems or gems that hit a low clarity ceiling become dust, dust improves wanted gems. Players are never stuck with dead inventory.
+
+### Rift Drop Sources
+
+Raw gems and gem dust both drop from rift runs. Gem color drop chance corresponds to the rift theme's associations. A specific theme weighted toward dropping more Color A gems. Gem dust drops in smaller quantities from any room. Raw gems are less common but more valuable.
+
+This ties gem farming to theme selection, giving players another reason to seek specific themes beyond gear slot weighting.
+
+---
+
+## Core System
+
+The core is the foundation of any crafted armor piece or weapon. It determines the item's tier, its socket count, and the probability distribution of socket shapes. No armor or weapon can be crafted without a core.
+
+### Core Tier
+
+Core tier directly equals gear tier. A T2 core produces T2 armor. The primary ingredient of a core can only be obtained from the matching rift tier. A T3 core requires a material that only drops in T3 rifts. This is the gate that prevents players from skipping tiers.
+
+### Socket Count
+
+Socket count is determined at the time of crafting the armor, not the core. Socket shapes probabilities are set at the time of crafting the core and are presented as a probability range in the core's details panel. Players can see the odds of each possible socket count and shape before crafting. This allows informed decision-making without removing the element of chance.
+
+Cores should be designed in stackable manner, and therefore cores are not armor class specific.
+
+| Core tier | Socket count range |
+|---|---|
+| T1 | 1-2 |
+| T2 | 2-3 |
+| T3 | 3-4 |
+| T4 | 4-5 |
+| T5 | 5-6 |
+
+### Socket Shape Influence
+
+Base socket shapes are drawn probabilistically from a pool influenced by the armor class being crafted. At base the player has no control over which shapes appear only which class they are crafting.
+
+**Unlockable influence:** Later Guild meta unlocks allow players to craft gem based ingredients that shift socket shape probabilities when used during core crafting. This gives advanced players targeted socket control without removing randomness entirely.
+
+**Automation:** A later quality-of-life meta unlock allows automated core rerolling the system repeatedly crafts and evaluates cores until a player-specified socket configuration is achieved, consuming materials automatically. This removes repetitive manual crafting for players deep into the endgame.
+
+---
+
+## Crafting Flow
+
+The complete crafting flow for a piece of armor:
+
+1. **Collect core ingredient**, drops from the matching rift tier only
+2. **Craft the core**, at the Gear Guild. Core details panel shows the probability distribution before crafting.
+3. **Collect armor materials**, the appropriate class materials for the target tier
+4. **Craft the armor**, at the Gear Guild, using the core plus the armor materials. Socket count and shape probabilities based on core used. Affixes roll at this step.
+5. **Collect gems**, raw gems and dust from rift runs
+6. **Roll gem shapes**, take raw gems to the Enhancement Guild to roll their shape
+7. **Polish gems**, spend dust at the Enhancement Guild to improve clarity
+8. **Socket gems**, equip polished gems into matching socket shapes on the gear piece
+
+---
+
+## Guilds
+
+**Gear  Guild** responsible for armor and weapon creation. Manages core crafting, armor crafting, material sourcing, and implicit bonus unlocks. Full unlock tree defined in Gear Guild SDD.
+
+**Enhancement Guild** responsible for gem processing and gear modification. Manages gem rolling, gem polishing, gem socketing, and any post craft gear modification. Full unlock tree defined in Enhancment Guild SDD.
+
+---
+
+## Open Design Questions
+
+The following must be resolved before the Guild SDDs can be written:
+- Armor slot predispositions to specific attributes (Head, Chest, Legs, Feet which leans toward which)
+- Armor class affix pool differentiation. What makes Class A, B, and C affixes feel different beyond base defense value?
+- Weapon identity differentiation. What makes each weapon type play differently? (flagged to Combat System SDD)
+- Gem color and shape naming (pending attribute naming pass)
+- Number of shapes per gem color and exact stat per shape
+- Socket shape grouping confirmation. The proposed Class A/B/C alignment to attribute clusters needs review
+- Armor material sourcing. How materials for each armor class are obtained from rifts
+
+---
+
+## Changelog
+
+| Version | Changes |
+|---|---|
+| 1.0.0 | Initial draft. Armor, weapons, offhand, gem system, core system. |
