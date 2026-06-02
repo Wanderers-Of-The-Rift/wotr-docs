@@ -1,9 +1,6 @@
 # Gear System
 > version: 1.0.0
-
 ---
-
-# Gear System
 
 > Defines weapons, armor, offhand items, the gem enhancement system and the core crafting system. Gear is created at the Gear Guild and enhanced at the Enhancement Guild.
 
@@ -219,7 +216,16 @@ The complete crafting flow for a piece of armor:
 
 **Gear  Guild** responsible for armor and weapon creation. Manages core crafting, armor crafting, material sourcing, and implicit bonus unlocks. Full unlock tree defined in Gear Guild SDD.
 
-**Enhancement Guild** responsible for gem processing and gear modification. Manages gem rolling, gem polishing, gem socketing, and any post craft gear modification. Full unlock tree defined in Enhancment Guild SDD.
+**Enhancement Guild** responsible for gem processing and gear modification. Manages gem rolling, gem polishing, gem socketing, and any post craft gear modification. Full unlock tree defined in Enhancement Guild SDD.
+
+---
+## Gear Guild Progression Gate
+
+The Gear Guild's meta progression gates both the ability to **craft** a tier of gear and the ability to **equip** it. These are the same gate (unlocking the Gear Guild tier unlocks crafting and equipping simultaneously). A player cannot equip T3 gear without having unlocked T3 crafting through the Gear Guild, regardless of whether the item was self-crafted or traded.
+
+This creates a consistent progression requirement: engaging with the Gear Guild and running the rifts that provide its contract materials is the path to higher-tier gear, for every player. Trading a high-tier piece to another player does not bypass this (the recipient must have unlocked that tier through their own Gear Guild progression before they can equip it).
+
+This is consistent with the ability system's guild unlock gate. Both systems use guild progression as the equip requirement, keeping progression integrity without locking down the player economy.
 
 ---
 
@@ -240,4 +246,5 @@ The following must be resolved before the Guild SDDs can be written:
 
 | Version | Changes |
 |---|---|
+| 1.0.1 | Typo, Duplicate Header, Gear Guild Progression Gate. |
 | 1.0.0 | Initial draft. Armor, weapons, offhand, gem system, core system. |
