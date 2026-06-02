@@ -18,6 +18,7 @@ module.exports = {
         'design/GameDesignDocument',
         'design/RiftSystem',
         'design/GearSystem',
+        'design/AbilitySystem',
         'mvp',
         'design/livingbacklog',
         {

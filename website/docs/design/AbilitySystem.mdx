@@ -1,0 +1,202 @@
+# Ability System
+> version: 1.0.0
+
+---
+
+# Ability System
+
+> Defines how abilities are unlocked, acquired, upgraded, equipped, and used. Abilities are physical items shaped by player investment.
+
+---
+
+## Overview
+
+Abilities are items in the player's inventory. They are unlocked through guild progression, crafted into additional copies at the Ability Guild, and shaped through a permanent branching upgrade tree that uses rift materials to define their final form.
+
+A player might own multiple copies of the same base ability, each upgraded along a different path, and swap between them depending on the build they are running. The ability system is as much an inventory and crafting system as it is a combat system.
+
+---
+
+## Acquiring Abilities
+
+### First Copy by Guild Unlock
+
+Each ability is tied to a source guild. When a player selects the unlock for that ability through the guild's meta progression, they receive one copy of the base ability item. This is the only way to obtain the first copy.
+
+Each guild unlocks a mix of active and passive abilities themed around that guild's domain. The Ability Guild itself unlocks abilities not thematically tied to other guilds. The exact ratio of active to passive per guild varies.
+
+### Additional Copies by Ability Guild Crafting
+
+Any additional copies of an ability must be crafted at the Ability Guild. The crafting cost uses a blank ability template plus ability materials (a much higher cost than a standard upgrade node). This ensures that accumulating multiple copies of an ability requires meaningful investment.
+
+The exact cost of templates and material requirements are defined in the Ability Guild SDD.
+
+---
+
+## Upgrade Tree Structure
+
+Every ability is based on the same branching upgrade tree structure. Upgrading an ability spends ability materials at each node. Each node presents multiple upgrade options, each with different material requirements. All choices are permanent and nodes cannot be re-crafted and branches cannot be reversed. The only way to explore a different path is to start a new copy of the base ability.
+
+### Path Notation
+
+Each node is identified by three parts: **Ability.Path.Node**
+
+- `Ability` is the base ability name (e.g. `Fireball`)
+- `Path` is which branch the node belongs to (`Core` for the main path, or a branch name)
+- `Node` is sequential number within that path
+
+Branch names are content decisions made per ability. Branch names should reflect what the branch actually does to the ability. For documentation purposes this SDD uses generic placeholders (`BranchI`, `BranchII`, `BranchIII`, `BranchIV`, `BranchI-Sub`, `BranchII-Sub`).
+
+---
+
+### Upgrade Path Diagram
+<img src="/img/abilityupgradetree.svg" style={{width:'100%'}} />
+
+---
+
+### Main Path and Branch Points
+
+The main path runs continuously. At defined node intervals the player faces a branch decision: spend a tier-specific core material to enter a branch, or continue on the main path. Continuing past a branch point without taking it closes that branch permanently.
+
+| Branch | Core material required |
+|---|---|
+| Branch I | T1 core material |
+| Branch II | T2 core material |
+| Branch III | T3 core material |
+| Branch IV | T4 core material |
+
+A player who takes Branch I will not have the Branch II, Branch III, and Branch IV decision points on that copy of the ability.
+
+### Sub-Branches
+
+Branch I and Branch II each have a sub-branch decision at their tenth node:
+
+| Sub-branch | Core material required |
+|---|---|
+| Branch I-Sub | T3 core material |
+| Branch II-Sub | T4 core material |
+
+### Terminal Paths
+
+A single ability offers seven possible abilities dependant on the branch choices.
+
+### Capstone
+
+Every path ends with a capstone node requiring T5 core material. Every path has exactly one capstone regardless of which route was taken.
+
+---
+
+## Upgrade Nodes
+
+Each node on any path presents the player with multiple upgrade options. The player selects one. That choice is permanent.
+
+Each option at a node has a distinct material requirement ()a specific combination of ability material types and quantities). Different options on the same node cost different things, creating a secondary layer of investment decision on top of the branch structure.
+
+**Example (hypothetical):**
+
+> Node A.0.1 — choose one:
+> - Option A: 5× Red material, 2× Blue material, 1× Green material
+> - Option B: 1× Red material, 4× Blue material, 3× Green material
+> - Option C: 3× Red material, 3× Green material
+
+Material 'colors' correspond to and drop accordingly from rift themes.
+
+The number of options available at each node is a base value that can be increased through Ability Guild meta progression. Earlier in progression players see fewer options per node, later they see more. This will encourage players revisiting similar paths once they have progressed further with the Ability Guild.
+
+---
+
+## Active and Passive Abilities
+
+Abilities are not permanently classified as active or passive at the base level. A base ability has a default type, but upgrade branches can change this.
+
+Some abilities start as passives and a branch converts them into an active version. Some start as actives and a branch produces a passive variant themed on the same concept. Some abilities maintain their original type across all branches. This is determined per ability during content design and documented in each ability's individual entry.
+
+This means active and passive is a property of the upgraded ability item, not a category locked at unlock time.
+
+---
+
+## Equipping Abilities
+
+Equipped abilities are managed at an Ability Guild workstation. Players slot ability items into available ability slots.
+
+### Active Ability Slots
+
+Eight active ability slots exist across three contextual keybinds (R, F, Right Click), mapped by what the player is holding:
+
+| Context | R | F | Right Click |
+|---|---|---|---|
+| Weapon held | Slot 1 | Slot 2 | Slot 3 |
+| Tool held | Slot 4 | Slot 5 | Slot 6 |
+| Empty hand | Slot 7 | Slot 8 | — |
+
+Active slots unlock progressively through Ability Guild meta progression. Players begin with a limited number of available slots and unlock more as they invest in the guild.
+
+### Passive Ability Slots
+
+Passive ability slots exist separately from active slots. Their count also unlocks through Ability Guild meta progression. Passive abilities equipped in these slots apply their effects without player input.
+
+---
+
+## Ability Guild
+
+The Ability Guild is responsible for ability equipping, slot management, crafting additional ability item copies, and its own set of ability unlocks.
+
+### Meta Progression Unlocks (examples — full tree in SDD)
+
+- Active ability slot count (unlocked incrementally)
+- Passive ability slot count (unlocked incrementally)
+- Upgrade node option count (base number of options visible per node)
+- Ability item crafting cost reduction
+- Upgrade material cost reduction
+- Ability-specific unlocks not tied to other guilds
+
+---
+
+## Ability Materials
+
+The primary crafting material for ability upgrades. A type drops from rifts with weighting tied to the theme's associations (similar to weighting that governs gem color drops).
+
+Each upgrade node option specifies a combination of types and quantities. The material composition of an option signals its emphasis and build alignment.
+
+Material sourcing, drop rates, and exact type definitions are specified in the Ability Guild SDD.
+
+---
+
+## Open Design Questions
+
+- Exact number of abilities per guild and content decision for each guild's SDD
+- Blank template sourcing and cost (defined in Ability Guild SDD)
+- Material naming (pending attribute naming pass)
+- Mechanical treatment of ability type transitions (active and passive through branches) requires UI and implementation definition in Ability Guild SDD
+
+---
+
+## Ability Effectiveness and Stat Scaling
+
+Ability effectiveness is derived from player stats, not from upgrade level alone. The upgrade tree determines *how* an ability behaves (its modifiers, branch expression, and perk interactions). The raw power of that behavior ()damage dealt, healing applied, duration, area) scales with the player's attribute investment and equipped gear.
+
+A fully upgraded ability equipped by a level 1 player with minimal attribute points and starter gear is not the same ability as when equipped by a max-level player with deep attribute investment and high-tier gear. The upgrade path shapes the tool. The player's stats determine how hard that tool hits.
+
+This has two practical implications:
+
+**Boosting resistance:** A high-level player giving a new player a fully upgraded ability item does not create a power imbalance, because the new player's stats cannot support the ability's full effectiveness. Resource costs (mana, stamina) for advanced upgraded abilities will also exceed what a low-stat player can sustain (a natural prohibitive friction that discourages using abilities far ahead of progression).
+
+**Build coherence:** Players must invest in the attributes that their chosen abilities actually scale from. An ability that scales with Attribute B is weak in the hands of a player who invested entirely in Attribute A, regardless of how far they upgraded it. The upgrade tree and the attribute system are complementary and neither alone defines the ability's ceiling.
+
+---
+
+## Trading and Progression Integrity
+
+Ability items are NOT player bound. Upgraded ability items represent invested commodities and can be freely exchanged between players through the merchant economy.
+
+**The guild unlock is the gate.** A player cannot equip an ability they have not personally unlocked through the relevant guild. This is the primary and sufficient protection against boosting.
+
+No additional restrictions apply beyond the guild unlock requirement. A player who has unlocked an ability but is skill-limited or resource-limited at their current rift tier may trade for a more upgraded version of that ability as a deliberate build investment. This is intentional player agency, not an exploit.
+
+---
+
+## Changelog
+
+| Version | Changes |
+|---|---|
+| 1.0.0 | Initial publication |
